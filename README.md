@@ -22,13 +22,13 @@
 <br>
 ## web架构
 ```
-h-common      共享资源文件<br>
-h-pojo        对象实体<br>
-h-dao         Data Access Object数据访问对象<br>
-h-api         ESB总线为模型对外的接口，内含REST目录<br>
-h-service     服务（拆微服务）<br>
-h-web         web目录（大型网站的后台系统）之后是否需要拆，CMS、OA、ERP等<br>
-h-portal      大型网站的门户系统<br>
-h-user        大型网站的个人中心系统<br>
-h-channel     底层通信<br>
+h-common      共享资源文件
+h-pojo        对象实体
+h-dao         Data Access Object数据访问对象
+h-api         ESB总线为模型对外的接口，内含REST目录
+h-service     服务（拆微服务）
+h-web         web目录（大型网站的后台系统）之后是否需要拆，CMS、OA、ERP等
+h-portal      大型网站的门户系统
+h-user        大型网站的个人中心系统
+h-channel     底层通信
 ```
