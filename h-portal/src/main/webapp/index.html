@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<style>
+		/****** CSSRESET******/
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+button {
+  outline: none;
+}
+
+button {
+    border: none;
+}
+
+
+body { 
+  line-height: 1;
+  font-family: Microsoft Yahei,SimSun,Helvetica;
+}
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  font-size: 14.7px;
+  color: #000;
+}
+
+h1 { font-size: 24px; font-weight: bold;}
+
+h2 { font-size: 20px; font-weight: bold;}
+
+h3 { font-size: 16px; font-weight: bold;}
+
+h4 { font-size: 14px; font-weight: bold;}
+
+h5 { font-size: 13px; font-weight: bold;}
+
+h6 { font-size: 12px; font-weight: bold;}
+
+p { font-size: 10px; }
+
+.clearfix {
+	clear:both;
+}
+
+
+
+
+.context {
+	width: 600px;
+	height: 100px;
+}
+		
+	</style>
+</head>
+<body>
+	<h1>This is a portal login</h1>
+	
+		<input id="text" type="text" name="query" placeholder="query host infomations">
+		<input id="btn" type="submit">
+	<div class="context" id="context">
+		THIS IS MY WORLD!
+	</div>
+	
+	<h2>This is a services</h2>
+	<a href="servlet/HelloServlet">GET</a>
+	<input id="text2" type="text" name="query" placeholder="return servlet infos">
+	<input id="btn2" type="submit">
+	<div class="context" id="context2">
+		THIS IS YOUR WORLD!
+	</div>
+	<h2>This is a services</h2>
+	<a href="servlet/HelloServlet">POST</a>
+	<input id="text3" type="text" name="query" placeholder="return servlet infos">
+	<input id="btn3" type="submit">
+	<div class="context" id="context3">
+		THIS IS YOUR WORLD!
+	</div>
+		
+	<script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+	<script>
+	var urls = "/h-service/HelloService";
+	var urls2 = "/h-service/myService";
+	
+		$("#btn").click(function(){
+			function clis(urls) {
+				query = $("#text").val();
+				urls = urls + query + '';
+				console.log(query);
+				ctx=$.ajax({
+					type: "GET",
+					url:urls,
+					success: function() {
+						$("#context").html(ctx.responseText);
+					}
+				});
+			}
+			clis(urls);
+		})
+		$("#btn2").click(function(){
+			ctx=$.ajax({
+				type: "GET",
+				url:urls2,
+				success: function() {
+					$("#context2").html(ctx.responseText);
+				}
+			});
+		})
+		$("#btn3").click(function(){
+			ctx=$.ajax({
+				type: "POST",
+				url:urls2,
+				success: function() {
+					$("#context3").html(ctx.responseText);
+				}
+			});
+		})	
+	</script>
+	
+</body>
