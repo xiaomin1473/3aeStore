@@ -1,4 +1,4 @@
-﻿
+
 killTomcat()
 {
 	pid = `ps -ef|grep tomcat|grep java|awk '{print $2}'`
@@ -36,7 +36,7 @@ cp PROJ_PATH/h-parent/h-portal/target/h-portal.war TOMCAT_APP_PATH/
 cd TOMCAT_APP_PATH/
 mv h-web1.war ROOT.war
 
-# 启动Tomcat
+# ??Tomcat
 cd /opt/apache-tomcat-8.5.33
 
 sh bin/startup.sh
