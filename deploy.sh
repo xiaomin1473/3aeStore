@@ -22,32 +22,32 @@ killTomcat()
 	fi
 }
 
-cd PROJ_PATH/h-parent/h-web
+cd $PROJ_PATH/h-parent/h-web
 mvn clean install
 
-cd PROJ_PATH/h-parent/h-user
+cd $PROJ_PATH/h-parent/h-user
 mvn clean install
 
-cd PROJ_PATH/h-parent/h-portal
+cd $PROJ_PATH/h-parent/h-portal
 mvn clean install
 
 # 停tomcat
 killTomcat
 
 # 删除原有工程
-rm -rf TOMCAT_APP_PATH/ROOT
-rm -f TOMCAT_APP_PATH/ROOT.war
-rm -f TOMCAT_APP_PATH/h-web.war
-rm -f TOMCAT_APP_PATH/h-user.war
-rm -f TOMCAT_APP_PATH/h-portal.war
+rm -rf $TOMCAT_APP_PATH/ROOT
+rm -f $OMCAT_APP_PATH/ROOT.war
+rm -f $TOMCAT_APP_PATH/h-web.war
+rm -f $TOMCAT_APP_PATH/h-user.war
+rm -f $TOMCAT_APP_PATH/h-portal.war
 
 # 复制新的工程
-cp PROJ_PATH/h-parent/h-web/target/h-web.war TOMCAT_APP_PATH/
-cp PROJ_PATH/h-parent/h-web/target/h-web1.war TOMCAT_APP_PATH/
-cp PROJ_PATH/h-parent/h-user/target/h-user.war TOMCAT_APP_PATH/
-cp PROJ_PATH/h-parent/h-portal/target/h-portal.war TOMCAT_APP_PATH/
+cp $PROJ_PATH/h-parent/h-web/target/h-web.war $TOMCAT_APP_PATH/
+cp $PROJ_PATH/h-parent/h-web/target/h-web1.war $TOMCAT_APP_PATH/
+cp $PROJ_PATH/h-parent/h-user/target/h-user.war $TOMCAT_APP_PATH/
+cp $PROJ_PATH/h-parent/h-portal/target/h-portal.war $TOMCAT_APP_PATH/
 
-cd TOMCAT_APP_PATH/
+cd $TOMCAT_APP_PATH/
 mv h-web1.war ROOT.war
 
 # 启动Tomcat
