@@ -12,7 +12,7 @@
 
 killTomcat()
 {
-	pid = `ps -ef|grep tomcat|grep java|awk '{print $2}'`
+	$pid = `ps -ef|grep tomcat|grep java|awk '{print $2}'`
 	echo "tomcat ID list :$pid"
 	if [ "$pid" = ""]
 	then
@@ -42,10 +42,10 @@ rm -f $TOMCAT_APP_PATH/h-user.war
 rm -f $TOMCAT_APP_PATH/h-portal.war
 
 # 复制新的工程
-cp $PROJ_PATH/h-parent/h-web/target/h-web.war $TOMCAT_APP_PATH/
-cp $PROJ_PATH/h-parent/h-web/target/h-web1.war $TOMCAT_APP_PATH/
-cp $PROJ_PATH/h-parent/h-user/target/h-user.war $TOMCAT_APP_PATH/
-cp $PROJ_PATH/h-parent/h-portal/target/h-portal.war $TOMCAT_APP_PATH/
+cp $PROJ_PATH/h-parent/h-web/target/h-web-0.0.1-SNAPSHOT.war $TOMCAT_APP_PATH/h-web.war
+cp $PROJ_PATH/h-parent/h-web/target/h-web-0.0.1-SNAPSHOT.war $TOMCAT_APP_PATH/h-web1.war
+cp $PROJ_PATH/h-parent/h-user/target/h-user-0.0.1-SNAPSHOT.war $TOMCAT_APP_PATH/h-user.war
+cp $PROJ_PATH/h-parent/h-portal/target/h-portal-0.0.1-SNAPSHOT.war $TOMCAT_APP_PATH/h-portal.war
 
 cd $TOMCAT_APP_PATH/
 mv h-web1.war ROOT.war
