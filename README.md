@@ -25,6 +25,7 @@
 h-common      共享资源文件
 h-pojo        对象实体
 h-dao         Data Access Object数据访问对象
+h-parent	  pom管理
 h-api         ESB总线为模型对外的接口，内含REST目录
 h-service     服务（拆微服务）
 h-web         web目录（大型网站的后台系统）之后是否需要拆，CMS、OA、ERP等
@@ -32,3 +33,19 @@ h-portal      大型网站的门户系统
 h-user        大型网站的个人中心系统
 h-channel     底层通信
 ```
+
+## 一些约束
+
+1、图片编码格式采用YUV420sp
+```
+主要使用netty框架
+h-channel -> io.netty
+根据国标BT601（标清）和BT709（高清）两种转换方式，分了模拟和数字两种。
+后期可能会在这个基础之上实现图像传输。（UDP）
+```
+2、
+
+
+
+
+
