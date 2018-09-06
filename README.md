@@ -43,9 +43,12 @@ h-channel -> io.netty
 根据国标BT601（标清）和BT709（高清）两种转换方式，分了模拟和数字两种。
 后期可能会在这个基础之上实现图像传输。（UDP）
 ```
-2、
-
-
+2、sonarqube的maven配置
+```
+  mvn sonar:sonar \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=d9be46eadefc3bc0f5f9cde712980d51cf9053a1
+```
 
 
 
