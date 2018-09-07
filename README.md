@@ -55,9 +55,19 @@ h-channel -> io.netty
 
 5、配置了海康的SDK
 
-6、配置了线上的markdown的预览功能
-[刍易-知难行易](http://3ae.store)
-[看云-个人文档](http://book.3ae.store)
+6、配置了线上的markdown的预览功能  
+[刍易-知难行易](http://3ae.store)  
+[看云-个人文档](http://book.3ae.store)  
 
+7.测试当前Markdown是否支持流程图
+```flow
+st=>start: 开始
+op=>operation: My Operation
+cond=>condition: Yes or No?
+e=>end
+st->op->cond
+cond(yes)->e
+cond(no)->op
+&```
 
 
