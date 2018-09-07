@@ -34,7 +34,7 @@ h-user        大型网站的个人中心系统
 h-channel     底层通信
 ```
 
-## 一些约束
+## 一些约束,接下来每天所做的一些内容
 
 1、图片编码格式采用YUV420sp
 ```
@@ -49,6 +49,15 @@ h-channel -> io.netty
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.login=d9be46eadefc3bc0f5f9cde712980d51cf9053a1
 ```
+3、配了阿里云的rdc.aliyun.com
+
+4、更新了njrs-rd59的代码分析
+
+5、配置了海康的SDK
+
+6、配置了线上的markdown的预览功能
+[刍易-知难行易](http://3ae.store)
+[看云-个人文档](http://book.3ae.store)
 
 
 

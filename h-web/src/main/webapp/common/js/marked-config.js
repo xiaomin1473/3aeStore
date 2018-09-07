@@ -17,7 +17,7 @@ $(function(){
 
     $.ajax({
         type:"get",
-        url : "./readme.md",
+        url : "./README.md",
         async : true,
         dataType:"text",
         success : function(response,status,request) {
