@@ -18,7 +18,7 @@ $(function(){
     $.ajax({
         type:"get",
         url : "./readme.md",
-        async : false,
+        async : true,
         dataType:"text",
         success : function(response,status,request) {
             document.body.innerHTML = marked(response);
