@@ -37,6 +37,7 @@ public class changeImg {
 			int width = 720;
 			int height = 576;
 			int[] RGB = YUVtoRGB.NV12ToRGB(buffer,width,height);
+			System.out.println(RGB);
 			BufferedImage newbuff=new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);
 			newbuff.setRGB(0,0,width,height,RGB,0,720);
 			ImageIO.write(newbuff,"jpg",new File("E:/yy45.jpg"));

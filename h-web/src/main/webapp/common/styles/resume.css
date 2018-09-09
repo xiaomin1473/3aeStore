@@ -1,3 +1,158 @@
-body{
+h3,h4,h5 {
+  font-weight: normal;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  line-height: 26px;
+}
+
+h5 {
+  color: #000;
+}
+
+h4 {
+  color: #333;
+}
+
+h3 {
+  color: #555;
+}
+
+b {
+  color: #ccc;
+}
+
+.divider {
+  height: 1px;
+  margin: 10px 0;
+  background-color: #eee;
+}
+
+.resume-wrapper {
+  width: 840px;
+  height: 1188px;
+  margin: 0 auto;
+  border: solid 1px #eee;
+}
+
+
+
+
+.container {
+  box-sizing: border-box;
+  float: right;
+  width: 61.80%;
   padding: 50px;
+}
+
+.brief {
+  width: 540px;
+  height: 400px;
+  margin-top: 30px;
+  margin-right: 30px;
+  border: dashed 2px rgb(126, 121, 121);
+}
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.copyright {
+  margin: 0 auto;
+  width: 320px;
+  color: #666;
+}
+
+
+.side-bar {
+  box-sizing: border-box;
+  padding: 30px;
+  width: 260px;
+}
+
+.own {
+  border: solid 2px #ccc;
+}
+
+.own .avatar {
+  width: 120px;
+  height: 150px;
+  margin: 30px auto 50px;
+  border: solid 1px #ccc;
+}
+
+.own .own-list {
+  width: 160px;
+  padding-left: 40px;
+
+}
+
+.own .own-list li {
+  position: relative;
+  width: 120px;
+  height: 32px;
+  margin-bottom: 40px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #fff;
+  border: solid 2px rgb(126, 121, 121);
+}
+
+.own .own-list li a {
+  display: block;
+  width: 120px;
+  height: 40px;
+  color:rgb(126, 121, 121);
+}
+
+.own .own-list li a::before {
+  position: absolute;
+  top: -2px;
+  left: -16px;
+  z-index: -1;
+  display: block;
+  content: "";
+  width: 36px;
+  height: 32px;
+  border-radius: 50%;
+  border: solid 2px rgb(126, 121, 121);
+  background-color: rgb(126, 121, 121);
+}
+
+.own .own-list li:hover a {
+  color: rgb(126, 121, 121);
+  color: #fff;
+}
+
+.own .own-list li:hover a::before {
+  background-color: #fff;
+}
+
+.own .own-list li:hover {
+  background-color: rgb(126, 121, 121);
+}
+
+.own .own-list .active a {
+  color: rgb(126, 121, 121);
+  color: #fff;
+}
+
+.own .own-list .active a::before {
+  background-color: #fff;
+}
+
+.own .own-list .active {
+  background-color: rgb(126, 121, 121);
+}
+
+footer {
+  box-sizing: border-box;
+  padding-top: 30px;
 }

@@ -60,7 +60,7 @@ B = Y + 1.772 (U - 128)
 
 public class RGBtoYUV420SP {
 	public static void main(String[] args) {
-		File imgFile =new File("E:/3.jpg");
+		File imgFile =new File("E:/123.jpg");
 		try{
 			BufferedImage bufferedImage = ImageIO.read(imgFile);
 			int width = bufferedImage.getWidth();
@@ -70,7 +70,7 @@ public class RGBtoYUV420SP {
 			int[] pixelsNew=ColorUtil.decodeYUV420sp(yuvs,width,height);
 			BufferedImage newbuff=new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);
 			newbuff.setRGB(0,0,width,height,pixelsNew,0,width);
-			ImageIO.write(newbuff,"jpg",new File("E:/yy4.nv12"));
+			ImageIO.write(newbuff,"yuv",new File("E:/1.yuv"));
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
