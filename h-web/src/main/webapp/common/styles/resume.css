@@ -88,13 +88,13 @@ b {
   border: solid 1px #ccc;
 }
 
-.own .own-list {
+.own-list {
   width: 160px;
   padding-left: 40px;
 
 }
 
-.own .own-list li {
+.own-list li {
   position: relative;
   width: 120px;
   height: 32px;
@@ -105,14 +105,14 @@ b {
   border: solid 2px rgb(126, 121, 121);
 }
 
-.own .own-list li a {
+.own-list li a {
   display: block;
   width: 120px;
   height: 40px;
   color:rgb(126, 121, 121);
 }
 
-.own .own-list li a::before {
+.own-list li a::before {
   position: absolute;
   top: -2px;
   left: -16px;
@@ -126,30 +126,49 @@ b {
   background-color: rgb(126, 121, 121);
 }
 
-.own .own-list li:hover a {
+.own-list li:hover a {
   color: rgb(126, 121, 121);
   color: #fff;
 }
 
-.own .own-list li:hover a::before {
+.own-list li:hover a::before {
   background-color: #fff;
 }
 
-.own .own-list li:hover {
+.own-list li:hover {
   background-color: rgb(126, 121, 121);
 }
 
-.own .own-list .active a {
+.own-list .active a {
   color: rgb(126, 121, 121);
   color: #fff;
 }
 
-.own .own-list .active a::before {
+.own-list .active a::before {
   background-color: #fff;
 }
 
-.own .own-list .active {
+.own-list .active {
   background-color: rgb(126, 121, 121);
+}
+
+@media (max-width: 900px) {
+  .side-bar {
+    width: 100%;
+    padding: 0;
+  }
+  .own-list {
+    width: 100%;
+  }
+  .own-list li a::before {
+    display: none;
+
+  }
+
+  .own-list li {
+    float: left;
+    margin: 10px;
+  }
 }
 
 footer {
