@@ -12,6 +12,11 @@ $(function(){
         highlight: function (code,lang) {
             //使用 highlight 插件解析文档中代码部分
             return hljs.highlightAuto(code,[lang]).value;
+        },
+        mermaid = function (code, language) {
+            if(code.match(/^sequenceDiagram/)||code.match(/^graph/)){
+               return '<div class="mermaid">'+code+'</div>';
+            }
         }
     });
 
