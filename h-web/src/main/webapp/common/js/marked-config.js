@@ -21,7 +21,8 @@ $(function(){
 		async : true,
 		dataType:"text",
 		success : function(response,status,request) {
-			document.body.innerHTML = marked(response);
+            
+			$("#container").html(marked(response));
 
 			//渲染文档中代码部分
 			hljs.initHighlighting();
