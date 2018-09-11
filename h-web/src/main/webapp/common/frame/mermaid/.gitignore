@@ -1,9 +1,0 @@
-.DS_Store
-
-node_modules/
-coverage/
-
-dist/*.js
-dist/*.map
-
-yarn-error.log
