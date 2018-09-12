@@ -110,11 +110,9 @@ rd59-debug
     is_TCPbind(false)->logger->e
     is_ret(false)->logger->e
     is_ret(true)->start_OK->e
-
-&```
+```
 
 ```mermaid
-
 graph TB
     id1(圆角矩形)--普通线-->id2[矩形]
     subgraph 子图表
@@ -122,5 +120,12 @@ graph TB
         id3-.虚线.->id4>右向旗帜]
         id3--无箭头---id5((圆形))
     end
+```
 
-\```
+```mermaid
+graph TB
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
