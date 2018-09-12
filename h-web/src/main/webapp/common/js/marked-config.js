@@ -6,7 +6,6 @@ $(function(){
         tables: true,
         breaks: false,
         pedantic: false,
-        langPrefix: '',
         sanitize: false,
         smartLists: true,
         smartypants: false,

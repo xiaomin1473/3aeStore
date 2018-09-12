@@ -20,18 +20,7 @@
         <link rel="shortcut icon" href="common/imgs/icons/favicon.ico" type="image/x-icon">
 	
 			
-		<!-- jQuery-1.12.2-->
-    	<script src="common/js/jquery-1.12.2.min.js"></script>
 		
-		<!-- marked library -->
-    	<script src="common/frame/marked/marked.min.js"></script>
-    	<script src="common/frame/hight-light/src/highlight.js"></script>
-		
-		<!-- <script src="common/js/flowchart.min.js"></script> -->
-		<script src="common/js/mermaind/mermaid.js"></script>
-		
-		<script src="common/js/marked-config.js"></script>
-		<!-- <script src="common/js/mermaid-config.js"></script> -->
 	</head>
 	
 	<body>
@@ -51,24 +40,16 @@
 	
 	
 </html>
-<script>
-    mermaid.initialize({
-      theme: 'forest',
-      // themeCSS: '.node rect { fill: red; }',
-      logLevel: 3,
-      flowchart: { curve: 'linear' },
-      gantt: { axisFormat: '%m/%d/%Y' },
-      sequence: { actorMargin: 50 },
-      // sequenceDiagram: { actorMargin: 300 } // deprecated
-    });
-  </script>
-  <script>
-    function testClick(nodeId) {
-      console.log("clicked", nodeId)
-      var originalBgColor = document.querySelector('body').style.backgroundColor
-      document.querySelector('body').style.backgroundColor = 'yellow'
-      setTimeout(function() {
-        document.querySelector('body').style.backgroundColor = originalBgColor
-      }, 100)
-    }
-  </script>
+
+<!-- jQuery-1.12.2-->
+<script src="common/js/jquery-1.12.2.min.js"></script>
+		
+<!-- marked library -->
+<script src="common/frame/marked/marked.min.js"></script>
+<script src="common/frame/hight-light/src/highlight.js"></script>
+
+<!-- <script src="common/js/flowchart.min.js"></script> -->
+<!-- <script src="common/js/mermaind/mermaid.js"></script> -->
+
+<script src="common/js/marked-config.js"></script>
+<!-- <script src="common/js/mermaid-config.js"></script> -->
