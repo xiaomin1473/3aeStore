@@ -36,7 +36,7 @@ button {
 
 body { 
     line-height: 1;
-    font-family: Microsoft Yahei,SimSun,Helvetica;
+    font-family: 'LedFont', cursive, 'Microsoft YaHei', sans-serif;
 }
 
 ol, ul { list-style: none; }
