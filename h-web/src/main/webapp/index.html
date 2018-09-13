@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
-		<title>markdownTest</title>
+		<title>3ae.store</title>
 		
 		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
 	    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -14,14 +14,58 @@
 	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	    <![endif]-->
 	    
-	    <link href="common/styles/reset.css" rel="stylesheet">
-        <link href="common/styles/resume.css" rel="stylesheet">
+        <link href="common/styles/reset.css" rel="stylesheet">
+        
+        <style>
+            @import url("common/styles/components/page-header.css");
+            /* @import url("common/styles/components/scroll.css"); */
+        </style>
+
+
+
+        <link href="common/styles/www_3ae_index.css" rel="stylesheet">
+        <link href="common/styles/animation.css" rel="stylesheet">
 
 	    <link rel="icon" href="common/imgs/icons/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="common/imgs/icons/favicon.ico" type="image/x-icon">
+        
 	</head>
-	
+
 	<body>
+        <div class="page-header">
+            <div  class="page-title">
+                <div class="title-wrapper ae-slideIn">
+                    <a class="title" href="/">3ae.store</a><br>
+                    <span class="author">sid in nanjing</span>
+                </div>
+            </div>
+            
+            <div class="top-bar">
+                <ul class="nav-wrapper ae-slideIn">
+                    <li class="cur"><a href="/">
+                        首页<br>
+                        <i>home</i></a></li>
+                    <li class><a href="/">
+                        搜索<br>
+                        <i>searh</i></a></li>
+                    <li class><a href="/">
+                        文章<br>
+                        <i>articles</i></a></li>
+                    <li class><a href="/">
+                        归档<br>
+                        <i>archives</i></a></li>
+                    <li class><a href="/">
+                        标签<br>
+                        <i>tags</i></a></li>
+                    <li class><a href="/">
+                        关于<br>
+                        <i>about</i></a></li>
+                    <li class><a href="/">
+                        文档<br>
+                        <i>books</i></a></li>
+                </ul>
+            </div>
+        </div>
 		<div class="wrapper">
             <div class="container">
                 <h2>一个追梦者的独白</h2>
@@ -44,8 +88,6 @@
                 <h3>茫茫人海，繁华世界</h3>
                 <h3>再美的故事</h3>
                 <h3>不及，此时此刻的不期而遇……</h3>
-
-                
             </div>
 
             <div class="side-bar flt">
@@ -63,10 +105,13 @@
             <p class="copyright">©2018 3ae <a href="#top">意见反馈</a> 晋ICP证书号 晋ICP备16009680号-3</p>
         </footer>
 
-
-	
+        <div class="backtop dead" id="backtop">
+            <i class="iconfont icon-up"></i>
+            <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">21</span>%</span>
+        </div>
+        
 		<!-- jQuery-1.12.2-->
-    	<script src="common/js/jquery-1.12.2.min.js"></script>
+        <script src="common/js/jquery-1.12.2.min.js"></script>
+        <script src="common/js/main.js"></script>
 	</body>
 </html>
-
