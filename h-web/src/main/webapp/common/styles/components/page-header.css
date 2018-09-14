@@ -76,11 +76,12 @@
     }
     .top-bar {
         float: none;
+        min-width: 320px;
         margin: 0 auto;
-        min-width: 368px;
     }
 
     .top-bar .nav-wrapper li{
+        width: auto;
         margin-right: 0px;
         margin-left: 0px;
     }

@@ -35,7 +35,7 @@ button {
 }
 
 html {
-    min-width: 374px;
+    width: 100%;
 }
 
 body { 

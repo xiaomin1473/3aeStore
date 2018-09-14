@@ -23,6 +23,10 @@ b {
     color: #ccc;
 }
 
+.web-app {
+    padding-bottom: 10px;
+}
+
 
 .wrapper {
     box-sizing: border-box;
@@ -50,11 +54,16 @@ b {
   
 .footer {
     box-sizing: border-box;
+    width: 100%;
     padding-top: 30px;
 }
 
 .copyright {
-    margin: 0 auto;
-    width: 320px;
+    width: 100%;
+    text-align: center;
+}
+
+.copyright span {
+    font-size: 13px;
     color: #666;
 }
