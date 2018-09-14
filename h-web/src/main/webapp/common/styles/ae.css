@@ -89,7 +89,9 @@
 }
 
 .ae-fadeIn {
-    animation-name: fadeIn;
+    opacity:0;
+    animation: fadeIn 1s 1;
+    animation-fill-mode:forwards;
     animation-timing-function: ease-in;
 }
 
@@ -236,15 +238,118 @@ from {
 }
 
 
+.ae-elongateIn {
+    width: 1px;
+    animation: elongateIn 1s 1;
+    animation-fill-mode:forwards;
+}
+
+@keyframes elongateIn {
+    from {
+        width: 1px;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.ae-elongateOut {
+    animation: elongateOut 1s 1;
+    animation-fill-mode:forwards;
+}
+
+@keyframes elongateOut {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+.ae-stretchIn {
+    height: 0;
+    width: 0;
+    animation: elongateIn 1s 1;
+    animation-fill-mode:forwards;
+}
+
+@keyframes strechIn {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+
+/* **************************** 帧 *************************** */
+
+.ae-do3 {
+    animation-delay: .3s;
+}
+
+.ae-do5 {
+    animation-delay: .5s;
+}
 
 .ae-d1 {
     animation-delay: 1s;
+}
+
+.ae-d1o5 {
+    animation-delay: 1.5s;
 }
 
 .ae-d2 {
     animation-delay: 2s;
 }
 
+.ae-d2o5 {
+    animation-delay: 2.5s;
+}
+
 .ae-d3 {
     animation-delay: 3s;
+}
+
+.ae-d3o5 {
+    animation-delay: 3.5s;
+}
+
+.ae-d4 {
+    animation-delay: 4s;
+}
+
+.ae-d4o5 {
+    animation-delay: 4.5s;
+}
+
+.ae-d5 {
+    animation-delay: 5s;
+}
+
+.ae-d5o5 {
+    animation-delay: 5.5s;
+}
+
+.ae-d6 {
+    animation-delay: 6s;
+}
+
+.ae-d6o5 {
+    animation-delay: 6.5s;
+}
+
+.ae-d7 {
+    animation-delay: 7s;
+}
+
+.ae-d6o5 {
+    animation-delay: 7.5s;
 }
