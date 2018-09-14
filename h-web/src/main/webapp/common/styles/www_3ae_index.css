@@ -16,42 +16,25 @@ h3 {
     color: #555;
 }
 
+/* 
+*   提示
+*/
 b {
     color: #ccc;
 }
 
 
-
-.divider {
-    height: 1px;
-    margin: 10px 0;
-    background-color: #eee;
-  }
+.wrapper {
+    box-sizing: border-box;
+    padding: 0 30px;
+}
   
-  .resume-wrapper {
-    width: 840px;
-    height: 1188px;
-    margin: 0 auto;
-    border: solid 1px #eee;
-  }
-  
-  
-  
-  
-  .container {
+.container {
     box-sizing: border-box;
     float: right;
     width: 61.80%;
-    padding: 50px;
-  }
-  
-  .brief {
-    width: 540px;
-    height: 400px;
-    margin-top: 30px;
-    margin-right: 30px;
-    border: dashed 2px rgb(126, 121, 121);
-  }
+    padding: 30px;
+}
   
   
   
@@ -59,122 +42,19 @@ b {
   
   
   
-  
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
     .container {
-      width: 100%;
+         width: 100%;
     }
-  }
+}
   
-  .copyright {
+footer {
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+.copyright {
     margin: 0 auto;
     width: 320px;
     color: #666;
-  }
-  
-  
-  .side-bar {
-    box-sizing: border-box;
-    padding: 30px;
-    width: 260px;
-  }
-  
-  .own {
-    border: solid 2px #ccc;
-  }
-  
-  .own .avatar {
-    width: 120px;
-    height: 150px;
-    margin: 30px auto 50px;
-    border: solid 1px #ccc;
-  }
-  
-  .own-list {
-    width: 160px;
-    padding-left: 40px;
-  
-  }
-  
-  .own-list li {
-    position: relative;
-    width: 120px;
-    height: 32px;
-    margin-bottom: 40px;
-    line-height: 32px;
-    text-align: center;
-    background-color: #fff;
-    border: solid 2px rgb(126, 121, 121);
-  }
-  
-  .own-list li a {
-    display: block;
-    width: 120px;
-    height: 40px;
-    color:rgb(126, 121, 121);
-  }
-  
-  .own-list li a::before {
-    position: absolute;
-    top: -2px;
-    left: -16px;
-    z-index: -1;
-    display: block;
-    content: "";
-    width: 36px;
-    height: 32px;
-    border-radius: 50%;
-    border: solid 2px rgb(126, 121, 121);
-    background-color: rgb(126, 121, 121);
-  }
-  
-  .own-list li:hover a {
-    color: rgb(126, 121, 121);
-    color: #fff;
-  }
-  
-  .own-list li:hover a::before {
-    background-color: #fff;
-  }
-  
-  .own-list li:hover {
-    background-color: rgb(126, 121, 121);
-  }
-  
-  .own-list .active a {
-    color: rgb(126, 121, 121);
-    color: #fff;
-  }
-  
-  .own-list .active a::before {
-    background-color: #fff;
-  }
-  
-  .own-list .active {
-    background-color: rgb(126, 121, 121);
-  }
-  
-  @media (max-width: 900px) {
-    .side-bar {
-      width: 100%;
-      padding: 0;
-    }
-    .own-list {
-      width: 100%;
-    }
-    .own-list li a::before {
-      display: none;
-  
-    }
-  
-    .own-list li {
-      float: left;
-      margin: 10px;
-    }
-  }
-  
-  footer {
-    box-sizing: border-box;
-    padding-top: 30px;
-  }
-  
+}

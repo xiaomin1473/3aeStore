@@ -72,6 +72,10 @@ table {
 
 /* ************************* global_define *********************** */
 
+* {
+  transition: all .35s;
+}
+
 h1 { font-size: 24px; font-weight: bold;}
 
 h2 { font-size: 20px; font-weight: bold;}
@@ -107,6 +111,13 @@ p { font-size: 10px; }
 .w-1200 {
     width: 1200px;
     margin: 0 auto;
+}
+
+
+
+hr {
+  margin: 10px 0;
+  border: solid .5px #eee;
 }
 
 

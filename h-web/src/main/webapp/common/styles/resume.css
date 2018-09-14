@@ -20,20 +20,12 @@ b {
   color: #ccc;
 }
 
-.divider {
-  height: 1px;
-  margin: 10px 0;
-  background-color: #eee;
-}
-
 .resume-wrapper {
   width: 840px;
   height: 1188px;
   margin: 0 auto;
   border: solid 1px #eee;
 }
-
-
 
 
 .container {
