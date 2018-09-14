@@ -34,10 +34,14 @@ button {
     border: none;
 }
 
+html {
+    min-width: 374px;
+}
 
 body { 
     line-height: 1;
     font-family: Microsoft Yahei,SimSun,Helvetica;
+    background-color: #fff;
 }
 
 ol, ul { list-style: none; }

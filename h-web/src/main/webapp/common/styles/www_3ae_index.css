@@ -48,7 +48,7 @@ b {
     }
 }
   
-footer {
+.footer {
     box-sizing: border-box;
     padding-top: 30px;
 }
