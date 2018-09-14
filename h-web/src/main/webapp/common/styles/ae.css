@@ -1,12 +1,13 @@
 
 .ae-slideIn {
     transform: scale(0,0);
-    animation: slideIn 1s 1;
+    animation: slideIn .5s 1;
     animation-fill-mode:forwards;
 }
 
 @keyframes slideIn {
     from {
+        animation-timing-function: linear;
         transform: scale(.1,.1);
     }
     50% {
@@ -48,8 +49,13 @@
 
 @keyframes riseIn {
     0%{
+        animation-timing-function: linear;
         opacity:0;
         transform:translateY(50%)
+    }
+    50% {
+        opacity: .62;
+        transform:translateY(19%)
     }
     100%{
         opacity:1;
@@ -113,9 +119,13 @@
 
 @keyframes fadeIn {
     from {
+        animation-timing-function: linear;
         opacity: 0;
     }
-    to {
+    50% {
+        opacity: .5;
+    }
+    100% {
         opacity: 1;
     }
 }
@@ -272,7 +282,7 @@ from {
 .ae-stretchIn {
     height: 0;
     width: 0;
-    animation: elongateIn 1s 1;
+    animation: strechIn 1s 1;
     animation-fill-mode:forwards;
 }
 
@@ -286,6 +296,47 @@ from {
         height: 50%;
     }
 }
+
+.circle {
+    animation: circleIn 15s infinite linear;
+    animation-fill-mode:forwards;
+}
+
+@keyframes circleIn {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* **************************** 帧 *************************** */

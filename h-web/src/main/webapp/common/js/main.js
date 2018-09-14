@@ -24,9 +24,24 @@
                 clearInterval(interText);
             }
         }, 200);
-        
     })();
     
-    
-    
+    (function () {
+        var bgMusic = document.getElementById("music");
+        var status = false;
+
+        (function(status) {
+            $('#cd').click(function() {
+                if (!status) {
+                    bgMusic.play();
+                    cd.className = "cd circle";
+                    status = true;
+                } else {
+                    bgMusic.pause();
+                    cd.className = "cd";
+                    status = false;
+                }
+            })
+        })();
+    })();
 })();

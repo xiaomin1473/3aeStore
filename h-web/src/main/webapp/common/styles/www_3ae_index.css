@@ -35,21 +35,33 @@ b {
 }
   
 .container {
+    position: relative;
     box-sizing: border-box;
     float: right;
     width: 61.80%;
     padding: 30px;
 }
   
+.cd {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 14px #524c4c;
+    overflow: hidden;
+    cursor: pointer;
+}
   
-  
-  
-  
-  
+@media (max-width: 680px) {
+    .cd {
+        display: none;
+    }
+}  
   
 @media (max-width: 900px) {
     .container {
-         width: 100%;
+        width: 100%;
     }
 }
   
