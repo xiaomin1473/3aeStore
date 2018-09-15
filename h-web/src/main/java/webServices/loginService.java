@@ -1,6 +1,6 @@
 package webServices;
 
-import blog.user.login;
+import blog.userService.login;
 
 public class loginService extends login{
 

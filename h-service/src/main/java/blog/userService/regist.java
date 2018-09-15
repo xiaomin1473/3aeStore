@@ -1,4 +1,4 @@
-package blog.user;
+package blog.userService;
 
 public class regist {
 
