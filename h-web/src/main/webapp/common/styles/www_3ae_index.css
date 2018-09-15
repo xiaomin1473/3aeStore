@@ -33,6 +33,10 @@ b {
     box-sizing: border-box;
     padding: 0 30px;
 }
+
+.sider {
+    float: left;
+}
   
 .container {
     position: relative;
@@ -62,6 +66,10 @@ b {
 @media (max-width: 900px) {
     .container {
         width: 100%;
+    }
+
+    .sider {
+        display: none;
     }
 }
   
