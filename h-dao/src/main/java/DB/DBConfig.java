@@ -14,7 +14,7 @@ public class DBConfig {
 	
 	public String port = "3306";
 	
-	public String address = "localhost";
+	public String address = "3ae.store";
 	
 	public String charate ="utf8";
 	
