@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 	<head>
 		<meta charset="UTF-8">
-		<title>fails</title>
+		<title>success</title>
 	</head>
 	
 	<body>
@@ -15,7 +15,7 @@
 		setInterval("refer()", 1000); 
 		function refer(){ 
 		 if(t==0){ 
-		 location.href="/index.html";
+		 location.href="/h-user/index.html";
 		 } 
 		 document.getElementById('show').innerHTML=t;
 		 t--;
