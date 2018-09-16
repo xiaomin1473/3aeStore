@@ -59,7 +59,7 @@ public class userHandler {
 		}
 		users.close();
 		blogDB.close();
-		
+
 		return false;
 	}
 

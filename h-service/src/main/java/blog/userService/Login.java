@@ -1,10 +1,19 @@
 package blog.userService;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServlet;
 
-public class loginCheck {
-	public static boolean SSOCheck(HttpServletRequest req) {
+public class Login extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+
+	
+	
+	
+/*	public static boolean Check(HttpServletRequest req) {
 		Cookie[] cookies = req.getCookies();
 		if(cookies != null) {
 			for(Cookie cookie:cookies) {
@@ -15,5 +24,5 @@ public class loginCheck {
 			}
 		}
 		return false;
-	}
+	}*/
 }

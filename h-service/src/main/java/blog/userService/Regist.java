@@ -1,5 +1,5 @@
 package blog.userService;
 
-public class regist {
+public class Regist {
 
 }
