@@ -41,24 +41,21 @@ public class login extends HttpServlet {
 		
 		try {
 			result = userHandler.query(name, pwd);
-			
-			out.println("<html><body><i>This is " + result + " request!</i><br><h1>hello servlet</h1></body></html>");
-		
-			
+					
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			
-			out.println("<html><body><i>This is " + e + " request!</i><br><h1>hello servlet</h1></body></html>");
+			out.println("<html><body><h1>loggers</h1><i>" + e + "</i><br></body></html>");
 			
 		}
 		
 		// 判断验证结果并返回
-//		if(result){
-//			response.sendRedirect("success.jsp");
-//		}
-//		else {
-//			response.sendRedirect("fails.jsp");
-//		}
+		if(result){
+			response.sendRedirect("success.jsp");
+		}
+		else {
+			response.sendRedirect("fails.jsp");
+		}
 		
 	}
 }
