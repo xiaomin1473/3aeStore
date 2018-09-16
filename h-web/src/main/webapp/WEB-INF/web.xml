@@ -61,6 +61,16 @@ id="WebApp_ID" version="3.1">
 		<url-pattern>/test/HelloServlet</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>cancels</servlet-name>
+		<servlet-class>webServices.cancel</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>cancels</servlet-name>
+		<url-pattern>/cancel</url-pattern>
+	</servlet-mapping>
+	
 	<error-page>
 		<error-code>404</error-code>
 		<location>/error404.html</location>
