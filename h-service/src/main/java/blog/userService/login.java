@@ -41,7 +41,7 @@ public class login extends HttpServlet {
 		
 		try {
 			result = userHandler.query(name, pwd);
-					
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			
