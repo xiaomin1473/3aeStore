@@ -36,22 +36,29 @@ public class login extends HttpServlet {
 		String pwd = request.getParameter("pwd");
 		Boolean result = true;
 		
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html;charset=UTF-8");
+		
 		try {
 			result = userHandler.query(name, pwd);
 			
+			out.println("<html><body><i>This is " + result + " request!</i><br><h1>hello servlet</h1></body></html>");
+		
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			out.println("<html><body><i>This is " + "error!" + " request!</i><br><h1>hello servlet</h1></body></html>");
+			
 		}
 		
 		// 判断验证结果并返回
-		if(result){
-			response.sendRedirect("success.jsp");
-		}
-		else {
-			response.sendRedirect("fails.jsp");
-		}
+//		if(result){
+//			response.sendRedirect("success.jsp");
+//		}
+//		else {
+//			response.sendRedirect("fails.jsp");
+//		}
 		
 	}
 }
