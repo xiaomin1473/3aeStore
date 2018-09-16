@@ -7,7 +7,7 @@
 
 <body>
 	<h1>欢迎登陆</h1>
-	<form action="./login" method="POST">
+	<form action="/login" method="POST">
 		<input id="name" type="text" name="name" placeholder="name"><br>
 		<input id="pwd" type="text" name="pwd" placeholder="password">
 		<input id="btn" type="submit">
