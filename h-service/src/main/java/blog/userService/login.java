@@ -39,19 +39,19 @@ public class login extends HttpServlet {
 		try {
 			result = userHandler.query(name, pwd);
 			
-			// 判断验证结果并返回
-			if(result){
-				response.sendRedirect("success.jsp");
-			}
-			else {
-				response.sendRedirect("fails.jsp");
-			}
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		
+		// 判断验证结果并返回
+		if(result){
+			response.sendRedirect("success.jsp");
+		}
+		else {
+			response.sendRedirect("fails.jsp");
+		}
 		
 	}
 }
