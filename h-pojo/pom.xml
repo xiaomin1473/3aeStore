@@ -6,5 +6,8 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>h-pojo</artifactId>
-
+	
+   	<build>
+	  	<finalName>h-pojo</finalName>
+  	</build>
 </project>

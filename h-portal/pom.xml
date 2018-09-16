@@ -8,6 +8,10 @@
   <artifactId>h-portal</artifactId>
   <packaging>war</packaging>
   
+      <build>
+  	  	<finalName>h-portal</finalName>
+  </build>
+  
   <dependencies>
   	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 	<dependency>

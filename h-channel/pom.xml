@@ -7,6 +7,10 @@
   </parent>
   <artifactId>h-channel</artifactId>
   
+    <build>
+	  	<finalName>h-channel</finalName>
+  	</build>
+  
   <dependencies>
   	<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 	<dependency>

@@ -6,4 +6,8 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>h-common</artifactId>
+  
+    <build>
+	  	<finalName>h-common</finalName>
+  	</build>
 </project>

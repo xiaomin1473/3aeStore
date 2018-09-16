@@ -8,6 +8,10 @@
   <artifactId>h-web</artifactId>
   <packaging>war</packaging>
   
+  <build>
+  	  	<finalName>h-web</finalName>
+  </build>
+  
   <dependencies>
   	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 	<dependency>

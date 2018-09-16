@@ -7,6 +7,10 @@
   </parent>
   <artifactId>h-service</artifactId>
   
+    <build>
+  	  	<finalName>h-service</finalName>
+  </build>
+  
     <dependencies>
   	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 	<dependency>

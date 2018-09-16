@@ -30,7 +30,7 @@
 				</configuration>
   		</plugin>
   	</plugins>
-  	<finalName>projectname</finalName>
+
   </build>
   
   <properties>

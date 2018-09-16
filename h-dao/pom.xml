@@ -7,6 +7,10 @@
   </parent>
   <artifactId>h-dao</artifactId>
   
+    <build>
+	  	<finalName>h-dao</finalName>
+  	</build>
+  
   <dependencies>
 	  	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
