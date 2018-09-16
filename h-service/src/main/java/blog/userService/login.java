@@ -34,22 +34,24 @@ public class login extends HttpServlet {
 		
 		String name = request.getParameter("name");
 		String pwd = request.getParameter("pwd");
-		Boolean result = null;
+		Boolean result = false;
 		
 		try {
 			result = userHandler.query(name, pwd);
+			
+			// 判断验证结果并返回
+			if(result){
+				response.sendRedirect("success.jsp");
+			}
+			else {
+				response.sendRedirect("fails.jsp");
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		
-		// 判断验证结果并返回
-		if(result){
-			response.sendRedirect("success.jsp");
-		}
-		else {
-			response.sendRedirect("fails.jsp");
-		}
+		
 	}
 }
