@@ -23,7 +23,7 @@
             if(i === contentItem.length) {
                 clearInterval(interText);
             }
-        }, 200);
+        }, 100);
     })();
     
     (function () {
