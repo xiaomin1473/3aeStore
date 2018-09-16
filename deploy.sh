@@ -22,13 +22,7 @@ killTomcat()
 	fi
 }
 
-cd $PROJ_PATH/h-parent/h-web
-mvn clean install
-
-cd $PROJ_PATH/h-parent/h-user
-mvn clean install
-
-cd $PROJ_PATH/h-parent/h-portal
+cd $PROJ_PATH/h-parent
 mvn clean install
 
 # 停tomcat
