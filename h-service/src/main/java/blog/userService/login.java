@@ -34,7 +34,7 @@ public class login extends HttpServlet {
 		
 		String name = request.getParameter("name");
 		String pwd = request.getParameter("pwd");
-		Boolean result = false;
+		Boolean result = true;
 		
 		try {
 			result = userHandler.query(name, pwd);
