@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -51,6 +52,9 @@ public class login extends HttpServlet {
 		
 		// 判断验证结果并返回
 		if(result){
+			Cookie cookieLogin = new Cookie("SSOcookie", "sso");
+			cookieLogin.setPath("/cookie/login");
+			response.addCookie(cookieLogin);
 			response.sendRedirect("success.jsp");
 		}
 		else {
