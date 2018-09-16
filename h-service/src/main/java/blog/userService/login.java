@@ -47,8 +47,8 @@ public class login extends HttpServlet {
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-			out.println("<html><body><i>This is " + "error!" + " request!</i><br><h1>hello servlet</h1></body></html>");
+			
+			out.println("<html><body><i>This is " + e + " request!</i><br><h1>hello servlet</h1></body></html>");
 			
 		}
 		
