@@ -30,11 +30,11 @@ killTomcat
 
 # 删除原有工程
 rm -rf $TOMCAT_APP_PATH/ROOT
-rm -f $OMCAT_APP_PATH/ROOT.war
-rm -f $TOMCAT_APP_PATH/h-web.war
-rm -f $TOMCAT_APP_PATH/h-user.war
-rm -f $TOMCAT_APP_PATH/api.war
-rm -f $TOMCAT_APP_PATH/h-portal.war
+rm -rf $OMCAT_APP_PATH/ROOT.war
+rm -rf $TOMCAT_APP_PATH/h-web.war
+rm -rf $TOMCAT_APP_PATH/h-user.war
+rm -rf $TOMCAT_APP_PATH/api.war
+rm -rf $TOMCAT_APP_PATH/h-portal.war
 
 # 复制新的工程
 cp $PROJ_PATH/h-parent/h-web/target/h-web.war $TOMCAT_APP_PATH/h-web.war
