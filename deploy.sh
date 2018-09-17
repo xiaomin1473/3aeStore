@@ -33,6 +33,7 @@ rm -rf $TOMCAT_APP_PATH/ROOT
 rm -f $OMCAT_APP_PATH/ROOT.war
 rm -f $TOMCAT_APP_PATH/h-web.war
 rm -f $TOMCAT_APP_PATH/h-user.war
+rm -f $TOMCAT_APP_PATH/api.war
 rm -f $TOMCAT_APP_PATH/h-portal.war
 
 # 复制新的工程
@@ -40,6 +41,7 @@ cp $PROJ_PATH/h-parent/h-web/target/h-web.war $TOMCAT_APP_PATH/h-web.war
 cp $PROJ_PATH/h-parent/h-web/target/h-web.war $TOMCAT_APP_PATH/h-web1.war
 cp $PROJ_PATH/h-parent/h-user/target/h-user.war $TOMCAT_APP_PATH/h-user.war
 cp $PROJ_PATH/h-parent/h-portal/target/h-portal.war $TOMCAT_APP_PATH/h-portal.war
+cp $PROJ_PATH/h-parent/api/target/api.war $TOMCAT_APP_PATH/api.war
 
 cd $TOMCAT_APP_PATH/
 mv h-web1.war ROOT.war

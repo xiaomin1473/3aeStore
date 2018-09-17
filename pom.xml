@@ -11,9 +11,9 @@
   	<module>h-service</module>
   	<module>h-pojo</module>
   	<module>h-common</module>
-  	<module>h-api</module>
   	<module>h-dao</module>
   	<module>h-channel</module>
+  	<module>api</module>
   </modules>
   
   
