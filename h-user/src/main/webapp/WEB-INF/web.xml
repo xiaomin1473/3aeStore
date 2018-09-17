@@ -75,7 +75,7 @@ id="WebApp_ID" version="3.1">
         <url-pattern>/error.html</url-pattern>
         <dispatcher>ERROR</dispatcher>
     </filter-mapping> -->
-    <filter>
+    <!-- <filter>
         <filter-name>loginFilter</filter-name>
         <filter-class>webServices.loginFilter</filter-class>
     </filter>
@@ -83,5 +83,5 @@ id="WebApp_ID" version="3.1">
     <filter-mapping>
         <filter-name>loginFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping> -->
 </web-app>
