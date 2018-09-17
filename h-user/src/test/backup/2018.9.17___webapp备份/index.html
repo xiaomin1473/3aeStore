@@ -105,7 +105,8 @@ p { font-size: 10px; }
 	</style>
 </head>
 <body>
-	<h1>This is portal</h1>
+	<a href="/">返回首页</a><a href="/cancel">注销</a>
+	<h1>This is a socket</h1>
 	
 		<input id="text" type="text" name="query" placeholder="query host infomations">
 		<input id="btn" type="submit">
@@ -131,7 +132,42 @@ p { font-size: 10px; }
 		
 	<script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
 	<script>
+	var urls = "/h-service/HelloService";
+	var urls2 = "/h-service/myService";
 	
+		$("#btn").click(function(){
+			function clis(urls) {
+				query = $("#text").val();
+				urls = urls + query + '';
+				console.log(query);
+				ctx=$.ajax({
+					type: "GET",
+					url:urls,
+					success: function() {
+						$("#context").html(ctx.responseText);
+					}
+				});
+			}
+			clis(urls);
+		})
+		$("#btn2").click(function(){
+			ctx=$.ajax({
+				type: "GET",
+				url:urls2,
+				success: function() {
+					$("#context2").html(ctx.responseText);
+				}
+			});
+		})
+		$("#btn3").click(function(){
+			ctx=$.ajax({
+				type: "POST",
+				url:urls2,
+				success: function() {
+					$("#context3").html(ctx.responseText);
+				}
+			});
+		})	
 	</script>
 	
 </body>
