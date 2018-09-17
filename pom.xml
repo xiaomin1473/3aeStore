@@ -30,6 +30,9 @@
 				</configuration>
   		</plugin>
   	</plugins>
+	
+
+ 	<finalName>h-parent</finalName>
 
   </build>
   
