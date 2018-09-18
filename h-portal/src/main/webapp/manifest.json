@@ -10,6 +10,11 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#333",
+  "background_color": "#ffffff",
+  "screen-orientation": "portrait",
+  "full-screen": "yes",
+  "browsermode": "application",
+  "x5-fullscreen": "yes",
+  "x5-orientation": "portrait"
 }
