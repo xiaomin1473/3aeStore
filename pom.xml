@@ -14,6 +14,9 @@
   	<module>h-dao</module>
   	<module>h-channel</module>
   	<module>api</module>
+  	<module>h-answer</module>
+  	<module>answer</module>
+  	<module>netty</module>
   </modules>
   
   
