@@ -66,7 +66,7 @@ cp $PROJ_PATH/h-parent/h-user/target/h-user.war $TOMCAT_APP_PATH/h-user.war
 cp $PROJ_PATH/h-parent/h-portal/target/h-portal.war $TOMCAT_APP_PATH/h-portal.war
 cp $PROJ_PATH/h-parent/api/target/api.war $TOMCAT_APP_PATH/api.war
 cp $PROJ_PATH/h-parent/answer/target/answer.war $TOMCAT_APP_PATH/answer.war
-cp $PROJ_PATH/h-parent/netty/target/netty.jar $NETTY_APP_PATH/netty.jar
+cp $PROJ_PATH/h-parent/netty/target/netty.jar $NETTY_APP_PATH/netty/netty.jar
 
 cd $TOMCAT_APP_PATH/
 mv h-web1.war ROOT.war
@@ -77,4 +77,4 @@ sh bin/startup.sh
 
 # 启动Tomcat
 cd /var/netty
-$JAVA_HOME/bin/javaw -Xms32m -Xmx256m -classpath netty.jar answer.main >/usr/local/beta/nohup.out&
+$JAVA_HOME/bin/javaw -Xms32m -Xmx256m -classpath netty.jar answer.main
