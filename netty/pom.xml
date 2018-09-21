@@ -7,6 +7,10 @@
   </parent>
   <artifactId>netty</artifactId>
   
+  <build>
+   	<finalName>netty</finalName>
+  </build>
+  
     <dependencies>
 	  	<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 		<dependency>
