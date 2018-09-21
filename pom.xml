@@ -15,7 +15,6 @@
   	<module>h-channel</module>
   	<module>api</module>
   	<module>answer</module>
-  	<module>netty</module>
   </modules>
   
   
