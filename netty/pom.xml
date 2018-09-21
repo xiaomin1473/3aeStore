@@ -9,9 +9,38 @@
   
   <build>
    	<finalName>netty</finalName>
+   	
+   	<plugin>
+			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-assembly-plugin -->
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-assembly-plugin</artifactId>
+		    <version>3.1.0</version>
+			<configuration>
+				<archive>
+					<manifest>
+						<mainClass>answer.mainFrame</mainClass>
+					</manifest>
+				</archive>
+				<descriptorRefs>
+					<descriptorRef>netty</descriptorRef>
+				</descriptorRefs>
+			</configuration>
+			<executions>
+				<execution>
+					<id>make-assembly</id>
+					<phase>package</phase>
+					<goals>
+						<goal>single</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+		
+
   </build>
   
     <dependencies>
+    	
 	  	<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 		<dependency>
 		    <groupId>io.netty</groupId>
