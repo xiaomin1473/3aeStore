@@ -23,6 +23,6 @@ id="WebApp_ID" version="3.1">
 	
 	<servlet-mapping>
 		<servlet-name>solutions</servlet-name>
-		<url-pattern>/answer/ctrl</url-pattern>
+		<url-pattern>/ctrl</url-pattern>
 	</servlet-mapping>
 </web-app>
