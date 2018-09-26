@@ -5,7 +5,7 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
 id="WebApp_ID" version="3.1">
 
 	
-	<display-name>h-web</display-name>
+	<display-name>web</display-name>
 	
 	
 	<session-config>
@@ -43,7 +43,7 @@ id="WebApp_ID" version="3.1">
 	
 	<servlet>
 		<servlet-name>login</servlet-name>
-		<servlet-class>webServices.loginService</servlet-class>
+		<servlet-class>com.ae.web.portal.cgi.loginService</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
@@ -52,18 +52,8 @@ id="WebApp_ID" version="3.1">
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>test</servlet-name>
-		<servlet-class>servlet.HelloServlet</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>test</servlet-name>
-		<url-pattern>/test/HelloServlet</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>cancels</servlet-name>
-		<servlet-class>webServices.cancel</servlet-class>
+		<servlet-class>com.ae.web.portal.cgi.cancel</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
@@ -78,7 +68,7 @@ id="WebApp_ID" version="3.1">
 	
 	<filter>
         <filter-name>loginFilter</filter-name>
-        <filter-class>webServices.loginFilter</filter-class>
+        <filter-class>com.ae.web.portal.cgi.loginFilter</filter-class>
     </filter>
 
     <filter-mapping>
@@ -88,7 +78,7 @@ id="WebApp_ID" version="3.1">
 	
 	<filter>
         <filter-name>errorFilter</filter-name>
-        <filter-class>webServices.errorFilter</filter-class>
+        <filter-class>com.ae.web.portal.cgi.errorFilter</filter-class>
         <init-param>
             <param-name>errorPage</param-name>
             <param-value>/error.html</param-value>
