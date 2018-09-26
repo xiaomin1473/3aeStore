@@ -59,9 +59,9 @@ public class Server {
 					future = bootstrap.bind(serverport).sync();
 					if (future.isSuccess()) {
 						serverSocketChannel = (ServerSocketChannel) future.channel();
-						System.out.println("服务端开启成功");
+						System.out.println("Server is running in prot： 10010");
 					} else {
-						System.out.println("服务端开启失败");
+						System.out.println("Server start error");
 					}
 					
 					//等待服务监听端口关闭,就是由于这里会将线程阻塞，导致无法发送信息，所以我这里开了线程

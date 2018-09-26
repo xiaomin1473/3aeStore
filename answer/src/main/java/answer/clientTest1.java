@@ -6,7 +6,7 @@ public class clientTest1 {
 	public static void main(String[] args) {  
 		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
-        Client bootstrap = new Client(10010, "127.0.0.1");  
+        Client bootstrap = new Client(10010, "47.104.66.44");  
         
         String infoString = "";
         while (true){

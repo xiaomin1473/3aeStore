@@ -13,7 +13,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 	     */
 	    @Override
 	    public void channelActive(ChannelHandlerContext ctx) throws Exception {
-	        System.out.println("客户端与服务端连接开始...");
+	        System.out.println("Client link server start...");
 	        answerConfig.group.add(ctx.channel());
 	    }
 	 
@@ -22,7 +22,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 	     */
 	    @Override
 	    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-	        System.out.println("客户端与服务端连接关闭...");
+	        System.out.println("Client link server close...");
 	        answerConfig.group.remove(ctx.channel());
 	    }
 	 
@@ -32,7 +32,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 	    @Override
 	    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
 	        ctx.flush();
-	        System.out.println("信息接收完毕...");
+	        System.out.println("Message is recieved...");
 	    }
 	 
 	    /**
@@ -49,7 +49,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 	     */
 	    @Override
 		public void channelRead(ChannelHandlerContext channelHandlerContext, Object info) throws Exception {
-	    	System.out.println("我是服务端，我接受到了：" + ((answerInfo)info).getInfo());
+	    	System.out.println("I'm server, I'm recieved：" + ((answerInfo)info).getInfo());
 	    	//服务端使用这个就能向 每个连接上来的客户端群发消息
 	    	answerConfig.group.writeAndFlush(info);
 	    	Iterator<Channel> iterator = answerConfig.group.iterator();
