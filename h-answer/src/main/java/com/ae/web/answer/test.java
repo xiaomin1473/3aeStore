@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class test extends HttpServlet {
 	
@@ -27,7 +30,17 @@ public class test extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		System.out.println("处理POST请求…………");
+		JSONObject object = new JSONObject();
+		
+	    try {
+	        object.put("test", "success");
+	
+	        System.out.println();
+	
+	    } catch (JSONException e) {
+	        e.printStackTrace();
+	    }
 		response.setContentType("application/json;charset=UTF-8");
-		response.getWriter().println("test success!");
+		response.getWriter().println("json" + object.toString());
 	}
 }
