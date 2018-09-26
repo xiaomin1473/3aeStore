@@ -38,7 +38,7 @@ public class Server {
 						//保持连接数
 						.option(ChannelOption.SO_BACKLOG, 128)
 						//有数据立即发送
-						.option(ChannelOption.TCP_NODELAY, true)
+						//.option(ChannelOption.TCP_NODELAY, true)
 						//保持连接
 						.childOption(ChannelOption.SO_KEEPALIVE, true)
 						//处理新连接
