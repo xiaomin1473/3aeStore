@@ -81,6 +81,7 @@ public class RGBtoYUV420SP {
 		int frameSize = width * height;
 		byte[] yuvs=new byte[frameSize + size *2];
 		int y=0,u=0,v=0;
+		@SuppressWarnings("unused")
 		int r=0,g=0,b=0,a=0;
 		int index=0,uvindex=frameSize;
 		for(int i=0; i < height; i++) {
