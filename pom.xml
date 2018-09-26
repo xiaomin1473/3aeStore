@@ -15,11 +15,38 @@
   	<module>h-channel</module>
   	<module>api</module>
   	<module>answer</module>
+  	<module>h-agent</module>
   </modules>
   
   
   <build>
   	<plugins>
+  		<plugin>
+   			<groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-resources-plugin</artifactId>
+		    <version>3.1.0</version>
+   		</plugin>
+   		<plugin>
+	   		<groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-surefire-plugin</artifactId>
+		    <version>2.22.0</version>
+   		</plugin>
+   		
+   		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-jar-plugin</artifactId>
+		    <version>3.1.0</version>
+	    </plugin>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-clean-plugin</artifactId>
+		    <version>3.1.0</version>
+  		</plugin>
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-jar-plugin</artifactId>
+		    <version>3.1.0</version>
+	    </plugin>
   		<plugin>
   			<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -42,6 +69,13 @@
   </properties>
   
   <dependencies>
+ 		<!-- https://mvnrepository.com/artifact/org.apache.maven.wagon/wagon-ssh -->
+		<dependency>
+		    <groupId>org.apache.maven.wagon</groupId>
+		    <artifactId>wagon-ssh</artifactId>
+		    <version>3.1.0</version>
+		</dependency>
+  
   	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 	<dependency>
 	    <groupId>mysql</groupId>
@@ -85,5 +119,6 @@
   		<artifactId>slf4j-simple</artifactId>
   		<version>1.7.25</version>
   	</dependency>
+  	
   </dependencies>
 </project>

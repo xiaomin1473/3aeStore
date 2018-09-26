@@ -5,10 +5,11 @@
     <artifactId>h-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>netty</artifactId>
+  <artifactId>h-agent</artifactId>
   
   <build>
-   	<finalName>netty</finalName>
+   	<finalName>agent</finalName>
+   	
    	<plugins>
    		<plugin>
 		    <groupId>org.apache.maven.plugins</groupId>
@@ -50,16 +51,8 @@
   				</execution>
   			</executions>
   		</plugin>
-	 </plugins>
+ 	</plugins>
   </build>
   
-    <dependencies>
-    	
-	  	<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
-		<dependency>
-		    <groupId>io.netty</groupId>
-		    <artifactId>netty-all</artifactId>
-		    <version>4.1.29.Final</version>
-		</dependency>
-	</dependencies>
+  
 </project>
