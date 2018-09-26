@@ -1,17 +1,9 @@
 package com.ae.web.blog.userCtrl;
 
 import java.sql.SQLException;
-
-import javax.servlet.http.HttpServlet;
-
-
 import com.ae.web.database.blog.user.userHandler;
 
-public class Login extends HttpServlet {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class Login{
 
 	public static Boolean check(String name, String pwd) {
 		Boolean result = false;
