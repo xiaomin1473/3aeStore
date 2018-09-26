@@ -5,7 +5,7 @@
     <artifactId>h-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>answer</artifactId>
+  <artifactId>h-answer</artifactId>
   <packaging>war</packaging>
   
   	<build>
