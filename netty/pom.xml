@@ -20,7 +20,7 @@
                         <!--change addClasspath to true if daks is desktop version-->  
                         <addClasspath>true</addClasspath>  
                         <classpathPrefix>lib/</classpathPrefix>  
-                        <mainClass>com.agent.shell</mainClass>  
+                        <mainClass>answer.mainFrame</mainClass>  
                         <addDefaultImplementationEntries>true</addDefaultImplementationEntries>  
                         <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>  
                     </manifest>  
