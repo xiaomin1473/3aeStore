@@ -59,7 +59,7 @@ public class Server {
 					future = bootstrap.bind(serverport).sync();
 					if (future.isSuccess()) {
 						serverSocketChannel = (ServerSocketChannel) future.channel();
-						System.out.println("Server is running in prot： 10010");
+						System.out.println("Server is running in prot: 10010");
 					} else {
 						System.out.println("Server start error");
 					}
