@@ -53,7 +53,7 @@ id="WebApp_ID" version="3.1">
 
     <filter-mapping>
         <filter-name>loginCheckFilter</filter-name>
-        <url-pattern>/h-user/*</url-pattern>
+        <url-pattern>/user/*</url-pattern>
     </filter-mapping>
 	
 	<error-page>
