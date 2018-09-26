@@ -27,7 +27,7 @@ public class test extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		System.out.println("处理POST请求…………");
-		response.setContentType("text/html;charset=UTF-8");
-		response.getWriter().println("<html><body><h1>测试成功！</h1><i></i><br></body></html>");
+		response.setContentType("application/json;charset=UTF-8");
+		response.getWriter().println("test success!");
 	}
 }
