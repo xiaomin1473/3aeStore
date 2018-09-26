@@ -34,6 +34,7 @@ public class Server {
 				ServerBootstrap bootstrap = new ServerBootstrap();
 				// 绑定处理group
 				bootstrap.group(boss, worker).channel(NioServerSocketChannel.class)
+						.childOption(ChannelOption.TCP_NODELAY, true)
 						//保持连接数
 						.option(ChannelOption.SO_BACKLOG, 128)
 						//有数据立即发送

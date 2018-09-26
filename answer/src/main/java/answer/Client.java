@@ -27,7 +27,10 @@ public class Client {
 	            public void run() {
 	            	EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
 	        		Bootstrap bootstrap = new Bootstrap();
+	        		
 	        		bootstrap.channel(NioSocketChannel.class)
+	        				// 配置连接属性
+	        				.option(ChannelOption.TCP_NODELAY, true)
 	        				// 保持连接
 	        				.option(ChannelOption.SO_KEEPALIVE, true)
 	        				// 有数据立即发送
