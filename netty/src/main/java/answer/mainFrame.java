@@ -2,13 +2,8 @@ package answer;
 
 
 public class mainFrame {
-	@SuppressWarnings("unused")
-	private static void start() {
-		Server server = new Server(10010);
-	}
 	
 	public static void main(String[] args){
-		start();
 //		BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
 //		System.out.println("server>");
 //		String m;
@@ -26,7 +21,17 @@ public class mainFrame {
 //				e.printStackTrace();
 //			}
 //		}
-		
-		
+		//Scanner input = new Scanner(System.in);
+		@SuppressWarnings("unused")
+		Server server = new Server(10010);
+		//String infoString = "";
+//        while (true){
+//        	infoString = input.nextLine();
+//        	answerInfo req = new answerInfo();  
+//            req.setType((byte) 2);
+//            req.setInfo(infoString);
+//            server.sendMessage(req);  
+//           
+//        }  
 	}
 }

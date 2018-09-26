@@ -3,7 +3,7 @@ package answer;
 import java.util.Scanner;
 
 
-public class clientTest1 {
+public class Test1 {
 	public static void main(String[] args) {  
 		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class clientTest1 {
         while (true){
         	infoString = input.nextLine();
         	answerInfo req = new answerInfo();  
-            req.setType((byte) 1);  
+            req.setType((byte) 2);
             req.setInfo(infoString);
             bootstrap.sendMessage(req);  
            

@@ -45,7 +45,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 	    }
 	 
 	    /**
-	     * 服务端处理客户端websocket请求的核心方法，这里接收了客户端发来的信息
+	       *  服务端处理客户端websocket请求的核心方法，这里接收了客户端发来的信息
 	     */
 	    @Override
 		public void channelRead(ChannelHandlerContext channelHandlerContext, Object info) throws Exception {
@@ -57,7 +57,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 	    		//打印出所有客户端的远程地址
 	    		System.out.println((iterator.next()).remoteAddress());
 	    	}
-//	    	//单独回复客户端信息
-//	    	channelHandlerContext.writeAndFlush(info);
+	    	//单独回复客户端信息
+	    	// channelHandlerContext.writeAndFlush(info);
 	    }
 }
