@@ -40,7 +40,7 @@ id="WebApp_ID" version="3.1">
 	
 	
 	<!-- 管理员登录拦截器 -->
-    <filter>
+    <!-- <filter>
         <filter-name>loginCheckFilter</filter-name>
         <filter-class>webServices.loginFilter</filter-class>
         <init-param>
@@ -58,7 +58,7 @@ id="WebApp_ID" version="3.1">
 		<error-code>404</error-code>
 		<location>/error404.html</location>
 	</error-page>
-	
+	 -->
 	<!-- <filter>
         <filter-name>errorFilter</filter-name>
         <filter-class>webServices.errorFilter</filter-class>
