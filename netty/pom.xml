@@ -10,32 +10,23 @@
   <build>
    	<finalName>netty</finalName>
    	<plugins>
-   		<plugin>
-		    <groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-jar-plugin</artifactId>
-		    <version>3.1.0</version>
-		    <configuration>  
-                <archive>  
-                    <manifest>  
-                        <!--change addClasspath to true if daks is desktop version-->  
-                        <addClasspath>true</addClasspath>  
-                        <classpathPrefix>lib/</classpathPrefix>  
-                        <mainClass>answer.mainFrame</mainClass>  
-                        <addDefaultImplementationEntries>true</addDefaultImplementationEntries>  
-                        <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>  
-                    </manifest>  
-                    <manifestEntries>  
-                        <Permissions>${Permissions}</Permissions>  
-                        <Caller-Allowable-Codebase>${Caller-Allowable-Codebase}</Caller-Allowable-Codebase>  
-                    </manifestEntries>  
-                </archive>  
-            </configuration>
-	    </plugin>
   		<plugin>
   			<groupId>org.apache.maven.plugins</groupId>
   			<artifactId>maven-assembly-plugin</artifactId>
   			<version>3.1.0</version>
   			<configuration>
+  				<archive>  
+                    <manifest>  
+                        <!--change addClasspath to true if daks is desktop version-->  
+                        <addClasspath>true</addClasspath>  
+                        <classpathPrefix>lib/</classpathPrefix>  
+                        <mainClass>answer.mainFrame</mainClass>
+                    </manifest>  
+                    <manifestEntries>  
+                        <Permissions>${Permissions}</Permissions>  
+                        <Caller-Allowable-Codebase>${Caller-Allowable-Codebase}</Caller-Allowable-Codebase>  
+                    </manifestEntries>  
+                </archive> 
   				<descriptorRefs>
   					<descriptorRef>jar-with-dependencies</descriptorRef>
   				</descriptorRefs>
@@ -54,7 +45,6 @@
   </build>
   
     <dependencies>
-    	
 	  	<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 		<dependency>
 		    <groupId>io.netty</groupId>
