@@ -1,5 +1,9 @@
 package answer;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -66,10 +70,10 @@ public class Server {
 					
 					//等待服务监听端口关闭,就是由于这里会将线程阻塞，导致无法发送信息，所以我这里开了线程
 					future.channel().closeFuture().sync();
+					
 				} catch (Exception e) {
 					e.printStackTrace();
-				}
-				finally {
+				} finally {
 					//优雅地退出，释放线程池资源
 					boss.shutdownGracefully();
 					worker.shutdownGracefully();

@@ -8,7 +8,7 @@ public class clientTest1 {
 		Scanner input = new Scanner(System.in);
         Client bootstrap = new Client(10010, "47.104.66.44");  
         
-        String infoString = "";
+        String infoString = "I'm coming...";
         while (true){
         	infoString = input.nextLine();
         	answerInfo req = new answerInfo();  
