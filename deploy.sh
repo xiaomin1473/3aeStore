@@ -50,9 +50,9 @@ killNetty
 # 删除原有工程
 rm -rf $TOMCAT_APP_PATH/ROOT
 rm -rf $TOMCAT_APP_PATH/ROOT.war
-rm -rf $TOMCAT_APP_PATH/h-web.war
-rm -rf $TOMCAT_APP_PATH/h-user.war
-rm -rf $TOMCAT_APP_PATH/h-portal.war
+rm -rf $TOMCAT_APP_PATH/web.war
+rm -rf $TOMCAT_APP_PATH/user.war
+rm -rf $TOMCAT_APP_PATH/portal.war
 rm -rf $NETTY_APP_PATH/server.jar
 
 # 删除原有新增工程
@@ -66,7 +66,8 @@ cp $PROJ_PATH/h-parent/h-user/target/h-user.war $TOMCAT_APP_PATH/user.war
 cp $PROJ_PATH/h-parent/h-portal/target/h-portal.war $TOMCAT_APP_PATH/portal.war
 cp $PROJ_PATH/h-parent/h-api/target/h-api.war $TOMCAT_APP_PATH/api.war
 cp $PROJ_PATH/h-parent/h-answer/target/h-answer.war $TOMCAT_APP_PATH/answer.war
-cp $PROJ_PATH/h-parent/h-server/target/h-server.jar $NETTY_APP_PATH/server/server.jar
+cp $PROJ_PATH/h-parent/h-agent/target/h-agent-jar-with-dependencies.jar $NETTY_APP_PATH/agent/agent.jar
+cp $PROJ_PATH/h-parent/h-server/target/h-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
 
 cd $TOMCAT_APP_PATH/
 mv web1.war ROOT.war
