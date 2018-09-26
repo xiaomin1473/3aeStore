@@ -16,7 +16,7 @@
   			<artifactId>maven-assembly-plugin</artifactId>
   			<version>3.1.0</version>
   			<configuration>
-  				<archive>  
+  				<archive>
                     <manifest>  
                         <!--change addClasspath to true if daks is desktop version-->  
                         <addClasspath>true</addClasspath>  

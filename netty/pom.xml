@@ -25,7 +25,7 @@
                     <manifestEntries>  
                         <Permissions>${Permissions}</Permissions>  
                         <Caller-Allowable-Codebase>${Caller-Allowable-Codebase}</Caller-Allowable-Codebase>  
-                    </manifestEntries>  
+                    </manifestEntries>
                 </archive> 
   				<descriptorRefs>
   					<descriptorRef>jar-with-dependencies</descriptorRef>
