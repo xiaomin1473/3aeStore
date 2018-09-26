@@ -74,57 +74,5 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
-  <dependencies>
- 		<!-- https://mvnrepository.com/artifact/org.apache.maven.wagon/wagon-ssh -->
-		<dependency>
-		    <groupId>org.apache.maven.wagon</groupId>
-		    <artifactId>wagon-ssh</artifactId>
-		    <version>3.1.0</version>
-		</dependency>
-  
-  	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-	<dependency>
-	    <groupId>mysql</groupId>
-	    <artifactId>mysql-connector-java</artifactId>
-	    <version>8.0.12</version>
-	</dependency>
-	
-  	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-	<dependency>
-	    <groupId>javax.servlet</groupId>
-	    <artifactId>javax.servlet-api</artifactId>
-	    <version>4.0.1</version>
-	    <scope>provided</scope>
-	</dependency>
-  
-  	<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
-	<dependency>
-	    <groupId>io.netty</groupId>
-	    <artifactId>netty-all</artifactId>
-	    <version>4.1.29.Final</version>
-	</dependency>
-	
-			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-	  	<dependency>
-  		<groupId>ch.qos.logback</groupId>
-  		<artifactId>logback-classic</artifactId>
-  		<version>1.2.3</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>ch.qos.logback</groupId>
-  		<artifactId>logback-core</artifactId>
-  		<version>1.2.3</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.slf4j</groupId>
-  		<artifactId>slf4j-api</artifactId>
-  		<version>1.7.25</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.slf4j</groupId>
-  		<artifactId>slf4j-simple</artifactId>
-  		<version>1.7.25</version>
-  	</dependency>
-  	
-  </dependencies>
+
 </project>
