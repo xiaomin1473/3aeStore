@@ -66,7 +66,7 @@ cp $PROJ_PATH/h-parent/h-user/target/h-user.war $TOMCAT_APP_PATH/user.war
 cp $PROJ_PATH/h-parent/h-portal/target/h-portal.war $TOMCAT_APP_PATH/portal.war
 cp $PROJ_PATH/h-parent/h-api/target/h-api.war $TOMCAT_APP_PATH/api.war
 cp $PROJ_PATH/h-parent/h-answer/target/h-answer.war $TOMCAT_APP_PATH/answer.war
-cp $PROJ_PATH/h-parent/h-netty/target/h-server.jar $NETTY_APP_PATH/server/server.jar
+cp $PROJ_PATH/h-parent/h-server/target/h-server.jar $NETTY_APP_PATH/server/server.jar
 
 cd $TOMCAT_APP_PATH/
 mv web1.war ROOT.war
