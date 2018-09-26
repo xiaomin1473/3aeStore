@@ -74,7 +74,3 @@ mv h-web1.war ROOT.war
 # 启动Tomcat
 cd /opt/apache-tomcat-8.5.33
 sh bin/startup.sh
-
-# 启动Tomcat
-cd /var/netty
-$JAVA_HOME/bin/java -Xms32m -Xmx256m -classpath netty.jar answer.main
