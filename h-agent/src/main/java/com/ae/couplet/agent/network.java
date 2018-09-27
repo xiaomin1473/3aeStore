@@ -11,8 +11,7 @@ import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.SigarNotImplementedException;
 
 public class network {
-	public static void main(String[] args) throws SigarException {
-		Sigar sigar = new Sigar();
+	private static void networkMain(Sigar sigar) throws SigarException{
 		//当前机器的正式域名
 		try { 
 			System.out.println(InetAddress.getLocalHost().getCanonicalHostName()); 
@@ -110,4 +109,13 @@ public class network {
 		    System.out.println("cfg.getName() = " + cfg.getName()); 
 		}
 	}
+	
+	public static void main(String[] args) throws SigarException {
+		Sigar sigar = new Sigar();
+		
+		// 物理内存信息
+		networkMain(sigar);
+		
+	}
+
 }

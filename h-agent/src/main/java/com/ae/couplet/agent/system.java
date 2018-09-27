@@ -8,8 +8,7 @@ import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.Who;
 
 public class system {
-	public static void main(String[] args) {
-		Sigar sigar = new Sigar();
+	private static void systemMain(Sigar sigar) {
 		// 取到当前操作系统的名称
 		String hostname = ""; 
 		try { 
@@ -69,5 +68,12 @@ public class system {
 		} 
 		
 	}
+
+	public static void main(String[] args) {
+		Sigar sigar = new Sigar();
+		
+		systemMain(sigar);
+	}
+
 
 }
