@@ -1,4 +1,4 @@
-package com.ae.couplet.agent;
+package com.ae.couplet.server.info;
 
 import org.hyperic.sigar.CpuInfo;
 import org.hyperic.sigar.CpuPerc;

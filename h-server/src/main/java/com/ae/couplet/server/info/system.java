@@ -1,4 +1,4 @@
-package com.ae.couplet.agent;
+package com.ae.couplet.server.info;
 
 import java.net.InetAddress;
 

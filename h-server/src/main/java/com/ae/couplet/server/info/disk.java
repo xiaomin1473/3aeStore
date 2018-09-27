@@ -1,4 +1,4 @@
-package com.ae.couplet.agent;
+package com.ae.couplet.server.info;
 
 import org.hyperic.sigar.FileSystem;
 import org.hyperic.sigar.FileSystemUsage;
