@@ -9,39 +9,6 @@
   
   <build>
    	<finalName>h-server</finalName>
-   	<plugins>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-  			<artifactId>maven-assembly-plugin</artifactId>
-  			<version>3.1.0</version>
-  			<configuration>
-  				<archive>  
-                    <manifest>  
-                        <!--change addClasspath to true if daks is desktop version-->  
-                        <addClasspath>true</addClasspath>  
-                        <classpathPrefix>lib/</classpathPrefix>  
-                        <mainClass>answer.mainFrame</mainClass>
-                    </manifest>  
-                    <manifestEntries>  
-                        <Permissions>${Permissions}</Permissions>  
-                        <Caller-Allowable-Codebase>${Caller-Allowable-Codebase}</Caller-Allowable-Codebase>  
-                    </manifestEntries>
-                </archive> 
-  				<descriptorRefs>
-  					<descriptorRef>jar-with-dependencies</descriptorRef>
-  				</descriptorRefs>
-  			</configuration>
-  			<executions>
-  				<execution>
-  					<id>make-assembly</id>
-  					<phase>package</phase>
-					<goals>
-						<goal>single</goal>
-					</goals>
-  				</execution>
-  			</executions>
-  		</plugin>
-	 </plugins>
   </build>
   
     <dependencies>
