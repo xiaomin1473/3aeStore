@@ -58,6 +58,13 @@ public class cpu {
 		    cpu = sigar.getCpuPerc();
 		    System.out.println("——————————————————————————————— CPU Perc ——————————————————————————————");
 		    System.out.println(cpu);
+		    System.out.println("CPU用户使用率:    " + CpuPerc.format(cpu.getUser()));// 用户使用率
+	        System.out.println("CPU系统使用率:    " + CpuPerc.format(cpu.getSys()));// 系统使用率
+	        System.out.println("CPU当前等待率:    " + CpuPerc.format(cpu.getWait()));// 当前等待率
+	        System.out.println("CPU当前错误率:    " + CpuPerc.format(cpu.getNice()));//
+	        System.out.println("CPU当前空闲率:    " + CpuPerc.format(cpu.getIdle()));// 当前空闲率
+	        System.out.println("CPU总的使用率:    " + CpuPerc.format(cpu.getCombined()));// 总的使用率
+
 		    System.out.println("——————————————————————————————— CPU Perc ——————————————————————————————\n\n\n");
 		} catch (SigarException e) { 
 		    e.printStackTrace(); 
