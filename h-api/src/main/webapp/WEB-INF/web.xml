@@ -15,6 +15,14 @@
     <servlet-name>users</servlet-name>
     <url-pattern>/user</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>com.ae.web.api.user.login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/user/login</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <servlet-name>error</servlet-name>
