@@ -116,4 +116,3 @@ public class login extends HttpServlet {
 //		out.println("<html><body><i>This is a POST request!</i><br><h1>hello servlet</h1>" +object.toString() + " </body></html>");
 	}
 }
-
