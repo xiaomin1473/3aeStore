@@ -1,22 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.rs.h</groupId>
-  <artifactId>h-parent</artifactId>
+  <groupId>com.rs.3ae</groupId>
+  <artifactId>3ae-parent</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
+  <description>父工程,用于版本管理</description>
   <modules>
- 	<module>h-common</module>
-  	<module>h-channel</module>
-  	<module>h-pojo</module>
-  	<module>h-dao</module>
-  	<module>h-api</module>
-  	<module>h-web</module>
-    <module>h-user</module>
-    <module>h-portal</module>
-    <module>h-answer</module>
-    <module>h-agent</module>
-    <module>h-server</module>
-    <module>h-service</module>
+ 	<module>3ae-common</module>
+  	<module>3ae-channel</module>
+  	<module>3ae-pojo</module>
+  	<module>3ae-dao</module>
+  	<module>3ae-api</module>
+  	<module>3ae-web</module>
+    <module>3ae-user</module>
+    <module>3ae-portal</module>
+    <module>3ae-answer</module>
+    <module>3ae-agent</module>
+    <module>3ae-server</module>
+    <module>3ae-service</module>
   </modules>
   
   
@@ -66,12 +67,73 @@
   	</plugins>
 	
 
- 	<finalName>h-parent</finalName>
+ 	<finalName>3ae-parent</finalName>
 
   </build>
 
   <dependencyManagement>  
-    <dependencies>  
+    <dependencies>
+        <dependency>
+	        <groupId>com.rs.3ae</groupId>
+	        <artifactId>3ae-agent</artifactId>
+	        <version>1.0.0</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.rs.3ae</groupId>
+	        <artifactId>3ae-answer</artifactId>
+	        <version>1.0.0</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.rs.3ae</groupId>
+	        <artifactId>3ae-api</artifactId>
+	        <version>1.0.0</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.rs.3ae</groupId>
+	        <artifactId>3ae-channel</artifactId>
+	        <version>1.0.0</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.rs.3ae</groupId>
+	        <artifactId>3ae-common</artifactId>
+	        <version>1.0.0</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.rs.3ae</groupId>
+	        <artifactId>3ae-dao</artifactId>
+	        <version>1.0.0</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.rs.3ae</groupId>
+	        <artifactId>3ae-pojo</artifactId>
+	        <version>1.0.0</version>
+	    </dependency>
+	    <dependency>
+            <groupId>com.rs.3ae</groupId>
+            <artifactId>3ae-portal</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rs.3ae</groupId>
+            <artifactId>3ae-server</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rs.3ae</groupId>
+            <artifactId>3ae-service</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rs.3ae</groupId>
+            <artifactId>3ae-user</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rs.3ae</groupId>
+            <artifactId>3ae-web</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
       <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -122,6 +184,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.12</version>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
+		<dependency>
+		    <groupId>org.eclipse.persistence</groupId>
+		    <artifactId>org.eclipse.persistence.jpa</artifactId>
+		    <version>2.7.3</version>
+		</dependency>
     </dependencies>  
   </dependencyManagement>
   
