@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.rs.3ae</groupId>
     <artifactId>3ae-parent</artifactId>
-    <version>1.0.0</version>
+    <version>${ae.version}</version>
   </parent>
   <artifactId>3ae-answer</artifactId>
   <packaging>war</packaging>

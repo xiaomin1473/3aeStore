@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.rs.3ae</groupId>
   <artifactId>3ae-parent</artifactId>
-  <version>1.0.0</version>
+  <version>${ae.version}</version>
   <packaging>pom</packaging>
   <description>父工程,用于版本管理</description>
   <modules>
@@ -19,182 +19,138 @@
     <module>3ae-server</module>
     <module>3ae-service</module>
   </modules>
+   
+    <!-- 设置统一控制版本 -->
+  <properties>
+    <!-- 项目版本 -->
+    <ae.version>1.0.1</ae.version>
+    
+    <!-- 项目依赖版本 -->
+	    <!-- 日志 -->
+	    <logback.version>1.2.3</logback.version>
+	    <slf4j.version>1.7.25</slf4j.version>
+	    
+	    <netty-all.version>4.1.29.Final</netty-all.version>
+	    <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+	    <json.version>20180813</json.version>
+	    
+	    <!-- mysql -->
+	    <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
+	    
+	    <!-- JPA -->
+	    <org.eclipse.persistence.jpa.version>2.7.3</org.eclipse.persistence.jpa.version>
+    <!-- 项目依赖版本 END -->
+    
+    <!-- build依赖 -->
+        <maven-bundle-plugin.version>4.0.0</maven-bundle-plugin.version>
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+        <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
+        <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
+    <!-- build依赖 END -->
+    
+    <!-- 编码 -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   
   
+  
+  <!-- 构建 -->
   <build>
-  	<plugins>
-  		<plugin>
-  			<groupId>org.apache.felix</groupId>
-		    <artifactId>maven-bundle-plugin</artifactId>
-		    <version>4.0.0</version>
-  		</plugin>
-  		<plugin>
-   			<groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-resources-plugin</artifactId>
-		    <version>3.1.0</version>
-   		</plugin>
-   		<plugin>
-	   		<groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-surefire-plugin</artifactId>
-		    <version>2.22.0</version>
-   		</plugin>
-   		
-   		<plugin>
-		    <groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-jar-plugin</artifactId>
-		    <version>3.1.0</version>
-	    </plugin>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-clean-plugin</artifactId>
-		    <version>3.1.0</version>
-  		</plugin>
-		<plugin>
-		    <groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-jar-plugin</artifactId>
-		    <version>3.1.0</version>
-	    </plugin>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<encoding>UTF-8</encoding>
-				</configuration>
-  		</plugin>
-  	</plugins>
-	
-
- 	<finalName>3ae-parent</finalName>
-
-  </build>
-
-  <dependencyManagement>  
-    <dependencies>
-        <dependency>
-	        <groupId>com.rs.3ae</groupId>
-	        <artifactId>3ae-agent</artifactId>
-	        <version>1.0.0</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.rs.3ae</groupId>
-	        <artifactId>3ae-answer</artifactId>
-	        <version>1.0.0</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.rs.3ae</groupId>
-	        <artifactId>3ae-api</artifactId>
-	        <version>1.0.0</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.rs.3ae</groupId>
-	        <artifactId>3ae-channel</artifactId>
-	        <version>1.0.0</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.rs.3ae</groupId>
-	        <artifactId>3ae-common</artifactId>
-	        <version>1.0.0</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.rs.3ae</groupId>
-	        <artifactId>3ae-dao</artifactId>
-	        <version>1.0.0</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.rs.3ae</groupId>
-	        <artifactId>3ae-pojo</artifactId>
-	        <version>1.0.0</version>
-	    </dependency>
-	    <dependency>
-            <groupId>com.rs.3ae</groupId>
-            <artifactId>3ae-portal</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rs.3ae</groupId>
-            <artifactId>3ae-server</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rs.3ae</groupId>
-            <artifactId>3ae-service</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rs.3ae</groupId>
-            <artifactId>3ae-user</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rs.3ae</groupId>
-            <artifactId>3ae-web</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>maven-bundle-plugin</artifactId>
+            <version>${maven-bundle-plugin.version}</version>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>${maven-resources-plugin.version}</version>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${maven-surefire-plugin.version}</version>
+        </plugin>
         
-      <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>${maven-jar-plugin.version}</version>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>${maven-clean-plugin.version}</version>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+        </plugin>
+    </plugins>
+    
+    <finalName>3ae-parent</finalName>
+  </build>
+   
+  <!-- 依赖 -->
+  <dependencyManagement>
+    <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
+            <version>${logback.version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>1.2.3</version>
+            <version>${logback.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.25</version>
+            <version>${slf4j.version}</version>
         </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 	    <dependency>
 	        <groupId>io.netty</groupId>
 	        <artifactId>netty-all</artifactId>
-	        <version>4.1.29.Final</version>
+	        <version>${netty-all.version}</version>
 	    </dependency>
-	    
-	    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 	    <dependency>
 	        <groupId>javax.servlet</groupId>
 	        <artifactId>javax.servlet-api</artifactId>
-	        <version>4.0.1</version>
+	        <version>${javax.servlet-api.version}</version>
 	        <scope>provided</scope>    
 	    </dependency>
-	    
-	    <!-- https://mvnrepository.com/artifact/org.json/json -->
 	    <dependency>
 	        <groupId>org.json</groupId>
 	        <artifactId>json</artifactId>
-	        <version>20180813</version>
+	        <version>${json.version}</version>
 	    </dependency>
-	    
-	    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.12</version>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
-		<dependency>
+        <dependency>
 		    <groupId>org.eclipse.persistence</groupId>
 		    <artifactId>org.eclipse.persistence.jpa</artifactId>
-		    <version>2.7.3</version>
+		    <version>${org.eclipse.persistence.jpa.version}</version>
 		</dependency>
     </dependencies>  
   </dependencyManagement>
-  
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+
 </project>

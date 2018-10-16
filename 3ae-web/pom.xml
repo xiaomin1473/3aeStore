@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.rs.3ae</groupId>
     <artifactId>3ae-parent</artifactId>
-    <version>1.0.0</version>
+    <version>${ae.version}</version>
   </parent>
   <artifactId>3ae-web</artifactId>
   <packaging>war</packaging>
@@ -22,6 +22,7 @@
 	<dependency>
         <groupId>com.rs.3ae</groupId>
         <artifactId>3ae-service</artifactId>
+        <version>${ae.version}</version>
     </dependency>
   </dependencies>
 </project>
