@@ -18,6 +18,7 @@
     <module>3ae-agent</module>
     <module>3ae-server</module>
     <module>3ae-service</module>
+    <module>3ae-job</module>
   </modules>
    
     <!-- 设置统一控制版本 -->
@@ -31,8 +32,9 @@
 	    <slf4j.version>1.7.25</slf4j.version>
 	    
 	    <netty-all.version>4.1.29.Final</netty-all.version>
-	    <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+	    <tomcat.version>8.5.34</tomcat.version>
 	    <json.version>20180813</json.version>
+	    <quartz.version>2.3.0</quartz.version>
 	    
 	    <!-- mysql -->
 	    <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
@@ -101,7 +103,7 @@
     <finalName>3ae-parent</finalName>
   </build>
    
-  <!-- 依赖 -->
+  <!-- 设置统一依赖管理、不强行依赖 -->
   <dependencyManagement>
     <dependencies>
         <dependency>
@@ -130,16 +132,25 @@
 	        <version>${netty-all.version}</version>
 	    </dependency>
 	    <dependency>
-	        <groupId>javax.servlet</groupId>
-	        <artifactId>javax.servlet-api</artifactId>
-	        <version>${javax.servlet-api.version}</version>
-	        <scope>provided</scope>    
-	    </dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-servlet-api</artifactId>
+		    <version>${tomcat.version}</version>
+		</dependency>
 	    <dependency>
 	        <groupId>org.json</groupId>
 	        <artifactId>json</artifactId>
 	        <version>${json.version}</version>
 	    </dependency>
+	    <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz-jobs</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

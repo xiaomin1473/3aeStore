@@ -21,4 +21,10 @@ public class errorFilter implements Filter {
 	public void init(FilterConfig arg0) {
 		
 	}
+
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
 }

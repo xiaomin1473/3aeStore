@@ -5,20 +5,19 @@
     <artifactId>3ae-parent</artifactId>
     <version>${ae.version}</version>
   </parent>
-  <artifactId>3ae-web</artifactId>
-  <packaging>war</packaging>
-  
-  <build>
-  	  	<finalName>3ae-web</finalName>
-  </build>
+  <artifactId>3ae-job</artifactId>
+  <description>定时任务</description>
   
   <dependencies>
-  	<dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-servlet-api</artifactId>
+    <dependency>
+        <groupId>org.quartz-scheduler</groupId>
+        <artifactId>quartz</artifactId>
     </dependency>
-	
-	<dependency>
+    <dependency>
+        <groupId>org.quartz-scheduler</groupId>
+        <artifactId>quartz-jobs</artifactId>
+    </dependency>
+    <dependency>
         <groupId>com.rs.3ae</groupId>
         <artifactId>3ae-service</artifactId>
         <version>${ae.version}</version>
