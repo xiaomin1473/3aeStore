@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
-
 public class login extends HttpServlet {
 	/**
 	 * 
