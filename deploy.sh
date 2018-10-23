@@ -54,19 +54,19 @@ rm -rf $TOMCAT_APP_PATH/app/api/api.war
 
 rm -rf $TOMCAT_APP_PATH/app/test/custom/portal.war
 rm -rf $TOMCAT_APP_PATH/app/test/custom/user.war
-rm -rf $TOMCAT_APP_PATH/app/test/admin.war
+rm -rf $TOMCAT_APP_PATH/app/test/admin/admin.war
 
 rm -rf $TOMCAT_APP_PATH/app/main/custom/portal.war
 rm -rf $TOMCAT_APP_PATH/app/main/custom/user.war
-rm -rf $TOMCAT_APP_PATH/app/main/admin.war
+rm -rf $TOMCAT_APP_PATH/app/main/admin/admin.war
 
 
 # 复制新的工程
-cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/main/admin.war
+cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/main/admin/admin.war
 cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/main/custom/user.war
 cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/main/custom/portal.war
 
-cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/test/admin.war
+cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/test/admin/admin.war
 cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/test/custom/user.war
 cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/test/custom/portal.war
 
