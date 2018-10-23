@@ -48,29 +48,32 @@ killNetty
 
 
 # 删除原有工程
-rm -rf $TOMCAT_APP_PATH/ROOT
-rm -rf $TOMCAT_APP_PATH/ROOT.war
-rm -rf $TOMCAT_APP_PATH/web.war
-rm -rf $TOMCAT_APP_PATH/user.war
-rm -rf $TOMCAT_APP_PATH/portal.war
-# rm -rf $NETTY_APP_PATH/server.jar
+rm -rf $TOMCAT_APP_PATH/app/agent/agent.war
+rm -rf $TOMCAT_APP_PATH/app/answer/answer.war
+rm -rf $TOMCAT_APP_PATH/app/api/api.war
 
-# 删除原有新增工程
-rm -rf $TOMCAT_APP_PATH/api.war
-rm -rf $TOMCAT_APP_PATH/answer.war
+rm -rf $TOMCAT_APP_PATH/app/test/custom/portal.war
+rm -rf $TOMCAT_APP_PATH/app/test/custom/user.war
+rm -rf $TOMCAT_APP_PATH/app/test/admin.war
+
+rm -rf $TOMCAT_APP_PATH/app/main/custom/portal.war
+rm -rf $TOMCAT_APP_PATH/app/main/custom/user.war
+rm -rf $TOMCAT_APP_PATH/app/main/admin.war
+
 
 # 复制新的工程
-cp $PROJ_PATH/3ae-parent/3ae-web/target/3ae-web.war $TOMCAT_APP_PATH/web.war
-cp $PROJ_PATH/3ae-parent/3ae-web/target/3ae-web.war $TOMCAT_APP_PATH/web1.war
-cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/user.war
-cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/portal.war
-cp $PROJ_PATH/3ae-parent/3ae-api/target/3ae-api.war $TOMCAT_APP_PATH/api.war
-cp $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer.war $TOMCAT_APP_PATH/answer.war
-cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $NETTY_APP_PATH/agent/agent.jar
-# cp $PROJ_PATH/3ae-parent/3ae-server/target/3ae-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
+cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/main/admin.war
+cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/main/custom/user.war
+cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/main/custom/portal.war
 
-cd $TOMCAT_APP_PATH/
-mv web1.war ROOT.war
+cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/test/admin.war
+cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/test/custom/user.war
+cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/test/custom/portal.war
+
+cp $PROJ_PATH/3ae-parent/3ae-api/target/3ae-api.war $TOMCAT_APP_PATH/app/api/api.war
+cp $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer.war $TOMCAT_APP_PATH/app/answer/answer.war
+cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $NETTY_APP_PATH/app/agent/agent.war
+# cp $PROJ_PATH/3ae-parent/3ae-server/target/3ae-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
 
 # 启动Tomcat
 cd /opt/apache-tomcat-8.5.33

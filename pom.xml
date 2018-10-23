@@ -11,9 +11,9 @@
   	<module>3ae-pojo</module>
   	<module>3ae-dao</module>
   	<module>3ae-api</module>
-  	<module>3ae-web</module>
+  	<module>3ae-portal</module>
     <module>3ae-user</module>
-    <module>3ae-portal</module>
+    <module>3ae-admin</module>
     <module>3ae-answer</module>
     <module>3ae-agent</module>
     <module>3ae-server</module>

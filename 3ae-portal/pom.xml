@@ -8,14 +8,20 @@
   <artifactId>3ae-portal</artifactId>
   <packaging>war</packaging>
   
-      <build>
+  <build>
   	  	<finalName>3ae-portal</finalName>
   </build>
   
   <dependencies>
-	<dependency>
+  	<dependency>
         <groupId>org.apache.tomcat</groupId>
         <artifactId>tomcat-servlet-api</artifactId>
+    </dependency>
+	
+	<dependency>
+        <groupId>com.rs.3ae</groupId>
+        <artifactId>3ae-service</artifactId>
+        <version>${ae.version}</version>
     </dependency>
   </dependencies>
 </project>

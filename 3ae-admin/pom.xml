@@ -5,23 +5,17 @@
     <artifactId>3ae-parent</artifactId>
     <version>${ae.version}</version>
   </parent>
-  <artifactId>3ae-web</artifactId>
+  <artifactId>3ae-admin</artifactId>
   <packaging>war</packaging>
   
-  <build>
-  	  	<finalName>3ae-web</finalName>
+      <build>
+  	  	<finalName>3ae-admin</finalName>
   </build>
   
   <dependencies>
-  	<dependency>
+	<dependency>
         <groupId>org.apache.tomcat</groupId>
         <artifactId>tomcat-servlet-api</artifactId>
-    </dependency>
-	
-	<dependency>
-        <groupId>com.rs.3ae</groupId>
-        <artifactId>3ae-service</artifactId>
-        <version>${ae.version}</version>
     </dependency>
   </dependencies>
 </project>
