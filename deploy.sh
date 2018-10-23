@@ -51,14 +51,23 @@ killNetty
 rm -rf $TOMCAT_APP_PATH/app/agent/agent.war
 rm -rf $TOMCAT_APP_PATH/app/answer/answer.war
 rm -rf $TOMCAT_APP_PATH/app/api/api.war
+rm -rf $TOMCAT_APP_PATH/app/agent/agent
+rm -rf $TOMCAT_APP_PATH/app/answer/answer
+rm -rf $TOMCAT_APP_PATH/app/api/api
 
 rm -rf $TOMCAT_APP_PATH/app/test/custom/portal.war
 rm -rf $TOMCAT_APP_PATH/app/test/custom/user.war
 rm -rf $TOMCAT_APP_PATH/app/test/admin/admin.war
+rm -rf $TOMCAT_APP_PATH/app/test/custom/portal
+rm -rf $TOMCAT_APP_PATH/app/test/custom/user
+rm -rf $TOMCAT_APP_PATH/app/test/admin/admin
 
 rm -rf $TOMCAT_APP_PATH/app/main/custom/portal.war
 rm -rf $TOMCAT_APP_PATH/app/main/custom/user.war
 rm -rf $TOMCAT_APP_PATH/app/main/admin/admin.war
+rm -rf $TOMCAT_APP_PATH/app/main/custom/portal
+rm -rf $TOMCAT_APP_PATH/app/main/custom/user
+rm -rf $TOMCAT_APP_PATH/app/main/admin/admin
 
 
 # 复制新的工程
@@ -66,12 +75,23 @@ cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/mai
 cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/main/custom/user.war
 cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/main/custom/portal.war
 
+cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin $TOMCAT_APP_PATH/app/main/admin/admin
+cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user $TOMCAT_APP_PATH/app/main/custom/user
+cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/app/main/custom/portal
+
 cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/test/admin/admin.war
 cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/test/custom/user.war
 cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/test/custom/portal.war
 
+cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin $TOMCAT_APP_PATH/app/test/admin/admin
+cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user $TOMCAT_APP_PATH/app/test/custom/user
+cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/app/test/custom/portal
+
 cp $PROJ_PATH/3ae-parent/3ae-api/target/3ae-api.war $TOMCAT_APP_PATH/app/api/api.war
 cp $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer.war $TOMCAT_APP_PATH/app/answer/answer.war
+
+cp $PROJ_PATH/3ae-parent/3ae-api/target/3ae-api $TOMCAT_APP_PATH/app/api/api
+cp $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer $TOMCAT_APP_PATH/app/answer/answer
 cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $NETTY_APP_PATH/www/app/agent/agent.war
 # cp $PROJ_PATH/3ae-parent/3ae-server/target/3ae-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
 
