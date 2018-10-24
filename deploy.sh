@@ -69,7 +69,7 @@ rm -rf $TOMCAT_APP_PATH/app/main/custom/portal
 rm -rf $TOMCAT_APP_PATH/app/main/custom/user
 rm -rf $TOMCAT_APP_PATH/app/main/admin/admin
 
-
+##
 # 复制新的工程
 cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/main/admin/admin.war
 cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/main/custom/user.war
