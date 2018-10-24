@@ -54,6 +54,7 @@ rm -rf $TOMCAT_APP_PATH/app/api/api.war
 rm -rf $TOMCAT_APP_PATH/app/agent/agent
 rm -rf $TOMCAT_APP_PATH/app/answer/answer
 rm -rf $TOMCAT_APP_PATH/app/api/api
+rm -rf $TOMCAT_APP_PATH/app/ROOT
 
 rm -rf $TOMCAT_APP_PATH/app/test/custom/portal.war
 rm -rf $TOMCAT_APP_PATH/app/test/custom/user.war
