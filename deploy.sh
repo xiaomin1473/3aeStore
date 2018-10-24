@@ -56,37 +56,37 @@ rm -rf $TOMCAT_APP_PATH/app/answer/answer
 rm -rf $TOMCAT_APP_PATH/app/api/api
 rm -rf $TOMCAT_APP_PATH/app/ROOT
 
-rm -rf $TOMCAT_APP_PATH/app/test/custom/portal.war
-rm -rf $TOMCAT_APP_PATH/app/test/custom/user.war
+rm -rf $TOMCAT_APP_PATH/app/test/custom/portal/ROOT.war
+rm -rf $TOMCAT_APP_PATH/app/test/custom/user/ROOT.war
 rm -rf $TOMCAT_APP_PATH/app/test/admin/admin.war
-rm -rf $TOMCAT_APP_PATH/app/test/custom/portal
-rm -rf $TOMCAT_APP_PATH/app/test/custom/user
+rm -rf $TOMCAT_APP_PATH/app/test/custom/portal/ROOT
+rm -rf $TOMCAT_APP_PATH/app/test/custom/user/ROOT
 rm -rf $TOMCAT_APP_PATH/app/test/admin/admin
 
-rm -rf $TOMCAT_APP_PATH/app/main/custom/portal.war
-rm -rf $TOMCAT_APP_PATH/app/main/custom/user.war
+rm -rf $TOMCAT_APP_PATH/app/main/custom/portal/ROOT.war
+rm -rf $TOMCAT_APP_PATH/app/main/custom/user/ROOT.war
 rm -rf $TOMCAT_APP_PATH/app/main/admin/admin.war
-rm -rf $TOMCAT_APP_PATH/app/main/custom/portal
-rm -rf $TOMCAT_APP_PATH/app/main/custom/user
+rm -rf $TOMCAT_APP_PATH/app/main/custom/portal/ROOT
+rm -rf $TOMCAT_APP_PATH/app/main/custom/user/ROOT
 rm -rf $TOMCAT_APP_PATH/app/main/admin/admin
 
 
 # 复制新的工程
 cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/main/admin/admin.war
-cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATHapp/main/custom/user/ROOT.war
-cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATHapp/main/custom/portal/ROOT.war
+cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/main/custom/user/ROOT.war
+cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/main/custom/portal/ROOT.war
 
 cp -r $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin $TOMCAT_APP_PATH/app/main/admin/admin
-cp -r $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user $TOMCAT_APP_PATHapp/main/custom/user/ROOT
-cp -r $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal $TOMCAT_APP_PATHapp/main/custom/portal/ROOT
+cp -r $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user $TOMCAT_APP_PATH/app/main/custom/user/ROOT
+cp -r $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/app/main/custom/portal/ROOT
 
 cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/test/admin/admin.war
-cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATHapp/test/custom/user/ROOT.war
-cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATHapp/test/custom/portal/ROOT.war
+cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/test/custom/user/ROOT.war
+cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/test/custom/portal/ROOT.war
 
 cp -r $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin $TOMCAT_APP_PATH/app/test/admin/admin
-cp -r $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user $TOMCAT_APP_PATHapp/test/custom/user/ROOT
-cp -r $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/apptest/custom/portal/ROOT
+cp -r $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user $TOMCAT_APP_PATH/app/test/custom/user/ROOT
+cp -r $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/app/test/custom/portal/ROOT
 
 cp $PROJ_PATH/3ae-parent/3ae-api/target/3ae-api.war $TOMCAT_APP_PATH/app/api/api.war
 cp $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer.war $TOMCAT_APP_PATH/app/answer/answer.war
