@@ -96,5 +96,7 @@ cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $N
 # cp $PROJ_PATH/3ae-parent/3ae-server/target/3ae-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
 
 
+
+
 # 启动Tomcat
 sh /opt/apache-tomcat-8.5.33/bin/startup.sh
