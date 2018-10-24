@@ -20,6 +20,9 @@
     <module>3ae-service</module>
     <module>3ae-job</module>
   </modules>
+  
+  
+  
    
     <!-- 设置统一控制版本 -->
   <properties>
