@@ -94,6 +94,8 @@ h6 { font-size: 12px; font-weight: bold;}
 
 p { font-size: 10px; }
 
+img { -webkit-user-drag: none; }
+
 .clearfix {
     clear:both;
 }
