@@ -45,7 +45,7 @@
   </filter>
   <filter-mapping>
     <filter-name>errorFilter</filter-name>
-    <url-pattern>/error.html</url-pattern>
+    <url-pattern>/views/error404.html</url-pattern>
     <dispatcher>ERROR</dispatcher>
   </filter-mapping>
 </web-app>

@@ -27,7 +27,7 @@ public class loginFilter implements Filter {
 			chain.doFilter(req, res);
 		}
 		else {
-			res.sendRedirect("/login.jsp");
+			res.sendRedirect("/views/login.jsp");
 		}
 		
 //		chain.doFilter(req, res);

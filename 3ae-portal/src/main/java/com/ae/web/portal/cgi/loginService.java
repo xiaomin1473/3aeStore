@@ -35,11 +35,11 @@ public class loginService extends HttpServlet {
 			session.setAttribute("userName", name);
 			// 304重定向
 			// response.sendRedirect("success.jsp");
-			request.getRequestDispatcher("/success.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/success.jsp").forward(request, response);
 		}
 		else {
 			// response.sendRedirect("fails.jsp");
-			request.getRequestDispatcher("/fails.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/fails.jsp").forward(request, response);
 		}
 		
 	}

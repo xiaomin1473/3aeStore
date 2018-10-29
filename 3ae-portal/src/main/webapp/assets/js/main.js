@@ -1,6 +1,7 @@
-(function(){
+(function () {
     "use strict";
 
+    
     (function(){
         var navItems = $(".topbar-wrapper").children("li");
         navItems.hover(function(){
@@ -13,11 +14,7 @@
     })();
 
     (function(){
-        var contentItem = $('#brief').children();
-        if(0 == contentItem.length) {
-            console.log("节点不存在");
-            return;
-        }
+        var contentItem = $('.content').children();
         console.log(contentItem);
         var i = 0;
         var interText = setInterval(function() {
@@ -43,6 +40,6 @@
                     status = false;
                 }
             })
-        })
+        })()
     })()
 })()
