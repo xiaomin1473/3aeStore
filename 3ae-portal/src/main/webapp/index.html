@@ -47,23 +47,23 @@
                         <li class="cur"><a href="/">
                             首页<br>
                             <i>home</i></a></li>
-                        <li class><a href="/search">
+                        <li class><a class="search" href="javascript:">
                             搜索<br>
                             <i>searh</i></a></li>
-                        <li class><a href="/article">
+                        <li class><a class="article" href="javascript:">
                             文章<br>
                             <i>article</i></a></li>
-                        <li class><a href="/arch">
+                        <li class><a class="arch" href="javascript:">
                             归档<br>
                             <i>arch</i></a></li>
                         
-                        <li class><a href="/user/">
+                        <li class><a class="about" href="/resume.html">
                             关于<br>
                             <i>about</i></a></li>
                         <li class><a href="http://book.3ae.store">
                             手册<br>
                             <i>books</i></a></li>
-                        <li class><a href="/login.jsp">
+                        <li class><a href="/user">
                             管理<br>
                             <i>admin</i></a></li>
                     </ul>
@@ -78,9 +78,9 @@
                 </div> -->
 
                 <!-- 侧边栏 -->
-                <div class="sider">
-                    <a href="/cancel">注销</a>
-                </div>
+                <!-- <div class="sider">
+                    <a href="/vicancel">注销</a>
+                </div> -->
                 
                 <!-- 右边内容 -->
                 <div class="container trip-mind">
@@ -134,8 +134,21 @@
 
     <script src="common/js/jquery-1.12.2.min.js"></script>
     <script>
-        /* $("#app").load("./views/default.html", function(responseTxt, statusTxt, xhr) {
-		//alert(responseTxt);
-	    }); */
+        $(".search").click(function() {
+            $("#app").load("./views/search.html", function(responseTxt, statusTxt, xhr) {
+                //alert(responseTxt);
+            });
+        })
+        $(".article").click(function() {
+            $("#app").load("./views/article.html", function(responseTxt, statusTxt, xhr) {
+                //alert(responseTxt);
+            });
+        })
+        $(".arch").click(function() {
+            $("#app").load("./views/arch.html", function(responseTxt, statusTxt, xhr) {
+                //alert(responseTxt);
+            });
+        })
+        
     </script>
     <script src="assets/js/main.js"></script>
