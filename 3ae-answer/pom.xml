@@ -24,6 +24,11 @@
         <artifactId>tomcat-servlet-api</artifactId>
     </dependency>
     
+    <dependency>
+	    <groupId>com.thetransactioncompany</groupId>
+	    <artifactId>cors-filter</artifactId>
+	</dependency>
+    
     <!-- https://mvnrepository.com/artifact/org.json/json -->
     <dependency>
         <groupId>org.json</groupId>
