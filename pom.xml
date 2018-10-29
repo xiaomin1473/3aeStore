@@ -38,6 +38,7 @@
 	    <tomcat.version>8.5.34</tomcat.version>
 	    <json.version>20180813</json.version>
 	    <quartz.version>2.3.0</quartz.version>
+	    <cors-filter.version>2.6</cors-filter.version>
 	    
 	    <!-- mysql -->
 	    <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
@@ -111,6 +112,11 @@
   <!-- 设置统一依赖管理、不强行依赖 -->
   <dependencyManagement>
     <dependencies>
+    	<dependency>
+		    <groupId>com.thetransactioncompany</groupId>
+		    <artifactId>cors-filter</artifactId>
+		    <version>${cors-filter.version}</version>
+		</dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
