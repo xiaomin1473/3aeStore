@@ -1,175 +1,100 @@
 <!DOCTYPE html>
-<html  lang="en">
+    <!--[if lt IE 7 ]><html class="ie ie6"><![endif]-->
+    <!--[if IE 7 ]><html class="ie ie7"><![endif]-->
+    <!--[if IE 8 ]><html class="ie ie8"><![endif]-->
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--><html class="standard"><!--<![endif]-->
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+        <meta name="applicable-device" content="pc">
+        <meta name="mobile-agent" content="format=html5;url=https://m.3ae.store">
         
-
-        <!-- 删除默认的苹果工具栏和菜单栏 -->
-        <meta name="apple-mobile-web-app-capable" content="no">
-
-        <!-- 导航条颜色 -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-        <!-- 导航按钮颜色 -->
-        <meta name="msapplication-navbutton-color" content="#666666">
-
-        <!-- 添加到主屏界面的显示标题 -->
-        <meta name="apple-mobile-web-app-title" content="3ae.store">
-
-        <!-- 忽略自动识别数字为电话号码 -->
-        <meta content="telephone=no" name="format-detection" />
-
-        <!-- 忽略自动识别邮箱账号 -->
-        <meta content="email=no" name="format-detection" />
-
-        <!-- 隐藏状态栏/设置状态栏颜色 -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-        <!-- uc强制竖屏 -->
-        <meta name="screen-orientation" content="portrait">
-        <!-- UC强制全屏 --> 
-        <meta name="full-screen" content="yes">
-        <!-- UC应用模式 --> 
-        <meta name="browsermode" content="application">
-
-        <!-- QQ强制竖屏 -->
-        <meta name="x5-orientation" content="portrait">
-        <!-- QQ强制全屏 -->
-        <meta name="x5-fullscreen" content="true">
-        <!-- QQ应用模式 -->
-        <meta name="x5-page-mode" content="app">
-
-        <!-- 是针对一些老的不识别viewport的浏览器，列如黑莓 -->
-        <meta name="HandheldFriendly" content="true">
-
-        <!-- 微软的老式浏览器 -->
-        <meta name="MobileOptimized" content="320">
-		
-		<title>3ae.store</title>
-		
-		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-	    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-	    <!--[if lt IE 9]>
-	      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-	    <![endif]-->
-	    
-        <link href="common/styles/reset.css" rel="stylesheet">
+        <title>3ae.store</title>
         
-       
-        <link href="common/styles/www_3ae_index.css" rel="stylesheet">
-        <link href="common/styles/ae.css" rel="stylesheet">
-        <link href="common/styles/ornate.css" rel="stylesheet">
+        <link rel="canonical" href="https://3ae.store">
+
+        <link href="assets/css/reset.css" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+
+        <link href="common/css/ae.css" rel="stylesheet">
+        <link href="common/css/ornate.css" rel="stylesheet">
 
 
-        <link href="common/styles/components/page-header.css" rel="stylesheet">
+        <link href="assets/css/components/header.css" rel="stylesheet">
         <!-- <link href="common/styles/components/scroll.css"> -->
 
-
-	    <link rel="icon" href="common/imgs/icons/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="common/imgs/icons/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/imgs/icons/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/imgs/icons/favicon.ico" type="image/x-icon">
         
 	</head>
 
 	<body>
-        <div class="web-app">
-                <div class="page-header">
-                        <div  class="page-title">
-                            <div class="title-wrapper ae-slideIn ae-do3">
-                                <a class="title" href="/">3ae.store</a><br>
-                                <span class="author">sid in nanjing</span>
-                            </div>
-                        </div>
-                        
-                        <div class="top-bar">
-                            <ul class="nav-wrapper ae-slideIn ae-do5">
-                                <li class="cur"><a href="/">
-                                    首页<br>
-                                    <i>home</i></a></li>
-                                <li class><a href="/">
-                                    搜索<br>
-                                    <i>searh</i></a></li>
-                                <li class><a href="/">
-                                    文章<br>
-                                    <i>article</i></a></li>
-                                <li class><a href="/">
-                                    归档<br>
-                                    <i>arch</i></a></li>
-                                <li class><a href="/login.jsp">
-                                    标签<br>
-                                    <i>tags</i></a></li>
-                                <li class><a href="/h-user/">
-                                    关于<br>
-                                    <i>about</i></a></li>
-                                <li class><a href="http://book.3ae.store">
-                                    文档<br>
-                                    <i>books</i></a></li>
-                            </ul>
-                        </div>
-        
-                        <div class="clearfix"></div>
-                </div>
-                <div class="wrapper">
-                    <!-- <div class="sider">
-                        <a href="/login.jsp">登录</a>
-                    </div> -->
-                    <div class="sider">
-                        <a href="/cancel">注销</a>
+        <div class="app">
+            <!-- 页头 -->
+            <div class="header">
+                <div  class="logo">
+                    <div class="title-wrapper ae-slideIn ae-do3">
+                        <a class="title" href="/">3ae.store</a><br>
+                        <span class="author">sid in nanjing</span>
                     </div>
-                    <div class="container trip-mind">
-                        <h2 class="ae-riseIn ae-d2o5">一个追梦者的独白</h2>
-                        <hr class="ae-fadeIn ae-d1">
-                        <div class="content">
-                            <h5>曾经梦想仗剑走天涯</h5>
-                            <h5>曾经朝远方独行浪子</h5>
-                            <h5>曾经模仿过很多强者</h5>
-                            <h5>最后才明白，</h5>
-                            <h5>无尽的旅程，如此漫长……</h5>
-                            <h5>想过当一个writer</h5>
-                            <h5>想过当一个painter</h5>
-                            <h5>却不料成了loser</h5>
-                            <h4>最后咬咬牙，</h4>
-                            <h4>还是打算成为一个coder……</h4>
-                            <h4>因此才有了下面的故事</h4>
-                            <h3>虽然不长</h3>
-                            <h3>只因刚开始……</h3>
-                            <h3>然而很长</h3>
-                            <h3>又因无结束……</h3>
-                            <h3>茫茫人海，繁华世界</h3>
-                            <h3>再美的故事</h3>
-                            <h3>不及，此时此刻的不期而遇……</h3>
-                        </div>
+                </div>
+                <!-- 导航条 -->
+                <div class="topbar">
+                    <ul class="topbar-wrapper ae-slideIn ae-do5">
+                        <li class="cur"><a href="/">
+                            首页<br>
+                            <i>home</i></a></li>
+                        <li class><a href="/search">
+                            搜索<br>
+                            <i>searh</i></a></li>
+                        <li class><a href="/article">
+                            文章<br>
+                            <i>article</i></a></li>
+                        <li class><a href="/arch">
+                            归档<br>
+                            <i>arch</i></a></li>
+                        
+                        <li class><a href="/user/">
+                            关于<br>
+                            <i>about</i></a></li>
+                        <li class><a href="http://book.3ae.store">
+                            手册<br>
+                            <i>books</i></a></li>
+                        <li class><a href="/login.jsp">
+                            管理<br>
+                            <i>admin</i></a></li>
+                    </ul>
+                </div>
 
-                        <div class="cd ae-d9 ae-fadeIn" id="cd">
-                            <svg t="1536907306579" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1136" data-spm-anchor-id="a313x.7781069.0.i4" xmlns:xlink="http://www.w3.org/1999/xlink" width="280" height="280"><defs><style type="text/css"></style></defs><path d="M512 947.2c-243.2 0-435.2-198.4-435.2-435.2 0-243.2 198.4-435.2 435.2-435.2 243.2 0 435.2 198.4 435.2 435.2 0 243.2-192 435.2-435.2 435.2z m0-819.2c-211.2 0-384 172.8-384 384s172.8 384 384 384 384-172.8 384-384-172.8-384-384-384z" fill="#524c4c" p-id="1137"></path><path d="M512 614.4c-57.6 0-102.4-44.8-102.4-102.4 0-57.6 44.8-102.4 102.4-102.4s102.4 44.8 102.4 102.4c0 57.6-44.8 102.4-102.4 102.4z m0-147.2c-25.6 0-44.8 19.2-44.8 44.8s19.2 44.8 44.8 44.8c25.6 0 44.8-19.2 44.8-44.8s-19.2-44.8-44.8-44.8zM198.4 544c-6.4 0-12.8-6.4-12.8-12.8v-19.2c0-6.4 6.4-12.8 12.8-12.8s12.8 6.4 12.8 12.8v12.8c0 12.8-6.4 19.2-12.8 19.2zM358.4 800h-6.4c-89.6-51.2-147.2-134.4-160-230.4 0-6.4 6.4-12.8 12.8-12.8s12.8 6.4 12.8 12.8c12.8 89.6 70.4 166.4 147.2 211.2 6.4 6.4 6.4 12.8 6.4 19.2h-12.8zM339.2 691.2c-6.4 0-6.4 0-12.8-6.4-38.4-38.4-64-96-64-153.6 0-6.4 6.4-12.8 12.8-12.8s12.8 6.4 12.8 12.8c0 51.2 19.2 96 57.6 134.4 6.4 6.4 6.4 12.8 0 19.2 0 6.4-6.4 6.4-6.4 6.4zM384 723.2h-6.4c-6.4 0-6.4-6.4-12.8-6.4-6.4-6.4-6.4-12.8-6.4-19.2 6.4-6.4 12.8-6.4 19.2-6.4 6.4 0 6.4 6.4 12.8 6.4 6.4 6.4 6.4 12.8 6.4 19.2-6.4 6.4-12.8 6.4-12.8 6.4zM396.8 646.4h-6.4c-32-19.2-57.6-57.6-57.6-96 0-6.4 6.4-12.8 12.8-12.8s12.8 6.4 12.8 12.8c0 32 12.8 57.6 44.8 70.4 6.4 6.4 6.4 12.8 6.4 19.2 0 6.4-6.4 6.4-12.8 6.4zM819.2 550.4c-6.4 0-12.8-6.4-12.8-12.8 12.8-108.8-32-217.6-121.6-281.6-6.4-6.4-6.4-12.8 0-19.2 6.4-6.4 12.8-6.4 19.2 0 96 70.4 147.2 185.6 134.4 307.2-6.4 0-12.8 6.4-19.2 6.4z" fill="#524c4c" p-id="1138"></path><path d="M742.4 524.8c-6.4 0-12.8-6.4-12.8-12.8 6.4-70.4-19.2-134.4-76.8-172.8-6.4-6.4-6.4-12.8 0-19.2s12.8-6.4 19.2 0c64 44.8 96 121.6 89.6 198.4-6.4 0-12.8 6.4-19.2 6.4zM672 492.8c-6.4 0-12.8-6.4-12.8-12.8 6.4-32-6.4-57.6-32-76.8-6.4-6.4-6.4-12.8 0-19.2 6.4-6.4 12.8-6.4 19.2 0 32 25.6 51.2 64 44.8 102.4-6.4 0-12.8 6.4-19.2 6.4z" fill="#524c4c" p-id="1139"></path></svg>
-                            <audio  id="music" autoplay preload="auto" loop="loop">
-                                <source src="common/music/123.mp3"  type="audio/mpeg">
-                            </audio>
-                        </div>
-                        
-                    </div>
-    
-                    <div class="clearfix"></div>
-                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- 主体内容 -->
+            <div class="wrapper" id="app">
+                
+            </div>
         </div>
         <div class="footer">
-            <div  class="copyright ae-slideIn ae-d7o5">
+            <div  class="copyright ae-slideIn ae-do3">
                 <!-- <span>©2018 3ae <a href="#top">意见反馈</a> 晋ICP证书号 晋ICP备16009680号-3</span> -->
                 <span>©2018 3ae <a href="#top">意见反馈</a> 晋ICP证书号 备16009680号-3</span>
             </div>
         </div>
-       
 
         <!-- 下标提示 -->
         <!-- <div class="backtop dead" id="backtop">
             <i class="iconfont icon-up"></i>
             <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">21</span>%</span>
         </div> -->
-        
-		<!-- jQuery-1.12.2-->
-        <script src="common/js/jquery-1.12.2.min.js"></script>
-        <script src="common/js/main.js"></script>
 	</body>
 </html>
+
+    <script src="common/js/jquery-1.12.2.min.js"></script>
+    <script>
+        $("#app").load("./views/error404.html", function(responseTxt, statusTxt, xhr) {
+		//alert(responseTxt);
+	    });
+    </script>
+    <script src="assets/js/main.js"></script>

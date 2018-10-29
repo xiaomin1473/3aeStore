@@ -1,9 +1,8 @@
-(function () {
+(function(){
     "use strict";
 
-    
     (function(){
-        var navItems = $(".nav-wrapper").children("li");
+        var navItems = $(".topbar-wrapper").children("li");
         navItems.hover(function(){
                 this.className = "cur";
                 console.log(this);
@@ -14,7 +13,11 @@
     })();
 
     (function(){
-        var contentItem = $('.content').children();
+        var contentItem = $('#brief').children();
+        if(0 == contentItem.length) {
+            console.log("节点不存在");
+            return;
+        }
         console.log(contentItem);
         var i = 0;
         var interText = setInterval(function() {
@@ -24,9 +27,7 @@
                 clearInterval(interText);
             }
         }, 100);
-    })();
-    
-    (function () {
+
         var bgMusic = document.getElementById("music");
         var status = false;
 
@@ -42,6 +43,6 @@
                     status = false;
                 }
             })
-        })();
-    })();
-})();
+        })
+    })()
+})()

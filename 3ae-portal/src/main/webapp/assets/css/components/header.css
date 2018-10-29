@@ -1,33 +1,39 @@
-.page-header {
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
     height: 80px;
+    background-color: #fff;
 }
 
-.page-title {
+.logo {
     float: left;
     display: table;
     width: 40%;
     height: 72px;
 }
 
-.page-title .title-wrapper {
+.title-wrapper {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
 
-.page-title .title-wrapper .title {
+.title-wrapper .title {
     margin-top: 8px;
     font-size: 40px;
     color: #666;
     font-family: 'LedFont', cursive, 'Microsoft YaHei', sans-serif;
 }
 
-.page-title .title-wrapper .author {
+.title-wrapper .author {
     margin-top: 8px;
     font-size: 12px;
 }
 
-.top-bar {
+.topbar {
     float: right;
     display: table;
     width: 60%;
@@ -35,13 +41,13 @@
     height: 72px;
 }
 
-.top-bar .nav-wrapper {
+.topbar-wrapper {
     text-align: center;
     display: table-cell;
     vertical-align: middle;
 }
 
-.top-bar .nav-wrapper li{
+.topbar-wrapper li{
     display: inline-block;
     text-align: center;
     width: 48px;
@@ -49,39 +55,42 @@
     margin-left: 10px;
 }
 
-.top-bar .nav-wrapper li a {
+.topbar-wrapper li a {
     font-size: 16px;
     color: #666;
     font-family: 'Optima', 'PingFang SC', 'Roboto', 'Noto SansCJK', 'Helvetica Neue', 'Helvetica', "微软雅黑", "YaHei-Consolas-Hybrid", sans-serif;
 }
 
-.top-bar .nav-wrapper li i {
+.topbar-wrapper li i {
     font-size: 12px;
     color: #666;
 }
 
-.top-bar .nav-wrapper .cur a {
+.topbar-wrapper .cur a {
     color: #000;
 }
 
-.top-bar .nav-wrapper .cur i {
+.topbar-wrapper .cur i {
     font-size: 13px;
     font-weight: bold;
     color: rgb(126, 121, 121);
 }
 
 @media screen and (max-width:900px) {
-    .page-title {
+    .header {
+        height: 144px;
+    }
+    .logo {
         float: none;
         margin: 0 auto;
     }
-    .top-bar {
+    .topbar {
         float: none;
         min-width: 320px;
         margin: 0 auto;
     }
 
-    .top-bar .nav-wrapper li{
+    .topbar-wrapper li{
         width: 38px;
         margin-right: 0px;
         margin-left: 0px;
