@@ -1,4 +1,4 @@
-package com.ae.job;
+package com.ae.job.quartz;
 
 public class HelloQuartz {
 	public static void main(String[] args) {

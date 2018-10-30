@@ -1,4 +1,4 @@
-package com.ae.job;
+package com.ae.job.quartz;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,13 +20,13 @@ public class HelloScheduler {
 		JobDetail jobDetail = JobBuilder.newJob(HelloJob.class)
 								.withIdentity("myJob", "group")
 								.build();
-		
+
 		// 输出JobDetails
 		System.out.println("jobDetail's name: " + jobDetail.getKey().getName());
 		System.out.println("jobDetail's group: " + jobDetail.getKey().getGroup());
 		System.out.println("jobDetail's jobClass" + jobDetail.getJobClass().getName());
 		
-		
+
 		// 创建一个trigger实例，定义该job立即执行，并且每隔两秒钟重复一次，直到永远
 		Trigger trigger = TriggerBuilder
 							.newTrigger()

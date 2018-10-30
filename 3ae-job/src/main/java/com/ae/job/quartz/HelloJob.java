@@ -1,4 +1,4 @@
-package com.ae.job;
+package com.ae.job.quartz;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
