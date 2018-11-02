@@ -134,7 +134,12 @@ hr {
 
 @font-face{
     font-family: 'LedFont';
-    src : url('../font/lcd.ttf');
+    src: url('../font/lcd/lcd.woff') format('woff'),
+         url('../font/lcd/lcd.ttf') format('truetype'),
+         url('../font/lcd/lcd.eot') format('embedded-opentype'),
+         url('../font/lcd/lcd.svg#Sri-TSCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {

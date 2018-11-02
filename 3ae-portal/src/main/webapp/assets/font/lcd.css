@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'lcd';
+    src: url('fonts/lcd.eot');
+    src: url('fonts/lcd.eot') format('embedded-opentype'),
+         url('fonts/lcd.woff2') format('woff2'),
+         url('fonts/lcd.woff') format('woff'),
+         url('fonts/lcd.ttf') format('truetype'),
+         url('fonts/lcd.svg#lcd') format('svg');
+}

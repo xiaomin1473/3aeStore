@@ -23,6 +23,14 @@
     <servlet-name>cancels</servlet-name>
     <url-pattern>/cancel</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>testIe</servlet-name>
+    <servlet-class>com.ae.web.portal.cgi.TestIE</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>testIe</servlet-name>
+    <url-pattern>/api/testIe</url-pattern>
+  </servlet-mapping>
   <error-page>
     <error-code>404</error-code>
     <location>/views/error404.html</location>
