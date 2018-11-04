@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.google.gson.JsonParser;
+
 
 public class login extends HttpServlet {
 	/**
@@ -21,7 +21,7 @@ public class login extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("处理GET请求…………");
-		JSONObject object = new JSONObject();
+		JsonParser object = new JsonParser();
 		Object nullObj = null;
 	    try {
 	        object.put("name", "login get");

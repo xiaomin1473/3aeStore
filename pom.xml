@@ -36,7 +36,6 @@
 	    
 	    <netty-all.version>4.1.29.Final</netty-all.version>
 	    <tomcat.version>8.5.34</tomcat.version>
-	    <json.version>20180813</json.version>
 	    <quartz.version>2.3.0</quartz.version>
 	    <cors-filter.version>2.6</cors-filter.version>
 	    <svnkit.version>1.9.3</svnkit.version>
@@ -159,11 +158,6 @@
 		    <artifactId>tomcat-servlet-api</artifactId>
 		    <version>${tomcat.version}</version>
 		</dependency>
-	    <dependency>
-	        <groupId>org.json</groupId>
-	        <artifactId>json</artifactId>
-	        <version>${json.version}</version>
-	    </dependency>
 	    <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
