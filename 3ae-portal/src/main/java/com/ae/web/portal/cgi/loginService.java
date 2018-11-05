@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.ae.web.blog.userCtrl.Login;
+import com.ae.service.blog.userCtrl.Login;
 
 public class loginService extends HttpServlet {
 	

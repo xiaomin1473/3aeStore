@@ -43,6 +43,7 @@
 	    
 	    <!-- mysql -->
 	    <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
+	    <mybatis.version>3.4.6</mybatis.version>
 	    
 	    <!-- JPA -->
 	    <org.eclipse.persistence.jpa.version>2.7.3</org.eclipse.persistence.jpa.version>
@@ -113,6 +114,12 @@
   <!-- 设置统一依赖管理、不强行依赖 -->
   <dependencyManagement>
     <dependencies>
+    	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>${mybatis.version}</version>
+		</dependency>
     	<dependency>
 		    <groupId>com.google.code.gson</groupId>
 		    <artifactId>gson</artifactId>
