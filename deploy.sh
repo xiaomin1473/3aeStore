@@ -70,7 +70,7 @@ rm -rf $TOMCAT_APP_PATH/app/main/custom/portal/ROOT
 rm -rf $TOMCAT_APP_PATH/app/main/custom/user/ROOT
 rm -rf $TOMCAT_APP_PATH/app/main/admin/admin
 
-
+##
 # 复制新的工程
 cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/main/admin/admin.war
 cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/main/custom/user/ROOT.war
@@ -96,6 +96,8 @@ cp -r $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer $TOMCAT_APP_PATH/app/an
 cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $NETTY_APP_PATH/www/app/agent/agent.war
 # cp $PROJ_PATH/3ae-parent/3ae-server/target/3ae-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
 
+
 # 启动Tomcat
-cd /opt/apache-tomcat-8.5.33
-sh bin/startup.sh
+sh /opt/apache-tomcat-8.5.33/bin/startup.sh
+
+echo "this is lastest version"

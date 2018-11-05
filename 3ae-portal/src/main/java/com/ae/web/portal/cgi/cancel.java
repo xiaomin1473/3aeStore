@@ -21,6 +21,6 @@ public class cancel extends HttpServlet {
 		HttpSession session = req.getSession();
 		
 		session.removeAttribute("userName");
-		res.sendRedirect("/cancel.html");
+		res.sendRedirect("/views/cancel.html");
 	}
 }

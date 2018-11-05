@@ -18,6 +18,14 @@
         <artifactId>quartz-jobs</artifactId>
     </dependency>
     <dependency>
+	    <groupId>org.tmatesoft.svnkit</groupId>
+	    <artifactId>svnkit</artifactId>
+	</dependency>
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	</dependency>
+	<dependency>
         <groupId>com.rs.3ae</groupId>
         <artifactId>3ae-service</artifactId>
         <version>${ae.version}</version>

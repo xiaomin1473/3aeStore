@@ -6,7 +6,7 @@
   <packaging>pom</packaging>
   <description>父工程,用于版本管理</description>
   <modules>
- 	<module>3ae-common</module>
+ 	<module>3ae-common</module>  
   	<module>3ae-channel</module>
   	<module>3ae-pojo</module>
   	<module>3ae-dao</module>
@@ -20,6 +20,9 @@
     <module>3ae-service</module>
     <module>3ae-job</module>
   </modules>
+  
+  
+  
    
     <!-- 设置统一控制版本 -->
   <properties>
@@ -33,15 +36,20 @@
 	    
 	    <netty-all.version>4.1.29.Final</netty-all.version>
 	    <tomcat.version>8.5.34</tomcat.version>
-	    <json.version>20180813</json.version>
 	    <quartz.version>2.3.0</quartz.version>
+	    <cors-filter.version>2.6</cors-filter.version>
+	    <svnkit.version>1.9.3</svnkit.version>
+	    <gson.version>2.8.5</gson.version>
 	    
 	    <!-- mysql -->
 	    <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
+	    <mybatis.version>3.4.6</mybatis.version>
 	    
 	    <!-- JPA -->
 	    <org.eclipse.persistence.jpa.version>2.7.3</org.eclipse.persistence.jpa.version>
     <!-- 项目依赖版本 END -->
+    
+    
     
     <!-- build依赖 -->
         <maven-bundle-plugin.version>4.0.0</maven-bundle-plugin.version>
@@ -90,13 +98,13 @@
         </plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>${maven-compiler-plugin.version}</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+                <encoding>UTF-8</encoding>
+            </configuration>
         </plugin>
     </plugins>
     
@@ -106,6 +114,27 @@
   <!-- 设置统一依赖管理、不强行依赖 -->
   <dependencyManagement>
     <dependencies>
+    	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>${mybatis.version}</version>
+		</dependency>
+    	<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>${gson.version}</version>
+		</dependency>
+    	<dependency>
+		    <groupId>org.tmatesoft.svnkit</groupId>
+		    <artifactId>svnkit</artifactId>
+		    <version>${svnkit.version}</version>
+		</dependency>
+    	<dependency>
+		    <groupId>com.thetransactioncompany</groupId>
+		    <artifactId>cors-filter</artifactId>
+		    <version>${cors-filter.version}</version>
+		</dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -136,11 +165,6 @@
 		    <artifactId>tomcat-servlet-api</artifactId>
 		    <version>${tomcat.version}</version>
 		</dependency>
-	    <dependency>
-	        <groupId>org.json</groupId>
-	        <artifactId>json</artifactId>
-	        <version>${json.version}</version>
-	    </dependency>
 	    <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>

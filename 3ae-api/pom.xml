@@ -26,10 +26,15 @@
 	    <version>${ae.version}</version>
 	</dependency>
 	
+	<dependency>
+	    <groupId>com.thetransactioncompany</groupId>
+	    <artifactId>cors-filter</artifactId>
+	</dependency>
+	
 	<!-- https://mvnrepository.com/artifact/org.json/json -->
 	<dependency>
-	    <groupId>org.json</groupId>
-	    <artifactId>json</artifactId>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
 	</dependency>
   </dependencies>
 </project>

@@ -24,10 +24,15 @@
         <artifactId>tomcat-servlet-api</artifactId>
     </dependency>
     
-    <!-- https://mvnrepository.com/artifact/org.json/json -->
     <dependency>
-        <groupId>org.json</groupId>
-        <artifactId>json</artifactId>
-    </dependency>  	
+	    <groupId>com.thetransactioncompany</groupId>
+	    <artifactId>cors-filter</artifactId>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	</dependency>
   </dependencies>
 </project>
