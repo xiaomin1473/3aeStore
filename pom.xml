@@ -6,7 +6,7 @@
   <packaging>pom</packaging>
   <description>父工程,用于版本管理</description>
   <modules>
- 	<module>3ae-common</module>
+ 	<module>3ae-common</module>  
   	<module>3ae-channel</module>
   	<module>3ae-pojo</module>
   	<module>3ae-dao</module>
