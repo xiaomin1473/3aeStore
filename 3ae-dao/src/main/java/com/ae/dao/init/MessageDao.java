@@ -1,29 +1,48 @@
 package com.ae.dao.init;
 
-import org.apache.ibatis.annotations.Param;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public interface MessageDao {
+import org.apache.ibatis.session.SqlSession;
 
-	/**
-     * 获得当前数据库的名字
-     * @return
-     */
-	String getCurDataBaseName();
+import com.ae.dao.common.Access;
+import com.ae.pojo.Message;
+
+public class MessageDao {
+	public List<Message> queryMessageList(String command, String description) throws SQLException {
+		Access dbAccess = new Access();
+		SqlSession sqlSession = null;
+		List<Message> messageList = new ArrayList<Message>();
+
+		
+		try {
+			System.out.println("this is try");
+			sqlSession = dbAccess.getSqlSession();
+			
+			messageList = sqlSession.selectList("Message.queryMessageList");
+		} catch (IOException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			System.out.println("this is catch");
+		} finally {
+			System.out.println("this is finally");
+			if(sqlSession != null) {
+				System.out.println("this is finally close");
+				sqlSession.close();
+			} else {
+				System.out.println("sqlSession is null");
+			}
+			
+		}
+		
+		return messageList;
+	}
 	
-	
-	/**
-     * 从指定数据库中，查询是否存在某张表
-     * @param dataBaseName
-     * @param tableName
-     * @return
-     */
-	String isTargetTableExistInDB(@Param("dataBaseName") String dataBaseName, 
-            @Param("tableName") String tableName);
-	
-	
-	/**
-     * 根据传入的表明，创建新的表
-     * @param newTableName
-     */
-	public String createNewTable(@Param("newTableName") String newTableName);
+	public static void main(String[] args) throws SQLException {
+		MessageDao initDBae = new MessageDao();
+
+		initDBae.queryMessageList("", "");
+	}
 }
