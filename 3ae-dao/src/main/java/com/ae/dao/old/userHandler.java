@@ -1,11 +1,10 @@
-package com.ae.dao.blog.user;
+package com.ae.dao.old;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.ae.dao.config.DBUtil;
 import com.ae.pojo.blog.user.User;
 
 public class userHandler {

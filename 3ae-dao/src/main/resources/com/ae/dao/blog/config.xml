@@ -18,7 +18,7 @@
       <dataSource type="POOLED">
         <!-- 如果上面没有指定数据库配置的properties文件，那么此处可以这样直接配置 -->
         <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/store_3ae?useSSL=false"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/store_3ae_blog?useSSL=false"/>
         <property name="username" value="admin"/>
         <property name="password" value="O9ie96NKh7QEI7nt"/>
          

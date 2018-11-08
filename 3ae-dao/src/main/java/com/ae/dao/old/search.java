@@ -1,4 +1,4 @@
-package com.ae.dao.connect;
+package com.ae.dao.old;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Connect {
-	public static void main(String[] args) throws SQLException {
+public class search {
+	public boolean main(String[] args) throws SQLException {
 		Connection con;
 		
 		//驱动程序名
@@ -60,6 +60,27 @@ public class Connect {
 				//输出结果
 				System.out.println(name + "\t" + pwd + "\t" + createTime + "\t" + updateTime);
 			}
+			
+			name = "xiao";
+			//创建statement类对象，用来执行SQL语句
+			Statement statement2 = con.createStatement();
+			//要执行的SQL语句
+			String sql2 = "select user_name,user_password from user where user_name=\"xiao\"";
+			
+			//ResultSet类，用来存放获取的结果集
+			System.out.println("查询语句" + sql2);
+			ResultSet rs2 = statement2.executeQuery(sql2);
+			if(rs2.next()) {
+				name = rs2.getString("user_name");
+				//获取user_password这列数据
+				pwd = rs2.getString("user_password");
+			} else {
+				return false;
+			}
+			
+			System.out.println("查询具体结果" + name + "\t" + pwd);
+			
+			
 			rs.close();
 			con.close();
 			
@@ -74,9 +95,8 @@ public class Connect {
 			// TODO: handle exception
 			e.printStackTrace();
 		}finally{
-			System.out.println("数据库数据成功连接！！");
+			System.out.println("数据库User数据查询成功！！");
 		}
-		
+		return true;
 	}
-	
 }
