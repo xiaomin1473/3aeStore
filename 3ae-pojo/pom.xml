@@ -10,11 +10,7 @@
    	<build>
 	  	<finalName>3ae-pojo</finalName>
   	</build>
-  	<dependencies>  
-         <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa</artifactId>
-        </dependency>
+  	<dependencies>
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE mapper   
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd"> 
+<mapper namespace="Message">
+
+	<resultMap type="store.ae.pojo.Message" id="MessageResult">
+		<id column="id" jdbcType="INTEGER" property="id"/>
+		<result column="name" jdbcType="VARCHAR" property="name"/>
+		<result column="gmt_create" jdbcType="DATE" property="gmtCreate"/>
+		<result column="gmt_modified" jdbcType="DATE" property="gmtModified"/>
+	</resultMap>
+
+	<select id="queryMessageList" resultMap="MessageResult" >
+	   SELECT id,name,gmt_create,gmt_modified FROM message where 1=1
+	</select>
+
+	<update id="createNewTable">
+		create table message (
+			id smallint unsigned auto_increment primary key,
+			username varchar(20) not null
+		);
+	</update>
+</mapper>
