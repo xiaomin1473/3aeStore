@@ -9,7 +9,7 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>solutions</servlet-name>
-    <servlet-class>com.ae.web.answer.test</servlet-class>
+    <servlet-class>store.ae.answer.web.test</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>solutions</servlet-name>
