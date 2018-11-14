@@ -1,4 +1,4 @@
-package store.ae.web.portal.cgi;
+/*package store.ae.web.portal.cgi;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -11,9 +11,9 @@ import store.ae.service.blog.userCtrl.Login;
 
 public class loginService extends HttpServlet {
 	
-	/**
+	*//**
 	 * 
-	 */
+	 *//*
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -43,4 +43,4 @@ public class loginService extends HttpServlet {
 		}
 		
 	}
-}
+}*/

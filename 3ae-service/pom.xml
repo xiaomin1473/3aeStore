@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.rs.3ae</groupId>
+    <groupId>store.3ae</groupId>
     <artifactId>3ae-parent</artifactId>
     <version>${ae.version}</version>
   </parent>
@@ -12,14 +12,36 @@
   </build>
   
     <dependencies>
-	  	<dependency>
-	        <groupId>org.apache.tomcat</groupId>
-	        <artifactId>tomcat-servlet-api</artifactId>
-	    </dependency>
-		
+  	<!-- spring 核心 -->
+		<!-- spring service -->
 		<dependency>
-			<groupId>com.rs.3ae</groupId>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-aop</artifactId>
+		</dependency>
+		<!-- spring test -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>store.3ae</groupId>
 		    <artifactId>3ae-dao</artifactId>
+		    <version>${ae.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>store.3ae</groupId>
+		    <artifactId>3ae-dto</artifactId>
+		    <version>${ae.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>store.3ae</groupId>
+		    <artifactId>3ae-exception</artifactId>
 		    <version>${ae.version}</version>
 		</dependency>
 	

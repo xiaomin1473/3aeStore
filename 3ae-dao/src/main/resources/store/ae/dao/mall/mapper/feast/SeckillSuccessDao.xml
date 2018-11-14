@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="store.ae.dao.mall.feast.SeckillSuccessDao">
+    <insert id="insertSeckillSuccess">
+    	<!-- 主键冲突，重复，报错 -->
+    	insert ignore into feast_seckill_success(seckill_id, user_phone, state)
+    	values (#{seckillId}, #{userPhone}, 0)
+    </insert>
+    
+    <select id="queryByIdWithSeckill" resultType="SeckillSuccess">
+    	<!-- 根据id查询SeckillSuccess并携带秒杀产品对象实体 -->
+    	<!-- 如何告诉mybatis把结果映射到SeckillSuccess同时映射seckill属性 -->
+    	<!-- 可以自由控制SQL -->
+    	select 
+    		sk.seckill_id,
+    		sk.user_phone,
+    		sk.gmt_create,
+    		sk.state,
+    		s.seckill_id "seckill.seckill_id",
+    		s.name "seckill.name",
+    		s.number "seckill.number",
+    		s.start_time "seckill.start_time",
+    		s.end_time "seckill.end_time",
+    		s.gmt_create "seckill.gmt_create"
+    	from feast_seckill_success sk
+    	inner join feast_seckill s on sk.seckill_id = s.seckill_id
+    	where sk.seckill_id=#{seckillId} and sk.user_phone=#{userPhone}
+    </select>
+</mapper>

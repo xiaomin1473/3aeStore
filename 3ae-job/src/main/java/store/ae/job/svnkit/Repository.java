@@ -41,7 +41,8 @@ public class Repository {
         try{
             //获取编辑器
             editor = svnRepository.getCommitEditor("delete file",null,true,null);
-            String itemB1Path = "itemB1";//要删除的文件路径
+            @SuppressWarnings("unused")
+			String itemB1Path = "itemB1";//要删除的文件路径
             SVNCommitInfo svnCommitInfo = deleteFile(editor,revisionNo);//执行删除并返回执行结果
             System.out.println("执行删除操作的返回结果：" + svnCommitInfo);
         }catch (SVNException e){

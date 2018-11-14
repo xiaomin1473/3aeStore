@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.rs.3ae</groupId>
+  <groupId>store.3ae</groupId>
   <artifactId>3ae-parent</artifactId>
   <version>${ae.version}</version>
   <packaging>pom</packaging>
@@ -20,6 +20,9 @@
     <module>3ae-service</module>
     <module>3ae-job</module>
     <module>3ae-dto</module>
+    
+    <module>3ae-exception</module>
+    <module>3ae-enums</module>
   </modules>
   
   
@@ -30,13 +33,16 @@
     <!-- 项目版本 -->
     <ae.version>1.0.1</ae.version>
     
-    <!-- 项目依赖版本 -->
+    	<!-- 项目依赖版本 -->
 	    <!-- 日志 -->
 	    <logback.version>1.2.3</logback.version>
-	    <slf4j.version>1.7.25</slf4j.version>
-	    
-	    <netty-all.version>4.1.29.Final</netty-all.version>
-	    <tomcat.version>8.5.34</tomcat.version>
+	    <slf4j.version>1.8.0-beta2</slf4j.version>
+
+	    <!-- mysql -->
+	    <c3p0.version>0.9.5.2</c3p0.version>
+	    <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
+	    <mybatis.version>3.4.6</mybatis.version>
+	    <mybatis-spring.version>1.3.2</mybatis-spring.version>
 	    
 	    <!-- 任务调度 -->
 	    <quartz.version>2.3.0</quartz.version>
@@ -44,7 +50,7 @@
 	    <!-- SVN -->
 	    <svnkit.version>1.9.3</svnkit.version>
 	    
-	    <!-- JSON -->
+	    <!-- GSON -->
 	    <gson.version>2.8.5</gson.version>
 	    
 	    <!-- 跨域 -->
@@ -52,14 +58,14 @@
 	    
 	    <!-- 测试 -->
 	    <junit.version>4.12</junit.version>
-	    
-	    <!-- mysql -->
-	    <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
-	    <mybatis.version>3.4.6</mybatis.version>
-	    <c3p0.version>0.9.1.2</c3p0.version>
-	    
+	    <!-- spring -->
+	    <spring.version>5.1.2.RELEASE</spring.version>
     <!-- 项目依赖版本 END -->
     
+    <!-- Jetty and Netty -->
+    	    <netty-all.version>4.1.29.Final</netty-all.version>
+	    	<tomcat.version>8.5.34</tomcat.version>
+   	<!-- Jetty and Netty END -->
     
     
     <!-- build依赖 -->
@@ -123,89 +129,147 @@
   </build>
    
   <!-- 设置统一依赖管理、不强行依赖 -->
-  <dependencyManagement>
-    <!-- https://mvnrepository.com/artifact/junit/junit -->
-	<dependency>
-	    <groupId>junit</groupId>
-	    <artifactId>junit</artifactId>
-	    <version>${junit.version}</version>
-	    <scope>test</scope>
-	</dependency>
-    <dependencies>
-    	<dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-    	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-		<dependency>
-		    <groupId>org.mybatis</groupId>
-		    <artifactId>mybatis</artifactId>
-		    <version>${mybatis.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
-		<dependency>
-		    <groupId>c3p0</groupId>
-		    <artifactId>c3p0</artifactId>
-		    <version>${c3p0.version}</version>
-		</dependency>
-    	<dependency>
-		    <groupId>com.google.code.gson</groupId>
-		    <artifactId>gson</artifactId>
-		    <version>${gson.version}</version>
-		</dependency>
-    	<dependency>
-		    <groupId>org.tmatesoft.svnkit</groupId>
-		    <artifactId>svnkit</artifactId>
-		    <version>${svnkit.version}</version>
-		</dependency>
-    	<dependency>
-		    <groupId>com.thetransactioncompany</groupId>
-		    <artifactId>cors-filter</artifactId>
-		    <version>${cors-filter.version}</version>
-		</dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-	    <dependency>
-	        <groupId>io.netty</groupId>
-	        <artifactId>netty-all</artifactId>
-	        <version>${netty-all.version}</version>
-	    </dependency>
-	    <dependency>
-		    <groupId>org.apache.tomcat</groupId>
-		    <artifactId>tomcat-servlet-api</artifactId>
-		    <version>${tomcat.version}</version>
-		</dependency>
-	    <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-            <version>${quartz.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz-jobs</artifactId>
-            <version>${quartz.version}</version>
-        </dependency>
-    </dependencies>  
-  </dependencyManagement>
+	<dependencyManagement>
+	    <dependencies>
+	    <!-- 日志 -->
+	        <dependency>
+	            <groupId>ch.qos.logback</groupId>
+	            <artifactId>logback-classic</artifactId>
+	            <version>${logback.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>ch.qos.logback</groupId>
+	            <artifactId>logback-core</artifactId>
+	            <version>${logback.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-api</artifactId>
+	            <version>${slf4j.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-simple</artifactId>
+	            <version>${slf4j.version}</version>
+	        </dependency>
+	    <!-- 测试 -->
+			<dependency>
+			    <groupId>junit</groupId>
+			    <artifactId>junit</artifactId>
+			    <version>${junit.version}</version>
+			    <scope>test</scope>
+			</dependency>
+		<!-- 数据库 -->
+			<dependency>
+			    <groupId>com.mchange</groupId>
+			    <artifactId>c3p0</artifactId>
+			    <version>${c3p0.version}</version>
+			</dependency>
+	    	<dependency>
+	            <groupId>mysql</groupId>
+	            <artifactId>mysql-connector-java</artifactId>
+	            <version>${mysql-connector-java.version}</version>
+	            <scope>runtime</scope>
+	        </dependency>
+			<dependency>
+			    <groupId>org.mybatis</groupId>
+			    <artifactId>mybatis</artifactId>
+			    <version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.mybatis</groupId>
+			    <artifactId>mybatis-spring</artifactId>
+			    <version>${mybatis-spring.version}</version>
+			</dependency>
+		<!-- GSON -->
+	    	<dependency>
+			    <groupId>com.google.code.gson</groupId>
+			    <artifactId>gson</artifactId>
+			    <version>${gson.version}</version>
+			</dependency>
+		<!-- SVN -->
+	    	<dependency>
+			    <groupId>org.tmatesoft.svnkit</groupId>
+			    <artifactId>svnkit</artifactId>
+			    <version>${svnkit.version}</version>
+			</dependency>
+		<!-- 跨域 -->
+	    	<dependency>
+			    <groupId>com.thetransactioncompany</groupId>
+			    <artifactId>cors-filter</artifactId>
+			    <version>${cors-filter.version}</version>
+			</dependency>
+		<!-- servlet -->
+			<dependency>
+			    <groupId>org.apache.tomcat</groupId>
+			    <artifactId>tomcat-servlet-api</artifactId>
+			    <version>${tomcat.version}</version>
+			</dependency>
+		<!-- quartz -->
+		    <dependency>
+	            <groupId>org.quartz-scheduler</groupId>
+	            <artifactId>quartz</artifactId>
+	            <version>${quartz.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.quartz-scheduler</groupId>
+	            <artifactId>quartz-jobs</artifactId>
+	            <version>${quartz.version}</version>
+	        </dependency>
+	    <!-- Netty -->
+	        <dependency>
+		        <groupId>io.netty</groupId>
+		        <artifactId>netty-all</artifactId>
+		        <version>${netty-all.version}</version>
+		    </dependency>
+		<!-- spring -->
+			<!-- spring 核心 -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-core</artifactId>
+			    <version>${spring.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-beans</artifactId>
+			    <version>${spring.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-context</artifactId>
+			    <version>${spring.version}</version>
+			</dependency>
+			<!-- spring dao -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-jdbc</artifactId>
+			    <version>${spring.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-tx</artifactId>
+			    <version>${spring.version}</version>
+			</dependency>
+			<!-- spring service -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-aop</artifactId>
+			    <version>${spring.version}</version>
+			</dependency>
+			<!-- spring web -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-webmvc</artifactId>
+			    <version>${spring.version}</version>
+			</dependency>
+			<!-- spring test -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-test</artifactId>
+			    <version>${spring.version}</version>
+			    <scope>test</scope>
+			</dependency>
+	    </dependencies>  
+	</dependencyManagement>
 
 </project>

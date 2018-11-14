@@ -118,7 +118,8 @@ public class helloSvnkit {
          *  
          * You may also skip this point - anonymous access will be used. 
          */
-        ISVNAuthenticationManager authManager = SVNWCUtil.createDefaultAuthenticationManager(name, password);
+        @SuppressWarnings("deprecation")
+		ISVNAuthenticationManager authManager = SVNWCUtil.createDefaultAuthenticationManager(name, password);
         repository.setAuthenticationManager(authManager);
 
         try {
@@ -225,9 +226,9 @@ public class helloSvnkit {
          * doesn't provide its own Collection instance and uses the one returned
          * by getDir.
          */
-        Collection entries = repository.getDir(path, -1, null,
-                (Collection) null);
-        Iterator iterator = entries.iterator();
+        Collection<?> entries = repository.getDir(path, -1, null,
+                (Collection<?>) null);
+        Iterator<?> iterator = entries.iterator();
         while (iterator.hasNext()) {
             SVNDirEntry entry = (SVNDirEntry) iterator.next();
             System.out.println("/" + (path.equals("") ? "" : path + "/")

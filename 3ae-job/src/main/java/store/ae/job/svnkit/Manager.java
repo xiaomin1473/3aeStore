@@ -48,7 +48,8 @@ public class Manager {
      * 返回值：long 当前版本号
      * @throws SVNException
      */
-    private static void doCheckout() throws SVNException{
+    @SuppressWarnings("unused")
+	private static void doCheckout() throws SVNException{
         long nowRevision = svnClientManager.getUpdateClient().doCheckout(SVNURL.parseURIEncoded("https://wlyfree-PC:8443/svn/testRepository/trunk"),new File("E:\\svnWorkspace\\projectWorkingCopy"), SVNRevision.HEAD,SVNRevision.HEAD,SVNDepth.INFINITY,true);
         System.out.println("执行checkout操作成功，当前检出的版本号是：" + nowRevision);
     }
@@ -57,7 +58,8 @@ public class Manager {
      * 创建目录-mkdir
      * @throws SVNException
      */
-    private static void doMkDir() throws SVNException{
+    @SuppressWarnings("unused")
+	private static void doMkDir() throws SVNException{
         String commitMessage = "创建一个目录";
         SVNCommitInfo svnCommitInfo = svnClientManager.getCommitClient().doMkDir(new SVNURL[]{SVNURL.parseURIEncoded("https://wlyfree-PC:8443/svn/testRepository/trunk/aaa"),SVNURL.parseURIEncoded("https://wlyfree-PC:8443/svn/testRepository/trunk/bbb")},commitMessage);
         System.out.println("执行mkdir操作成功，操作结果：" + gson.toJson(svnCommitInfo));
@@ -91,7 +93,8 @@ public class Manager {
      * 更新-update
      * @throws SVNException
      */
-    private static void doUpdate() throws SVNException{
+    @SuppressWarnings("unused")
+	private static void doUpdate() throws SVNException{
         long nowRevision = svnClientManager.getUpdateClient().doUpdate(new File("E:\\svnWorkspace\\projectWorkingCopy"),SVNRevision.HEAD, SVNDepth.INFINITY,true,false);
         System.out.println("执行update操作成功，当前版本号：" + nowRevision);
     }
@@ -100,7 +103,8 @@ public class Manager {
      * 锁定-lock
      * @throws SVNException
      */
-    private static void doLock() throws SVNException{
+    @SuppressWarnings("unused")
+	private static void doLock() throws SVNException{
 //        svnClientManager.getWCClient().doLock(new SVNURL[]{SVNURL.parseURIEncoded("https://wlyfree-PC:8443/svn/testRepository/trunk/bbb/aa.txt")},true,"给文件加锁");
         svnClientManager.getWCClient().doLock(new File[]{new File("E:\\svnWorkspace\\projectWorkingCopy\\bbb\\aa.txt")},true,"给文件加锁");
         System.out.println("给文件加锁成功");
@@ -110,7 +114,8 @@ public class Manager {
      * 删除-delete
      * @throws SVNException
      */
-    private static void doDelete() throws SVNException{
+    @SuppressWarnings("unused")
+	private static void doDelete() throws SVNException{
         SVNCommitInfo svnCommitInfo = svnClientManager.getCommitClient().doDelete(new SVNURL[]{SVNURL.parseURIEncoded("https://wlyfree-PC:8443/svn/testRepository/trunk/bbb"),SVNURL.parseURIEncoded("https://wlyfree-PC:8443/svn/testRepository/trunk/b.txt")},"执行删除操作，删除一个目录bbb一个文件b.txt");
         System.out.println("执行delete操作成功，操作结果：" + gson.toJson(svnCommitInfo));
     }
@@ -119,7 +124,8 @@ public class Manager {
      * 复制-copy
      * @throws SVNException
      */
-    private static void doCopy() throws SVNException{
+    @SuppressWarnings("unused")
+	private static void doCopy() throws SVNException{
         SVNCopySource svnCopySource1 = new SVNCopySource(SVNRevision.HEAD,SVNRevision.HEAD,SVNURL.parseURIEncoded("https://wlyfree-PC:8443/svn/testRepository/trunk/aaa/aa.txt"));
         SVNCopySource svnCopySource2 = new SVNCopySource(SVNRevision.HEAD,SVNRevision.HEAD,SVNURL.parseURIEncoded("https://wlyfree-PC:8443/svn/testRepository/trunk/aaa/bb.txt"));
         svnClientManager.getCopyClient().doCopy(new SVNCopySource[]{svnCopySource1,svnCopySource2},new File("E:\\svnWorkspace\\projectWorkingCopy\\bbb"),false,false,true);
@@ -130,7 +136,8 @@ public class Manager {
      * 状态-status
      * @throws SVNException
      */
-    private static void doStatus() throws SVNException{
+    @SuppressWarnings("unused")
+	private static void doStatus() throws SVNException{
         SVNStatus svnStatus = svnClientManager.getStatusClient().doStatus(new File("E:\\svnWorkspace\\projectWorkingCopy\\a.txt"),true);
         System.out.println("执行status操作成功，操作结果：" + gson.toJson(svnStatus));
     }
@@ -139,7 +146,8 @@ public class Manager {
      * 信息-info
      * @throws SVNException
      */
-    private static void doInfo() throws SVNException{
+    @SuppressWarnings("unused")
+	private static void doInfo() throws SVNException{
         SVNInfo svnInfo = svnClientManager.getWCClient().doInfo(new File("E:\\svnWorkspace\\projectWorkingCopy\\a.txt"),SVNRevision.HEAD);
         System.out.println("执行info操作成功，操作结果：" + gson.toJson(svnInfo));
     }

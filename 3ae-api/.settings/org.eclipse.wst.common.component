@@ -13,6 +13,15 @@
         <dependent-module archiveName="3ae-pojo-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/3ae-pojo/3ae-pojo">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="3ae-dto-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/3ae-dto/3ae-dto">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="3ae-enums-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/3ae-enums/3ae-enums">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="3ae-exception-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/3ae-exception/3ae-exception">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/3ae-api/target/classes"/>
         <property name="context-root" value="3ae-api"/>
     </wb-module>
