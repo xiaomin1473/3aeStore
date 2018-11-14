@@ -19,6 +19,7 @@
     <module>3ae-server</module>
     <module>3ae-service</module>
     <module>3ae-job</module>
+    <module>3ae-dto</module>
   </modules>
   
   
