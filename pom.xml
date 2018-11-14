@@ -86,7 +86,7 @@
   
   <!-- 构建 -->
   <build>
-    <plugins>
+    <plugins>    	
         <plugin>
             <groupId>org.apache.felix</groupId>
             <artifactId>maven-bundle-plugin</artifactId>
@@ -131,6 +131,14 @@
   <!-- 设置统一依赖管理、不强行依赖 -->
 	<dependencyManagement>
 	    <dependencies>
+	    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+			<dependency>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>${maven-surefire-plugin.version}</version>
+			    <scope>test</scope>
+			</dependency>
+	    
 	    <!-- 日志 -->
 	        <dependency>
 	            <groupId>ch.qos.logback</groupId>
