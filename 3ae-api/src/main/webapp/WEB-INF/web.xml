@@ -24,6 +24,11 @@
   		<!-- 默认匹配所有请求 -->
   		<url-pattern>/</url-pattern>
   	</servlet-mapping>
+  	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/views/error/404.html</location>
+	</error-page>
   <filter>
 	<filter-name>CORS</filter-name>
 	<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>

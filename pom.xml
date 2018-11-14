@@ -174,11 +174,6 @@
 			    <artifactId>druid</artifactId>
 			    <version>${druid.version}</version>
 			</dependency>
-			<dependency>
-			    <groupId>org.mariadb.jdbc</groupId>
-			    <artifactId>mariadb-java-client</artifactId>
-			    <version>${mariadb-java-client.version}</version>
-			</dependency>
 	    	<dependency>
 	            <groupId>mysql</groupId>
 	            <artifactId>mysql-connector-java</artifactId>
