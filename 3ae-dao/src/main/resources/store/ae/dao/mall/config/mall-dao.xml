@@ -8,8 +8,7 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	<!-- 配置整合mybatis过程 -->
 	<!-- 配置数据库相关参数properties属性: ${url} -->
-	<!-- <context:property-placeholder location="classpath:store/ae/dao/mall/config/mall-mariadb.properties"/> -->
-	<context:property-placeholder location="classpath:store/ae/dao/mall/config/mall-mysql.properties"/>
+	<context:property-placeholder location="classpath:store/ae/dao/mall/config/mall-jdbc.properties"/>
 	
 	<!-- 数据库连接池 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
