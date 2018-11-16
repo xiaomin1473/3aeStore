@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_package = "store.ae.pojo.mall.feast";
+option java_outer_classname = "SeckillSchema.java";
+
+message SeckillSchema {
+	int32 seckillId=1;
+	
+	string name=2;
+	
+	int32 number=3;
+	
+	date startTime=4;
+
+	date endTime=5;
+	
+	date gmtCreate=6;
+}

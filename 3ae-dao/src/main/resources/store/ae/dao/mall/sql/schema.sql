@@ -29,7 +29,7 @@ values
 
 -- 秒杀成功明细表
 -- 用户登录认证相关信息
-CREATE TABLE feast__seckill_success  (
+CREATE TABLE feast_seckill_success  (
 `seckill_id` bigint NOT NULL COMMENT '秒杀商品ID',
 `user_phone` bigint NOT NULL COMMENT '用户手机号',
 `state` tinyint NOT NULL DEFAULT -1 COMMENT '-1无效 0成功 1已付款 2已发货 3已收货',

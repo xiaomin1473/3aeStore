@@ -1,4 +1,4 @@
-package store.ae.api.mall.portal;
+package store.ae.api.mall;
 
 import java.util.Date;
 import java.util.List;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
 
-import store.ae.dto.mall.feast.Exposer;
-import store.ae.dto.mall.feast.SeckillResult;
-import store.ae.dto.mall.feast.SeckilllExecution;
+import store.ae.dto.service.mall.feast.Exposer;
+import store.ae.dto.service.mall.feast.SeckillResult;
+import store.ae.dto.service.mall.feast.SeckilllExecution;
 import store.ae.enums.mall.feast.SeckillStatEnum;
 import store.ae.exception.mall.feast.SeckillCloseException;
 import store.ae.exception.mall.feast.SeckillRepeatException;
@@ -77,7 +77,7 @@ public class SeckillController {
 			logger.error(e.getMessage(), e);
 			result = new SeckillResult<Exposer>(false, e.getMessage());
 		}
-		
+
 		return result;
 	}
 	

@@ -1,4 +1,4 @@
-package store.ae.dto.mall.feast;
+package store.ae.dto.service.mall.feast;
 
 
 /**

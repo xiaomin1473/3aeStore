@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import store.ae.dto.mall.feast.Exposer;
-import store.ae.dto.mall.feast.SeckilllExecution;
+import store.ae.dto.service.mall.feast.Exposer;
+import store.ae.dto.service.mall.feast.SeckilllExecution;
 import store.ae.exception.mall.feast.SeckillCloseException;
 import store.ae.exception.mall.feast.SeckillRepeatException;
 import store.ae.pojo.mall.feast.Seckill;

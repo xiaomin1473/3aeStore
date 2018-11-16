@@ -12,8 +12,8 @@ import org.springframework.util.DigestUtils;
 
 import store.ae.dao.mall.feast.SeckillDao;
 import store.ae.dao.mall.feast.SeckillSuccessDao;
-import store.ae.dto.mall.feast.Exposer;
-import store.ae.dto.mall.feast.SeckilllExecution;
+import store.ae.dto.service.mall.feast.Exposer;
+import store.ae.dto.service.mall.feast.SeckilllExecution;
 import store.ae.enums.mall.feast.SeckillStatEnum;
 import store.ae.exception.mall.feast.SeckillCloseException;
 import store.ae.exception.mall.feast.SeckillException;
@@ -61,6 +61,15 @@ public class SeckillServiceImpl implements SeckillService {
 	 */
 	@Override
 	public Exposer exportSeckillUrl(long seckillId) {
+		// redis优化，redis缓存
+		/*
+		 * get form cache 
+		 * if null
+		 *   get db
+		 * else
+		 * 	 put cache
+		 * logic
+		 */
 		Seckill seckill = seckillDao.queryById(seckillId);
 		
 		if(seckill == null) {

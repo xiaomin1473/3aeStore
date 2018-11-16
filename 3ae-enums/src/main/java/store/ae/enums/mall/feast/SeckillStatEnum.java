@@ -13,17 +13,17 @@ public enum SeckillStatEnum {
 	INNER_ERROR(-2, "系统异常"),
 	DATA_REWRITE(-3, "数据篡改");
 	
-	private String staeInfo;
+	private String stateInfo;
 
 	private int state;
 
 	private SeckillStatEnum(int state, String staeInfo) {
 		this.state = state;
-		this.staeInfo = staeInfo;
+		this.stateInfo = staeInfo;
 	}
 
 	public String getStaeInfo() {
-		return staeInfo;
+		return stateInfo;
 	}
 
 	public int getState() {

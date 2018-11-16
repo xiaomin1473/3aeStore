@@ -1,4 +1,4 @@
-package store.ae.dto.mall.feast;
+package store.ae.dto.service.mall.feast;
 
 import store.ae.enums.mall.feast.SeckillStatEnum;
 import store.ae.pojo.mall.feast.SeckillSuccess;

@@ -5,4 +5,4 @@
  * @author sidtadpole
  *
  */
-package store.ae.api.mall;
+package store.ae.dao.mall.cache;
