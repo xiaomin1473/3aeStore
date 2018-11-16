@@ -48,10 +48,10 @@ killNetty
 
 
 # 删除原有工程
-rm -rf $TOMCAT_APP_PATH/app/agent/agent
+# rm -rf $TOMCAT_APP_PATH/app/agent/agent
 rm -rf $TOMCAT_APP_PATH/app/answer/answer.war
 rm -rf $TOMCAT_APP_PATH/app/api/api.war
-rm -rf $TOMCAT_APP_PATH/app/agent/agent
+# rm -rf $TOMCAT_APP_PATH/app/agent/agent
 rm -rf $TOMCAT_APP_PATH/app/answer/answer
 rm -rf $TOMCAT_APP_PATH/app/api/api
 # rm -rf $TOMCAT_APP_PATH/app/ROOT
@@ -93,7 +93,7 @@ cp $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer.war $TOMCAT_APP_PATH/app/a
 
 cp -r $PROJ_PATH/3ae-parent/3ae-api/target/3ae-api $TOMCAT_APP_PATH/app/api/api
 cp -r $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer $TOMCAT_APP_PATH/app/answer/answer
-cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $NETTY_APP_PATH/www/app/agent/agent
+# cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $NETTY_APP_PATH/www/app/agent/agent
 # cp $PROJ_PATH/3ae-parent/3ae-server/target/3ae-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
 
 
