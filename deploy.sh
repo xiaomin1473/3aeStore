@@ -98,6 +98,6 @@ cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $N
 
 
 # 启动Tomcat
-sh /opt/apache-tomcat-8.5.33/bin/startup.sh
+sh /opt/apache-tomcat-8.5.35/bin/startup.sh
 
 echo "this is lastest version"
