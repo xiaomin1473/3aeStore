@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="store.ae.dao.oss.UserDao">
+    <!-- 目的： 为dao接口提供sql语句配置 -->
+    
+    <select id="queryByUserName" resultType="User" parameterType="String">
+    	select user_id, user_name, user_pwd, user_mark, user_group_id, gmt_create, gmt_modified
+    	from User
+    	where user_name = #{userName}
+    </select>
+    
+    <select id="queryAll" resultType="User">
+    	select user_id, user_name, user_pwd, user_mark, user_group_id, gmt_create, gmt_modified
+    	from User
+    	order by gmt_create desc
+    	limit #{offset}, #{limit}
+    </select>
+    
+    <update id="changePwd">
+    	update
+    		user
+    	set
+    		user_pwd = #{userPwd}
+    	where user_name = #{userName}
+    </update>
+</mapper>

@@ -16,6 +16,7 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:store/ae/dao/mall/config/mall-*.xml;classpath:store/ae/service/mall/config/mall-*.xml;classpath:store/ae/api/mall/config/mall-*.xml</param-value>
+			<param-value>classpath:store/ae/dao/oss/config/oss-*.xml;classpath:store/ae/service/oss/config/oss-*.xml;classpath:store/ae/api/oss/config/oss-*.xml</param-value>
 		</init-param>
 	</servlet>
   

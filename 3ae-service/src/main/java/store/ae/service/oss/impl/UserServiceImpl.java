@@ -1,0 +1,54 @@
+package store.ae.service.oss.impl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
+
+import store.ae.dao.oss.UserDao;
+import store.ae.dto.service.oss.UserExecution;
+import store.ae.pojo.oss.User;
+import store.ae.service.oss.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	@Autowired
+	UserDao userDao;
+	
+	// md5盐值字符串，用来混淆md5
+	private final String slat = "w6_Aa^p1%@HW+_ijfo&-i14#Yg_T5*%er#HLwr*aMa^F#48_5GA(mf15a^sfaFO*Htg1a_G$PI";
+	
+	private String getMD5(String userPwd) {
+		String base = userPwd +"." + slat;
+		String md5 = DigestUtils.md5DigestAsHex(base.getBytes());
+		
+		return md5;
+	}
+	
+	
+	public UserExecution checkUserInfo(String userName, String userPwd) {
+			User user = userDao.queryByUserName(userName);
+			if(user != null) {
+				String pwdMD5 = getMD5(userPwd);
+				if(user.getUserPwd().equals(pwdMD5)) {
+					return new UserExecution(0, userName, user);
+				}
+			}
+			return null;
+	}
+
+
+	@Override
+	public String changePwd(String userName, String userPwd) {
+		String pwdMD5 = getMD5(userPwd);
+		String oldPwd = userDao.queryByUserName(userName).getUserPwd();
+		userDao.changePwd(userName, pwdMD5);
+		String nowPwd = userDao.queryByUserName(userName).getUserPwd();
+		logger.info("password form" + oldPwd +"to" + nowPwd);
+		return nowPwd;
+	}
+
+}

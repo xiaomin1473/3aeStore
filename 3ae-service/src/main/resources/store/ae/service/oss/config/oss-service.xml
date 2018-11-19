@@ -11,7 +11,7 @@ http://www.springframework.org/schema/tx
 http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 	<!-- 扫描service包下所有使用注解类型 -->
-	<context:component-scan base-package="store.ae.service.mall" />
+	<context:component-scan base-package="store.ae.service.oss" />
 	
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

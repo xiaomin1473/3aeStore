@@ -28,5 +28,5 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
 	
 	<!-- 扫描web相关的bean -->
-	<context:component-scan base-package="store.ae.api.mall" />
+	<context:component-scan base-package="store.ae.api.oss" />
 </beans>
