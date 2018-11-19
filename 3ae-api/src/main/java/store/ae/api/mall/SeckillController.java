@@ -95,7 +95,11 @@ public class SeckillController {
 		}		
 		
 		try {
-			SeckilllExecution execution = seckillService.executeSeckill(seckillId, phone, md5);
+			// 存储过程
+			SeckilllExecution execution = seckillService.executeSeckillProcedure(seckillId, phone, md5);
+			
+			// 事务回滚
+			// SeckilllExecution execution = seckillService.executeSeckill(seckillId, phone, md5);
 			return new SeckillResult<SeckilllExecution>(true, execution);
 			
 		} catch (SeckillRepeatException e) {

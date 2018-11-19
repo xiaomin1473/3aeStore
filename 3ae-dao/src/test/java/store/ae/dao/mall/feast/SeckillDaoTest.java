@@ -34,27 +34,8 @@ public class SeckillDaoTest {
 	private SeckillDao seckillDao;
 
 	@Test
-	public void testReduceNumber() {
-		Date killTime = new Date();
-		int updateCount = seckillDao.reduceNumber(1000L, killTime);
-		logger.info("updateCount={}" + updateCount);
-		/*
-		 * update feast_seckill set number = number - 1 
-		 * where seckill_id = ? 
-		 * and start_time <= ? 
-		 * and end_time >= ? 
-		 * and number > 0; 
-		 * 
-		 * 1000(Long), 
-		 * 2018-11-12 18:53:56.102(Timestamp), 
-		 * 2018-11-12 18:53:56.102(Timestamp)
-		 * Updates: 0
-		 */
-	}
-
-	@Test
 	public void testQueryById() {
-		long id = 1000;
+		long id = 1002;
 		Seckill seckill = seckillDao.queryById(id);
 		logger.info("seckillName={}", seckill.getName());
 		logger.info("seckill={}",seckill);
@@ -77,6 +58,26 @@ public class SeckillDaoTest {
 		for(Seckill seckill: seckills) {
 			logger.info("seckill={}", seckill);
 		}
+	}
+	
+
+	@Test
+	public void testReduceNumber() {
+		Date killTime = new Date();
+		int updateCount = seckillDao.reduceNumber(1002L, killTime);
+		logger.info("updateCount={}" + updateCount);
+		/*
+		 * update feast_seckill set number = number - 1 
+		 * where seckill_id = ? 
+		 * and start_time <= ? 
+		 * and end_time >= ? 
+		 * and number > 0; 
+		 * 
+		 * 1000(Long), 
+		 * 2018-11-12 18:53:56.102(Timestamp), 
+		 * 2018-11-12 18:53:56.102(Timestamp)
+		 * Updates: 0
+		 */
 	}
 
 }

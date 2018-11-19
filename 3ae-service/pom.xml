@@ -12,6 +12,10 @@
   </build>
   
     <dependencies>
+    	<dependency>
+		    <groupId>commons-collections</groupId>
+		    <artifactId>commons-collections</artifactId>
+		</dependency>
   	<!-- spring 核心 -->
 		<!-- spring service -->
 		<dependency>

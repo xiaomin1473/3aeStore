@@ -23,11 +23,11 @@ public class SeckillSuccessDaoTest {
 	
 	@Test
 	public void testInsertSeckillSuccess() {
-		long id = 1001L;
+		long id = 1002L;
 		long phone = 13544114331L;
 		int insertCount = seckillSuccessDao.insertSeckillSuccess(id, phone);
 		
-		logger.info("insertCount={}" + insertCount);
+		logger.info("insertCount=" + insertCount);
 		/*
 		* 第一次执行： Updates: 1 insertCount = 1
 		* 
@@ -37,13 +37,13 @@ public class SeckillSuccessDaoTest {
 
 	@Test
 	public void testQueryByIdWidthSeckill() throws Exception {
-		long id = 1001L;
+		long id = 1002L;
 		long phone = 13544114331L;
 		
 		SeckillSuccess seckillSuccess = seckillSuccessDao.queryByIdWithSeckill(id, phone);
 		
-		logger.info("seckillSuccess={}" + seckillSuccess);
-		logger.info("seckill={}" + seckillSuccess.getSeckill());
+		logger.info("seckillSuccess=" + seckillSuccess);
+		logger.info("seckill=" + seckillSuccess.getSeckill());
 		/*
 		 * 第一次
 		 * seckillSuccess = SeckillSuccess [seckillId=1000, 

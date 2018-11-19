@@ -1,4 +1,4 @@
-/*package store.ae.dao.mall.cache;
+package store.ae.dao.mall.cache;
 
 import io.protostuff.LinkBuffer;
 import io.protostuff.LinkedBuffer;
@@ -24,12 +24,12 @@ public class RedisDao {
 			try {
 				String key = "seckill" + seckillId;
 				
-				 
+				/* 
 				* 没有内部实现序列化
 				* get -> byte[] -> 反序列化 -> Object(seckill)
 				* 自定义序列化 
 				* protostuff: pojo
-				
+				*/
 				byte[] bytes = jedis.get(key.getBytes());
 				if(bytes != null) {
 					// 空对象
@@ -75,4 +75,3 @@ public class RedisDao {
 		return null;
 	}
 }
-*/

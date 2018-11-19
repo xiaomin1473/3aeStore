@@ -34,6 +34,8 @@
     <ae.version>1.0.1</ae.version>
     
     	<!-- 项目依赖版本 -->
+    	<!-- 公共资源库 -->
+    	<commons-collections.version>3.2.2</commons-collections.version>
 	    <!-- 日志 -->
 	    <logback.version>1.2.3</logback.version>
 	    <slf4j.version>1.8.0-beta2</slf4j.version>
@@ -150,6 +152,13 @@
 			    <version>${maven-surefire-plugin.version}</version>
 			    <scope>test</scope>
 			</dependency> -->
+		<!-- 公共资源库 -->
+			<dependency>
+			    <groupId>commons-collections</groupId>
+			    <artifactId>commons-collections</artifactId>
+			    <version>${commons-collections.version}</version>
+			</dependency>
+		
 	    
 	    <!-- 日志 -->
 	        <dependency>
@@ -205,7 +214,6 @@
 			    <groupId>io.protostuff</groupId>
 			    <artifactId>protostuff-core</artifactId>
 			    <version>${protostuff.version}</version>
-			    <scope>test</scope>
 			</dependency>
 			<dependency>
 			    <groupId>org.apache.commons</groupId>
