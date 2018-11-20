@@ -23,5 +23,9 @@
         <artifactId>3ae-service</artifactId>
         <version>${ae.version}</version>
     </dependency>
+    <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	</dependency>
   </dependencies>
 </project>
