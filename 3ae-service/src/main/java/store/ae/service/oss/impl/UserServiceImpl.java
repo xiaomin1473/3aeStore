@@ -8,6 +8,7 @@ import org.springframework.util.DigestUtils;
 
 import store.ae.dao.oss.UserDao;
 import store.ae.dto.service.oss.UserExecution;
+import store.ae.dto.service.oss.UserResult;
 import store.ae.pojo.oss.User;
 import store.ae.service.oss.UserService;
 
@@ -29,15 +30,15 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	
-	public UserExecution checkUserInfo(String userName, String userPwd) {
+	public boolean checkUserInfo(String userName, String userPwd) {
 			User user = userDao.queryByUserName(userName);
 			if(user != null) {
 				String pwdMD5 = getMD5(userPwd);
 				if(user.getUserPwd().equals(pwdMD5)) {
-					return new UserExecution(0, userName, user);
+					return true;
 				}
 			}
-			return null;
+			return false;
 	}
 
 

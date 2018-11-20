@@ -29,6 +29,6 @@ public interface UserService {
 	 * @throws UserNullException
 	 * @throws UserException
 	 */
-	UserExecution checkUserInfo(String userName, String userPwd)
+	boolean checkUserInfo(String userName, String userPwd)
 			throws UserErrorException, UserNullException, UserException;
 }

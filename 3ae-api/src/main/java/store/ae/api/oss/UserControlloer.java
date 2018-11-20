@@ -27,17 +27,16 @@ public class UserControlloer {
 	
 	@RequestMapping(value = "/{userName}/{userPwd}", 
 			method = RequestMethod.POST,
+			
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
 	public String check(@PathVariable("userName") String userName, @PathVariable("userPwd") String userPwd) {
 
-		UserExecution userExecution = userService.checkUserInfo(userName, userPwd);
+		boolean userInfo = userService.checkUserInfo(userName, userPwd);
 		
-		if(userExecution.getUser() == null) {
+		if(!userInfo) {
 			return "登录失败";
 		}
-		else {
-			return "登录成功";
-		}
+		return "登录成功";
 	}
 }
