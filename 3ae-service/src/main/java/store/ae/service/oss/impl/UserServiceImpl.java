@@ -71,15 +71,14 @@ public class UserServiceImpl implements UserService {
 			User user = userDao.queryByUserName(userName);
 			
 			if(user == null) {
-				exposer = new UserExposer(false, userName, nowTime.getTime());
-				return exposer;
+				return new UserExposer(false, userName, nowTime.getTime());
 			}
 			
 			String token = getToken(userName);
 			exposer = new UserExposer(true, token, userName, nowTime.getTime());
 
 		} catch (Exception e) {
-			exposer = new UserExposer(false, userName, nowTime.getTime());
+			return new UserExposer(false, userName, nowTime.getTime());
 		}
 		
 		return exposer;

@@ -40,7 +40,7 @@ public class UserControlloer {
 			boolean userInfo = userService.checkUserInfo(userName, userPwd);
 			
 			if(!userInfo) {
-				result = new UserResult<UserExposer>(false, "用户不存在");
+				return new UserResult<UserExposer>(false, "用户不存在");
 			}
 			
 			UserExposer exposer = userService.exportUserToken(userName);
@@ -49,7 +49,7 @@ public class UserControlloer {
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			
-			result = new UserResult<UserExposer>(false, "系统异常");
+			return new UserResult<UserExposer>(false, "系统异常");
 		}
 		
 		return result;
