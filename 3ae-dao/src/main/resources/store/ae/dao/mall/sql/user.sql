@@ -8,15 +8,16 @@ CREATE TABLE user (
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY (user_id),
 key idx_user_mark(user_mark),
+key idx_user_name(user_name),
 key idx_user_group_id(user_group_id),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
--- 初始化数据
+-- 初始化数据 pwd = admin
 -- mark标识：超级用户、超级角色、超级权限、超级时间、超级操作、备用
 insert into user(user_name, user_pwd, user_mark, user_group_id)
 values
-	('root', 'root', '1000-1000-1000-1000-1000-1000', '1000');
+	('root', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', '1000');
 
 CREATE TABLE user_group (
 `user_group_id` bigint NOT NULL AUTO_INCREMENT COMMENT '用户组ID',

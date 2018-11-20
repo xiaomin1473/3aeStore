@@ -8,7 +8,7 @@
     
     <select id="queryByUserName" resultType="User" parameterType="String">
     	select user_id, user_name, user_pwd, user_mark, user_group_id, gmt_create, gmt_modified
-    	from User
+    	from user
     	where user_name = #{userName}
     </select>
     
