@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import store.ae.dao.oss.UserDao;
 import store.ae.dto.service.oss.UserExposer;
 import store.ae.dto.service.oss.UserResult;
+import store.ae.pojo.oss.User;
 import store.ae.service.oss.UserService;
 
 @Controller
@@ -37,10 +39,15 @@ public class UserControlloer {
 	public UserResult<UserExposer> login(@PathVariable("userName") String userName, @PathVariable("userPwd") String userPwd) {
 		UserResult<UserExposer> result;
 		try {
+			User user = userService.queryUserByUserName(userName);
+			if(user == null) {
+				return new UserResult<UserExposer>(false, "用户不存在，请注册");
+			}
+			
 			boolean userInfo = userService.checkUserInfo(userName, userPwd);
 			
 			if(!userInfo) {
-				return new UserResult<UserExposer>(false, "用户不存在");
+				return new UserResult<UserExposer>(false, "用户名密码错误，请重输");
 			}
 			
 			UserExposer exposer = userService.exportUserToken(userName);
