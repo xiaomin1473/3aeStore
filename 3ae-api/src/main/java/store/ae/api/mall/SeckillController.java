@@ -98,14 +98,14 @@ public class SeckillController {
 							@CookieValue(value = "userName", required = true) String userName) {
 		
 		// springMVC valid
-		UserExposer userExposer = userService.exportUserToken(userName);
-		
-		if(token == null && userName == null) {
-			return new SeckillResult<SeckilllExecution>(false, "未登录");
-		}
-		if(!token.equals(userExposer.getTocken())) {
-			return new SeckillResult<SeckilllExecution>(false, "用户信息错误，请重新登录");
-		}
+//		UserExposer userExposer = userService.exportUserToken(userName);
+//		
+//		if(token == null && userName == null) {
+//			return new SeckillResult<SeckilllExecution>(false, "未登录");
+//		}
+//		if(!token.equals(userExposer.getTocken())) {
+//			return new SeckillResult<SeckilllExecution>(false, "用户信息错误，请重新登录");
+//		}
 		
 		try {
 			// 存储过程
