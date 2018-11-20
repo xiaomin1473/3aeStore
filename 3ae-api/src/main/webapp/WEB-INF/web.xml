@@ -12,7 +12,7 @@
 		<!-- 配置SpringMVC需要加载的配置文件 
 			Spring-dao.xml, Spring-service.xml, Spring-web.xml
 			Mybatis => Spring => SpringMVC
-		-->
+		-->  
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:store/ae/dao/mall/config/mall-*.xml;classpath:store/ae/service/mall/config/mall-*.xml;classpath:store/ae/api/mall/config/mall-*.xml</param-value>
