@@ -18,11 +18,13 @@ import com.google.gson.Gson;
 import store.ae.dto.service.mall.feast.Exposer;
 import store.ae.dto.service.mall.feast.SeckillResult;
 import store.ae.dto.service.mall.feast.SeckilllExecution;
+import store.ae.dto.service.oss.UserExposer;
 import store.ae.enums.mall.feast.SeckillStatEnum;
 import store.ae.exception.mall.feast.SeckillCloseException;
 import store.ae.exception.mall.feast.SeckillRepeatException;
 import store.ae.pojo.mall.feast.Seckill;
 import store.ae.service.mall.feast.SeckillService;
+import store.ae.service.oss.UserService;
 
 @Controller
 @RequestMapping("/goods/seckill") // url:/模块/资源/{id}/细分
@@ -31,6 +33,9 @@ public class SeckillController {
 
 	@Autowired
 	private SeckillService seckillService;
+	
+	@Autowired
+	private UserService userService;
 	
 	@RequestMapping(value = "/list", 
 			method = RequestMethod.GET,
@@ -88,11 +93,19 @@ public class SeckillController {
 	public SeckillResult<SeckilllExecution> execute(
 							@PathVariable("seckillId") Long seckillId, 
 							@PathVariable("md5") String md5, 
-							@CookieValue(value = "killPhone", required = false) Long phone) {
+							@CookieValue(value = "killPhone", required = false) Long phone,
+							@CookieValue(value = "token", required = true) String token,
+							@CookieValue(value = "userName", required = true) String userName) {
+		
 		// springMVC valid
-		if(phone == null) {
-			return new SeckillResult<SeckilllExecution>(false, "未注册");
-		}		
+		UserExposer userExposer = userService.exportUserToken(userName);
+		
+		if(token == null && userName == null) {
+			return new SeckillResult<SeckilllExecution>(false, "未登录");
+		}
+		if(!token.equals(userExposer.getTocken())) {
+			return new SeckillResult<SeckilllExecution>(false, "用户信息错误，请重新登录");
+		}
 		
 		try {
 			// 存储过程

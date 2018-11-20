@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import store.ae.dao.oss.UserDao;
+import store.ae.dto.service.oss.UserExposer;
 import store.ae.pojo.oss.User;
 
 
@@ -44,6 +45,14 @@ public class UserServiceTest {
 		
 		logger.info("userInfo is:" + user.toString());
 		logger.info("user is:" + user);
+	}
+	
+	@Test
+	public void testExportUserToken() {
+		String userName = "root";
+		UserExposer exposer = userService.exportUserToken(userName);
+		
+		logger.info("userTocken is:" + exposer.getTocken());
 	}
 
 }
