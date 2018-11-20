@@ -19,13 +19,8 @@
                     console.log(data.error);
                     $("#message").html(data.error);
                 } else if(data.success) {
-                    console.log(data.success);
-                    console.log(data.data);
-                    console.log("cookie ==>>" + data.data.userName + ": " + data.data.token);
-                    $.cookie(data.data.userName, data.data.token);
-                    $.cookie('name','rr',{expires:3});
-                    console.log($.cookie('name'));
-                    console.log($.cookie(data.data.userName));
+                    $.cookie(data.data.userName, data.data.token, {expires:3});
+                    $(location).attr('href', './index.html');
                 }
             },
             error:function(data) {
