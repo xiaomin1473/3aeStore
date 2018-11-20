@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import store.ae.dao.oss.UserDao;
 import store.ae.dto.service.oss.UserExecution;
 import store.ae.pojo.oss.User;
 
@@ -23,6 +24,9 @@ public class UserServiceTest {
 	@Autowired
 	UserService userService;
 	
+	@Autowired
+	UserDao userDao;
+	
 	@Test
 	public void testChangePwd() {
 		String userName = "root";
@@ -36,11 +40,10 @@ public class UserServiceTest {
 	public void testCheckUserInfo() {
 		String userName = "root";
 		String userPwd = "admin";
-		UserExecution userExecution = userService.checkUserInfo(userName, userPwd);
-		String userInfo = userExecution.getStateInfo();
-		User user = userExecution.getUser();
+		boolean ss = userService.checkUserInfo(userName, userPwd);
+		User user = userDao.queryByUserName(userName);
 		
-		logger.info("userInfo is:" + userInfo);
+		logger.info("userInfo is:" + user.toString());
 		logger.info("user is:" + user);
 	}
 
