@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import store.ae.service.oss.UserService;
 
 @Controller
-@RequestMapping("/user/login") // url:/模块/资源/{id}/细分
+@RequestMapping("/login") // url:/模块/资源/{id}/细分
 public class UserControlloer {
 	
 	@Autowired

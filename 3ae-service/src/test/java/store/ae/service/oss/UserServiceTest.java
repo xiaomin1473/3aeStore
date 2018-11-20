@@ -9,7 +9,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import store.ae.dao.oss.UserDao;
-import store.ae.dto.service.oss.UserExecution;
 import store.ae.pojo.oss.User;
 
 

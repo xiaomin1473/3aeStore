@@ -25,7 +25,7 @@ import store.ae.pojo.mall.feast.Seckill;
 import store.ae.service.mall.feast.SeckillService;
 
 @Controller
-@RequestMapping("/mall/goods/seckill") // url:/模块/资源/{id}/细分
+@RequestMapping("/goods/seckill") // url:/模块/资源/{id}/细分
 public class SeckillController {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 

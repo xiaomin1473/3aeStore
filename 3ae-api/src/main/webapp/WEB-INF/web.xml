@@ -7,7 +7,7 @@
   
   <!-- SpringMVC 前端控制器 -->
 	<servlet>
-		<servlet-name>api-dispatcher</servlet-name>
+		<servlet-name>api-dispatcher-mall</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<!-- 配置SpringMVC需要加载的配置文件 
 			Spring-dao.xml, Spring-service.xml, Spring-web.xml
@@ -16,14 +16,34 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:store/ae/dao/mall/config/mall-*.xml;classpath:store/ae/service/mall/config/mall-*.xml;classpath:store/ae/api/mall/config/mall-*.xml</param-value>
+			<!-- <param-value>classpath:store/ae/dao/oss/config/oss-*.xml;classpath:store/ae/service/oss/config/oss-*.xml;classpath:store/ae/api/oss/config/oss-*.xml</param-value> -->
+		</init-param>
+	</servlet>
+  
+  	<servlet-mapping>
+  		<servlet-name>api-dispatcher-mall</servlet-name>
+  		<!-- 默认匹配所有请求 -->
+  		<url-pattern>/mall/*</url-pattern>
+  	</servlet-mapping>
+  	
+  	  <!-- SpringMVC 前端控制器 -->
+	<servlet>
+		<servlet-name>api-dispatcher-oss</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- 配置SpringMVC需要加载的配置文件 
+			Spring-dao.xml, Spring-service.xml, Spring-web.xml
+			Mybatis => Spring => SpringMVC
+		-->
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:store/ae/dao/oss/config/oss-*.xml;classpath:store/ae/service/oss/config/oss-*.xml;classpath:store/ae/api/oss/config/oss-*.xml</param-value>
 		</init-param>
 	</servlet>
   
   	<servlet-mapping>
-  		<servlet-name>api-dispatcher</servlet-name>
+  		<servlet-name>api-dispatcher-oss</servlet-name>
   		<!-- 默认匹配所有请求 -->
-  		<url-pattern>/</url-pattern>
+  		<url-pattern>/user/*</url-pattern>
   	</servlet-mapping>
   	
 	<error-page>
