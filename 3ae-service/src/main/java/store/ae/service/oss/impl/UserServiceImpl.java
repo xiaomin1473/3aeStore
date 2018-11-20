@@ -72,6 +72,7 @@ public class UserServiceImpl implements UserService {
 			
 			if(user == null) {
 				exposer = new UserExposer(false, userName, nowTime.getTime());
+				return exposer;
 			}
 			
 			String token = getToken(userName);
