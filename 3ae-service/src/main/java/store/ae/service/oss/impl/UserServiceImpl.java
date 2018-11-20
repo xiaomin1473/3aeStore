@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import store.ae.dao.oss.UserDao;
-import store.ae.dto.service.oss.UserExecution;
-import store.ae.dto.service.oss.UserResult;
 import store.ae.pojo.oss.User;
 import store.ae.service.oss.UserService;
 
