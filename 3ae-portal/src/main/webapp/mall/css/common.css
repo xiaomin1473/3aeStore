@@ -334,7 +334,7 @@ a {
     display: block;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    border-left: 8px solid #f93c16;
+    border-left: 8px solid #f81828;
  }
  
  .side-toolbar .items .tips .tips-msg {
@@ -343,7 +343,7 @@ a {
     font-size: 16px;
     color: #fff;
     white-space:nowrap;
-    background-color: #f93c16;
+    background-color: #f81828;
     border-radius: 5px;
  }
  
@@ -544,7 +544,7 @@ a {
     width:140px;
     height:30px;
     line-height:30px;
-    background-color: #ff2832;
+    background-color: #f81828;
     text-align:center;
     color:#fff;
     font-size:14px;
