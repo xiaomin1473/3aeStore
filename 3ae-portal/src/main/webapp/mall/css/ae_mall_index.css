@@ -627,7 +627,7 @@ box-sizing: border-box;
  
 .ayg-items-content h3 {
    position: absolute;
-   bottom: 64px;
+   bottom: 58px;
    left: 50%;
    display: -webkit-box;
    margin-left: -38%;
@@ -636,7 +636,7 @@ box-sizing: border-box;
    line-height: 22px;
    font-size: 13px;
    font-weight: normal;
-   color: #444;
+   color: #333;
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 2;
    text-overflow: ellipsis;
@@ -656,15 +656,15 @@ box-sizing: border-box;
  
 .ctt .now-price2 {
    position: absolute;
-   bottom: 34px;
+   bottom: 24px;
    left: 14px;
    width: 80%;
    text-align: center;
-   font-size: 14px;
+   font-size: 16px;
    font-weight: bold;
    line-height: 24px;
    color: #f81828;
-   transition: all .3s;
+   transition: all .15s;
 }
  
 .carto2 {
@@ -689,7 +689,7 @@ box-sizing: border-box;
 }
  
 .ayg-items-content .ctt:hover .carto2 {
-   bottom: 21px;
+   bottom: 18px;
    display: block;
 }
  
