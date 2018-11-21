@@ -597,12 +597,12 @@ box-sizing: border-box;
  
  
 .ayg-items-content .image {
-   width: 80%;
+   width: 160px;
    height: 160px;
    margin: 0 auto;
    margin-top: 24px;
    overflow: hidden;
-   transition: all .3s;
+   transition: all .2s;
 }
 
 .ayg-items-content .image img {
