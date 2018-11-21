@@ -55,6 +55,7 @@
   float: right;
   width: 420px;
   height: 540px;
+  margin-top: 20px;
   background-image: url(../img/login_bak.png);
 }
 
