@@ -1221,7 +1221,16 @@ box-sizing: border-box;
 }
 
 /* *************************** sidebar *********************************** */
-.sidebar {position: fixed; top: 435px; left: 269.5px; opacity: 1; width:64px;height:464px;}
+.sidebar {
+   position: fixed; 
+   top: 10px; 
+   left: 240px; 
+   opacity: 1; 
+   width:64px;
+   height: 320px;
+   display: none;
+}
+
 .sidebar h4 {
    height: 26px;
    margin-top: -10px; 
