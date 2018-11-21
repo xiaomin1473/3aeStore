@@ -1106,7 +1106,7 @@ box-sizing: border-box;
 .case-wrapper {
    margin-top: 20px;
    margin-bottom: 20px;
-   height: 780px;
+   height: 779px;
    border-radius: 3px;
    overflow: hidden;
    box-shadow: 0 0 12px 1px rgba(1, 17, 37, .15);
@@ -1120,8 +1120,8 @@ box-sizing: border-box;
    box-sizing: border-box;
    height: 260px;
    background-color: #fff;
-   border-right: dashed 1px #f9f9f9;
-   border-bottom: solid 1px #eee;
+   border-right: dashed 1px #d9d9d9;
+   border-bottom: dashed 1px #d9d9d9;
    overflow: hidden;
 }
  
