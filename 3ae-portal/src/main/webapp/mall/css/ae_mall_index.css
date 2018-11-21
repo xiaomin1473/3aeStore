@@ -602,10 +602,6 @@ box-sizing: border-box;
    margin-top: 24px;
    overflow: hidden;
    transition: all .3s;
-   -o-transition: all .3s;
-   -moz-transition: all .3s;
-   -ms-transition: all .3s;
-   -webkit-transition: all .3s;
 }
 
 .ayg-items-content .image img {
@@ -799,7 +795,7 @@ box-sizing: border-box;
 
 .options{
    width: 960px;
-   padding-top: 10px;
+   padding-top: 12px;
 }
 
 .options-wrapper {
@@ -843,14 +839,21 @@ box-sizing: border-box;
    text-shadow: 0 0 1px rgba(1, 17, 37, .2);
 }
 
+.options .options-items .more-input {
+   margin: 0;
+   box-sizing: border-box;
+   width: 66px;
+   height: 30px;
+}
+
 .options .options-items .tab {
-display: none;
-position: absolute;
-width: 100%;;
-height: 460px;
-   top: 31px;
+   display: none;
+   position: absolute;
+   top: 26px;
    left: 0;
-z-index: 0;
+   z-index: 0;
+   width: 100%;;
+   height: 460px;
 }
 
 .options .options-items .tab .tab-wrapper {
@@ -858,27 +861,27 @@ z-index: 0;
 }
 
 .options .one input:checked + span + .tab {
-display: block;
+   display: block;
 }
 
 .options .two input:checked + span + .tab {
-display: block;
+   display: block;
 }
 
 .options .three input:checked + span + .tab {
-display: block;
+   display: block;
 }
 
 .options .four input:checked + span + .tab {
-display: block;
+   display: block;
 }
 
 .options .five input:checked + span + .tab {
-display: block;
+   display: block;
 }
 
 .options .six input:checked + span + .tab {
-display: block;
+   display: block;
 }
 
 .options .options-items .tab table {
@@ -946,10 +949,6 @@ display: block;
    background-color: #fff;
    color: rgba(248, 24, 40, 1);
    transition: all .3s;
-   -o-transition: all .3s;
-   -moz-transition: all .3s;
-   -ms-transition: all .3s;
-   -webkit-transition: all .3s;
 }
 
 .floor-items .content .shopcart:hover {
@@ -964,10 +963,6 @@ display: block;
    width: 45%;
    overflow: hidden;
    transition: all .3s;
-   -o-transition: all .3s;
-   -moz-transition: all .3s;
-   -ms-transition: all .3s;
-   -webkit-transition: all .3s;
 }
 
 .floor-items li:hover .img {
@@ -1140,10 +1135,6 @@ display: block;
    display: block;
    width: 100%;
    transition: all .3s;
-   -webkit-transition: all .3s;
-   -moz-transition: all .3s;
-   -o-transition: all .3s;
-   -ms-tansition: all .3s;
  }
  
  
