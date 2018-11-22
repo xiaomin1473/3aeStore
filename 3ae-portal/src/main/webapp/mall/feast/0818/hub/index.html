@@ -1,0 +1,17 @@
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<section id="hub" class="hub">
+    <div class="baka"></div>
+    <div class="bak"></div>
+    <div class="text"></div>
+    <div class="birth"></div>
+    <div class="close" onclick="fade()"></div>
+</section>
+<script>
+    setTimeout("document.getElementById('hub').className += ' dplnone'", 5000);
+
+    var fade = function() {
+        document.getElementById('hub').style.display ='none'; 
+    }
+</script>
