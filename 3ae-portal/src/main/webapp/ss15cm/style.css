@@ -1,0 +1,3295 @@
+/****** CSSRESET******/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+* {
+   text-decoration: none;
+   list-style: none;
+   font-family: "Microsoft Yahei";
+   font-size: 12px;
+   color: #000;
+   border-style: none;
+   transition: all 0.5s;
+   -webkit-transition: all 0.5s;
+   -ms-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+   -o-transition: all 0.5s;
+}
+
+a:hover {
+    color: rgba(152, 136, 110, 1);
+    text-decoration-line: none;
+}
+
+h1 { font-size: 24px; font-weight: bold;}
+
+h2 { font-size: 20px; font-weight: bold;}
+
+h3 { font-size: 16px; font-weight: bold;}
+
+h4 { font-size: 14px; font-weight: bold;}
+
+h5 { font-size: 13px; font-weight: bold;}
+
+h6 { font-size: 12px; font-weight: bold;}
+
+p { font-size: 10px; }
+
+.clrfix { clear: both; zoom: 1;}
+
+.clrhvr { width: 100%; height: 300px; position: absolute; }
+
+.lf { float: left; }
+
+.rf { float: right; }
+
+.dplyes { display: block; }
+
+.dplyno { display: none; }
+
+.ps-rlt { position: relative; }
+.ps-abt { position: absolute; }
+
+body {
+  overflow: hidden;
+  background: rgba(26, 26, 26, 1);
+}
+
+.navbar-active {
+   color: #0068b7;
+   border-bottom:solid 3px #0068b7;
+}
+
+
+.redactive {
+    background-color: red;
+}
+
+/***** MEDIA 1700px ******/
+.wrapper {
+    position: relative;
+    margin: 0;
+    width: 99%;
+    min-width: 1700px;
+    height: 99vh;
+    border-top: solid 10px rgba(118, 76, 104, 1);
+    border-left: solid 10px rgba(122, 85, 116, 1);
+    border-right: solid 10px rgba(94, 46, 46, 1);
+    overflow: hidden;
+}
+
+.depute-wrapper {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-width: 1700px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.define-wrapper {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-width: 1700px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.tvc-wrapper {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-width: 1700px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ay-wrapper {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-width: 1700px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.coo-wrapper {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-width: 1700px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.coo-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 1920px;
+    height: 960px;
+    background-image: url(img/coo/bak.png);
+    background-size: 1920px;
+    height: 960px;
+    z-index: -8;
+}
+
+.ay-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 1920px;
+    height: 960px;
+    background-image: url(img/ay/bak.png);
+    background-size: 1920px;
+    height: 960px;
+    z-index: -8;
+}
+
+.tvc-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 1920px;
+    height: 960px;
+    background-image: url(img/tvc/bg.png);
+    background-size: 1920px;
+    height: 960px;
+    z-index: -8;
+}
+
+.light-wrapper {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-width: 1700px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 1920px;
+    height: 960px;
+    background-image: url(img/beijing.png);
+    background-size: 1920px;
+    height: 960px;
+    z-index: -8;
+}
+
+.depute-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 1920px;
+    height: 960px;
+    background-image: url(img/depute/back_depute.png);
+    background-size: 1920px;
+    height: 960px;
+    z-index: -8;
+}
+
+.define-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 1920px;
+    height: 960px;
+    background-image: url(img/define/back.png);
+    background-size: 1920px;
+    height: 960px;
+    z-index: -8;
+}
+
+.light-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 1920px;
+    height: 960px;
+    background-image: url(img/15light/3.png);
+    background-size: 1920px;
+    height: 960px;
+    z-index: -8;
+}
+
+
+.depute-right .back {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    width: 24.2%;
+    height: 49.3%;
+    background-image: url(img/depute/kuang_01.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards;
+    animation: feed 2.5s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+
+}
+
+.depute-right .back2 {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    width: 24.2%;
+    height: 49.3%;
+    background-image: url(img/depute/kuang_02.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-right .depute-font {
+    position: absolute;
+    right: 6.2%;
+    top: 30%;
+    width: 33%;
+    height: 12%;
+    background-image: url(img/depute/depute_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: csmall 2.5s;
+    animation-fill-mode:forwards; 
+    opacity: 0; 
+}
+
+
+
+
+.depute-right .depute-font1 {
+    position: absolute;
+    right: 13.5%;
+    top: 47%;
+    width: 17.3%;
+    height: 4.6%;
+    background-image: url(img/depute/font1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+
+.depute-right .depute-font2 {
+    position: absolute;
+    right: 16.5%;
+    top: 52%;
+    width: 11.5%;
+    height: 2.3%;
+    background-image: url(img/depute/font2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-right .depute-line {
+    position: absolute;
+    right: 21.5%;
+    top: 57%;
+    width: 2.1%;
+    height: 0.4%;
+    background-image: url(img/depute/line.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+
+.depute-left .left-line {
+    position: absolute;
+    left: 10%;
+    top: 28%;
+    width: 12.6%;
+    height: 5.4%;
+    background-image: url(img/depute/left-line.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-left .left-line + i {
+    position: absolute;
+    left: 23%;
+    top: 30%;
+    width: 17.7%;
+    height: 1.7%;
+    background-image: url(img/depute/left-line-i.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-left .left-line2 {
+    position: absolute;
+    left: 10%;
+    top: 38%;
+    width: 22%;
+    height: 5.3%;
+    background-image: url(img/depute/left-line2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 3s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-left .left-line2-1 {
+    position: absolute;
+    left: 25%;
+    top: 46%;
+    width: 5.5%;
+    height: 1.7%;
+    background-image: url(img/depute/2-1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 4s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-left .left-line2-2 {
+    position: absolute;
+    left: 22%;
+    top: 50%;
+    width: 7.2%;
+    height: 1.7%;
+    background-image: url(img/depute/2-2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 5s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-left .left-line2-3 {
+    position: absolute;
+    left: 19%;
+    top: 54%;
+    width: 7.2%;
+    height: 1.7%;
+    background-image: url(img/depute/2-3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 6s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-left .left-line2-4 {
+    position: absolute;
+    left: 22%;
+    top: 58%;
+    width: 8.9%;
+    height: 1.7%;
+    background-image: url(img/depute/2-4.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 7s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-left .left-line3 {
+    position: absolute;
+    left: 10%;
+    top: 64%;
+    width: 9.3%;
+    height: 5.6%;
+    background-image: url(img/depute/left-line3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 8s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.depute-left .left-line3 + i {
+    position: absolute;
+    left: 21%;
+    top: 67%;
+    width: 20%;
+    height: 1.7%;
+    background-image: url(img/depute/left-line3-i.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2.5s;
+    animation-delay: 8.5s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+
+.define-back {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 0;
+    height: 0;
+    background-image: url(img/define/bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: mymove-45 2s;
+    animation-fill-mode:forwards; 
+}
+
+.define-line {
+    position: absolute;
+    left: 12%;
+    top: 6%;
+    width: 29.4%;
+    height: 6%;
+    background-image: url(img/define/line.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2s;
+    animation-delay: 2s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.define-line2 {
+    position: absolute;
+    left: 12%;
+    top: 14%;
+    width: 29.5%;
+    height: 3.2%;
+    background-image: url(img/define/line2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: scaley 2s;
+    animation-delay: 3s;
+    animation-fill-mode:forwards;
+    transform: scale(-1);
+    opacity: 0;
+
+}
+
+
+
+.define-line3 {
+    position: absolute;
+    right: 19.5%;
+    top: 0;
+    width: 0;
+    height: 9.6%;
+    background-image: url(img/define/line3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: drop 2s;
+    animation-delay: 4s;
+    animation-fill-mode:forwards;
+}
+
+
+
+.define-line4 {
+    position: absolute;
+    right: 19.5%;
+    top: 43%;
+    width: 18.5%;
+    height: 8.2%;
+    background-image: url(img/define/line4.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2s;
+    animation-delay: 5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.define-text {
+    position: absolute;
+    right: 20%;
+    bottom: 23%;
+    width: 27%;
+    height: 0;
+    background-image: url(img/define/wenan.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: stretch 2s;
+    animation-delay: 6s;
+    animation-fill-mode:forwards;
+}
+
+.define-first {
+    position: absolute;
+    right: 41.5%;
+    bottom: 35%;
+    width: 4.1%;
+    height: 11.5%;
+    background-image: url(img/define/s.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2s;
+    animation-delay: 6s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    z-index: 10;
+}
+
+.video {
+    position: absolute;
+    top: 9%;
+    right: 90%;
+    width: 5.7%;
+    height: 2.6%;
+    background-image: url(img/video_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+    
+}
+
+.video + i {
+    position: absolute;
+    top: 7.7%;
+    right: 87%;
+    width: 1.5%;
+    height: 4%;
+    background-image: url(img/03_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.navbar {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    height: 34px;
+    width: 40px;
+    background-image: url(img/01_03.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.navbar ul {
+    margin-left: -60px;
+    width: 0;
+    height: 30px;
+    overflow: hidden;
+}
+
+.navbar:hover ul {
+    transition: 1s;
+    margin-top: -3px;
+    margin-left: -1160px;
+    width: 1200px;
+}
+
+.navbar ul li {
+    float: right; 
+    margin-right: 60px;
+    width: 130px;
+    height: 30px;
+    padding-right: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    text-align: right;
+    color: rgba(152, 136, 110, 1);
+    transition: none;
+}
+
+.active {
+    border-right:solid 4px rgba(118, 71, 89, 1);
+}
+
+
+.black-background {
+    /* display: none; */
+    position: absolute;
+    /* right: 760px; */
+    left: 0; 
+    top: 0;
+    width: 0;
+    height: 960px;
+    /* background-image: url(img/mosha_03.png); */
+    /* background-position-y: 0px; */
+    background-color: rgba(31, 27, 26, .95); 
+    box-shadow: 0 10px 40px 1px #333;
+    animation: mymove60 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards; 
+}
+
+
+.time1 {
+    position: absolute;
+    right: 0px;
+    top: 25%;
+    width: 0;
+    height: 100%;
+    animation:mymove 6s 1;
+    animation-fill-mode:forwards; 
+    overflow: hidden;
+}
+
+.time1 img {
+    float: right;
+}
+
+.time2 {
+    position: absolute;
+    right: 0px;
+    top: 41.5%;
+    width: 0;
+    height: 100%;
+    animation:mymove 10s 1;
+    animation-fill-mode:forwards; 
+    overflow: hidden;
+}
+
+.time2 img {
+    float: right;
+}
+
+.hour {
+    position: absolute;
+    right: -10px;
+    top: 45.5%;
+    width: 0;
+    height: 100%;
+    animation: mymove40 6s 1;
+    animation-delay:3s;
+    animation-fill-mode:forwards; 
+    overflow: hidden;
+}
+
+.hour img {
+    float: right;
+}
+
+.hours {
+    position: absolute;
+    right: 31.7%;
+    top: 41.5%;
+    width: 1.2%;
+    height: 2.5%;
+    background-image: url(img/xiaoshi_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2s 1;
+    animation-delay:7s;
+    animation-fill-mode:forwards; 
+    opacity: 0;
+}
+
+.minute {
+    position: absolute;
+    right: 28.6%;
+    top: 41.5%;
+    width: 1.2%;
+    height: 2.5%;
+    background-image: url(img/fen_05.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2s 1;
+    animation-delay: 8s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.second {
+    position: absolute;
+    right: 25.5%;
+    top: 41.5%;
+    width: 1.2%;
+    height: 2.5%;
+    background-image: url(img/05_07.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2s 1;
+    animation-delay: 9s;
+    animation-fill-mode:forwards;
+    opacity: 0; 
+}
+
+
+
+
+.btn {
+    display: block;
+    position: absolute;
+    top: 43%;
+    right: 37%;
+    width: 2.5%;
+    height: 6%;
+    background-image: url(img/jiantou_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: feed 2s 1;
+    animation-delay:7s;
+    animation-fill-mode:forwards; 
+    cursor: pointer;
+}
+
+
+.btn2 {
+    display: none;
+    position: absolute;
+    top: 43%;
+    right: 48%;
+    width: 2.5%;
+    height: 6%;
+    background-image: url(img/jiantou_04.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: feed 2s 1;
+    animation-fill-mode:forwards; 
+    cursor: pointer;
+    opacity: 0;
+}
+
+.sheng {
+    position: absolute;
+    top: 31%;
+    left: 10.5%;
+    width: 9%;
+    height: 24.5%;
+    background-image: url(img/sheng_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 4.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.shi {
+    position: absolute;
+    top: 28%;
+    left: 21%;
+    background-image: url(img/shi_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 6.5%;
+    height: 14.5%;
+    animation: feed 3s 1;
+    animation-delay: 5.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.fift {
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    width: 10%;
+    height: 2%;
+    background-image: url(img/figteen-cm_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 1s 1;
+    animation-delay: 8s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.line {
+    position: absolute;
+    top: 45%;
+    left: 21%;
+    width: 0;
+    height: 1px;
+    background-image: url(img/hengxian_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: line 2s 1;
+    animation-delay: 4s;
+    animation-fill-mode:forwards;
+}
+
+.text {
+    position: absolute;
+    bottom: 43%;
+    left: 21%;
+    width: 31%;
+    height: 10%;
+    background-image: url(img/wenan_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.text1 {
+    position: absolute;
+    bottom: 43%;
+    left: 21%;
+    width: 31%;
+    height: 10%;
+    background-image: url(img/wenan_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+}
+
+ .text2 {
+    position: absolute;
+    bottom: 43%;
+    left: 21%;
+    width: 31%;
+    height: 10%;
+    background-image: url(img/text2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+}
+
+.text3 {
+    position: absolute;
+    bottom: 43%;
+    left: 21%;
+    width: 31%;
+    height: 10%;
+    background-image: url(img/text3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+}
+
+.text4 {
+    position: absolute;
+    bottom: 43%;
+    left: 21%;
+    width: 31%;
+    height: 10%;
+    background-image: url(img/text4.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+} 
+
+.bak {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: -100%;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(31, 27, 26, .95);  */
+    background-color: rgba(0, 0, 0, .7); 
+}
+
+.bak-content {
+    /*opacity: 0;*/
+    
+}
+
+.wenan {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-image: url(img/wenan_04.png);
+    background-size: 68%; 
+    background-position: 50% 48%;
+    background-repeat: no-repeat;
+}
+
+.sheng2 {
+    position: absolute;
+    top: 32%;
+    left: 12.5%;
+    width: 9%;
+    height: 25%;
+    background-image: url(img/sheng_04.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 1.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.shi2 {
+    position: absolute;
+    top: 28%;
+    left: 24%;
+    width: 10%;
+    height: 22.3%;
+    background-image: url(img/shi_04.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 2s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.fift2 {
+    position: absolute;
+    top: 52%;
+    left: 24%;
+    width: 10%;
+    height: 2%;
+    background-image: url(img/figteen-cm_03.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 1s 1;
+    animation-delay: 2.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(14, 14, 14, 1);
+    background-image: url(img/kuang_03.png);
+    background-size: 1920px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.sanjiao {
+    float: right;
+    margin-top: 44px;
+    margin-right: 30px;
+    width: 15px;
+    height: 16px;
+    background-image: url(img/sanjiao_03.png);
+}
+
+.brand {
+    float: right;
+    letter-spacing: 6px;
+    line-height: 100px;
+    margin-right: 20px;
+    font-size: 24px;
+    color: rgba(152, 136, 110, 1);
+}
+
+.about {
+    float: right;
+    margin-right: 78%;
+    letter-spacing: 6px;
+    line-height: 100px;
+    text-align: left;
+    font-size: 24px;
+    color: rgba(152, 136, 110, 1);
+}
+
+.about + i {
+    float: right;
+    margin-top: 44px;
+    margin-right: 20px;
+    width: 15px;
+    height: 16px;
+    background-image: url(img/sanjiao_03.png);
+}
+
+
+.aboutus-wrapper {
+    width: 100%;
+    min-width: 1200px;
+    height: 100vh;
+    overflow-y: scroll; 
+}
+
+.aboutus-container {
+    width: 100%;
+    height: 5000px;
+    background-image: url(img/about/bak.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+.navbar-top {
+    float: right;
+    width: 45%;
+    margin-top: 10%;
+    margin-right: 12%;
+}
+
+.navbar-top li {
+    float: left;
+    width: 20%;
+    height: 24px;
+    font-size: 1.1rem;
+    color: #c9c9c9;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbar-top .about-active {
+    color: #fff;
+}
+
+
+.navbar-top li:hover {
+    color: #fff;
+}
+
+.scl {
+    width: 100%;
+    height: 600px;
+    padding-top: 18%;
+
+}
+
+.scl-bak {
+    margin: 0 auto;
+    width: 34.8%;
+    height: 0;
+    background-image: url(img/about/2.png);
+    animation: long 4s;
+    animation-fill-mode:forwards;
+}
+
+.now {
+    float: right;
+    margin-top: 45px;
+    margin-right: 44%;
+    width: 17.9%;
+    height: 28%;
+    background-image: url(img/about/now.png);
+    background-repeat: no-repeat;
+    animation: feed 3s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.summary {
+    position: relative;
+    margin: 0 auto;
+    width: 72%;
+    height: 900px;
+    background-color: #fff;
+}
+
+.avatar {
+    position: absolute;
+    top: -150px;
+    left: 10%;
+    width: 45%;
+    height: 820px;
+    background-image: url(img/about/pt.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.summary .content {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 32%;
+    height: 800px;
+}
+
+.content-sum {
+    width: 100%;
+    height: 400px;
+    background-image: url(img/about/5.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.content-ico {
+    width: 50%;
+    height: 100px;
+    background-image: url(img/about/6.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.footer-sum {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 24%;
+    width: 100%;
+    background: #fdfdfd;
+}
+
+.pre-ico {
+    position: absolute;
+    left: 1%;
+    bottom: 40%;
+    width: 35px;
+    height: 37px;
+    background-image: url(img/about/12.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.next-ico {
+    position: absolute;
+    right: 1%;
+    bottom: 40%;
+    width: 35px;
+    height: 37px;
+    background-image: url(img/about/11.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.items {
+    position: absolute;
+    bottom: 4%;
+    left: 4%;
+    width: 92%;
+    height: 92%;
+}
+
+.items li {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+.footer-sum .items-1 .logo {
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 119px;
+    height: 135px;
+    background-image: url(img/about/9.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.footer-sum .items-2 .logo {
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 225px;
+    height: 135px;
+    background-image: url(img/about/8.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.footer-sum .items-3 .logo {
+    margin: 0 auto;
+    margin-top: -16%;
+    width: 342px;
+    height: 256px;
+    background-image: url(img/about/7.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.footer-sum .items-4 .logo {
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 133px;
+    height: 133px;
+    background-image: url(img/about/132.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.my-car {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 260px;
+    width: 83.5%;
+    height: 800px;
+    overflow-x: hidden;
+}
+
+
+.my-car .pre-ico {
+    position: absolute;
+    left: -7%;
+    bottom: 0;
+    width: 18%;
+    height: 80%;
+    background-image: url(img/about/s.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.my-car .main {
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    width: 60%;
+    height: 80%;
+}
+
+.my-car .main .time {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/about/13.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.my-car .main .our {
+    position: absolute;
+    left:-6%;
+    bottom: -2%;
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+        
+}
+
+.my-car .main .our img {
+    margin-top: 6%;
+    margin-left: 4%;
+}
+
+.my-car .next-ico {
+    position: absolute;
+    right:-7%;
+    bottom: 0;
+    width: 18%;
+    height: 80%;
+    background-image: url(img/about/c.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.ico-items{
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+}
+
+.ico-items li {
+    float: left;
+    margin-right: 10px;
+    width: 11px;
+    height: 11px;
+    background-image: url(img/about/19.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.ico-items .sactive {
+    width: 30px;
+    height: 30px;
+    margin-top: -4px;
+    margin-left: 2px;
+    background-image: url(img/about/18.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.three {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 260px;
+    padding-left: 100px;
+    width: 83.5%;
+    height: 730px;
+    overflow: hidden;
+}
+
+.three li {
+    float: left;
+    width: 33%;
+    margin-right: .5%;
+    height: 80%;
+}
+
+.three> .three1 {
+    width: 441px;
+    height: 700px;
+    background-image: url(img/about/24.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.three>.three2 {
+    width: 441px;
+    height: 700px;
+    background-image: url(img/about/25.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.three>.three3 {
+    width: 441px;
+    height: 700px;
+    background-image: url(img/about/26.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.sss {
+    position: relative;
+    margin-left: 12.5%;
+    margin-top: 200px;
+    width: 72%;
+    height: 700px;
+    background-image: url(img/about/21.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.sfq {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    width: 30%;
+    height: 760px;
+    background-image: url(img/about/22.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.light-bak {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/15light/4.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 5s 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.light-kuang {
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: url(img/15light/1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: sadg 1.5s 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.light-kuang2 {
+    position: absolute;
+    left: 34.5%; 
+    top: 27%; 
+    width: 35.6%; 
+    height: 49.2%;
+    background-image: url(img/15light/5.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+.light-15 {
+    position: absolute;
+    left: 39%; 
+    top: 38%; 
+    width: 8.6%;
+    height: 16.2%;
+    background-image: url(img/15light/2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.light-text {
+    position: absolute;
+    left: 49%; 
+    top: 38%; 
+    width: 16.7%;
+    height: 9.2%;
+    background-image: url(img/15light/23.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 2s 1;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.light-15lt {
+    position: absolute;
+    left: 43%; 
+    top: 49%; 
+    width: 14.5%;
+    height: 6.1%;
+    background-image: url(img/15light/14.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3.5s 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.light-line {
+    position: absolute;
+    left: 43%; 
+    top: 56%; 
+    width: 14.5%;
+    height: 6.1%;
+    background-image: url(img/15light/51.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 1s 1;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.light-content-l {
+    position: absolute;
+    left: 29%; 
+    bottom: 12.5%; 
+    width: 23.7%;
+    height: 10.4%;
+    background-image: url(img/15light/131.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 1s 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.light-content-r {
+    position: absolute;
+    right: 24%; 
+    bottom: 10%; 
+    width: 20.6%;
+    height: 13.3%;
+    background-image: url(img/15light/41.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 1s 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.tvc-kuang {
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: url(img/tvc/1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: sadg 1.5s 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.tvc-kuang2 {
+    position: absolute;
+    left: 29.1%; 
+    top: 32%; 
+    width: 46.9%; 
+    height: 39.2%;
+    background-image: url(img/tvc/2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 1.5s 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+.tvc-title {
+    position: absolute;
+    left: 43%; 
+    top: 20%; 
+    width: 18.9%;
+    height: 6.6%; 
+    background-image: url(img/tvc/tvc.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.tvc-1 {
+    position: absolute;
+    left: 30.5%; 
+    top: 42%; 
+    width: 14%; 
+    height: 23.5%;
+    background-image: url(img/tvc/pt_1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.tvc-2 {
+    position: absolute;
+    left: 45.5%; 
+    top: 42%; 
+    width: 14%; 
+    height: 23.5%;
+    background-image: url(img/tvc/pt_2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.tvc-3 {
+    position: absolute;
+    left: 60.5%; 
+    top: 42%; 
+    width: 14%; 
+    height: 23.5%;
+    background-image: url(img/tvc/pt_3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.tvc-t1 {
+    position: absolute;
+    left: 30.5%; 
+    top: 36%; 
+    width: 14.6%; 
+    height: 23px;
+    background-image: url(img/tvc/12.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.tvc-t2 {
+    position: absolute;
+    left: 47%; 
+    top: 36%;
+    width: 11.2%; 
+    height: 23px;
+    background-image: url(img/tvc/41.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.tvc-t3 {
+    position: absolute;
+    left: 64%; 
+    top: 36%; 
+    width: 7.3%;
+    height: 23px;
+    background-image: url(img/tvc/61.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: feed 3s 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.ccc {
+    position: absolute;
+    margin-left: 35%;
+    width: 600px;
+    height: 800px;
+}
+
+.conttt {
+    margin:0 auto;
+    padding-top: 130px;
+    width: 600px;
+    height: 800px;
+    animation: loop-up 40s infinite;
+}
+
+.conttt h2 {
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    text-align: center;
+    color: rgba(152, 136, 110, 1);
+}
+
+.conttt p {
+    text-indent: 2.2rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: .3rem;
+    color: rgba(152, 136, 110, 1);
+}
+
+.coo-title {
+    position: absolute;
+    right: 21.5%;
+    top: 35%;
+    width: 16.6%;
+    height: 5.4%;
+    background-image: url(img/coo/12.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.coo-text1 {
+    position: absolute;
+    right: 12%;
+    top: 45%;
+    width: 26%;
+    height: 19.7%;
+    background-image: url(img/coo/1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.coo-text2 {
+    position: absolute;
+    right: 12%;
+    top: 45%;
+    width: 26%;
+    height: 19.7%;
+    background-image: url(img/coo/2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.coo-btn {
+    position: absolute;
+    right: 39%;
+    top: 45%;
+    width: 11px;
+    height: 20%;
+    background-image: url(img/coo/3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+/********************************************************************************************************************  */
+
+@media(max-width: 1700px){
+    .wrapper {
+        margin: 0;
+        width: 98.7%;
+        min-width: 1500px;
+        height: 99vh;
+        border-top: solid 10px rgba(118, 76, 104, 1);
+        border-left: solid 10px rgba(122, 85, 116, 1);
+        border-right: solid 10px rgba(94, 46, 46, 1);
+        overflow: hidden;
+    }
+
+    .depute-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1500px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .define-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1500px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .light-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1500px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .tvc-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1500px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .ay-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1500px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .coo-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1500px;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+
+    .coo-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1700px;
+        height: 800px;
+        background-image: url(img/coo/bak.png);
+        background-repeat: no-repeat;
+        background-size: 1700px;
+    }
+
+    .ay-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1700px;
+        height: 800px;
+        background-image: url(img/ay/bak.png);
+        background-repeat: no-repeat;
+        background-size: 1700px;
+    }
+
+    .tvc-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1700px;
+        height: 800px;
+        background-image: url(img/tvc/bg.png);
+        background-repeat: no-repeat;
+        background-size: 1700px;
+    }
+
+    .container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1700px;
+        height: 800px;
+        background-image: url(img/beijing.png);
+        background-repeat: no-repeat;
+        background-size: 1700px;
+    }
+
+    .depute-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1700px;
+        height: 800px;
+        background-image: url(img/depute/back_depute.png);
+        background-repeat: no-repeat;
+        background-size: 1700px;
+    }
+
+    .define-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: right;
+        width: 1700px;
+        height: 800px;
+        background-image: url(img/define/back.png);
+        background-repeat: no-repeat;
+        background-size: 1700px;
+    }
+
+    .light-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: right;
+        width: 1700px;
+        height: 800px;
+        background-image: url(img/15light/3.png);
+        background-repeat: no-repeat;
+        background-size: 1700px;
+    }
+    
+    .black-background {
+        /* display: none; */
+        position: absolute;
+        /* right: 760px; */
+        left: 0; 
+        top: 0;
+        width: 0;
+        height: 960px;
+        /* background-image: url(img/mosha_03.png); */
+        /* background-position-y: 0px; */
+        background-color: rgba(31, 27, 26, .95); 
+        box-shadow: 0 10px 40px 1px #333;
+        animation: mymove60 2.5s;
+        animation-delay: 1s;
+        animation-fill-mode:forwards; 
+    }
+
+    .time1 {
+        position: absolute;
+        right: 0px;
+        top: 16%;
+        width: 0;
+        height: 100%;
+        animation:mymove 6s 1;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .time1 img {
+        float: right;
+    }
+
+    .time2 {
+        position: absolute;
+        right: 0px;
+        top: 34.5%;
+        width: 0;
+        height: 100%;
+        animation:mymove 10s 1;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .time2 img {
+        float: right;
+    }
+
+
+    .hour {
+        position: absolute;
+        right: -60px;
+        top: 45%;
+        width: 0;
+        height: 100%;
+        animation: mymove40 6s 1;
+        animation-delay:3s;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .hour img {
+        float: right;
+    }
+
+    .hours {
+        position: absolute;
+        right: 31.7%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/xiaoshi_03.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay:7s;
+        animation-fill-mode:forwards; 
+        opacity: 0;
+    }
+
+    .minute {
+        position: absolute;
+        right: 28.6%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/fen_05.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay: 8s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+    }
+
+    .second {
+        position: absolute;
+        right: 25.5%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/05_07.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay: 9s;
+        animation-fill-mode:forwards;
+        opacity: 0; 
+    }
+
+    .navbar ul {
+        margin-left: -60px;
+        width: 0;
+        height: 30px;
+        overflow: hidden;
+    }
+
+    .navbar:hover ul {
+        transition: 1s;
+        margin-top: -3px;
+        margin-left: -1200px;
+        width: 1200px;
+    }
+
+    .navbar ul li {
+        float: right; 
+        margin-right: 35px;
+        width: 130px;
+        height: 30px;
+        padding-right: 20px;
+        font-size: 24px;
+        text-align: right;
+        color: rgba(152, 136, 110, 1);
+        transition: none;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        min-width: 1520px;
+        height: 80px;
+        background-color: rgba(14, 14, 14, 1);
+        background-image: url(img/kuang_03.png);
+        background-size: 1700px;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .sanjiao {
+        float: right;
+        margin-top: 34px;
+        margin-right: 2.5%;
+        width: 15px;
+        height: 16px;
+        background-image: url(img/sanjiao_03.png);
+    }
+
+    .brand {
+        float: right;
+        letter-spacing: 6px;
+        line-height: 80px;
+        margin-right: 20px;
+        font-size: 24px;
+        color: rgba(152, 136, 110, 1);
+    }
+
+    .about {
+        float: right;
+        margin-right: 74%;
+        letter-spacing: 6px;
+        line-height: 80px;
+        text-align: left;
+        font-size: 24px;
+        color: rgba(152, 136, 110, 1);
+    }
+
+    .about + i {
+        float: right;
+        margin-top: 34px;
+        margin-right: 20px;
+        width: 15px;
+        height: 16px;
+        background-image: url(img/sanjiao_03.png);
+    }
+}
+
+@media(max-width: 1520px){
+    .wrapper {
+        margin: 0;
+        width: 98.5%;
+        min-width: 1350px;
+        height: 99vh;
+        border-top: solid 10px rgba(118, 76, 104, 1);
+        border-left: solid 10px rgba(122, 85, 116, 1);
+        border-right: solid 10px rgba(94, 46, 46, 1);
+        overflow: hidden;
+    }
+
+    .depute-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1350px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .define-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1350px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .light-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1350px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .tvc-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1350px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .ay-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1350px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .coo-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1350px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .coo-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1500px;
+        height: 900px;
+        background-image: url(img/coo/bak.png);
+        background-repeat: no-repeat;
+        background-size: 1600px;
+    }
+
+    .ay-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1500px;
+        height: 900px;
+        background-image: url(img/ay/bak.png);
+        background-repeat: no-repeat;
+        background-size: 1600px;
+    }
+
+    .tvc-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1500px;
+        height: 900px;
+        background-image: url(img/tvc/bg.png);
+        background-repeat: no-repeat;
+        background-size: 1600px;
+    }
+
+    .container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1500px;
+        height: 900px;
+        background-image: url(img/beijing.png);
+        background-repeat: no-repeat;
+        background-size: 1600px;
+    }
+
+    .depute-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1500px;
+        height: 900px;
+        background-image: url(img/depute/back_depute.png);
+        background-repeat: no-repeat;
+        background-size: 1600px;
+    }
+
+    .define-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: right;
+        width: 1500px;
+        height: 900px;
+        background-image: url(img/define/back.png);
+        background-repeat: no-repeat;
+        background-size: 1600px;
+    }
+
+    .light-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: right;
+        width: 1500px;
+        height: 900px;
+        background-image: url(img/15light/3.png);
+        background-repeat: no-repeat;
+        background-size: 1600px;
+    }
+
+    .navbar ul {
+        margin-left: -60px;
+        width: 0;
+        height: 30px;
+        overflow: hidden;
+    }
+
+    .navbar:hover ul {
+        transition: 1s;
+        margin-top: -3px;
+        margin-left: -1200px;
+        width: 1200px;
+    }
+
+    .navbar ul li {
+        float: right; 
+        margin-right: 10px;
+        width: 130px;
+        height: 30px;
+        padding-right: 20px;
+        font-size: 24px;
+        text-align: right;
+        color: rgba(152, 136, 110, 1);
+        transition: none;
+    }
+
+    .black-background {
+        /* display: none; */
+        position: absolute;
+        /* right: 760px; */
+        left: 0; 
+        top: 0;
+        width: 0;
+        height: 960px;
+        /* background-image: url(img/mosha_03.png); */
+        /* background-position-y: 0px; */
+        background-color: rgba(31, 27, 26, .95); 
+        box-shadow: 0 10px 40px 1px #333;
+        animation: mymove60 2.5s;
+        animation-delay: 1s;
+        animation-fill-mode:forwards; 
+    }
+  
+    .time1 {
+        position: absolute;
+        right: 0px;
+        top: 20%;
+        width: 0;
+        height: 100%;
+        animation:mymove 6s 1;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .time1 img {
+        float: right;
+    }
+
+    .time2 {
+        position: absolute;
+        right: 0px;
+        top: 38.5%;
+        width: 0;
+        height: 100%;
+        animation:mymove 10s 1;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .time2 img {
+        float: right;
+    }
+
+    .hour {
+        position: absolute;
+        right: -10%;
+        top: 45%;
+        width: 0;
+        height: 100%;
+        animation: mymove46 6s 1;
+        animation-delay:3s;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .hour img {
+        float: right;
+    }
+
+    .hours {
+        position: absolute;
+        right: 31.7%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/xiaoshi_03.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay:7s;
+        animation-fill-mode:forwards; 
+        opacity: 0;
+    }
+
+    .minute {
+        position: absolute;
+        right: 28.6%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/fen_05.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay: 8s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+    }
+
+    .second {
+        position: absolute;
+        right: 25.5%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/05_07.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay: 9s;
+        animation-fill-mode:forwards;
+        opacity: 0; 
+    }
+
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        min-width: 1200px;
+        height: 80px;
+        background-color: rgba(14, 14, 14, 1);
+        background-image: url(img/kuang_03.png);
+        background-size: 1500px;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .sanjiao {
+        float: right;
+        margin-top: 34px;
+        margin-right: 2.5%;
+        width: 15px;
+        height: 16px;
+        background-image: url(img/sanjiao_03.png);
+    }
+
+    .brand {
+        float: right;
+        letter-spacing: 6px;
+        line-height: 80px;
+        margin-right: 20px;
+        font-size: 24px;
+        color: rgba(152, 136, 110, 1);
+    }
+
+    .about {
+        float: right;
+        margin-right: 68%;
+        letter-spacing: 6px;
+        line-height: 80px;
+        text-align: left;
+        font-size: 24px;
+        color: rgba(152, 136, 110, 1);
+    }
+
+    .about + i {
+        float: right;
+        margin-top: 34px;
+        margin-right: 20px;
+        width: 15px;
+        height: 16px;
+        background-image: url(img/sanjiao_03.png);
+    }
+}
+
+@media(max-width: 1366px){
+    .wrapper {
+        margin: 0;
+        width: 98.5%;
+        min-width: 1200px;
+        height: 99vh;
+        border-top: solid 10px rgba(118, 76, 104, 1);
+        border-left: solid 10px rgba(122, 85, 116, 1);
+        border-right: solid 10px rgba(94, 46, 46, 1);
+        overflow: hidden;
+    }
+
+    .depute-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1200px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .define-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1200px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .light-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1200px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .tvc-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1200px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .ay-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1200px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .coo-wrapper {
+        margin: 0;
+        width: 100%;
+        min-width: 1200px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .coo-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1400px;
+        height: 800px;
+        background-image: url(img/coo/bak.png);
+        background-repeat: no-repeat;
+        background-size: 1400px;
+    }
+
+    .ay-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1400px;
+        height: 800px;
+        background-image: url(img/ay/bak.png);
+        background-repeat: no-repeat;
+        background-size: 1400px;
+    }
+
+    .tvc-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1400px;
+        height: 800px;
+        background-image: url(img/tvc/bg.png);
+        background-repeat: no-repeat;
+        background-size: 1400px;
+    }
+
+    .container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1400px;
+        height: 800px;
+        background-image: url(img/beijing.png);
+        background-repeat: no-repeat;
+        background-size: 1400px;
+    }
+
+    .depute-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1400px;
+        height: 800px;
+        background-image: url(img/depute/back_depute.png);
+        background-repeat: no-repeat;
+        background-size: 1400px;
+    }
+    .define-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1400px;
+        height: 800px;
+        background-image: url(img/define/back.png);
+        background-repeat: no-repeat;
+        background-size: 1400px;
+    }
+
+    .light-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1400px;
+        height: 800px;
+        background-image: url(img/15light/3.png);
+        background-repeat: no-repeat;
+        background-size: 1400px;
+    }
+
+
+    .navbar ul {
+        margin-left: -60px;
+        width: 0;
+        height: 30px;
+        overflow: hidden;
+    }
+
+    .navbar:hover ul {
+        transition: 1s;
+        margin-top: -3px;
+        margin-left: -1200px;
+        width: 1200px;
+    }
+
+    .navbar ul li {
+        float: right; 
+        margin-right: 0px;
+        width: 130px;
+        height: 30px;
+        padding-right: 30px;
+        font-size: 24px;
+        text-align: right;
+        color: rgba(152, 136, 110, 1);
+        transition: none;
+    }
+
+    .black-background {
+        /* display: none; */
+        position: absolute;
+        /* right: 760px; */
+        left: 0; 
+        top: 0;
+        width: 0;
+        height: 960px;
+        /* background-image: url(img/mosha_03.png); */
+        /* background-position-y: 0px; */
+        background-color: rgba(31, 27, 26, .95); 
+        box-shadow: 0 10px 40px 1px #333;
+        animation: mymove60 2.5s;
+        animation-delay: 1s;
+        animation-fill-mode:forwards; 
+    }
+
+    .time1 {
+        position: absolute;
+        right: 0px;
+        top: 0%;
+        width: 0;
+        height: 100%;
+        animation:mymove 6s 1;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .time1 img {
+        float: right;
+    }
+
+    .time2 {
+        position: absolute;
+        right: 0px;
+        top: 31.5%;
+        width: 0;
+        height: 100%;
+        animation:mymove 10s 1;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .time2 img {
+        float: right;
+    }
+
+    .hour {
+        position: absolute;
+        right: -10%;
+        top: 45%;
+        width: 0;
+        height: 100%;
+        animation: mymove46 6s 1;
+        animation-delay:3s;
+        animation-fill-mode:forwards; 
+        overflow: hidden;
+    }
+
+    .hour img {
+        float: right;
+    }
+
+    .hours {
+        position: absolute;
+        right: 31.7%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/xiaoshi_03.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay:7s;
+        animation-fill-mode:forwards; 
+        opacity: 0;
+    }
+
+    .minute {
+        position: absolute;
+        right: 28.6%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/fen_05.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay: 8s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+    }
+
+    .second {
+        position: absolute;
+        right: 25.5%;
+        top: 41.5%;
+        width: 1.2%;
+        height: 2.5%;
+        background-image: url(img/05_07.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: feed 2s 1;
+        animation-delay: 9s;
+        animation-fill-mode:forwards;
+        opacity: 0; 
+    }
+
+    .aboutus-container {
+        width: 100%;
+        height: 3600px;
+        background-image: url(img/about/bak.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .scl {
+        width: 100%;
+        height: 460px;
+        padding-top: 18%;
+
+    }
+
+    .scl-bak {
+        margin: 0 auto;
+        width: 56%;
+        height: 0;
+        background-image: url(img/about/2.png);
+        background-repeat: no-repeat;
+        animation: long 4s;
+        animation-fill-mode:forwards;
+    }
+
+    .now {
+        float: right;
+        margin-top: 45px;
+        margin-right: 38%;
+        width: 28%;
+        height: 32%;
+        background-image: url(img/about/now.png);
+        background-repeat: no-repeat;
+        animation: feed 3s;
+        animation-delay: 1s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+    }
+
+    .summary {
+        position: relative;
+        margin: 0 auto;
+        width: 72%;
+        height: 600px;
+        background-color: #fff;
+    }
+        
+    .avatar {
+        position: absolute;
+        top: -80px;
+        left: 10%;
+        width: 40%;
+        height: 820px;
+        background-image: url(img/about/pt.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .summary .content {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        width: 32%;
+        height: 800px;
+    }
+
+    .content-sum {
+        width: 100%;
+        height: 250px;
+        background-image: url(img/about/5.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .content-ico {
+        width: 50%;
+        height: 80px;
+        background-image: url(img/about/6.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+        
+    .footer-sum {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 28%;
+        width: 100%;
+        background: #fdfdfd;
+    }
+
+    .pre-ico {
+        position: absolute;
+        left: 1%;
+        bottom: 40%;
+        width: 35px;
+        height: 37px;
+        background-image: url(img/about/12.png);
+        background-size: 100%;
+        cursor: pointer;
+    }
+
+    .next-ico {
+        position: absolute;
+        right: 1%;
+        bottom: 40%;
+        width: 35px;
+        height: 37px;
+        background-image: url(img/about/11.png);
+        background-size: 100%;
+        cursor: pointer;
+    }
+
+    .items {
+        position: absolute;
+        bottom: 4%;
+        left: 4%;
+        width: 92%;
+        height: 92%;
+    }
+
+    .items li {
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+
+    .footer-sum .items-1 .logo {
+        margin: 0 auto;
+        margin-top: 10%;
+        width: 108px;
+        height: 120px;
+        background-image: url(img/about/9.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .footer-sum .items-2 .logo {
+        margin: 0 auto;
+        margin-top: 12%;
+        width: 180px;
+        height: 120px;
+        background-image: url(img/about/8.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .footer-sum .items-3 .logo {
+        margin: 0 auto;
+        margin-top: -10%;
+        width: 260px;
+        height: 230px;
+        background-image: url(img/about/7.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .footer-sum .items-4 .logo {
+        margin: 0 auto;
+        margin-top: 10%;
+        width: 123px;
+        height: 123px;
+        background-image: url(img/about/132.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+
+    .my-car {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 83.5%;
+        height: 420px;
+        overflow-x: hidden;
+    }
+
+
+    .my-car .pre-ico {
+        position: absolute;
+        left: -7%;
+        bottom: 0;
+        width: 18%;
+        height: 80%;
+        background-image: url(img/about/s.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .my-car .main {
+        position: absolute;
+        left: 20%;
+        bottom: 10%;
+        width: 60%;
+        height: 80%;
+    }
+
+    .my-car .main .time {
+        width: 100%;
+        height: 100%;
+        background-image: url(img/about/13.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .my-car .main .our {
+        position: absolute;
+        left:-3%;
+        bottom: 22%;
+        width: 60%;
+        height: 50%;
+        background: #fff;
+        background-size: 100%;
+        background-repeat: no-repeat;
+            
+    }
+
+    .my-car .main .our img {
+        margin-top: 10%;
+        margin-left: 4%;
+        width: 90%;
+    }
+
+    .my-car .next-ico {
+        position: absolute;
+        right:-7%;
+        bottom: 0;
+        width: 18%;
+        height: 80%;
+        background-image: url(img/about/c.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .ico-items{
+        position: absolute;
+        bottom: 20%;
+        left: 47%;
+    }
+
+    .ico-items li {
+        float: left;
+        margin-right: 10px;
+        width: 11px;
+        height: 11px;
+        background-image: url(img/about/19.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .ico-items .sactive {
+        width: 30px;
+        height: 30px;
+        margin-top: -4px;
+        margin-left: 2px;
+        background-image: url(img/about/18.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .three {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 100px;
+        padding-left: -30px;
+        width: 80.5%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .three li {
+        float: left;
+        width: 33%;
+        margin-right: .5%;
+        height: 80%;
+    }
+
+    .three> .three1 {
+        width: 300px;
+        height: 480px;
+        background-image: url(img/about/24.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .three>.three2 {
+        width: 300px;
+        height: 480px;
+        background-image: url(img/about/25.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .three>.three3 {
+        width: 300px;
+        height: 480px;
+        background-image: url(img/about/26.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+
+    .sss {
+        position: relative;
+        margin-left: 12.5%;
+        margin-top: 200px;
+        width: 72%;
+        height: 700px;
+        background-image: url(img/about/21.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .sfq {
+        position: absolute;
+        right: 15%;
+        bottom: 0;
+        width: 30%;
+        height: 760px;
+        background-image: url(img/about/22.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .ccc {
+        position: absolute;
+        margin-left: 25%;
+        width: 600px;
+        height: 800px;
+    }
+
+    .conttt {
+        margin:0 auto;
+        padding-top: 130px;
+        width: 600px;
+        height: 800px;
+        animation: loop-up 40s infinite;
+    }
+
+
+
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 80px;
+        background-color: rgba(14, 14, 14, 1);
+        background-image: url(img/kuang_03.png);
+        background-size: 1500px;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .sanjiao {
+        float: right;
+        margin-top: 34px;
+        margin-right: 2%;
+        width: 15px;
+        height: 16px;
+        background-image: url(img/sanjiao_03.png);
+    }
+
+    .brand {
+        float: right;
+        letter-spacing: 6px;
+        line-height: 80px;
+        margin-right: 20px;
+        font-size: 24px;
+        color: rgba(152, 136, 110, 1);
+    }
+
+    .about {
+        float: right;
+        margin-right: 69%;
+        letter-spacing: 6px;
+        line-height: 80px;
+        text-align: left;
+        font-size: 24px;
+        color: rgba(152, 136, 110, 1);
+    }
+
+    .about + i {
+        float: right;
+        margin-top: 34px;
+        margin-right: 25px;
+        width: 15px;
+        height: 16px;
+        background-image: url(img/sanjiao_03.png);
+    }
+
+}
+
+@keyframes mymove46
+{
+    to {width:46%;}
+}
+
+
+@keyframes mymove40
+{
+    to {width:40%;}
+}
+
+@keyframes mymove60
+{
+    to {width: 58%;}
+}
+
+
+.mymovesheng {
+    opacity: 1;
+    animation: mymovesheng 3.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes mymovesheng
+{
+    to {left: 40%;}
+}
+
+.mymoveshi {
+    opacity: 1;
+    animation: mymoveshi 3.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes mymoveshi
+{
+    to {left: 50%;}
+}
+
+.mymovefift {
+    opacity: 1;
+    animation: mymovefift 3.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes mymovefift
+{
+    to {left: 50%;}
+}
+
+
+.mymove100 {
+    width: 50%;
+    animation: mymove100 3.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes mymove100
+{
+    to {width: 100%;}
+}
+
+
+.mymove60-re {
+    width: 58%;
+    animation: mymove60-re 2.5s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes mymove60-re
+{
+    to {width: 50%;}
+}
+
+
+@keyframes mymove
+{
+    to {width:100%;}
+}
+
+@keyframes down
+{
+    to {top: 28%;}
+}
+
+
+@keyframes right
+{
+    to {left: 10%;}
+}
+
+
+@keyframes up
+{
+    to {bottom: 43%;}
+}
+
+
+@keyframes line
+{
+    to {width: 31%;}
+}
+
+
+.feed {
+    animation: feed 3s 1;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+
+@keyframes feed
+{
+    to {opacity: 1;}
+}
+
+
+.feed-re {
+    animation: feed-re 2s 1;
+    animation-fill-mode:forwards;
+    opacity: 1;
+}
+
+@keyframes feed-re
+{
+    to {opacity: 0;}
+}
+
+@keyframes feed2
+{
+    to {opacity: 1;}
+}
+
+/*#time-block {*/
+    /*opacity: 0;*/
+/*}*/
+
+@keyframes csmall
+{
+    to {top: 33%;right: 7.2%;width: 29.8%; opacity: 1; }
+}
+
+@keyframes mymove-45 
+{
+     to { width: 94%; height: 93%; }
+}
+
+
+@keyframes stretch {
+    to { height: 23%;}
+}
+
+@keyframes drop {
+    to { top: 34%; width: 22.7%;}
+}
+
+@keyframes scaley
+{
+    to { transform: scale(1); opacity: 1;}
+}
+
+@keyframes long 
+{
+    to {height: 287px;}
+}
+
+
+@keyframes sadg 
+{
+    to {left: 29.1%; top: 32%; width: 46.9%; height: 39.2%; }
+}
+
+@keyframes loop-up
+{
+    to {
+        margin-top: -560px;
+    }
+}
