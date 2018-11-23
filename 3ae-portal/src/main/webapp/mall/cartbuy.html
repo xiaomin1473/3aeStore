@@ -10,12 +10,12 @@
 
         <title>爱我所爱，悦购全球</title>
         <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-        <link rel="shortcut icon" href="img/favicon.ico" />
-        <link rel="stylesheet" href="css/bootstrap3.37.css">
+        <link rel="shortcut icon" href="./assets/img/favicon.ico" />
         
-        <link rel="stylesheet" href="css/common.css">
-        <link rel="stylesheet" href="css/font_icon.css">
-        <link rel="stylesheet" href="css/ayg3.0_index_style.css">
+        <link rel="stylesheet" href="./assets/css/common.css">
+        <link rel="stylesheet" href="./assets/css/font_icon.css">
+        <link rel="stylesheet" href="./assets/css/ayg3.0_index_style.css">
+        <link rel="stylesheet" href="./assets/css/ae_mall_case.css">
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,23 +30,51 @@
     <body>
         <!-- 内容 -->
         <div class="container-cart">
-            <section class="top-wrapper">
-                <div class="top-wrapper-main w-1200 clearfix">
-                    <span>   </span>
-                    <ul class="top_nav frt">
-                        <li><span><a href="##">小明先生</a></span><span><a class="active" href="##">退出</a></span></li><span>|</span>
-                        <li><a href="##">我的订单</a></li><span>|</span>
-                        <li><a href="##">支付帮助</a></li>
+            <!-- 顶部导航 -->
+            <div class="topbar">
+                <div class="topbar-wrapper w-1200">
+                    <i>Hi~欢迎来到爱悦购商城<a href="./index.html" style="color: #f81828">首页</a>，请</i><a href="./login.html">登录</a>
+                    <a href="./regist.html"> 免费注册</a>
+                    <div class="shopcart frt">
+                        <i class="iconfont icon-carts"></i>
+                        <span>购物车</span>
+                        <em class="count cart_num">0</em>
+                    </div>
+                    <ul class="top-nav frt">
+                        <li class="wechat"><i ></i>关注我们
+                            <div class="erma">二维码</div>
+                        </li><i>|</i>
+                        <li class="tels"><i></i>手机爱悦购
+                            <div class="erma">
+                                <div class="clearfix">
+                                    <div class="imgs flt">
+                                        <img src="./assets/img/erma.jpg">
+                                    </div>
+                                    <div class="content frt">
+        
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="imgs flt">
+                                    </div>
+                                    <div class="content frt">
+        
+                                    </div>
+                                </div>
+                            </div></li><i>|</i>
+                        <li>我的订单</li><i>|</i>
+                        <li>我的收藏</li><i>|</i>
+                        <li>客户服务</li>
+                        <li></li>
                     </ul>
                 </div>
-                <div class="top-wrapper-bak2"></div>
-            </section>
+            </div>
             
 
 
             <section class="window-main w-1200 clearfix">
                 <div class="main-left flt">
-                    <div class="logo"><a href="###"><img src="img/logo_2.png" alt="logo"></a></div>
+                    <div class="logo"><a href="###"><img src="./assets/img/logo_2.png" alt="logo"></a></div>
                 </div>
 
                 <div class="main-right frt">
@@ -75,71 +103,254 @@
 
             </div>
 
-
-
-
+            <!-- 猜你喜欢 -->
+            <div class="case-like">
+                <div class="buy-divider w-1200"><img src="./assets/img/buy_more.png"></div>
+                <ul class="case-wrapper w-1200 clearfix">
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                    <li><a href="##" target="_blank">
+                        <div class="image">
+                            <img src="./assets/img/13.gif" alt="商品">
+                        </div>
+                        <h3>华为META9全华为META9 全华 为 META9 全华 为META9全华 为META9全 华为MET</h3>
+                        <p class="price">￥4331.00</p></a>
+                        <div class="cart">
+                            <a href="###">立即购买</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
 
             <!-- 页面模板 FOOTER -->
             <div class="footer">
                 <div class="brand-wrapper">
-                    <ul class="brand-list w-1200 clearfix">
-                        <li class="flt">
-                            <img src="img/quality.png">
-                        </li>
-                        <li class="flt">
-                            <img src="img/authority.png">
-                        </li>
-                        <li class="flt">
-                            <img src="img/global.png">
-                        </li>
-                        <li class="flt">
-                            <img src="img/flash.png">
-                        </li>
-                        <li class="flt">
-                            <img src="img/sevenday.png">
-                        </li>
-                        <li class="flt">
-                            <img src="img/praise.png">
-                        </li>        
-                    </ul>
+                        <ul class="brand-list w-1200 clearfix">
+                            <li class="flt">
+                            <img src="./assets/img/footer/quality.png">
+                            </li>
+                            <li class="flt">
+                            <img src="./assets/img/footer/authority.png">
+                            </li>
+                            <li class="flt">
+                            <img src="./assets/img/footer/global.png">
+                            </li>
+                            <li class="flt">
+                            <img src="./assets/img/footer/flash.png">
+                            </li>
+                            <li class="flt">
+                            <img src="./assets/img/footer/sevenday.png">
+                            </li>
+                            <li class="flt">
+                            <img src="./assets/img/footer/praise.png">
+                            </li>
+                        </ul>
                 </div>
                 <div class="footer-list w-1200 clearfix">
-                    <div class="flt">
-                        <ul class="frt">
+                        <div class="flt">
+                            <ul class="frt">
                             <h3>新手上路</h3>
                             <li><a href="##">用户协议</a></li>
                             <li><a href="##">购物流程</a></li>
-                        </ul>
-                        <ul class="frt">
+                            </ul>
+                            <ul class="frt">
                             <h3>支付方式</h3>
                             <li><a href="##">联系客服</a></li>
-                        </ul>
-                        <ul class="frt">
+                            </ul>
+                            <ul class="frt">
                             <h3>会员中心</h3>
                             <li><a href="##">资金管理</a></li>
                             <li><a href="##">我的收藏</a></li>
                             <li><a href="##">我的订单</a></li>
-                        </ul>
-                        <ul class="frt">
+                            </ul>
+                            <ul class="frt">
                             <h3>售后服务</h3>
                             <li><a href="##">退换货规则</a></li>
                             <li><a href="##">客服服务</a></li>
                             <li><a href="##">售后流程</a></li>
-                        </ul>
-                        <ul class="frt">
+                            </ul>
+                            <ul class="frt">
                             <h3>商家服务</h3>
                             <li><a href="##">合作流程</a></li>
-                        </ul>
-                    </div>
-                    <div class="tels frt">
-                        <img src="img/tels.gif">
-                        <a class="btn-ctn" href="http://lzt.zoosnet.net/LR/Chatpre.aspx?id=LZT70604741" target="_blank"><i class="iconfont icon-csu"></i>咨询客服</a>
-                    </div>
+                            </ul>
+                        </div>
+                        <div class="tels frt">
+                            <img src="./assets/img/footer/tels.gif">
+                            <a class="btn-ctn" href="http://lzt.zoosnet.net/LR/Chatpre.aspx?id=LZT70604741" target="_blank"><i class="iconfont icon-csu"></i>咨询客服</a>
+                        </div>
                 </div>
                 <div class="footer-bar-wrapper">
-                    <nav class="footer-bar  w-1200">
-                        <ul class="footer-items clearfix">
+                        <nav class="footer-bar  w-1200">
+                            <ul class="footer-items clearfix">
                             <li><a href="">首页 |</a></li>
                             <li><a href=""> 隐私保护 | </a></li>
                             <li><a href=""> 联系我们 | </a></li>
@@ -152,84 +363,61 @@
                             <li><a href=""> 国贺 | </a></li>
                             <li><a href=""> 手拉手商城 | </a></li>
                             <li><a href="">快递查询</a></li>
-                        </ul>
-                    </nav>
-                    <article class="footer-copy  w-1200">©2017 aiyuemall <a href="##">意见反馈</a> 京ICP证书号 京ICP备17024021号-1 </article>
-                    <div class="copy-img w-1200">
-                            <p class="footer-fp-img"> <a href="https://v.pinpaibao.com.cn/cert/site/?site=www.aiyuemall.com&amp;at=business" target="_blank"><img src="https://static.anquan.org/static/outer/image/hy_124x47.png?id=www.aiyuemall.com?t=5"></a> <a id="___szfw_logo___" href="https://credit.szfw.org/CX20170908036121110137.html" target="_blank"><img src="https://www.aiyuemall.com/uploads/img_logo/cert.png" border="0"></a> 
-                                <script type="text/javascript">(function(){document.getElementById('___szfw_logo___').oncontextmenu = function(){return false;}})();</script> 
-                                <!--可信网站图片LOGO安装开始--> 
-                                <script src="https://kxlogo.knet.cn/seallogo.dll?sn=e17090811010668839p4z5000000&amp;size=0"></script><span style="display:inline-block;position:relative;width:auto;"><a href="https://ss.knet.cn/verifyseal.dll?sn=e17090811010668839p4z5000000&amp;ct=df&amp;a=1&amp;pa=0.49353051909077905" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式" style="display:inline-block;"><img src="https://ss.knet.cn/static/images/logo/cnnic.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"></a></span> 
-                                <!--可信网站图片LOGO安装结束--> 
-                            </p>
+                            </ul>
+                        </nav>
+                        <article class="footer-copy  w-1200">©2017 aiyuemall <a href="##">意见反馈</a> 京ICP证书号 京ICP备17024021号-1 </article>
+                        <div class="copy-img w-1200">
+                            <p class="footer-fp-img"></a></p>
+                        </div>
+                </div>
+            </div>
+                
+            <!-- 右侧工具条 -->
+            <div class="side-toolbar">
+                <div class="items">
+                    <a class="icon" href="##" target="_blank"><img  class="msg-img" src="./assets/img/qq.png" id="msg" style="transform: rotate(0deg);"></a>
+                    <hr>
+                    <div class="tips" style="display:block">
+                        <a class="tips-msg" href="###" target="_blank">在线咨询</a>
+                    </div>
+                    <div class="flash"></div>
+                </div>
+        
+                <div class="items">
+                    <img  class="icon" src="./assets/img/tel.png">
+                    <hr>
+                    <div class="tips">
+                        <p class="tips-msg">客服热线 400-8765-888</p>
                     </div>
                 </div>
         
-            </div>
-
-
-
-
-
-
-
-
-        </div>
-
-        <div class="toolbar">       
-            <div class="toolbarbox">
-                <div class="msg">
-                    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzkzODA2Njc1Ml84NDI4NV80MDA5OTk3NjU4XzJf" target="_blank"><img src="img/qq.png" class="msg-img" id="msg" style="transform: rotate(0deg);"></a>
-                    
-                    <div class="msg-line"></div>
-                    <div class="hidemsgAfter">
-                        <div class="hidemsg">
-                            <p><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzkzODA2Njc1Ml84NDI4NV80MDA5OTk3NjU4XzJf" target="_blank">在线咨询</a></p>
-                            <div></div>
-                        </div>
+                <div class="items">
+                    <a href="##"><img class="icon" src="./assets/img/mail.png"></a>
+                    <hr>
+                    <div class="tips">
+                        <a class="tips-msg" href="##">saes@vip.163.com</a>
                     </div>
                 </div>
-
-                <div class="mobel tel">
-                    <img src="img/tel.png">
-                    <div class="tool-line"></div>
-                    <div class="hidemobelBox hidetelBox" style="display: none;" >
-                        <div class="hidemobel">
-                            <p>客服热线 400-8765-888</p>
-                            <div class="triangle"> </div>
-                        </div>
+        
+                <div class="items">
+                    <a rel="nofollow" href="##" target="_blank"><img  class="icon" src="./assets/img/wchat.png"></a>                  
+                    <hr>
+                    <div class="tips">
+                        <a href="##" target="_blank">
+                            <a class="tips-msg" href="##">saes@vip.163.com</a>
+                        </a>
                     </div>
                 </div>
-
-                <div class="mobel mail">
-                    <a href="mailto:kefu@makeding.com"><img src="img/mail.png"></a>
-                    <div class="tool-line"></div>
-                    <div class="hidemobelBox hidemailBox" style="display: none;">
-                        <div class="hidemobel">
-                            <p><a href="mailto:kefu@makeding.com">kefu@makeding.com</a></p>
-                            <div class="triangle"> </div>
-                                
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="mobel tmairuan tomairuan">
-                    <a rel="nofollow" href="http://www.mairuan.com/beyondcompare/87.html" target="_blank"><img src="img/mairuan.png"></a>                  
-                    <div class="tool-line dn"></div>
-                    <div class="hidemobelBox hidetmairuanBox" style="display: none; background: transparent; right: 93px;">
-                        <div class="">
-                            <a href="http://www.mairuan.com/beyondcompare/87.html" target="_blank"><img src="http://www.mairuan.com/images/yx/201706080931_2195.png" width="256" height="126"></a>
-                            <div class="triangle"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="Rtop dn">
-                    <a href="#"><img src="img/top.png"></a>
+        
+                <div class="Rtop">
+                    <a href="#">
+                        <img class="on"  src="./assets/img/top.png">
+                        <img class="off" src="./assets/img/top_h.png">
+                    </a>
                 </div>
             </div>
         </div>
+
     </body>
 </html>
 
@@ -238,12 +426,10 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.1.12.4.js"></script>
-
-<script src="js/bootstrap3.37.js"></script>
+<script src="./assets/js/jquery.1.12.4.js"></script>
 
 
 
-<script src="js/ayg3.0_main.js"></script>
+<script src="./assets/js/ayg3.0_main.js"></script>
 
-<script src="js/sidebar.js"></script>
+<script src="./assets/js/sidebar.js"></script>

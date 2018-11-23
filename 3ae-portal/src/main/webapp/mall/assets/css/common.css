@@ -257,14 +257,18 @@ a {
 
 
 .txtl {
-    text-align: left;
+   text-align: left;
 }
 
 .gray {
-    color: #777;
+   color: #777;
 }
 
 
+/* ***************** global ******************* */
+body {
+   background-color: #f3f3f5;
+}
 
 /* ***************** topbar ******************* */
 .topbar {
