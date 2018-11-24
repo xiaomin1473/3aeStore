@@ -1,5 +1,7 @@
 .container {
    width: 100%;
+   min-width: 1200px;
+   margin: 0 auto;
    background-color: #f9f9f9;
 }
 
@@ -421,7 +423,8 @@ box-sizing: border-box;
    background-color: #fff;
    box-shadow: 0 1px 10px 0 rgba(1, 17, 37, .15);
 }
- 
+
+
  
 .ayg-items-content .image {
    width: 160px;
@@ -576,7 +579,7 @@ box-sizing: border-box;
  
  .brand-items td a {
    display: block;
-   width: 169px;
+   width: 168px;
    height: 77px;
    border: 1px solid transparent;
  }

@@ -266,8 +266,12 @@ a {
 
 
 /* ***************** global ******************* */
+html {
+   min-width: 1260px;
+}
 body {
    background-color: #f3f3f5;
+   overflow-x: scroll;
 }
 
 /* ***************** topbar ******************* */
@@ -450,9 +454,9 @@ body {
 .side-toolbar {
    position: fixed;
    right: 0;
-   bottom: 100px;
+   bottom: 20%;
    z-index: 1000;
-   width: 86px;
+   width: 60px;
    height: 280px;
    font-size: 16px;
    font-weight: 700;
@@ -497,7 +501,7 @@ body {
 .side-toolbar .items .tips {
    position: absolute;
    top: 10px;
-   right: 80px;
+   right: 60px;
    display: none;
    height: 40px;
    border-radius: 5px;

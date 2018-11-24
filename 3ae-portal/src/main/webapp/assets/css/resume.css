@@ -1,6 +1,21 @@
+* {
+  font-family: arial,verdana,helvetica,'PingFang SC','HanHei SC',STHeitiSC-Light,Microsoft Yahei,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #f3f3f5;
+}
+
+h2{
+  margin-top: 10px;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
 h3,h4,h5 {
   font-weight: normal;
-  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   line-height: 26px;
 }
 
@@ -13,34 +28,64 @@ h4 {
 }
 
 h3 {
-  color: #555;
+  color: #666;
+}
+
+i {
+  color: #c4c4c4;
 }
 
 b {
-  color: #ccc;
+  font-weight: bold;
 }
 
-.resume-wrapper {
-  width: 840px;
-  height: 1188px;
-  margin: 0 auto;
-  border: solid 1px #eee;
-}
+.resume {
+  /* 页边距 */
+  padding: 30px;        
 
-
-.container {
   box-sizing: border-box;
-  float: right;
-  width: 61.80%;
-  padding: 50px;
+  width: 840px;
+  height: 1224px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 24px 1px rgba(1, 37, 137, .15);
 }
 
 .brief {
   width: 540px;
   height: 400px;
-  margin-top: 30px;
-  margin-right: 30px;
-  border: dashed 2px rgb(126, 121, 121);
+  border: dashed 1.5px #c4c4c4;
+}
+
+.brief-content {
+  padding: 10px 20px;
+}
+
+.brief-content .purpose {
+  box-sizing: border-box;
+  float: left;
+  max-width: 168px;
+  padding: 4px 18px 8px 8px;
+  line-height: 28px;
+  word-wrap:break-word;
+}
+
+.brief-content .purpose b {
+  font-size: 14.7px;
+  font-weight: bold;
+}
+.brief-content .purpose span {
+  display: inline-block;
+  width: 90px;
+  font-size: 14px
+}
+
+.brief-content .exper {
+  font-size: 14.7px;
+  line-height: 27px;
+  text-align: justify;
+  letter-spacing: 1px;
 }
 
 
@@ -48,13 +93,6 @@ b {
 
 
 
-
-
-@media (max-width: 900px) {
-  .container {
-    width: 100%;
-  }
-}
 
 .copyright {
   margin: 0 auto;
@@ -65,8 +103,7 @@ b {
 
 .side-bar {
   box-sizing: border-box;
-  padding: 30px;
-  width: 260px;
+  width: 220px;
 }
 
 .own {
@@ -86,7 +123,7 @@ b {
 
 }
 
-.own-list li {
+.own-list .items {
   position: relative;
   width: 120px;
   height: 32px;
@@ -97,14 +134,14 @@ b {
   border: solid 2px rgb(126, 121, 121);
 }
 
-.own-list li a {
+.own-list .items a {
   display: block;
   width: 120px;
   height: 40px;
   color:rgb(126, 121, 121);
 }
 
-.own-list li a::before {
+.own-list .items a::before {
   position: absolute;
   top: -2px;
   left: -16px;
@@ -118,16 +155,16 @@ b {
   background-color: rgb(126, 121, 121);
 }
 
-.own-list li:hover a {
+.own-list .items:hover a {
   color: rgb(126, 121, 121);
   color: #fff;
 }
 
-.own-list li:hover a::before {
+.own-list .items:hover a::before {
   background-color: #fff;
 }
 
-.own-list li:hover {
+.own-list .items:hover {
   background-color: rgb(126, 121, 121);
 }
 
@@ -142,25 +179,6 @@ b {
 
 .own-list .active {
   background-color: rgb(126, 121, 121);
-}
-
-@media (max-width: 900px) {
-  .side-bar {
-    width: 100%;
-    padding: 0;
-  }
-  .own-list {
-    width: 100%;
-  }
-  .own-list li a::before {
-    display: none;
-
-  }
-
-  .own-list li {
-    float: left;
-    margin: 10px;
-  }
 }
 
 footer {
