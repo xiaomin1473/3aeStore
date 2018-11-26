@@ -3,6 +3,7 @@
   width: 100%;
   min-width: 1200px;
   height: 672px;
+  background-color: #fff;
   background-image: url(../img/login_background.png);
   background-repeat: no-repeat;
   background-position-y: 80px;
