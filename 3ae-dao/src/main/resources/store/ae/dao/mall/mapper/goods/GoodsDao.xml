@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="store.ae.dao.mall.goods.GoodsDao">
+    <!-- 目的： 为dao接口提供sql语句配置 -->
+
+
+    <select id="queryById" resultType="Goods" parameterType="long">
+    	select goods_id, goods_type_id, name, number, price, gmt_create
+    	from goods
+    	where goods_id = #{goodsId}
+    </select>
+    
+    <select id="queryAll" resultType="Goods">
+    	select goods_id, goods_type_id, name, number, price, gmt_create
+    	from goods
+    	order by gmt_create desc
+    	limit #{offset}, #{limit}
+    </select>
+</mapper>

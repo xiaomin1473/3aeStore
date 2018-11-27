@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="store.ae.dao.mall.goods.GoodsImageDao">
+    <!-- 目的： 为dao接口提供sql语句配置 -->
+
+    <select id="queryById" resultType="GoodsImage" parameterType="long">
+    	select goods_id, name, number_info, number_detail, suffix_type, urls_info, urls_detail, gmt_create
+    	from goods_image
+    	where goods_id = #{goodsId}
+    </select>
+</mapper>

@@ -72,8 +72,4 @@ public class Seckill {
 		return "Seckill [seckillId=" + seckillId + ", name=" + name + ", number=" + number + ", startTime=" + startTime
 				+ ", endTime=" + endTime + ", gmtCreate=" + gmtCreate + "]";
 	}
-
-	
-	
-	
 }

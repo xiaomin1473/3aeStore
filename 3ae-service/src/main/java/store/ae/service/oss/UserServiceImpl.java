@@ -1,4 +1,4 @@
-package store.ae.service.oss.impl;
+package store.ae.service.oss;
 
 import java.util.Date;
 
@@ -11,7 +11,6 @@ import org.springframework.util.DigestUtils;
 import store.ae.dao.oss.UserDao;
 import store.ae.dto.service.oss.UserExposer;
 import store.ae.pojo.oss.User;
-import store.ae.service.oss.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

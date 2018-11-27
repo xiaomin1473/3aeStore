@@ -1,4 +1,4 @@
-package store.ae.service.mall.feast.impl;
+package store.ae.service.mall.feast;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -24,7 +24,6 @@ import store.ae.exception.mall.feast.SeckillException;
 import store.ae.exception.mall.feast.SeckillRepeatException;
 import store.ae.pojo.mall.feast.Seckill;
 import store.ae.pojo.mall.feast.SeckillSuccess;
-import store.ae.service.mall.feast.SeckillService;
 
 // @Component @Service @Dao @Controller 所有组件
 @Service
