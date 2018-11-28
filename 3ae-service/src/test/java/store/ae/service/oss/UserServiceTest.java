@@ -40,7 +40,7 @@ public class UserServiceTest {
 	public void testCheckUserInfo() {
 		String userName = "root";
 		String userPwd = "admin";
-		boolean ss = userService.checkUserInfo(userName, userPwd);
+		userService.checkUserInfo(userName, userPwd);
 		User user = userDao.queryByUserName(userName);
 		
 		logger.info("userInfo is:" + user.toString());
