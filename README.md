@@ -1,11 +1,18 @@
 # 3AE整站介绍
 
+---
+| 修订版本 | 修订内容  | 修订日期 |
+| :-----: |  :-----:  | :-----: |
+|  v1.0.1 | 新建商城秒杀业务实现心得以及优化规划 | 2018-12-02 |
+
+---  
 感谢身边的家人;  
 感谢南京睿实消防设备有限公司；  
 感谢身边的领导；  
 感谢带我的小哥；  
 感谢身边的同事；  
 感谢身边的朋友。  
+
 
 ## Situation & Task
 
@@ -21,16 +28,23 @@
 ## web架构
 
 ```utf-8
-h-common      共享资源文件
-h-pojo        对象实体
-h-dao         Data Access Object数据访问对象
-h-parent      pom管理
-h-api         ESB总线为模型对外的接口，内含REST目录
-h-service     服务（拆微服务）
-h-web         web目录（大型网站的后台系统）之后是否需要拆，CMS、OA、ERP等
-h-portal      大型网站的门户系统
-h-user        大型网站的个人中心系统
-h-channel     底层通信
+3ae-parent      pom管理
+3ae-common      共享资源文件
+3ae-channel     底层通信
+3ae-dto         传输
+3ae-pojo        对象实体
+3ae-dao         Data Access Object数据访问对象
+3ae-agent       服务端代理
+3ae-server      C/S服务
+3ae-service     B/S微服务
+3ae-job         自动运行
+3ae-journal     日志文件目录
+3ae-enums       常量枚举
+3ae-exception   网站异常捕获
+3ae-api         ESB总线为模型对外的接口，内含REST目录
+3ae-admin       大型网站的后台管理
+3ae-user        大型网站的用户中心
+3ae-portal      大型网站的门户
 ```
 
 ## 一些约束,接下来每天所做的一些内容
@@ -39,7 +53,7 @@ h-channel     底层通信
 
 ```utf-8
 主要使用netty框架
-h-channel -> io.netty
+3ae-channel -> io.netty
 根据国标BT601（标清）和BT709（高清）两种转换方式，分了模拟和数字两种。
 后期可能会在这个基础之上实现图像传输。（UDP）
 ```
@@ -61,17 +75,4 @@ h-channel -> io.netty
 6、配置了线上的markdown的预览功能  
 [刍易-知难行易](http://3ae.store)  
 [看云-个人文档](http://book.3ae.store)  
-
-7.测试当前Markdown是否支持流程图
-
-```flow
-st=>start: 开始
-op=>operation: My Operation
-cond=>condition: Yes or No?
-e=>end
-st->op->cond
-cond(yes)->e
-cond(no)->op
-&```
-
 

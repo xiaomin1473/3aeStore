@@ -1,330 +1,316 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>store.3ae</groupId>
-  <artifactId>3ae-parent</artifactId>
-  <version>${ae.version}</version>
-  <packaging>pom</packaging>
-  <description>父工程,用于版本管理</description>
-  <modules>
- 	<module>3ae-common</module>  
-  	<module>3ae-channel</module>
-  	<module>3ae-pojo</module>
-  	<module>3ae-dao</module>
-  	<module>3ae-api</module>
-  	<module>3ae-portal</module>
-    <module>3ae-user</module>
-    <module>3ae-admin</module>
-    <module>3ae-answer</module>
-    <module>3ae-agent</module>
-    <module>3ae-server</module>
-    <module>3ae-service</module>
-    <module>3ae-job</module>
-    <module>3ae-dto</module>
-    
-    <module>3ae-exception</module>
-    <module>3ae-enums</module>
-  </modules>
-  
-  
-  
-   
-    <!-- 设置统一控制版本 -->
-  <properties>
-    <!-- 项目版本 -->
-    <ae.version>1.0.1</ae.version>
-    
-    	<!-- 项目依赖版本 -->
-    	<!-- 公共资源库 -->
-    	<commons-collections.version>3.2.2</commons-collections.version>
-	    <!-- 日志 -->
-	    <logback.version>1.2.3</logback.version>
-	    <slf4j.version>1.8.0-beta2</slf4j.version>
-		
-		<!-- 序列化 -->
-		<commons-pool2.version>2.6.0</commons-pool2.version>
-		<protobuf-java.version>3.6.1</protobuf-java.version>
-	    <protostuff.version>1.6.0</protostuff.version>
-		
-		<!-- redis -->
-   	    <jedis.version>2.9.0</jedis.version>
-		
-	    <!-- mysql -->
-	    <druid.version>1.1.12</druid.version>
-	    <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
-	    <mariadb-java-client.version>2.3.0</mariadb-java-client.version>
-	    <mybatis.version>3.4.6</mybatis.version>
-	    <mybatis-spring.version>1.3.2</mybatis-spring.version>
-	    
-	    <!-- 任务调度 -->
-	    <quartz.version>2.3.0</quartz.version>
-	    
-	    <!-- SVN -->
-	    <svnkit.version>1.9.3</svnkit.version>
-	    
-	    <!-- GSON -->
-	    <gson.version>2.8.5</gson.version>
-	    
-	    <!-- 跨域 -->
-	    <cors-filter.version>2.6</cors-filter.version>
-	    
-	    <!-- 测试 -->
-	    <junit.version>4.12</junit.version>
-	    <!-- spring -->
-	    <spring.version>5.1.2.RELEASE</spring.version>
-    <!-- 项目依赖版本 END -->
-    
-    <!-- Jetty and Netty -->
-    	    <netty-all.version>4.1.29.Final</netty-all.version>
-	    	<tomcat.version>8.5.34</tomcat.version>
-   	<!-- Jetty and Netty END -->
-    
-    
-    <!-- build依赖 -->
-        <maven-bundle-plugin.version>4.0.0</maven-bundle-plugin.version>
-        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
-        <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
-        <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-        <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
-    <!-- build依赖 END -->
-    
-    <!-- 编码 -->
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  
-  
-  
-  <!-- 构建 -->
-  <build>
-    <plugins>    	
-        <plugin>
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>store.3ae</groupId>
+   <artifactId>3ae-parent</artifactId>
+   <version>${ae.version}</version>
+   <packaging>pom</packaging>
+   <description>父工程,用于版本管理</description>
+   <modules>
+      <module>3ae-common</module>  
+      <module>3ae-channel</module>
+      <module>3ae-pojo</module>
+      <module>3ae-dao</module>
+      <module>3ae-api</module>
+      <module>3ae-portal</module>
+      <module>3ae-user</module>
+      <module>3ae-admin</module>
+      <module>3ae-answer</module>
+      <module>3ae-agent</module>
+      <module>3ae-server</module>
+      <module>3ae-service</module>
+      <module>3ae-job</module>
+      <module>3ae-dto</module>
+      
+      <module>3ae-exception</module>
+      <module>3ae-enums</module>
+   </modules>
+
+
+   <!-- 设置统一控制版本 -->
+   <properties>
+      <!-- 项目版本 -->
+      <ae.version>1.0.1</ae.version>
+      
+      <!-- 项目依赖版本 -->
+         <!-- 公共资源库 -->
+         <commons-collections.version>3.2.2</commons-collections.version>
+         <!-- 日志 -->
+         <logback.version>1.2.3</logback.version>
+         <slf4j.version>1.8.0-beta2</slf4j.version>
+         
+         <!-- 序列化 -->
+         <commons-pool2.version>2.6.0</commons-pool2.version>
+         <protobuf-java.version>3.6.1</protobuf-java.version>
+         <protostuff.version>1.6.0</protostuff.version>
+         
+         <!-- redis -->
+            <jedis.version>2.9.0</jedis.version>
+         
+         <!-- mysql -->
+         <druid.version>1.1.12</druid.version>
+         <mysql-connector-java.version>8.0.12</mysql-connector-java.version>
+         <mariadb-java-client.version>2.3.0</mariadb-java-client.version>
+         <mybatis.version>3.4.6</mybatis.version>
+         <mybatis-spring.version>1.3.2</mybatis-spring.version>
+         
+         <!-- 任务调度 -->
+         <quartz.version>2.3.0</quartz.version>
+         
+         <!-- SVN -->
+         <svnkit.version>1.9.3</svnkit.version>
+         
+         <!-- GSON -->
+         <gson.version>2.8.5</gson.version>
+         
+         <!-- 跨域 -->
+         <cors-filter.version>2.6</cors-filter.version>
+         
+         <!-- 测试 -->
+         <junit.version>4.12</junit.version>
+         <!-- spring -->
+         <spring.version>5.1.2.RELEASE</spring.version>
+      <!-- 项目依赖版本 END -->
+      
+      <!-- Jetty and Netty -->
+         <netty-all.version>4.1.29.Final</netty-all.version>
+         <tomcat.version>8.5.34</tomcat.version>
+      <!-- Jetty and Netty END -->
+      
+      <!-- build依赖 -->
+         <maven-bundle-plugin.version>4.0.0</maven-bundle-plugin.version>
+         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+         <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
+         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
+         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+         <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
+      <!-- build依赖 END -->
+      
+      <!-- 编码 -->
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   </properties>
+
+   <!-- 构建 -->
+   <build>
+      <plugins>    	
+         <plugin>
             <groupId>org.apache.felix</groupId>
             <artifactId>maven-bundle-plugin</artifactId>
             <version>${maven-bundle-plugin.version}</version>
-        </plugin>
-        <plugin>
+         </plugin>
+         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-resources-plugin</artifactId>
             <version>${maven-resources-plugin.version}</version>
-        </plugin>
-        <plugin>
+         </plugin>
+         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>${maven-surefire-plugin.version}</version>
             <configuration>
-	          <skipTests>true</skipTests>
-	        </configuration>
-        </plugin>
-        
-        <plugin>
+               <skipTests>true</skipTests>
+            </configuration>
+         </plugin>
+         
+         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
             <version>${maven-jar-plugin.version}</version>
-        </plugin>
-        <plugin>
+         </plugin>
+         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-clean-plugin</artifactId>
             <version>${maven-clean-plugin.version}</version>
-        </plugin>
-        <plugin>
+         </plugin>
+         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>${maven-compiler-plugin.version}</version>
             <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-                <encoding>UTF-8</encoding>
+               <source>1.8</source>
+               <target>1.8</target>
+               <encoding>UTF-8</encoding>
             </configuration>
-        </plugin>
-    </plugins>
-    
-    <finalName>3ae-parent</finalName>
-  </build>
+         </plugin>
+      </plugins>
+      
+      <finalName>3ae-parent</finalName>
+   </build>
    
-  <!-- 设置统一依赖管理、不强行依赖 -->
-	<dependencyManagement>
-	    <dependencies>
-	    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
-			<dependency>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-surefire-plugin</artifactId>
-			    <version>${maven-surefire-plugin.version}</version>
-			    <scope>test</scope>
-			</dependency> -->
-		<!-- 公共资源库 -->
-			<dependency>
-			    <groupId>commons-collections</groupId>
-			    <artifactId>commons-collections</artifactId>
-			    <version>${commons-collections.version}</version>
-			</dependency>
-		
-	    
-	    <!-- 日志 -->
-	        <dependency>
-	            <groupId>ch.qos.logback</groupId>
-	            <artifactId>logback-classic</artifactId>
-	            <version>${logback.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>ch.qos.logback</groupId>
-	            <artifactId>logback-core</artifactId>
-	            <version>${logback.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>org.slf4j</groupId>
-	            <artifactId>slf4j-api</artifactId>
-	            <version>${slf4j.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>org.slf4j</groupId>
-	            <artifactId>slf4j-simple</artifactId>
-	            <version>${slf4j.version}</version>
-	        </dependency>
-	    <!-- 测试 -->
-			<dependency>
-			    <groupId>junit</groupId>
-			    <artifactId>junit</artifactId>
-			    <version>${junit.version}</version>
-			    <scope>test</scope>
-			</dependency>
-		<!-- 数据库 -->
-			<dependency>
-			    <groupId>com.alibaba</groupId>
-			    <artifactId>druid</artifactId>
-			    <version>${druid.version}</version>
-			</dependency>
-	    	<dependency>
-	            <groupId>mysql</groupId>
-	            <artifactId>mysql-connector-java</artifactId>
-	            <version>${mysql-connector-java.version}</version>
-	            <scope>runtime</scope>
-	        </dependency>
-	        <dependency>
-			    <groupId>com.google.protobuf</groupId>
-			    <artifactId>protobuf-java</artifactId>
-			    <version>${protobuf-java.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>io.protostuff</groupId>
-			    <artifactId>protostuff-runtime</artifactId>
-			    <version>${protostuff.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>io.protostuff</groupId>
-			    <artifactId>protostuff-core</artifactId>
-			    <version>${protostuff.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.apache.commons</groupId>
-			    <artifactId>commons-pool2</artifactId>
-			    <version>${commons-pool2.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>redis.clients</groupId>
-			    <artifactId>jedis</artifactId>
-			    <version>${jedis.version}</version>
-			</dependency>
-	        
-			<dependency>
-			    <groupId>org.mybatis</groupId>
-			    <artifactId>mybatis</artifactId>
-			    <version>${mybatis.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.mybatis</groupId>
-			    <artifactId>mybatis-spring</artifactId>
-			    <version>${mybatis-spring.version}</version>
-			</dependency>
-		<!-- GSON -->
-	    	<dependency>
-			    <groupId>com.google.code.gson</groupId>
-			    <artifactId>gson</artifactId>
-			    <version>${gson.version}</version>
-			</dependency>
-		<!-- SVN -->
-	    	<dependency>
-			    <groupId>org.tmatesoft.svnkit</groupId>
-			    <artifactId>svnkit</artifactId>
-			    <version>${svnkit.version}</version>
-			</dependency>
-		<!-- 跨域 -->
-	    	<dependency>
-			    <groupId>com.thetransactioncompany</groupId>
-			    <artifactId>cors-filter</artifactId>
-			    <version>${cors-filter.version}</version>
-			</dependency>
-		<!-- servlet -->
-			<dependency>
-			    <groupId>org.apache.tomcat</groupId>
-			    <artifactId>tomcat-servlet-api</artifactId>
-			    <version>${tomcat.version}</version>
-			</dependency>
-		<!-- quartz -->
-		    <dependency>
-	            <groupId>org.quartz-scheduler</groupId>
-	            <artifactId>quartz</artifactId>
-	            <version>${quartz.version}</version>
-	        </dependency>
-	        <dependency>
-	            <groupId>org.quartz-scheduler</groupId>
-	            <artifactId>quartz-jobs</artifactId>
-	            <version>${quartz.version}</version>
-	        </dependency>
-	    <!-- Netty -->
-	        <dependency>
-		        <groupId>io.netty</groupId>
-		        <artifactId>netty-all</artifactId>
-		        <version>${netty-all.version}</version>
-		    </dependency>
-		<!-- spring -->
-			<!-- spring 核心 -->
-			<dependency>
-			    <groupId>org.springframework</groupId>
-			    <artifactId>spring-core</artifactId>
-			    <version>${spring.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.springframework</groupId>
-			    <artifactId>spring-beans</artifactId>
-			    <version>${spring.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.springframework</groupId>
-			    <artifactId>spring-context</artifactId>
-			    <version>${spring.version}</version>
-			</dependency>
-			<!-- spring dao -->
-			<dependency>
-			    <groupId>org.springframework</groupId>
-			    <artifactId>spring-jdbc</artifactId>
-			    <version>${spring.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.springframework</groupId>
-			    <artifactId>spring-tx</artifactId>
-			    <version>${spring.version}</version>
-			</dependency>
-			<!-- spring service -->
-			<dependency>
-			    <groupId>org.springframework</groupId>
-			    <artifactId>spring-aop</artifactId>
-			    <version>${spring.version}</version>
-			</dependency>
-			<!-- spring web -->
-			<dependency>
-			    <groupId>org.springframework</groupId>
-			    <artifactId>spring-webmvc</artifactId>
-			    <version>${spring.version}</version>
-			</dependency>
-			<!-- spring test -->
-			<dependency>
-			    <groupId>org.springframework</groupId>
-			    <artifactId>spring-test</artifactId>
-			    <version>${spring.version}</version>
-			    <scope>test</scope>
-			</dependency>
-	    </dependencies>  
-	</dependencyManagement>
-
+   <!-- 设置统一依赖管理、不强行依赖 -->
+   <dependencyManagement>
+      <dependencies>
+      <!-- 公共资源库 -->
+         <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${commons-collections.version}</version>
+         </dependency>
+      
+      
+      <!-- 日志 -->
+         <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+         </dependency>
+      <!-- 测试 -->
+         <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+         </dependency>
+      <!-- 数据库 -->
+         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+            <scope>runtime</scope>
+         </dependency>
+         <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf-java.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>${protostuff.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+            <version>${protostuff.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+            <version>${commons-pool2.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis-spring.version}</version>
+         </dependency>
+      <!-- GSON -->
+         <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+         </dependency>
+      <!-- SVN -->
+         <dependency>
+            <groupId>org.tmatesoft.svnkit</groupId>
+            <artifactId>svnkit</artifactId>
+            <version>${svnkit.version}</version>
+         </dependency>
+      <!-- 跨域 -->
+         <dependency>
+            <groupId>com.thetransactioncompany</groupId>
+            <artifactId>cors-filter</artifactId>
+            <version>${cors-filter.version}</version>
+         </dependency>
+      <!-- servlet -->
+         <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>${tomcat.version}</version>
+         </dependency>
+      <!-- quartz -->
+         <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz-jobs</artifactId>
+            <version>${quartz.version}</version>
+         </dependency>
+      <!-- Netty -->
+         <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty-all.version}</version>
+         </dependency>
+      <!-- spring -->
+         <!-- spring 核心 -->
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+         </dependency>
+         <!-- spring dao -->
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+         </dependency>
+         <!-- spring service -->
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+         </dependency>
+         <!-- spring web -->
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+         </dependency>
+         <!-- spring test -->
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+         </dependency>
+      </dependencies>  
+   </dependencyManagement>
 </project>
