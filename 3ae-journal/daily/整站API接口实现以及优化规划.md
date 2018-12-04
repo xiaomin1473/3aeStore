@@ -50,5 +50,6 @@
 | -----: | :----- | :-----: |  :-----:  | :-----: | :-----: |
 | GET | /mall/seckill/list | -- | JSON | 列出秒杀商品 | 2018-12-04 |
 | GET | /mall/seckill/{seckillId}/detail | -- | JSON | 查看秒杀详情 | 2018-12-04 |
+| POST | /mall/seckill/{seckillId}/exposer | -- | JSON | 返回秒杀地址 | 2018-12-04 |
 | POST | /mall/seckill/{seckillId}/{md5}/execution | -- | JSON | 提交秒杀信息 | 2018-12-04 |
 | ——— | ————————————————————— | ———— | ———— | ——————— | —————— |
