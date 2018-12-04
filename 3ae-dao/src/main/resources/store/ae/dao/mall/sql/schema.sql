@@ -7,7 +7,7 @@ CREATE DATABASE store_3ae_mall;
 use store_3ae_mall;
 
 CREATE TABLE feast_seckill (
-`seckill_id` bigint NOT NULL AUTO_INCREMENT COMMENT '商品库存ID',
+`seckill_id` bigint NOT NULL AUTO_INCREMENT COMMENT '商品ID',
 `name` varchar(120) NOT NULL COMMENT '商品名称',
 `number` int NOT NULL COMMENT '库存数量',
 `start_time` timestamp NOT NULL COMMENT '秒杀开启时间',
@@ -24,8 +24,8 @@ key idx_create_time(gmt_create)
 insert into feast_seckill(name, number, start_time, end_time)
 values
 	('1000元秒杀iphoneX', 100, '2018-11-11 00:00:00', '2018-11-12 00:00:00'),
-	('1500元秒杀iphoneXs', 100, '2018-12-31 23:00:00', '2018-11-12 00:00:00'),
-	('2000元秒杀iphoneX Plus', 100, '2019-11-11 00:00:00', '2018-11-12 00:00:00');
+	('1500元秒杀iphoneXs', 100, '2018-11-11 00:00:00', '2018-12-31 23:00:00'),
+	('2000元秒杀iphoneX Plus', 100, '2018-11-11 00:00:00', '2019-12-31 23:00:00');
 
 -- 秒杀成功明细表
 -- 用户登录认证相关信息
@@ -43,5 +43,9 @@ key idx_create_time(gmt_create)
 mysql -u root -p
 
 show create table tablename\G
+
+-- 删除表中数据
+
+truncate table feast_seckill;
 
 	

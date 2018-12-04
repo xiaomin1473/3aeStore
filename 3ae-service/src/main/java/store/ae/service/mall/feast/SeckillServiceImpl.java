@@ -81,7 +81,10 @@ public class SeckillServiceImpl implements SeckillService {
 		
 		if(seckill == null) {
 			seckill = seckillDao.queryById(seckillId);
-			return new Exposer(false, seckillId);
+			
+			if(seckill == null) {
+				return new Exposer(false, seckillId);
+			}
 		} else {
 			redisDao.putSeckill(seckill);
 		}

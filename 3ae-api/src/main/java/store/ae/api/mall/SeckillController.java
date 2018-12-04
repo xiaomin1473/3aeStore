@@ -50,12 +50,12 @@ public class SeckillController {
 	@ResponseBody
 	public String detail(@PathVariable("seckillId") Long seckillId){
 		if(seckillId == null) {
-			return "redirect:/mall/goods/seckill/list";
+			return "redirect:/mall/seckill/list";
 		}
 		
 		Seckill seckill = seckillService.getById(seckillId);
 		if(seckill == null) {
-			return "forward:/mall/goods/seckill/list";
+			return "forward:/mall/seckill/list";
 		}
 		
 		Gson gson = new Gson();
