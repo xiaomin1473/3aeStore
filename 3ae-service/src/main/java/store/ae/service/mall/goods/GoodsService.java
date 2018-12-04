@@ -10,5 +10,5 @@ public interface GoodsService {
 
 	Goods getGoodsById(long GoodsId);
 
-	Category getGoodsTypeList();
+	// Category getGoodsTypeList();
 }
