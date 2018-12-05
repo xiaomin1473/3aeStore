@@ -1,0 +1,170 @@
+/* *********************** CONTAINER ************************ */
+.container {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.page-tips {
+    height: 290px;
+    overflow: hidden;
+}
+
+.page-title {
+    position: relative;
+    z-index: 1;
+    width: 540px;
+    height: 290px;
+    margin-left: 56px;
+    background-color: #fff;
+}
+.page-title h3{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    border-left: solid 4px #f93c16;
+}
+
+
+.bead-content {
+    width: 500px;
+    height: 140px;
+    background-color: rgba(245, 146, 142, .1);
+}
+
+.exchange {
+    cursor: pointer;
+}
+
+.rules {
+    width: 300px;
+    height: 290px;
+    background-color: #fff;
+}
+
+.rules-list {
+    margin-top: -14px;
+    font-size: 13px;
+    color: #666;
+    line-height: 19px;
+}
+
+.my-order {
+    position: relative;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 860px;
+    height: 770px;
+    background-color: #fff;
+    box-shadow: 0 0 6px 3px #e8e8e8;
+    box-shadow: 0 0 6px 2px #e8e8e8;
+    border-radius: 2px;
+}
+
+
+.search {
+    position: relative;
+    z-index: 10;
+    margin-top: -7px;
+    margin-right: 20px;
+}
+
+.search .input {
+    width: 120px;
+    border: solid 1px #ccc;
+}
+
+.search .btn {
+    vertical-align: -1px;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 1px;
+}
+
+
+
+
+.options{
+    margin-top: 40px;
+	padding: 10px 12px;
+}
+
+.options-wrapper {
+    margin-top: -52px;
+    padding-right: 2px;
+    text-align: left;
+    height: 20px;
+    position: relative;
+}
+
+.options .options-items{
+	display: inline-block;
+    width: 90px;
+    height: 20px;
+	text-align: center;
+
+}
+
+.options .options-items input{
+    float: left;
+    display: block;
+    width: 90px;
+    height: 20px;
+    margin-top: 0;
+	opacity: 0;
+    -moz-opacity: 0;
+    cursor: pointer;
+}
+
+
+.options .options-items .options-tips {
+    float: left;
+	display: block;
+	width: 80px;
+    height: 20px;
+    margin-left: -100%;
+    font-size: 14.7px;
+}
+
+.options .options-items input:checked + span {
+    color: #f93c16;
+    border-bottom: solid 2px #f93c16;
+}
+
+
+.options .options-items .tab {
+	display: none;
+    position: absolute;
+    margin-left: 5px;
+	width: 98.5%;
+	height: 460px;
+    top: 31px;
+    left: 0;
+	z-index: 0;
+}
+
+.options .options-items .tab .tab-wrapper {
+    position: relative;
+}
+
+.options .options-items input:checked + span + .tab {
+	display: block;
+}
+
+.options .options-items .tab table {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+.alert-content {
+
+}
+
+.alert-content .input {
+    width: 260px;
+    padding: 4px 10px;
+}

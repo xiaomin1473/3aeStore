@@ -1,0 +1,109 @@
+/* *********************** CONTAINER ************************ */
+.container {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.page-title {
+    position: relative;
+    z-index: 1;
+    width: 840px;
+    margin-left: 56px;
+    color: #f93c16;
+    padding: 20px 0 10px 20px;
+    background-color: #fff;
+}
+.page-title h3{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    border-left: solid 4px #f93c16;
+}
+
+.my-order {
+    position: relative;
+    padding-bottom: 20px;
+    width: 860px;
+    height: 770px;
+    background-color: #fff;
+    /* box-shadow: 0 0 6px 3px #e8e8e8; */
+    box-shadow: 0 0 6px 2px #e8e8e8;
+    border-radius: 2px;
+}
+
+.add-path-btn {
+    padding: 4px 10px;
+    background-color: #f6f6f6;
+}
+
+.path-list {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.path-list .path-items {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: solid 1px #e8e8e8;
+}
+
+.path-list .path-items h6 {
+    color: #666;
+}
+
+.path-items .path-tips {
+    display: inline-block;
+    width: 64px;
+    margin-right: 10px;
+    font-size: 13px;
+    color: #777;
+    text-align: right;
+}
+
+.path-items .path-tips + span {
+    font-size: 13px;
+    color: #333;
+}
+
+.path-content {
+    margin-top: 20px;
+}
+
+.edit {
+    
+    font-size: 13px;
+    color: #f93c16;
+    line-height: 40px;
+}
+
+.default-path {
+    padding: 3px 8px;
+    background-color: #f93c16;
+    color: #fff;
+    font-size: 12px;
+}
+
+.add-path {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 1000;
+    background-color: rgba(1, 17 , 27, .5);
+}
+
+
+
+.alert-content .path-tips {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #999;
+    font-size: 12px;
+}
+
+.input-list {
+    padding: 6px;
+    width: 360px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    color: #777;
+}

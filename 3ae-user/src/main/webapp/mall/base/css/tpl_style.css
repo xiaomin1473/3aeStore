@@ -1,0 +1,33 @@
+/* *********************** CONTAINER ************************ */
+.container {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.page-title {
+    position: relative;
+    z-index: 1;
+    width: 840px;
+    margin-left: 56px;
+    color: #f93c16;
+    padding: 20px 0 10px 20px;
+    background-color: #fff;
+}
+.page-title h3{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    border-left: solid 4px #f93c16;
+}
+
+.my-order {
+    position: relative;
+    padding-bottom: 20px;
+    width: 860px;
+    height: 770px;
+    background-color: #fff;
+    /* box-shadow: 0 0 6px 3px #e8e8e8; */
+    box-shadow: 0 0 6px 2px #e8e8e8;
+    border-radius: 2px;
+}
+

@@ -1,0 +1,324 @@
+body { background-color: #f9f9f9;}
+
+/* ********************** WEB_TOP ************************** */
+
+.top {
+    width: 100%;
+    height: 30px;
+}
+
+.top-wrapper {
+    font-size: 12px;
+    line-height: 30px;
+    color: #666;
+}
+
+.top-wrapper a {
+    margin-left: 4px;
+}
+
+
+.header-wrapper {
+    height: 90px;
+}
+
+
+.shopcart {
+    width: 120px;
+    height: 36px;
+    margin-top: 28px;
+    padding-left: 20px;
+    border-radius: 20px;
+    line-height: 40px;
+    background-color: #f9f9f9;
+}
+
+
+.shopcart i {
+    font-size: 20px;
+}
+
+
+.logo {
+    margin-left: -6px;
+}
+
+
+.navbar {
+    margin-left: 30px;
+    padding-top: 36px;
+    color: #fff;
+}
+
+
+.navbar li {
+    margin-left: 80px;
+}
+
+
+/* *********************** CONTAINER ************************ */
+.container {
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+.page-title {
+    position: relative;
+    z-index: 1;
+    width: 840px;
+    margin-left: 56px;
+    color: #ff2832;
+    padding: 20px 0 10px 20px;
+    background-color: #fff;
+}
+
+
+.page-title h3{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    border-left: solid 4px #ff2832;
+}
+
+
+.my-order {
+    position: relative;
+    padding-bottom: 20px;
+    width: 860px;
+    height: 770px;
+    background-color: #fff;
+    /* box-shadow: 0 0 6px 3px #e8e8e8; */
+    box-shadow: 0 0 6px 2px #e8e8e8;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.paging {
+    position: absolute;
+    right: -10px;
+    margin-top: 10px;
+    width: 380px;
+    height: 30px;
+}
+
+
+.paging li {
+    float: left;
+    margin-right: 8px;
+    border-radius: 3px;    
+    cursor: pointer;
+}
+
+.paging li a {
+    display: block;
+    padding: 8px 10px;
+    height: 100%;
+    color: #fcfcfc;
+    background-color: #ff2832;
+    border: solid 2px #fff;
+    border-radius: 6px;
+}
+
+.paging li a:hover {
+    font-weight: bold;
+    color: #ff2832;
+    border: solid 2px #ff2832;
+    background-color: #fff;
+}
+
+.paging .active a{
+    font-weight: bold;
+    color: #ff2832;
+    background-color: #fff;
+    border: solid 2px #fff;
+}
+
+
+
+
+
+
+.case-you {
+    width: 860px;
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+.case-you .title {
+    margin-bottom: 20px;
+}
+
+.title {
+    margin: 20px;
+    padding: 10px 0;
+    border-bottom: solid 1px #ff2832;
+}
+
+.case-you li {
+    padding-bottom: 8px;
+}
+
+
+.case-you .image {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.case-you .image img {
+    width: 100%;
+}
+
+.case-you .introduce {
+    margin: 0 auto;
+    width: 80%;
+    height: 40px;
+    font-size: 13px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.case-you .price {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff2832;
+}
+
+.case-you .prev {
+    font-size: 14px;
+    margin-left: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* *********************** SIDERBAR ************************* */
+
+.siderbar {
+    
+}
+
+
+.user-items {
+    padding-left: 6px;
+}
+
+.siderbar li {
+    line-height: 24px;
+}
+
+.siderbar li h4 {
+    color: #444;
+    font-size: 14px;
+}
+
+.siderbar li a {
+    color: #888;
+    font-size: 14px;
+}
+
+.my-content {
+    margin-left: 56px;
+    margin-bottom: 20px;
+    padding-top: 14px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.my-content span {
+    display: inline-block;
+    padding: 9px 28px;
+    margin-right: 80px;
+    font-size: 13px;
+    background-color: #e8e8e8;
+}
+
+.my-content input {
+    width: 360px;
+    height: 30px;
+    padding-left: 20px;
+    margin-right: 80px;
+    vertical-align: 1px;
+    border: solid 1px #ddd;
+}
+
+.my-content .tel-input {
+    width: 220px;
+    margin-right: 100px;
+}
+
+.my-content button {
+    width: 120px;
+    height: 38px;
+    color: #fff;
+    background-color: #ff2832;
+    cursor: pointer;
+}
+
+.my-content label {
+    margin-left: 0px;
+    margin-right: 24px;
+}
+
+.my-content .tips {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 224px;
+    color: #999;
+    text-align: left;
+}
+
+.my-content .contents {
+    padding-left: 50px;
+    text-align: left;
+    font-size: 14.7px;
+    color: #666;
+    line-height: 28px;
+    letter-spacing: .5px;
+}
+
+.my-content .table {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.my-content .table .theader {
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    background-color: #f9f9f9;
+}
+
+.my-content .table .theader th {
+    width: 25%;
+}
+
+.my-content .table .tbody {
+    height: 46px;
+    line-height: 48px;
+    font-size: 14px;
+    border-bottom: solid 1px #e8e8e8;
+}

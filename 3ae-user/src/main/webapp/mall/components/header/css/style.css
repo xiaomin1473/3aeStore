@@ -1,0 +1,134 @@
+.top {
+    width: 100%;
+    height: 30px;
+}
+
+.top-wrapper {
+    font-size: 12px;
+    line-height: 30px;
+    color: #666;
+}
+
+.top-wrapper a {
+    margin-left: 4px;
+}
+
+.top_nav {
+    margin-right: -10px;
+    height: 30px;
+    list-style: none;
+}
+
+.top_nav li {
+    float: left;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.top_nav li + span {
+    float: left;
+    font-size: 12px;
+    color: #ddd;
+}
+
+
+
+.top_nav .wechat i{
+    display: inline-block;
+    width: 24px;
+    height: 30px;
+    text-indent: 4px;
+    vertical-align: -10px;
+    background-image: url(../img/wechat.gif);
+    background-position-x: 0px;
+    background-position-y: 5px;
+    background-repeat: no-repeat;
+}
+
+.top_nav .wechat .erma {
+    display: none;
+    position: absolute;
+    top: 23px;
+    right: -12px;
+    z-index: 100;
+    width: 380px;
+    height: 190px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  
+.top_nav .wechat:hover .erma {
+    display: block;
+  }
+
+
+.top_nav .tel i{
+    display: inline-block;
+    width: 24px;
+    height: 30px;
+    text-indent: 4px;
+    vertical-align: -10px;
+    background-image: url(../img/tel.gif);
+    background-position-x: 0px;
+    background-position-y: 5px;
+    background-repeat: no-repeat;
+}
+
+
+.top_nav .tel .erma {
+    display: none;
+    position: absolute;
+    top: 23px;
+    right: -12px;
+    z-index: 100;
+    width: 380px;
+    height: 190px;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    background-color: #fff;
+    cursor: pointer;
+    behavior: url(PIE.htc);
+  }
+
+  
+.top_nav .tel:hover .erma {
+    display: block;
+  }
+
+
+.header-wrapper {
+    height: 90px;
+}
+
+
+.shopcart {
+    width: 120px;
+    height: 36px;
+    margin-top: 28px;
+    padding-left: 20px;
+    border-radius: 20px;
+    line-height: 40px;
+    background-color: #f9f9f9;
+}
+
+.shopcart i {
+    font-size: 20px;
+}
+
+.logo {
+    margin-left: -6px;
+}
+
+.navbar {
+    margin-left: 30px;
+    padding-top: 36px;
+    color: #fff;
+}
+
+
+.navbar li {
+    margin-left: 80px;
+}

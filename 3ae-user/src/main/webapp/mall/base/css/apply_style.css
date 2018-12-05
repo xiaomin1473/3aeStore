@@ -1,0 +1,179 @@
+/* *********************** CONTAINER ************************ */
+.container {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.page-title {
+    position: relative;
+    z-index: 1;
+    width: 840px;
+    margin-left: 56px;
+    color: #f93c16;
+    padding: 20px 0 10px 20px;
+    background-color: #fff;
+}
+.page-title h3{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    border-left: solid 4px #f93c16;
+}
+
+.my-order {
+    position: relative;
+    padding-bottom: 20px;
+    width: 860px;
+    height: 770px;
+    background-color: #fff;
+    /* box-shadow: 0 0 6px 3px #e8e8e8; */
+    box-shadow: 0 0 6px 2px #e8e8e8;
+    border-radius: 2px;
+}
+
+.my-order .info {
+    float: right;
+    margin-top: 20px;
+    width: 60%;
+    line-height: 18px;
+}
+
+.my-order .info2 {
+    width: 80px;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.my-order .order-items {
+    margin: 0 10px;
+}
+
+.order-tips {
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+
+.form {
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.form-items .form-list .form-input {
+    margin-top: -1px;
+    height: 20px;
+    border-radius: 1px;
+}
+
+.form-items .form-list label {
+    width: 70px;
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.form-items .form-list label+input {
+    margin-left: 0px;
+}
+
+.textarea {
+    margin-top: -2px;
+    margin-left: 20px;
+}
+
+.textarea textarea {
+
+}
+
+
+
+
+
+
+.num {
+    width: 84px;
+    height: 24px;
+    margin-top: 6px;
+}
+
+
+.num input[name='jian'] {
+    float: left;
+    display: inline-block;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    font-size: 20px;
+    background-image: url(../img/jian.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #999;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.num input[type='text'] {
+    float: left;
+    display: inline-block;
+    margin: 0;
+    width: 36px;
+    height: 22px;
+    padding: 0;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    color: #666;
+    background: none;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.num input[name='jia'] {
+    float: left;
+    display: inline-block;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    font-size: 20px;
+    color: #999;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+
+.num-tips {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+.btn-shaitu {
+    margin-top: 30px;
+    margin-left: 80px;
+    width: 92px;
+    height: 32px;
+    
+    text-align: center;
+    line-height: 32px;
+    background-color: #f9f9f9;
+    
+    border: solid 1px #e8e8e8;
+    border-radius: 3px;
+
+    cursor: pointer;
+  }
+
+.btn {
+    font-size: 14px;
+    width: 152px;
+    height: 40px;
+    margin-left: 80px;
+}
