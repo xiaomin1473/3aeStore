@@ -37,7 +37,7 @@ killNetty()
 	fi
 }
 
-cd $PROJ_PATH/3ae-parent
+cd $PROJ_PATH/3aeStore
 mvn clean install
 
 # 停tomcat
@@ -72,29 +72,29 @@ rm -rf $TOMCAT_APP_PATH/app/main/admin/admin
 
 ##
 # 复制新的工程
-cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/main/admin/admin.war
-cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/main/custom/user/ROOT.war
-cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/main/custom/portal/ROOT.war
+cp $PROJ_PATH/3aeStore/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/main/admin/admin.war
+cp $PROJ_PATH/3aeStore/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/main/custom/user/ROOT.war
+cp $PROJ_PATH/3aeStore/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/main/custom/portal/ROOT.war
 
-cp -r $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin $TOMCAT_APP_PATH/app/main/admin/admin
-cp -r $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user $TOMCAT_APP_PATH/app/main/custom/user/ROOT
-cp -r $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/app/main/custom/portal/ROOT
+cp -r $PROJ_PATH/3aeStore/3ae-admin/target/3ae-admin $TOMCAT_APP_PATH/app/main/admin/admin
+cp -r $PROJ_PATH/3aeStore/3ae-user/target/3ae-user $TOMCAT_APP_PATH/app/main/custom/user/ROOT
+cp -r $PROJ_PATH/3aeStore/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/app/main/custom/portal/ROOT
 
-cp $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/test/admin/admin.war
-cp $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/test/custom/user/ROOT.war
-cp $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/test/custom/portal/ROOT.war
+cp $PROJ_PATH/3aeStore/3ae-admin/target/3ae-admin.war $TOMCAT_APP_PATH/app/test/admin/admin.war
+cp $PROJ_PATH/3aeStore/3ae-user/target/3ae-user.war $TOMCAT_APP_PATH/app/test/custom/user/ROOT.war
+cp $PROJ_PATH/3aeStore/3ae-portal/target/3ae-portal.war $TOMCAT_APP_PATH/app/test/custom/portal/ROOT.war
 
-cp -r $PROJ_PATH/3ae-parent/3ae-admin/target/3ae-admin $TOMCAT_APP_PATH/app/test/admin/admin
-cp -r $PROJ_PATH/3ae-parent/3ae-user/target/3ae-user $TOMCAT_APP_PATH/app/test/custom/user/ROOT
-cp -r $PROJ_PATH/3ae-parent/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/app/test/custom/portal/ROOT
+cp -r $PROJ_PATH/3aeStore/3ae-admin/target/3ae-admin $TOMCAT_APP_PATH/app/test/admin/admin
+cp -r $PROJ_PATH/3aeStore/3ae-user/target/3ae-user $TOMCAT_APP_PATH/app/test/custom/user/ROOT
+cp -r $PROJ_PATH/3aeStore/3ae-portal/target/3ae-portal $TOMCAT_APP_PATH/app/test/custom/portal/ROOT
 
-cp $PROJ_PATH/3ae-parent/3ae-api/target/3ae-api.war $TOMCAT_APP_PATH/app/api/api.war
-cp $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer.war $TOMCAT_APP_PATH/app/answer/answer.war
+cp $PROJ_PATH/3aeStore/3ae-api/target/3ae-api.war $TOMCAT_APP_PATH/app/api/api.war
+cp $PROJ_PATH/3aeStore/3ae-answer/target/3ae-answer.war $TOMCAT_APP_PATH/app/answer/answer.war
 
-cp -r $PROJ_PATH/3ae-parent/3ae-api/target/3ae-api $TOMCAT_APP_PATH/app/api/api
-cp -r $PROJ_PATH/3ae-parent/3ae-answer/target/3ae-answer $TOMCAT_APP_PATH/app/answer/answer
-# cp $PROJ_PATH/3ae-parent/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $NETTY_APP_PATH/www/app/agent/agent
-# cp $PROJ_PATH/3ae-parent/3ae-server/target/3ae-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
+cp -r $PROJ_PATH/3aeStore/3ae-api/target/3ae-api $TOMCAT_APP_PATH/app/api/api
+cp -r $PROJ_PATH/3aeStore/3ae-answer/target/3ae-answer $TOMCAT_APP_PATH/app/answer/answer
+# cp $PROJ_PATH/3aeStore/3ae-agent/target/3ae-agent-jar-with-dependencies.jar $NETTY_APP_PATH/www/app/agent/agent
+# cp $PROJ_PATH/3aeStore/3ae-server/target/3ae-server-jar-with-dependencies.jar $NETTY_APP_PATH/server/server.jar
 
 
 # 启动Tomcat
