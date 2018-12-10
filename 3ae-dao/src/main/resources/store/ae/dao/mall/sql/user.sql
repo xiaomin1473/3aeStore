@@ -135,8 +135,8 @@ key idx_create_time(gmt_create)
 insert into tb_user_session(session_name, session_level, session_time)
 values
 	('超级会话', '0', '0');
-	
- 
+
+
 
 -- 批量删除表
 Select CONCAT( 'drop table ', table_name, ';' ) 

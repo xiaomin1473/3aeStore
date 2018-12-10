@@ -6,6 +6,8 @@ public class GoodsDetail {
 	
 	private long GoodsId;
 	
+	private String classType;
+	
 	private String name;
 	
 	private String detail;
@@ -21,6 +23,14 @@ public class GoodsDetail {
 
 	public void setGoodsId(long goodsId) {
 		GoodsId = goodsId;
+	}
+
+	public String getClassType() {
+		return classType;
+	}
+
+	public void setClassType(String classType) {
+		this.classType = classType;
 	}
 
 	public String getName() {
@@ -50,9 +60,12 @@ public class GoodsDetail {
 	@Override
 	public String toString() {
 		return "GoodsDetail [GoodsId=" + GoodsId + 
+				", classType=" + classType + 
 				", name=" + name + 
 				", detail=" + detail + 
 				", gmtCreate=" + gmtCreate + "]";
 	}
+
+	
 	
 }

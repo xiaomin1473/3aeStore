@@ -1,37 +1,46 @@
 package store.ae.pojo.mall.goods;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 public class Goods {
 	private long goodsId;
 	
-	private long goodsTypeId;
+	private long classType;
+	
+	private long brandId;
 	
 	private String name;
 	
-	private int number;
+	private String props;
+	
+	private long businessId;
+	
+	private long number;
+	
+	private String unit;
 	
 	private BigDecimal price;
 	
-	private Date startTime;
-	
-	private Date gmtCreate;
+	private String imgUrl;
 
 	public long getGoodsId() {
 		return goodsId;
 	}
 
-	public void setGoodsId(long goodsId) {
-		this.goodsId = goodsId;
+	public long getClassType() {
+		return classType;
 	}
 
-	public long getGoodsTypeId() {
-		return goodsTypeId;
+	public void setClassType(long classType) {
+		this.classType = classType;
 	}
 
-	public void setGoodsTypeId(long goodsTypeId) {
-		this.goodsTypeId = goodsTypeId;
+	public long getBrandId() {
+		return brandId;
+	}
+
+	public void setBrandId(long brandId) {
+		this.brandId = brandId;
 	}
 
 	public String getName() {
@@ -42,12 +51,36 @@ public class Goods {
 		this.name = name;
 	}
 
-	public int getNumber() {
+	public String getProps() {
+		return props;
+	}
+
+	public void setProps(String props) {
+		this.props = props;
+	}
+
+	public long getBusinessId() {
+		return businessId;
+	}
+
+	public void setBusinessId(long businessId) {
+		this.businessId = businessId;
+	}
+
+	public long getNumber() {
 		return number;
 	}
 
-	public void setNumber(int number) {
+	public void setNumber(long number) {
 		this.number = number;
+	}
+
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
 	}
 
 	public BigDecimal getPrice() {
@@ -58,32 +91,25 @@ public class Goods {
 		this.price = price;
 	}
 
-	public Date getStartTime() {
-		return startTime;
+	public String getImgUrl() {
+		return imgUrl;
 	}
 
-	public void setStartTime(Date startTime) {
-		this.startTime = startTime;
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 
-	public Date getGmtCreate() {
-		return gmtCreate;
-	}
-
-	public void setGmtCreate(Date gmtCreate) {
-		this.gmtCreate = gmtCreate;
+	public void setGoodsId(long goodsId) {
+		this.goodsId = goodsId;
 	}
 
 	@Override
 	public String toString() {
-		return "Goods [goodsId=" + goodsId + 
-				", goodsTypeId=" + goodsTypeId + 
-				", name=" + name + 
-				", number=" + number + 
-				", price=" + price + 
-				", startTime=" + startTime + 
-				", gmtCreate=" + gmtCreate + "]";
+		return "Goods [goodsId=" + goodsId + ", classType=" + classType + ", brandId=" + brandId + ", name=" + name
+				+ ", props=" + props + ", businessId=" + businessId + ", number=" + number + ", unit=" + unit
+				+ ", price=" + price + ", imgUrl=" + imgUrl + "]";
 	}
+
 	
-	
+
 }

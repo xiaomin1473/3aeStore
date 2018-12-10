@@ -6,6 +6,8 @@ public class GoodsEvaluate {
 	
 	private long GoodsId;
 	
+	private long classType;
+	
 	private String name;
 	
 	private int evaluateRank;
@@ -25,6 +27,14 @@ public class GoodsEvaluate {
 
 	public void setGoodsId(long goodsId) {
 		GoodsId = goodsId;
+	}
+
+	public long getClassType() {
+		return classType;
+	}
+
+	public void setClassType(long classType) {
+		this.classType = classType;
 	}
 
 	public String getName() {
@@ -70,10 +80,14 @@ public class GoodsEvaluate {
 	@Override
 	public String toString() {
 		return "GoodsEvaluate [GoodsId=" + GoodsId + 
+				", classType=" + classType + 
 				", name=" + name + 
 				", evaluateRank=" + evaluateRank + 
 				", userId=" + userId + 
 				", content=" + content + 
 				", gmtCreate=" + gmtCreate + "]";
 	}
+
+
+
 }

@@ -5,7 +5,7 @@ use store_3ae_mall;
 -- 商品SPU
 CREATE TABLE tb_goods (
 `goods_id` bigint NOT NULL AUTO_INCREMENT COMMENT '商品ID',
-`class` bigint NOT NULL COMMENT '商品类目',
+`classType` bigint NOT NULL COMMENT '商品类目',
 `brand_id` bigint NOT NULL COMMENT '商品品牌',
 `name` varchar(120) NOT NULL COMMENT '商品名称',
 `props` varchar(120) NOT NULL COMMENT '商品属性',
@@ -17,16 +17,16 @@ CREATE TABLE tb_goods (
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_goods_id(goods_id),
-key idx_class(class),
+key idx_classType(classType),
 key idx_brand_id(brand_id),
 key idx_price(price),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='商品表(SPU)';
 
 -- 初始化数据
-insert into tb_goods(class, brand_id, name, props, business_id, number, unit, price, img_url)
+insert into tb_goods(classType, brand_id, name, props, business_id, number, unit, price, img_url)
 values
-	(10111100, 1000, 'iphone6 plus', '屏幕尺寸：720*576', 1000, 100, '部', 4000, './assests/img/iphone.png;');
+	(1010101, 1000, 'iphone6 plus', '屏幕尺寸：720*576', 1000, 100, '部', 4000, './assests/img/iphone.png;');
 
 
 -- 商品品牌
@@ -34,21 +34,22 @@ CREATE TABLE tb_goods_brand (
 `brand_id` bigint NOT NULL AUTO_INCREMENT COMMENT '商品品牌ID',
 `name` varchar(120) NOT NULL COMMENT '品牌名称',
 `brand` varchar(120) NOT NULL COMMENT '品牌标识',
+`img_url` varchar(120) NOT NULL COMMENT '品牌图片',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_brand_id(brand_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='品牌表';
 
 -- 初始化数据
-insert into tb_goods_brand(name, brand)
+insert into tb_goods_brand(name, brand, img_url)
 values
-	('苹果', 'apple');
+	('苹果', 'apple', './assets/brand/apple.png');
 
 
 -- 商品图片
 CREATE TABLE tb_goods_image (
 `goods_id` bigint NOT NULL COMMENT '商品ID',
-`class` bigint NOT NULL COMMENT '商品类别',
+`classType` bigint NOT NULL COMMENT '商品类别',
 `name` varchar(120) NOT NULL COMMENT '图片名称',
 `number_info` int NOT NULL COMMENT '图片数量',
 `number_detail` int NOT NULL COMMENT '详情图片数量',
@@ -58,46 +59,46 @@ CREATE TABLE tb_goods_image (
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_goods_id(goods_id),
-key idx_class(class),
+key idx_classType(classType),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='商品图片表';
 
 -- 初始化数据
-insert into tb_goods_image(goods_id, class, name, number_info, number_detail, suffix_type, urls_info, urls_detail)
+insert into tb_goods_image(goods_id, classType, name, number_info, number_detail, suffix_type, urls_info, urls_detail)
 values
-	(1000, 10111100, 'iphone6 plus', 1, 1, 'png', './assests/img/iphone.png;', './assests/img/iphone.png;');
+	(1000, 1010101, 'iphone6 plus', 1, 1, 'png', './assests/img/iphone.png;', './assests/img/iphone.png;');
 
 
 -- 商品类目
 CREATE TABLE tb_goods_category (
 `category_id` bigint NOT NULL AUTO_INCREMENT COMMENT '商品类型ID',
 `name` varchar(120) NOT NULL COMMENT '类型名称',
-`class` bigint NOT NULL COMMENT '分类',
-`grade` bigint NOT NULL COMMENT '分类等级',
-`series` bigint NOT NULL COMMENT '系列',
+`classType` bigint NOT NULL COMMENT '分类',
+`gradeType` bigint NOT NULL COMMENT '分类等级',
+`seriesType` bigint NOT NULL COMMENT '系列',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_category_id(category_id),
-key idx_class(class),
-key idx_grade(grade),
-key idx_series(series),
+key idx_classType(classType),
+key idx_gradeType(gradeType),
+key idx_seriesType(seriesType),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='商品类型表';
 
 -- 初始化数据
-insert into tb_goods_category(name, class, grade, series)
+insert into tb_goods_category(name, classType, gradeType, seriesType)
 values
-	('手机', 10111100, 10111000, 10100000),
-	('电子', 10111000, 10110000, 10100000),
-	('数码', 10111200, 10111000, 10100000),
-	('相机', 10111300, 10111000, 10100000);
+	('手机', 1010101, 1010100, 1010000),
+	('电子', 1010102, 1010100, 1010000),
+	('数码', 1010103, 1010100, 1010000),
+	('相机', 1010104, 1010100, 1010000);
 
 
 -- 商品列表SKU
 CREATE TABLE tb_goods_list (
 `goods_sku_id` bigint NOT NULL AUTO_INCREMENT COMMENT 'skuID',
 `goods_id` bigint NOT NULL COMMENT '商品ID',
-`class` bigint NOT NULL COMMENT '分类',
+`classType` bigint NOT NULL COMMENT '分类',
 `name` varchar(64) NOT NULL COMMENT '商品名称',
 `color` varchar(64) NOT NULL COMMENT '商品颜色',
 `model` varchar(64) NOT NULL COMMENT '商品型号',
@@ -113,40 +114,40 @@ CREATE TABLE tb_goods_list (
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_goods_sku_id(goods_sku_id),
 key idx_goods_id(goods_id),
-key idx_class(class),
+key idx_classType(classType),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='商品列表SKU';
 
 -- 初始化数据
-insert into tb_goods_list(goods_id, class, name, color, model, format, param, props, weight, img_url, market, mall, number)
+insert into tb_goods_list(goods_id, classType, name, color, model, format, param, props, weight, img_url, market, mall, number)
 values
-	(1000, 10111300, 'iphone6 plus', '土豪金', 'plus', '无', '无', '无', '净重：100g', './assests/img/iphone.png;', 5000, 3000, 1000);
+	(1000, 1010101, 'iphone6 plus', '土豪金', 'plus', '无', '无', '无', '净重：100g', './assests/img/iphone.png;', 5000, 3000, 1000);
 
 
 -- 商品详情
 CREATE TABLE tb_goods_detail (
 `goods_id` bigint NOT NULL COMMENT '商品ID',
-`class` bigint NOT NULL COMMENT '分类',
+`classType` bigint NOT NULL COMMENT '分类',
 `name` varchar(120) NOT NULL COMMENT '商品名称',
 `detail` text(300) NOT NULL COMMENT '商品详情',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_goods_id(goods_id),
-key idx_class(class),
+key idx_classType(classType),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='商品详情表';
 
 -- 初始化数据
-insert into tb_goods_detail(goods_id, class, name, detail)
+insert into tb_goods_detail(goods_id, classType, name, detail)
 values
-	(1000, 10111300, 'iphone6 plus', '暂无');
+	(1000, 1010101, 'iphone6 plus', '暂无');
 
 
 -- 商品评价
 CREATE TABLE tb_goods_evaluate (
 `evaluate_id` bigint NOT NULL AUTO_INCREMENT COMMENT '评价ID',
 `goods_id` bigint NOT NULL COMMENT '商品ID',
-`class` bigint NOT NULL COMMENT '分类',
+`classType` bigint NOT NULL COMMENT '分类',
 `name` varchar(120) NOT NULL COMMENT '评价名称',
 `evaluate_rank` int NOT NULL COMMENT '评价等级',
 `user_id` bigint NOT NULL COMMENT '评价用户',
@@ -155,17 +156,17 @@ CREATE TABLE tb_goods_evaluate (
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_evaluate_id(evaluate_id),
 key idx_goods_id(goods_id),
-key idx_class(class),
+key idx_classType(classType),
 key idx_evaluate_rank(evaluate_rank),
 key idx_user_id(user_id),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='用户评价表';
 
 -- 初始化数据
-insert into tb_goods_evaluate(goods_id, class, name, evaluate_rank, user_id, content)
+insert into tb_goods_evaluate(goods_id, classType, name, evaluate_rank, user_id, content)
 values
-	(1000, 10111300, '默认评价', 10, 1000, "五星好评!"),
-	(1000, 10111300, '默认评价', 9, 1001, "好评!");
+	(1000, 1010101, '默认评价', 10, 1000, "五星好评!"),
+	(1000, 1010101, '默认评价', 9, 1001, "好评!");
 
  
 

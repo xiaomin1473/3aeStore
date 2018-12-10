@@ -10,11 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import store.ae.pojo.mall.goods.Brand;
+import store.ae.pojo.mall.goods.Category;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsDetail;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsImage;
-import store.ae.pojo.mall.goods.GoodsType;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -26,18 +27,7 @@ public class GoodsDaoTest {
 	
 	@Autowired
 	GoodsDao goodsDao;
-	
-	@Autowired
-	GoodsTypeDao goodsTypeDao;
-	
-	@Autowired
-	GoodsImageDao goodsImageDao;
-	
-	@Autowired
-	GoodsDetailDao goodsDetailDao;
-	
-	@Autowired
-	GoodsEvaluateDao goodsEvaluateDao;
+
 	
 	@Test
 	public void testQueryById() {
@@ -45,30 +35,46 @@ public class GoodsDaoTest {
 		
 		Goods iphone = goodsDao.queryById(goodsId);
 		
-		long goodsTypeId = iphone.getGoodsTypeId();
+		long brandId = iphone.getBrandId();
 		
-		GoodsImage iphoneImage = goodsImageDao.queryById(goodsId);
+		logger.info("brands is : " + brandId);
+	}
+	
+	@Test
+	public void testQueryBrand() {
+		List<Brand> brands = goodsDao.queryBrand();
 		
-		GoodsType iphoneType = goodsTypeDao.queryById(goodsTypeId);
-
-		GoodsDetail iphoneDetail = goodsDetailDao.queryById(goodsId);
-
-		List<GoodsEvaluate> iphoneEvaluate = goodsEvaluateDao.queryById(goodsId);
-
-		logger.info("goods is : " + iphone);
-		logger.info("goodsImage is : " + iphoneImage);
-		logger.info("goodsType is : " + iphoneType);
-		logger.info("goodsDetail is : " + iphoneDetail);
-		logger.info("goodsEvaluate is : " + iphoneEvaluate);
+		logger.info("brands is : " + brands);
+	}
+	
+	@Test
+	public void testQueryCategory() {
+		List<Category> categories = goodsDao.queryCategory();
+		
+		logger.info("brands is : " + categories);
 	}
 
 	@Test
-	public void testQueryAll() {
+	public void testQueryAllBrand() {
+		long brand = 1000L;
 		int offset = 0;
-		int limit = 10;
-		List<Goods> goods = goodsDao.queryAll(offset, limit);
+		int limit = 1;
+		List<Goods> goods = goodsDao.queryAllByBrand(brand, offset, limit);
 		
 		logger.info("goods is : " + goods);
+	}
+	
+	@Test
+	public void testQueryGoodsInfo() {
+		long goodsId = 1000;
+
+		GoodsDetail details = goodsDao.queryDetailById(goodsId);
+		GoodsImage images = goodsDao.queryImageById(goodsId);
+		List<GoodsEvaluate> evaluates = goodsDao.queryEvaluatesById(goodsId);
+		
+		logger.info("details is : " + details);
+		logger.info("images is : " + images);
+		logger.info("evaluates is : " + evaluates);
 	}
 
 }

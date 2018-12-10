@@ -6,7 +6,7 @@ CREATE TABLE tb_orders (
 `user_id` bigint NOT NULL COMMENT '用户ID',
 `goods_sku_id` bigint NOT NULL COMMENT '商品ID',
 `payment_id` bigint NOT NULL DEFAULT -1 COMMENT '支付ID 默认-1无效 0未支付',
-`class` bigint NOT NULL COMMENT '分类',
+`classType` bigint NOT NULL COMMENT '分类',
 `name` varchar(120) NOT NULL COMMENT '商品名称',
 `goods_number` int NOT NULL COMMENT '购买数量',
 `unit` varchar(3) NOT NULL COMMENT '单位',
@@ -26,11 +26,11 @@ PRIMARY KEY pk_order_id(order_id),
 key idx_user_id(user_id),
 key idx_payment_id(payment_id),
 key idx_goods_sku_id(goods_sku_id),
-key idx_class(class),
+key idx_classType(classType),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='订单表';
 
 -- 初始化数据
-insert into tb_orders(user_id, goods_sku_id, payment_id, class, name, goods_number, unit, sku_price, img_url, discount_way, discount, user_name, user_phone, address)
+insert into tb_orders(user_id, goods_sku_id, payment_id, classType, name, goods_number, unit, sku_price, img_url, discount_way, discount, user_name, user_phone, address)
 values
-	(1000, 1000, 0, 10111300,'iphone6 plus', 1, '部', 1000, './assests/img/iphone.png;', 0, 0, "赵宇明", 18235010340, "天上人间");
+	(1000, 1000, 0, 1010101,'iphone6 plus', 1, '部', 1000, './assests/img/iphone.png;', 0, 0, "赵宇明", 18235010340, "天上人间");

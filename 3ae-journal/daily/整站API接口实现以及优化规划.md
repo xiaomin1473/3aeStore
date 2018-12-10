@@ -44,6 +44,19 @@
 | POST | /user/login/{name}/{pwd} | -- | String | 登录操作 | 2018-12-04 |
 | ——— | ————————————————————— | ———— | ———— | ——————— | —————— |
 
+### 商品服务
+
+| 请求 | 路由 | 参数  | 返回格式 | 功能描述 | 更新日期 |
+| -----: | :----- | :-----: |  :-----:  | :-----: | :-----: |
+| GET | /mall/goods/category | -- | String | 获取类目 | 2018-12-10 |
+| GET | /mall/goods/list/{classType}/{offset}/{limit} | -- | String | 分类商品 | 2018-12-10 |
+| GET | /mall/goods/brand | -- | String | 获取品牌 | 2018-12-10 |
+| GET | /mall/goods/list/{brand}/{offset}/{limit} | -- | String | 品牌商品 | 2018-12-10 |
+| GET | /mall/goods/detail/{goods_id} | -- | String | 获取商品详情 | 2018-12-10 |
+| GET | /mall/goods/detail/{goods_id}/{goods_sku_id} | -- | String | 获取商品详情 | 2018-12-10 |
+| GET | /mall/goods/evaluate/{goods_id} | -- | String | 获取商品评价 | 2018-12-10 |
+| ——— | ————————————————————— | ———— | ———— | ——————— | —————— |
+
 ### 秒杀服务
 
 | 请求 | 路由 | 参数  | 返回格式 | 功能描述 | 更新日期 |
