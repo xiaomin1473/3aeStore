@@ -1,4 +1,4 @@
-CREATE TABLE user_deliver (
+CREATE TABLE tb_user_deliver (
 `deliver_id` bigint NOT NULL AUTO_INCREMENT COMMENT '收货ID',
 `user_id` bigint NOT NULL COMMENT '用户ID',
 `name` varchar(120) NOT NULL COMMENT '收货联系人姓名',
@@ -14,6 +14,6 @@ key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='收货详情表';
 
 -- 初始化数据
-insert into user_deliver(deliver_id, user_id, name, phone, address, option_name, option_phone)
+insert into tb_user_deliver(deliver_id, user_id, name, phone, address, option_name, option_phone)
 values
 	(1000, 1000, "赵宇明", 18235010340, "天上人间", "暂无", 0);

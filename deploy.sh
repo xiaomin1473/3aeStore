@@ -101,3 +101,7 @@ cp -r $PROJ_PATH/3aeStore/3ae-answer/target/3ae-answer $TOMCAT_APP_PATH/app/answ
 sh /opt/apache-tomcat-8.5.35/bin/startup.sh
 
 echo "this is lastest version"
+
+service mysqld start
+
+echo "mysql is start"

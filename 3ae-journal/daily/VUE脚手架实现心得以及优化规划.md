@@ -22,43 +22,41 @@
 ## 主架构
 
 ```utf-8
-架构图 vue-app
+架构图 MVV
 
-    project-name
-    ├── build                                           // 打包资源
-    ├── config                                          // webpack配置
-    ├── dist                                            // 编译文件
-    ├── script                                          // 脚本资源
+  MVV
+    ├── public                                        // 全局静态资源
+    ├── script                                        // 脚本资源
     ├── src
-    │    ├── common                                     // 通用资源
-    │    │     ├── utils                                // 通用工具
-    │    │     └── assets                               // 通用静态资源
-    │    ├── config                                     // 公共配置
-    │    ├── doctor                                     // 装配文件 (Vt. 装配，假造，修改)
-    │    │     ├── cords                                // 数据处理 (n. 绳，堆积,捆绑)
-    │    │     │     ├── api                            // 后台api
-    │    │     │     ├── mock                           // 数据mock
-    │    │     │     └── store                          // vuex
-    │    │     ├── views                                // 视图
-    │    │     │     ├── apply                          // 应用
-    │    │     │     │     ├── components               // 组件
-    │    │     │     │     └── paging                   // 分页
-    │    │     │     └── pages                          // 页面
-    │    │     │           └── filler                   // 页面配置 (n. 填装物，填注，补白，填料)
-    │    │     └── vitae                                // 项目履历 (n. 个人简历，生活，生命<vita复数>，展望)
-    │    │     │     ├── router                         // 路由
-    │    │     │     └── permission.js                  // 许可证
-    │    ├── main.js                                    // 应用入口
-    │    └── app.vue                                    // 路由入口
-    ├── static                                          // 全局静态资源
-    ├── test                                            // 测试
-    ├── .editorconfig                                   // 代码风格配置
-    ├── .eslintignore                                   // eslint 忽略目录配置
-    ├── .eslintrc                                       // eslint 配置
-    ├── generator.json                                  // generator.json
-    ├── package.json                                    // package.json
-    ├── README.md                                       // 项目说明
-    └── yarn.lock                                       // 模板版本管理
+    │    ├── assets
+    │    │     ├── utils                              // 工具
+    │    │     └── static                             // 静态资源
+    │    ├── config                                   // 公共配置
+    │    ├── docker                                   // docker容器、码头工人; doctor装配文件(Vt. 装配，假造，修改)
+    │    │     ├── model
+    │    │     │     ├── api                          // 后台api
+    │    │     │     └── store                        // vuex
+    │    │     ├── views
+    │    │     │     ├── components                   // 组件
+    │    │     │     ├── pages
+    │    │     │     │     ├── caution                // 警示 (报错信息、状态码、数据异常等)
+    │    │     │     │     └── filler                 // 填充 (过渡页、流程页、信息页、介绍页)
+    │    │     │     └── service                      // 业务
+    │    │     └── vitae
+    │    │           ├── routes                       // 动态路由
+    │    │           ├── index.js                     // 路由配置
+    │    │           └── permission.js                // 许可证
+    │    ├── app.vue                                  // 应用入口
+    │    ├── main.js                                  // 挂载VUE
+    │    └── router.js                                // 路由入口
+    ├── test                                          // 测试
+    ├── .editorconfig                                 // 代码风格配置
+    ├── .eslintignore                                 // eslint 忽略目录配置
+    ├── .eslintrc                                     // eslint 配置
+    ├── generator.json                                // generator.json
+    ├── package.json                                  // package.json
+    ├── README.md                                     // 项目说明
+    └── yarn.lock                                     // 模板版本管理
 ```
 
 ## 架构介绍及实现思考
