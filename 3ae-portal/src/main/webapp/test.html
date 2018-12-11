@@ -20,14 +20,17 @@
    <button id="btnTest" onclick="test()">点击测试</button>
    <text id="text">sss</text>
 </body>
-</html>
+</html> 
 <script src="common/js/axios.min.js"></script>
 <script src="assets/js/request.js"></script>
+
+<script src="common/js/es6-promise.auto.min.js"></script>
+
 <script>
    axios.defaults.baseURL = 'http://api.3ae.store';
 
    function test() {
-      axios.post('/user/login/root/root', {
+      axios.post('/user/login/root/admin', {
 
       }).then(function (response) {
          console.log(response);
