@@ -12,24 +12,21 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video { 
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    color: #000;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  color: #000;
 }
 
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-button {
-  outline: none;
+  display: block;
 }
 
 button {
   border: none;
+  outline: none;
 }
 
 html {
@@ -52,28 +49,19 @@ q:before, q:after {
   content: none;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
-a:hover {
-    text-decoration: none;
-}
+a:hover { text-decoration: none; }
 
-a:link {
-    text-decoration: none;
-}
+a:link { text-decoration: none; }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
-
 
 
 /* ************************* global_define *********************** */
-
 * {
   transition: all .3s;
 }
@@ -94,38 +82,26 @@ p { font-size: 12px; }
 
 img { -webkit-user-drag: none; }
 
-.clearfix {
-    clear:both;
-}
+.clearfix { clear:both; }
 
-.frt {
-    float: right;
-}
+.frt { float: right; }
 
-.flt {
-    float: left;
-}
-
+.flt { float: left; }
 
 .context {
-    width: 600px;
-    height: 100px;
+  width: 600px;
+  height: 100px;
 }
 
 .w-1200 {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
-
-
 
 hr {
   margin: 10px 0;
   border: solid .5px #eee;
 }
-
-
-
 
 
 /* *************************** font-define **************************** */
@@ -201,6 +177,5 @@ hr {
 .icon-people:before {
   content: "\e651";
 }
-
 
 /* *************************** global_page **************************** */
