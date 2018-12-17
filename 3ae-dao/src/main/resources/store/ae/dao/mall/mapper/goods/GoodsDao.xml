@@ -5,53 +5,66 @@
     
 <mapper namespace="store.ae.dao.mall.goods.GoodsDao">
     <!-- 目的： 为dao接口提供sql语句配置 -->
-    
-    <select id="queryById" resultType="Goods" parameterType="long">
-    	select goods_id, goods_type_id, name, number, price, gmt_create
-    	from goods
-    	where goods_id = #{goodsId}
+        
+    <select id="queryAllCategory" resultType="Category">
+    	select category_id, name, category, grade_type, series_type, gmt_create
+    	from tb_goods_category
     </select>
 
-
-    <select id="queryBrand" resultType="Brand">
+    <select id="queryAllBrand" resultType="Brand">
     	select brand_id, name, brand, img_url, gmt_create
     	from tb_goods_brand
     </select>
+
     
-    <select id="queryCategory" resultType="Category">
-    	select category_id, name, classType, gradeType, seriesType, gmt_create
-    	from tb_goods_category
-    </select>
-    
-    <select id="queryAllByCategory" resultType="Goods">
-    	select goods_id, class, name, number, price, gmt_create
+    <select id="queryAllGoodsByCategory" resultType="Goods">
+    	select goods_id, category, brand_id, name, props, business_id, number, unit, price, img_url, gmt_create
     	from tb_goods
-    	order by gmt_create desc
-    	limit #{class}, #{offset}, #{limit}
-    </select>
-    
-    <select id="queryAllByBrand" resultType="Goods">
-    	select goods_id, classType, brand_id, name, props, business_id, number, unit, price, img_url, gmt_create
-    	from tb_goods
-    	where brand_id = #{brand}
+    	where category = #{category}
     	limit #{offset}, #{limit}
     </select>
     
-    <select id="queryDetailById" resultType="GoodsDetail" parameterType="long">
-    	select goods_id, classType, name, detail, gmt_create
+    <select id="queryAllGoodsByBrandId" resultType="Goods">
+    	select goods_id, category, brand_id, name, props, business_id, number, unit, price, img_url, gmt_create
+    	from tb_goods
+    	where brand_id = #{brandId}
+    	limit #{offset}, #{limit}
+    </select>
+    
+    <select id="queryGoodsSpuById" resultType="Goods" parameterType="long">
+    	select goods_id, category, brand_id, name, props, business_id, number, unit, price, img_url, gmt_create
+    	from tb_goods
+    	where goods_id = #{goodsId}
+    </select>
+
+	<select id="queryAllGoodsSkuById" resultType="GoodsSku" parameterType="long">
+    	select goods_id, category, name, color, model, format, param, props, weight, img_url, market, mall, number
+    	from tb_goods_list
+    	where goods_id = #{goodsId}
+    </select>
+    
+    <select id="queryGoodsDetailById" resultType="GoodsDetail" parameterType="long">
+    	select goods_id, category, name, detail, gmt_create
     	from tb_goods_detail
     	where goods_id = #{goodsId}
     </select>
     
-    <select id="queryImageById" resultType="GoodsImage" parameterType="long">
-    	select goods_id, classType, name, number_info, number_detail, suffix_type, urls_info, urls_detail,  gmt_create  
+    <select id="queryGoodsImageById" resultType="GoodsImage" parameterType="long">
+    	select goods_id, category, name, number_info, number_detail, suffix_type, urls_info, urls_detail,  gmt_create  
     	from tb_goods_image
     	where goods_id = #{goodsId}
     </select>
 
-    <select id="queryEvaluatesById" resultType="GoodsEvaluate" parameterType="long">
-    	select goods_id, classType, name, evaluate_rank, user_id, content, gmt_create
+    <select id="queryAllGoodsEvaluatesById" resultType="GoodsEvaluate" parameterType="long">
+    	select goods_id, category, name, evaluate_rank, user_id, content, gmt_create
     	from tb_goods_evaluate
     	where goods_id = #{goodsId}
     </select>
+    
+    <select id="queryGoodsSkuById" resultType="GoodsSku" parameterType="long">
+    	select goods_sku_id, goods_id, category, name, color, model, format, param, props, weight, img_url, market, mall, number, gmt_create
+    	from tb_goods_list
+    	where goods_sku_id = #{goodsSkuId}
+    </select>
+    
 </mapper>

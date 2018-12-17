@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class Goods {
 	private long goodsId;
 	
-	private long classType;
+	private long category;
 	
 	private long brandId;
 	
@@ -27,12 +27,12 @@ public class Goods {
 		return goodsId;
 	}
 
-	public long getClassType() {
-		return classType;
+	public long getCategory() {
+		return category;
 	}
 
-	public void setClassType(long classType) {
-		this.classType = classType;
+	public void setCategory(long category) {
+		this.category = category;
 	}
 
 	public long getBrandId() {
@@ -105,9 +105,16 @@ public class Goods {
 
 	@Override
 	public String toString() {
-		return "Goods [goodsId=" + goodsId + ", classType=" + classType + ", brandId=" + brandId + ", name=" + name
-				+ ", props=" + props + ", businessId=" + businessId + ", number=" + number + ", unit=" + unit
-				+ ", price=" + price + ", imgUrl=" + imgUrl + "]";
+		return "Goods [goodsId=" + goodsId + 
+				", category=" + category + 
+				", brandId=" + brandId + 
+				", name=" + name + 
+				", props=" + props + 
+				", businessId=" + businessId + 
+				", number=" + number + 
+				", unit=" + unit + 
+				", price=" + price + 
+				", imgUrl=" + imgUrl + "]";
 	}
 
 	

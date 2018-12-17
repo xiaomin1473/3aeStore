@@ -10,51 +10,88 @@ import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsDetail;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsImage;
+import store.ae.pojo.mall.goods.GoodsSku;
 
 public interface GoodsDao {
 	/**
-	 * @param GoodsId
+	 * 查询商品分类，不是查ID
 	 * @return
 	 */
-	Goods queryById(@Param("goodsId") long goodsId);
+	List<Category> queryAllCategory();
 
-
-	List<Category> queryCategory();
-
-	List<Brand> queryBrand();
+	/**
+	 * 查询商品品牌
+	 * @return
+	 */
+	List<Brand> queryAllBrand();
 
 	/**
 	 * @param category
-	 * 			根据分类
+	 * 			根据分类Id
 	 * @param offset
 	 * 			偏移量
 	 * @param limit
 	 * 			范围
 	 * @return
 	 */
-	List<Goods> queryAllByCategory(@Param("category") long category, @Param("offset") int offset, @Param("limit") int limit);
+	List<Goods> queryAllGoodsByCategory(@Param("category") long category, @Param("offset") int offset, @Param("limit") int limit);
 
 	/**
-	 * @param brand
-	 * 			根据品牌
+	 * @param brandId
+	 * 			根据品牌ID
 	 * @param offset
 	 * 			偏移量
 	 * @param limit
 	 * 			范围
 	 * @return
 	 */
-	List<Goods> queryAllByBrand(@Param("brand") long brand, @Param("offset") int offset, @Param("limit") int limit);
+	List<Goods> queryAllGoodsByBrandId(@Param("brandId") long brandId, @Param("offset") int offset, @Param("limit") int limit);
 	
 	
-	GoodsDetail queryDetailById(@Param("goodsId") long goodsId);
-	
-	GoodsImage queryImageById(@Param("goodsId") long goodsId);
 	
 	/**
+	 * 根据商品ID获取商品SPU信息
+	 * @param GoodsId
+	 * @return
+	 */
+	Goods queryGoodsSpuById(@Param("goodsId") long goodsId);
+	
+	/**
+	 * 根据商品ID获取所有SKU信息
 	 * @param goodsId
 	 * @return
 	 */
-	List<GoodsEvaluate> queryEvaluatesById(@Param("goodsId") long goodsId);
+	List<GoodsSku> queryAllGoodsSkuById(@Param("goodsId") long goodsId);
+	
+	/**
+	 * 根据商品ID查询商品Detail
+	 * @param goodsId
+	 * @return
+	 */
+	GoodsDetail queryGoodsDetailById(@Param("goodsId") long goodsId);
+	
+	/**
+	 * 根据商品ID查询商品图片
+	 * @param goodsId
+	 * @return
+	 */
+	GoodsImage queryGoodsImageById(@Param("goodsId") long goodsId);
+	
+	/**
+	 * 根据商品ID查询评价信息
+	 * @param goodsId
+	 * @return
+	 */
+	List<GoodsEvaluate> queryAllGoodsEvaluatesById(@Param("goodsId") long goodsId);
+	
+	
+
+	/**
+	 * 根据商品SKU ID查询SKU信息
+	 * @param goodsSkuId
+	 * @return
+	 */
+	GoodsSku queryGoodsSkuById(long goodsSkuId);
 	
 	
 }

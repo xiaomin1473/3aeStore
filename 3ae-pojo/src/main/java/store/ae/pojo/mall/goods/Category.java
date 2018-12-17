@@ -8,7 +8,7 @@ public class Category {
 	
 	private String name;
 	
-	private String classType;
+	private String category;
 	
 	private String gradeType;
 	
@@ -35,12 +35,12 @@ public class Category {
 		this.name = name;
 	}
 
-	public String getClassType() {
-		return classType;
+	public String getCategory() {
+		return category;
 	}
 
-	public void setClassType(String classType) {
-		this.classType = classType;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getGradeType() {
@@ -72,7 +72,7 @@ public class Category {
 	public String toString() {
 		return "Category [categoryId=" + categoryId + 
 				", name=" + name + 
-				", classType=" + classType + 
+				", category=" + category + 
 				", gradeType=" + gradeType + 
 				", seriesType=" + seriesType + 
 				", gmtCreate=" + gmtCreate + "]";
