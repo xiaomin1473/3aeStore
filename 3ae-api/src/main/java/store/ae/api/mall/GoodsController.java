@@ -32,6 +32,8 @@ public class GoodsController {
 		return goodsService.getCategoryList();
 	}
 	
+	
+	
 	@RequestMapping(value = "/list/{category}/{offset}/{limit}", 
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
