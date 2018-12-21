@@ -8,11 +8,11 @@
   <artifactId>3ae-api</artifactId>
   <packaging>war</packaging>
   
-    
+
   <build>
   	  	<finalName>3ae-api</finalName>
   </build>
-  
+ 
   <dependencies>	
 	<dependency>
 		<groupId>store.3ae</groupId>
