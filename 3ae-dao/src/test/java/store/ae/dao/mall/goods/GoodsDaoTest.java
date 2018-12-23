@@ -28,7 +28,7 @@ public class GoodsDaoTest {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
-	GoodsDao goodsDao;
+	private GoodsDao goodsDao;
 	
 	@Test
 	public void testQueryAllCategory() {
