@@ -1,9 +1,10 @@
 CREATE TABLE tb_user (
 `user_id` bigint NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-`user_name` varchar(120) NOT NULL COMMENT '用户名称',
-`user_pwd` varchar(120) NOT NULL COMMENT '用户密码',
-`user_mark` varchar(120) NOT NULL COMMENT '用户标识',
 `user_group_id` bigint NOT NULL COMMENT '用户组ID',
+`user_name` varchar(32) NOT NULL COMMENT '用户名称',
+`user_pwd` varchar(64) NOT NULL COMMENT '用户密码',
+`user_mark` varchar(120) NOT NULL COMMENT '用户标识',
+`login_status` tinyint NOT NULL DEFAULT -1 COMMENT '登录状态 默认-1登录异常 0未登录 1已登录 2登录超时',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_user_id(user_id),
@@ -15,9 +16,9 @@ key idx_create_time(gmt_create)
 
 -- 初始化数据 pwd = admin
 -- mark标识：超级用户、超级角色、超级权限、超级时间、超级操作、备用
-insert into tb_user(user_name, user_pwd, user_mark, user_group_id)
+insert into tb_user(user_group_id, user_name, user_pwd, user_mark, login_status)
 values
-	('root', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', '1000');
+	(1000, 'root', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', 0);
 
 CREATE TABLE tb_user_group (
 `user_group_id` bigint NOT NULL AUTO_INCREMENT COMMENT '用户组ID',

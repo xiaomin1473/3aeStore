@@ -34,6 +34,7 @@
       <!-- 项目依赖版本 -->
          <!-- 公共资源库 -->
          <commons-collections.version>3.2.2</commons-collections.version>
+         <lombok.version>1.18.4</lombok.version>
          <!-- 日志 -->
          <logback.version>1.2.3</logback.version>
          <slf4j.version>1.8.0-beta2</slf4j.version>
@@ -146,7 +147,13 @@
             <artifactId>commons-collections</artifactId>
             <version>${commons-collections.version}</version>
          </dependency>
-      
+      <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		 <dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>${lombok.version}</version>
+		 </dependency>
+      	 
       
       <!-- 日志 -->
          <dependency>

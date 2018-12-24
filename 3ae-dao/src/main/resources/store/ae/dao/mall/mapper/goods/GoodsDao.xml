@@ -7,62 +7,62 @@
     <!-- 目的： 为dao接口提供sql语句配置 -->
         
     <select id="queryAllCategory" resultType="Category">
-    	select category_id, name, category, grade_type, series_type, gmt_create
+    	select category_id, category_name, category_type, grade_type, series_type, gmt_create, gmt_modified
     	from tb_goods_category
     </select>
 
     <select id="queryAllBrand" resultType="Brand">
-    	select brand_id, name, brand, img_url, gmt_create
+    	select brand_id, brand_name, brand_tips, img_url, gmt_create, gmt_modified
     	from tb_goods_brand
     </select>
 
     
     <select id="queryAllGoodsByCategory" resultType="Goods">
-    	select goods_id, category, brand_id, name, props, business_id, number, unit, price, img_url, gmt_create
+    	select goods_id, business_id, brand_id, category_type, goods_name, amount, unit, price, volume, img_url, gmt_create, gmt_modified
     	from tb_goods
-    	where category = #{category}
+    	where category_type = #{categoryType}
     	limit #{offset}, #{limit}
     </select>
     
     <select id="queryAllGoodsByBrandId" resultType="Goods">
-    	select goods_id, category, brand_id, name, props, business_id, number, unit, price, img_url, gmt_create
+    	select goods_id, business_id, brand_id, category_type, goods_name, amount, unit, price, volume, img_url, gmt_create, gmt_modified
     	from tb_goods
     	where brand_id = #{brandId}
     	limit #{offset}, #{limit}
     </select>
     
     <select id="queryGoodsSpuById" resultType="Goods" parameterType="long">
-    	select goods_id, category, brand_id, name, props, business_id, number, unit, price, img_url, gmt_create
+    	select goods_id, business_id, brand_id, category_type, goods_name, amount, unit, price, volume, img_url, gmt_create, gmt_modified
     	from tb_goods
     	where goods_id = #{goodsId}
     </select>
 
 	<select id="queryAllGoodsSkuById" resultType="GoodsSku" parameterType="long">
-    	select goods_id, category, name, color, model, format, param, props, weight, img_url, market, mall, number
+    	select goods_id, category_type, name, color, model, format, param, props, weight, img_url, market, mall, number, gmt_modified
     	from tb_goods_list
     	where goods_id = #{goodsId}
     </select>
     
     <select id="queryGoodsDetailById" resultType="GoodsDetail" parameterType="long">
-    	select goods_id, category, name, detail, gmt_create
+    	select goods_id, category_type, goods_name, detail, gmt_create, gmt_modified
     	from tb_goods_detail
     	where goods_id = #{goodsId}
     </select>
     
     <select id="queryGoodsImageById" resultType="GoodsImage" parameterType="long">
-    	select goods_id, category, name, number_info, number_detail, suffix_type, urls_info, urls_detail,  gmt_create  
+    	select goods_id, category_type, name, number_info, number_detail, suffix_type, urls_info, urls_detail,  gmt_create, gmt_modified 
     	from tb_goods_image
     	where goods_id = #{goodsId}
     </select>
 
     <select id="queryAllGoodsEvaluatesById" resultType="GoodsEvaluate" parameterType="long">
-    	select goods_id, category, name, evaluate_rank, user_id, content, gmt_create
+    	select goods_id, category_type, evaluate_name, evaluate_rank, user_id, content, gmt_create, gmt_modified
     	from tb_goods_evaluate
     	where goods_id = #{goodsId}
     </select>
     
     <select id="queryGoodsSkuById" resultType="GoodsSku" parameterType="long">
-    	select goods_sku_id, goods_id, category, name, color, model, format, param, props, weight, img_url, market, mall, number, gmt_create
+    	select goods_sku_id, goods_id, category_type, name, color, model, format, param, props, weight, img_url, market, mall, number, gmt_create, gmt_modified
     	from tb_goods_list
     	where goods_sku_id = #{goodsSkuId}
     </select>

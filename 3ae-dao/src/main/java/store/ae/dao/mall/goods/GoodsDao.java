@@ -34,7 +34,7 @@ public interface GoodsDao {
 	 * 			范围
 	 * @return
 	 */
-	List<Goods> queryAllGoodsByCategory(@Param("category") long category, @Param("offset") int offset, @Param("limit") int limit);
+	List<Goods> queryAllGoodsByCategory(@Param("categoryType") long categoryType, @Param("offset") int offset, @Param("limit") int limit);
 
 	/**
 	 * @param brandId

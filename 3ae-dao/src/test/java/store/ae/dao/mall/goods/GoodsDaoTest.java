@@ -47,11 +47,11 @@ public class GoodsDaoTest {
 
 	@Test
 	public void testQueryAllGoodsByCategory() {
-		long category = 1010101;
+		long categoryType = 1010101;
 		int offset = 0;
 		int limit = 10;
 		
-		List<Goods> goods = goodsDao.queryAllGoodsByCategory(category, offset, limit);
+		List<Goods> goods = goodsDao.queryAllGoodsByCategory(categoryType, offset, limit);
 		
 		logger.info("根据分类查询商品如下: \n" + goods);
 	}
