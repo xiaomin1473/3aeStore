@@ -9,4 +9,10 @@
   <build>
   	  	<finalName>3ae-enums</finalName>
   </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+  	</dependency>
+  </dependencies>
 </project>

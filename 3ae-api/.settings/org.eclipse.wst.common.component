@@ -19,6 +19,9 @@
         <dependent-module archiveName="3ae-enums-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/3ae-enums/3ae-enums">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="3ae-vo-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/3ae-vo/3ae-vo">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="3ae-exception-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/3ae-exception/3ae-exception">
             <dependency-type>uses</dependency-type>
         </dependent-module>

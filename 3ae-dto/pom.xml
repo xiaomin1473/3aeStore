@@ -20,5 +20,10 @@
 		<artifactId>3ae-pojo</artifactId>
 		<version>${ae.version}</version>
 	</dependency>
+	<dependency>
+		<groupId>store.3ae</groupId>
+		<artifactId>3ae-vo</artifactId>
+		<version>${ae.version}</version>
+	</dependency>
   </dependencies>
 </project>

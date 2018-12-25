@@ -7,7 +7,7 @@
     <!-- 目的： 为dao接口提供sql语句配置 -->
         
     <select id="queryAllCategory" resultType="Category">
-    	select category_id, category_name, category_type, grade_type, series_type, gmt_create, gmt_modified
+    	select category_id, category_name, category_type, grade_type, gmt_create, gmt_modified
     	from tb_goods_category
     </select>
 
@@ -66,5 +66,15 @@
     	from tb_goods_list
     	where goods_sku_id = #{goodsSkuId}
     </select>
+    
+    <update id="reduceGoodsStore">
+    	<!-- 具体的sql语句 -->
+    	update
+    		tb_goods_list
+    	set
+    		number = number - 1
+    	where goods_sku_id = #{goodsSkuId}
+    	and number > 0;
+    </update>
     
 </mapper>

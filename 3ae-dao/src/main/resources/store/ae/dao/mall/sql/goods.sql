@@ -26,7 +26,7 @@ key idx_create_time(gmt_create)
 -- 初始化数据
 insert into tb_goods(business_id, brand_id, category_type, goods_name, amount, unit, price, volume, img_url)
 values
-	(1000, 1000, 1010101, 'iphone6 plus', 1, '部', 4000, 0, './assests/img/iphone.png;');
+	(1000, 1000, 1010101, 'iphone6 plus', 1000, '部', 4000, 0, './assests/img/iphone.png;');
 
 
 -- 商品品牌
@@ -72,26 +72,25 @@ values
 -- 商品类目
 CREATE TABLE tb_goods_category (
 `category_id` bigint NOT NULL AUTO_INCREMENT COMMENT '商品类型ID',
-`category_name` varchar(120) NOT NULL COMMENT '类型名称',
+`category_name` varchar(32) NOT NULL COMMENT '类型名称',
 `category_type` bigint NOT NULL COMMENT '分类',
 `grade_type` bigint NOT NULL COMMENT '分类等级',
-`series_type` bigint NOT NULL COMMENT '系列',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_category_id(category_id),
 key idx_category_type(category_type),
 key idx_grade_type(grade_type),
-key idx_series_type(series_type),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='商品类型表';
 
 -- 初始化数据
-insert into tb_goods_category(category_name, category_type, grade_type, series_type)
+insert into tb_goods_category(category_name, category_type, grade_type)
 values
-	('手机', 1010101, 1010100, 1010000),
-	('电子', 1010102, 1010100, 1010000),
-	('数码', 1010103, 1010100, 1010000),
-	('相机', 1010104, 1010100, 1010000);
+	('京东自营', 1010000, 1000000),
+	('电子', 1010100, 1010000),
+	('手机', 1010101, 1010100),
+	('数码', 1010103, 1010100),
+	('相机', 1010104, 1010100);
 
 
 -- 商品列表SKU

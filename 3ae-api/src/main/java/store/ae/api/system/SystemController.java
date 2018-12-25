@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import store.ae.dto.service.mall.feast.SeckillResult;
+import store.ae.dto.mall.feast.SeckillResult;
 
 
 @Controller

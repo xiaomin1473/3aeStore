@@ -94,4 +94,11 @@ public interface GoodsDao {
 	GoodsSku queryGoodsSkuById(long goodsSkuId);
 	
 	
+	
+	/**
+	 * @param goodsSkuId
+	 * @return
+	 * 		影响行数
+	 */
+	int reduceGoodsStore(@Param("goodsSkuId") long goodsSkuId);
 }

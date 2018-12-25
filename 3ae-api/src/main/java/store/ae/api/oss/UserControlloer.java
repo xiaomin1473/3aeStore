@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import store.ae.dto.service.oss.UserExposer;
-import store.ae.dto.service.oss.UserResult;
+import store.ae.dto.oss.UserExposer;
+import store.ae.dto.oss.UserResult;
 import store.ae.pojo.oss.User;
 import store.ae.service.oss.UserService;
 

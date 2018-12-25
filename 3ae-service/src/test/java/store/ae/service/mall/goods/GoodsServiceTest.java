@@ -1,6 +1,6 @@
 package store.ae.service.mall.goods;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import store.ae.pojo.mall.goods.Category;
 import store.ae.pojo.mall.goods.Goods;
+import store.ae.vo.mall.goods.CategoryList;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,18 +28,18 @@ public class GoodsServiceTest {
 
 	@Test
 	public void testGetCategoryList() {
-		List<Category> categories = goodsService.getCategoryList();
+		List<CategoryList> categories = goodsService.getCategoryList();
 		
 		logger.info("分类列表如下: \n" + categories);
 	}
 
 	@Test
 	public void testGetGoodsListByCategory() {
-		long category = 1000;
+		long categoryType = 1010101;
 		int offset = 0;
 		int limit = 10;
-		List<Goods> goods = goodsService.getGoodsListByCategory(category, offset, limit);
-		logger.info("分类列表如下: \n" + goods);
+		List<Goods> goods = goodsService.getGoodsListByCategory(categoryType, offset, limit);
+		logger.info("根据分类查询商品列表如下: \n" + goods);
 	}
 
 	@Test

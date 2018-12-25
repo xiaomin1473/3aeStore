@@ -1,5 +1,6 @@
-package store.ae.dto.service.mall.feast;
+package store.ae.dto.mall.feast;
 
+import lombok.Data;
 
 /**
  * @author sidtadpole
@@ -8,6 +9,7 @@ package store.ae.dto.service.mall.feast;
  * 
  * 所有的ajax请求的返回类型，封装JSON结果
  */
+@Data
 public class SeckillResult<T> {
 	
 	private boolean success;
@@ -25,36 +27,6 @@ public class SeckillResult<T> {
 
 	public SeckillResult(boolean success, String error) {
 		this.success = success;
-		this.error = error;
-	}
-
-
-	public boolean isSuccess() {
-		return success;
-	}
-
-
-	public void setSuccess(boolean success) {
-		this.success = success;
-	}
-
-
-	public T getData() {
-		return data;
-	}
-
-
-	public void setData(T data) {
-		this.data = data;
-	}
-
-
-	public String getError() {
-		return error;
-	}
-
-
-	public void setError(String error) {
 		this.error = error;
 	}
 }

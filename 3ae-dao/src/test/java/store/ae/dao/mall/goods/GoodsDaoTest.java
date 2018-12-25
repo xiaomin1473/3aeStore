@@ -108,4 +108,13 @@ public class GoodsDaoTest {
 		logger.info("根据商品ID查询商品评论如下: \n" + goodsEvaluates);
 	}
 
+	@Test
+	public void testReduceGoodsStore() {
+		long goodsSkuId = 1000L;
+		int success = 0;
+		
+		success = goodsDao.reduceGoodsStore(goodsSkuId);
+		
+		logger.info("success is : " + success);
+	}
 }

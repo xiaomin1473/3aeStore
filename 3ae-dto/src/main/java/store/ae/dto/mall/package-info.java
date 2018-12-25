@@ -5,4 +5,4 @@
  * @author sidtadpole
  *
  */
-package store.ae.dto.service.mall;
+package store.ae.dto.mall;

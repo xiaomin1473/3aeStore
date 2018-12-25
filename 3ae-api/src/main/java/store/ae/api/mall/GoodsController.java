@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import store.ae.dto.mall.goods.CategoryResult;
 import store.ae.pojo.mall.goods.Brand;
-import store.ae.pojo.mall.goods.Category;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsSku;
 import store.ae.service.mall.goods.GoodsService;
+import store.ae.vo.mall.goods.CategoryList;
 
 @Controller
 @RequestMapping("/goods") // url:/模块/资源/{id}/细分
@@ -27,9 +28,16 @@ public class GoodsController {
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public List<Category> categorieList() {
-
-		return goodsService.getCategoryList();
+	public CategoryResult<CategoryList> categorieList() {
+		List<CategoryList> list = goodsService.getCategoryList();
+		
+		CategoryResult categoryResult = new CategoryResult();
+		
+		categoryResult.setData(list);
+		categoryResult.setCode(0);
+		categoryResult.setMsg("成功");
+		
+		return categoryResult;
 	}
 	
 	

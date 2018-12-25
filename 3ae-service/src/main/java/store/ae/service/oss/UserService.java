@@ -1,6 +1,6 @@
 package store.ae.service.oss;
 
-import store.ae.dto.service.oss.UserExposer;
+import store.ae.dto.oss.UserExposer;
 import store.ae.exception.oss.UserErrorException;
 import store.ae.exception.oss.UserException;
 import store.ae.exception.oss.UserNullException;

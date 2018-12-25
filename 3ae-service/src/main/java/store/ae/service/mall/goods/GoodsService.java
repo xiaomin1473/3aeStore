@@ -3,10 +3,10 @@ package store.ae.service.mall.goods;
 import java.util.List;
 
 import store.ae.pojo.mall.goods.Brand;
-import store.ae.pojo.mall.goods.Category;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsSku;
+import store.ae.vo.mall.goods.CategoryList;
 
 /**
  * @author sidtadpole
@@ -23,14 +23,14 @@ public interface GoodsService {
 	 * 获取分类列表
 	 * @return
 	 */
-	List<Category> getCategoryList();
+	List<CategoryList> getCategoryList();
 	
 	/**
 	 * 根据分类获取商品列表
 	 * @param Category
 	 * @return
 	 */
-	List<Goods> getGoodsListByCategory(long category, int offset, int limit);
+	List<Goods> getGoodsListByCategory(long categoryType, int offset, int limit);
 
 	/**
 	 * 获取品牌列表

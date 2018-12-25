@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
 
-import store.ae.dto.service.mall.feast.Exposer;
-import store.ae.dto.service.mall.feast.SeckillResult;
-import store.ae.dto.service.mall.feast.SeckilllExecution;
+import store.ae.dto.mall.feast.Exposer;
+import store.ae.dto.mall.feast.SeckillResult;
+import store.ae.dto.mall.feast.SeckilllExecution;
 import store.ae.enums.mall.feast.SeckillStatEnum;
 import store.ae.exception.mall.feast.SeckillCloseException;
 import store.ae.exception.mall.feast.SeckillRepeatException;

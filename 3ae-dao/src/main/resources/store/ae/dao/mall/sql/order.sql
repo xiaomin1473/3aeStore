@@ -10,7 +10,7 @@ CREATE TABLE tb_order (
 `payment` decimal NOT NULL DEFAULT 0 COMMENT '支付金额 默认0',
 `invoice` tinyint NOT NULL DEFAULT -1 COMMENT '发票类型 默认-1无效 0无发票 1增专 ',
 `order_status` tinyint NOT NULL DEFAULT -1 COMMENT '订单状态, 默认-1无效 0未支付 1已付款待发货 2已发货待收货 3已收货待评价  4已评价 5交易成功 6售后中 7交易关闭',
-`after_sale_status` bigint NOT NULL DEFAULT -1 COMMENT '售后状态, 默认-1无效, 0成功 1待审核 2待退货入库 3待退款 4待换货入库 5换货出库 6售后成功',
+`after_sale_status` tinyint NOT NULL DEFAULT -1 COMMENT '售后状态, 默认-1无效, 0成功 1待审核 2待退货入库 3待退款 4待换货入库 5换货出库 6售后成功',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_order_id(order_id),

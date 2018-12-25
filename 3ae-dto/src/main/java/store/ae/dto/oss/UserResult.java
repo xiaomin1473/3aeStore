@@ -1,4 +1,4 @@
-package store.ae.dto.service.oss;
+package store.ae.dto.oss;
 
 public class UserResult<T> {
 	

@@ -11,11 +11,9 @@ public class Category {
 	
 	private String categoryName;
 	
-	private String categoryType;
+	private long categoryType;
 	
-	private String gradeType;
-	
-	private String seriesType;
+	private long gradeType;
 	
 	/**
 	 * 格林时间，创建日期

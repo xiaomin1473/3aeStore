@@ -23,6 +23,7 @@
       
       <module>3ae-exception</module>
       <module>3ae-enums</module>
+      <module>3ae-vo</module>
    </modules>
 
 

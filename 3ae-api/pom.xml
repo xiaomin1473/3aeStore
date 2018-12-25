@@ -25,10 +25,6 @@
          <artifactId>cors-filter</artifactId>
       </dependency>
       <dependency>
-         <groupId>com.google.code.gson</groupId>
-         <artifactId>gson</artifactId>
-      </dependency>
-      <dependency>
          <groupId>org.springframework</groupId>
          <artifactId>spring-webmvc</artifactId>
       </dependency>

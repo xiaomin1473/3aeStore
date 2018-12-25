@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import store.ae.dao.oss.UserDao;
-import store.ae.dto.service.oss.UserExposer;
+import store.ae.dto.oss.UserExposer;
 import store.ae.pojo.oss.User;
 
 @Service
