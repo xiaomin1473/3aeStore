@@ -1,4 +1,8 @@
 */.settings
 */.vscode
+*/.project
+*/.classpath
 
 .project
+.vscode
+.settings
