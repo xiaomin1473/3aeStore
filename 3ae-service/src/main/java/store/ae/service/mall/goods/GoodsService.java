@@ -6,7 +6,7 @@ import store.ae.pojo.mall.goods.Brand;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsSku;
-import store.ae.vo.mall.goods.CategoryList;
+import store.ae.vo.mall.goods.category.CategoryVo;
 
 /**
  * @author sidtadpole
@@ -23,7 +23,7 @@ public interface GoodsService {
 	 * 获取分类列表
 	 * @return
 	 */
-	List<CategoryList> getCategoryList();
+	List<CategoryVo> getCategoryList();
 	
 	/**
 	 * 根据分类获取商品列表

@@ -1,5 +1,7 @@
 package store.ae.vo.mall.goods.category;
 
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
 
 import lombok.Data;
@@ -12,4 +14,7 @@ public class CategoryVo {
 	
 	@SerializedName("type")
 	private long categoryType;
+	
+	@SerializedName("child")
+	List<SeriesVo> seriesVoList;
 }

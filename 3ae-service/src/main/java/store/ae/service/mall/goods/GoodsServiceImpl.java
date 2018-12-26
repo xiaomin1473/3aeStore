@@ -12,9 +12,9 @@ import store.ae.pojo.mall.goods.Category;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsSku;
-import store.ae.vo.mall.goods.CategoryList;
 import store.ae.vo.mall.goods.category.CategoryVo;
 import store.ae.vo.mall.goods.category.GradeVo;
+import store.ae.vo.mall.goods.category.SeriesVo;
 
 //@Component @Service @Dao @Controller 所有组件
 @Service
@@ -24,7 +24,7 @@ public class GoodsServiceImpl implements GoodsService {
 	private GoodsDao goodsDao;
 
 	@Override
-	public List<CategoryList> getCategoryList() {
+	public List<CategoryVo> getCategoryList() {
 		/*
 		 *  01000000 一级
 		 *  01010000 二级
@@ -54,50 +54,49 @@ public class GoodsServiceImpl implements GoodsService {
 		 *  }]
 		 *  
 		 */
+		
 		List<Category> list = goodsDao.queryAllCategory();
-
-		List<CategoryList> categories = new ArrayList<>();
+		
+		List<CategoryVo> categoryVoList = new ArrayList<>();
+		if(null == list || list.size() ==0 ){ return categoryVoList = null; }
+		
 		
 		for(Category category: list) {
-			CategoryList categoryList = new CategoryList();
+			CategoryVo categoryVo = new CategoryVo();
 			if(category.getCategoryType() == 1010000) {
-				categoryList.setCategoryName(category.getCategoryName());
-				categoryList.setCategoryType(category.getCategoryType());
+				categoryVo.setCategoryName(category.getCategoryName());
+				categoryVo.setCategoryType(category.getCategoryType());
 				
-				List<GradeVo> gradeVoList = new ArrayList<>();
+				List<SeriesVo> seriesVoList = new ArrayList<>();
 				for(Category category2: list) {
-					GradeVo gradeVo = new GradeVo();
+					SeriesVo seriesVo = new SeriesVo();
 					if(category2.getGradeType() == category.getCategoryType() ) {
-						gradeVo.setCategoryName(category2.getCategoryName());
-						gradeVo.setCategoryType(category2.getCategoryType());
+						seriesVo.setCategoryName(category2.getCategoryName());
+						seriesVo.setCategoryType(category2.getCategoryType());
 						
-						List<CategoryVo> categoryVoList = new ArrayList<>();
+						List<GradeVo> gradeVoList = new ArrayList<>();
 						for(Category category3: list) {
-							CategoryVo categoryVo = new CategoryVo();
+							GradeVo gradeVo = new GradeVo();
 							
 							if(category3.getGradeType() == category2.getCategoryType()) {
 								if(category3.getCategoryType() != 0) {
-									categoryVo.setCategoryName(category3.getCategoryName());
-									categoryVo.setCategoryType(category3.getCategoryType());
+									gradeVo.setCategoryName(category3.getCategoryName());
+									gradeVo.setCategoryType(category3.getCategoryType());
 									
-									categoryVoList.add(categoryVo);
+									gradeVoList.add(gradeVo);
 								}
 							}
-							
-							
 						}
-						
-						gradeVo.setCategoryVoList(categoryVoList);
-						gradeVoList.add(gradeVo);
+						seriesVo.setGradeVoList(gradeVoList);
+						seriesVoList.add(seriesVo);
 					}
 				}
-				
-				categoryList.setGradeVoList(gradeVoList);
-				categories.add(categoryList);
+				categoryVo.setSeriesVoList(seriesVoList);
+				categoryVoList.add(categoryVo);
 			}
 		}
 
-		return categories;
+		return categoryVoList;
 	}
 
 	@Override

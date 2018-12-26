@@ -1,5 +1,5 @@
 package store.ae.vo.mall.goods;
 
-public class GoodsList {
+public class GoodsDetailVo {
 
 }

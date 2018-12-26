@@ -6,12 +6,28 @@
 http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-	<!-- 配置整合mybatis过程 -->
+
+		
+	<!-- 配置扫描dao接口包, 动态实现dao接口, 注入到spring容器中 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 注入sqlSessionFactory -->
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+		<!-- 给出扫描dao接口包 -->
+		<property name="basePackage" value="store.ae.dao.mall" />
+	</bean>
+	
+	<!-- 配置RedisDao -->
+	<bean id="redisDao" class="store.ae.dao.mall.cache.RedisDao">
+		<constructor-arg index="0" value="3ae.store" />
+		<constructor-arg index="1" value="6379" />
+	</bean>
+	
 	<!-- 配置数据库相关参数properties属性: ${url} -->
 	<context:property-placeholder location="classpath:store/ae/dao/mall/config/mall-jdbc.properties"/>
-	
+
+	<!-- 配置整合mybatis过程 -->
 	<!-- 数据库连接池 -->
-	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<!-- 配置连接池属性 -->
 		<property name="driverClassName" value="${jdbc.driver}"/>
 		<property name="url" value="${jdbc.url}"/>
@@ -51,21 +67,5 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 		<property name="typeAliasesPackage" value="store.ae.pojo.mall" />
 		<!-- 扫描sql配置文件:mapper需要的xml文件 -->
 		<property name="mapperLocations" value="classpath*:store/ae/dao/mall/mapper/*/*.xml" />
-		
 	</bean>
-	
-	<!-- 配置扫描dao接口包, 动态实现dao接口, 注入到spring容器中 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- 注入sqlSessionFactory -->
-		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-		<!-- 给出扫描dao接口包 -->
-		<property name="basePackage" value="store.ae.dao.mall" />
-	</bean>
-	
-	<!-- 配置RedisDao -->
-	<bean id="redisDao" class="store.ae.dao.mall.cache.RedisDao">
-		<constructor-arg index="0" value="3ae.store" />
-		<constructor-arg index="1" value="6379" />
-	</bean>
-	
 </beans>

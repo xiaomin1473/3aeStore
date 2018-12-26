@@ -13,7 +13,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import store.ae.pojo.mall.goods.Goods;
-import store.ae.vo.mall.goods.CategoryList;
+import store.ae.vo.mall.goods.category.CategoryVo;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,7 +28,7 @@ public class GoodsServiceTest {
 
 	@Test
 	public void testGetCategoryList() {
-		List<CategoryList> categories = goodsService.getCategoryList();
+		List<CategoryVo> categories = goodsService.getCategoryList();
 		
 		logger.info("分类列表如下: \n" + categories);
 	}

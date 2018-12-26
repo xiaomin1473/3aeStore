@@ -57,5 +57,4 @@ public class OrderDaoTest {
 		
 		logger.info("orderGoods is :" + orderGoods);
 	}
-
 }

@@ -55,6 +55,7 @@
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-beans</artifactId>
 		</dependency>
+		<!-- //TODO 移动到POJO文件中使用@Componet -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-context</artifactId>
