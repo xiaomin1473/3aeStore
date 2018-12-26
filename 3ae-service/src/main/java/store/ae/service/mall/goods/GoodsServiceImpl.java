@@ -25,36 +25,6 @@ public class GoodsServiceImpl implements GoodsService {
 
 	@Override
 	public List<CategoryVo> getCategoryList() {
-		/*
-		 *  01000000 一级
-		 *  01010000 二级
-		 *  01010100 三级
-		 *  01010101 四级
-		 *  
-		 *  data: [
-		 *  {
-		 *  	"name": "京东自营",
-		 *  	"type": 1010000,
-		 *  	"child": [
-		 *  		{
-		 *  			"name": "电子",
-		 *  			"type": "1010100",
-		 *  			"child": [
-		 *  				{
-		 *  					"name": "手机",
-		 *  					"type": "1010101"
-		 *  				},
-		 *  				{
-		 *  					"name": "相机",
-		 *  					"type": "1010102"
-		 *  				},
-		 *  			]
-		 *  		},
-		 *  	]
-		 *  }]
-		 *  
-		 */
-		
 		List<Category> list = goodsDao.queryAllCategory();
 		
 		List<CategoryVo> categoryVoList = new ArrayList<>();
