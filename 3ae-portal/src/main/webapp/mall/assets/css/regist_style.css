@@ -1,0 +1,367 @@
+.navbar-active {
+   color: #0068b7;
+   border-bottom:solid 3px #0068b7;
+}
+
+.red-active {
+   background-color: #ff0006;
+   color: #fff;
+}
+
+
+
+.conta {
+  position: relative;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.wrapper-header {
+  width: 100%;
+}
+
+.wrapper-header .left {
+  float: left;
+  margin-left: -18px;
+  width: 380px;
+}
+
+.wrapper-header .tips {
+  float: right;
+  display: block;
+  /* height: 60px;
+  margin-top: -30px; */
+  margin-left: 20px;
+  color: #999;
+  line-height: 60px;
+  font-size: 26px;
+}
+
+.wrapper-header .right {
+  float: right;
+  width: 200px;
+  height: 130px;
+}
+
+
+.wrapper-header .tick {
+  float: right;
+  font-size: 16px;
+  color: rgba(249, 91, 20, 1);
+}
+
+.wrapper-header .tick + span {
+  float: right;
+  font-size: 16px;
+}
+
+
+
+/* ****************************************************************** regist_page *****************************************************************/
+.regist-header {
+  padding-top: 10px;
+  height: 90px;
+  width: 100%;
+  min-width: 1200px;
+  box-shadow: 0 0 26px 1px #ccc;
+}
+
+.regist-header .wrapper-header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+.regist-header .wrapper-header .right {
+  line-height: 80px;
+}
+
+.regist-wrapper {
+  width: 100%;
+  min-width: 1200px;
+  height: 622px;
+}
+
+.regist-wrapper .wrapper {
+
+  width: 1200px;
+  height: 662px;
+  background-image: url(../img/bak.png);
+  background-size: 340px;
+  background-repeat: no-repeat;
+  background-position-x: -10px;
+}
+
+.regist-main {
+  position: relative;
+  float: right;
+  margin-top: 70px;
+  margin-right: 120px;
+  width: 480px;
+  height: 566px;
+}
+
+
+.form-title {
+  margin-top: -30px;
+  height: 50px;
+  color: rgba(244, 115, 64, 1);
+  text-align: center;
+}
+
+.form-default {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  height: 50px;
+  line-height: 40px;
+  width: 80%;
+}
+
+.form-default li {
+  margin-bottom: 32px;
+  width: 440px;
+  height: 48px;
+}
+
+.form-default li label {
+  position: relative;
+  z-index: 1000;
+  width: 92px;
+  margin-right: 4px;
+  font-size: 16px;
+  text-align:right;
+  color: #666;
+}
+
+.form-default li input {
+  margin-left: -100px;
+  width: 416px;
+  height: 48px;
+  padding-left: 130px;
+  font-size: 14.7px;
+  color: #111;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+}
+
+.form-default li input:focus{
+  border: solid 1px rgba(244, 115, 64, 1);
+}
+
+
+.form-default li input + em {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 48px;
+  text-indent: 10px;
+  vertical-align: middle;
+  color: rgba(255, 94, 136, 1);
+
+}
+
+.form-default li input + em + span {
+  display: block;
+  margin-left: 32px;
+  line-height: 30px;
+  font-size: 14px;
+  color: rgba(249, 91, 20, 1);
+  font-weight: bold;
+}
+
+
+.regist-btn {
+  display: block;
+  margin-left: 20px;
+  width: 82%;
+  height: 48px;
+  border-radius: 16px;
+  border: solid 2px #fff;
+  box-shadow: none;
+  color: #fff;
+  font-size: 22px;
+  background-image:-webkit-linear-gradient(90deg, rgba(244, 115, 64, 1), rgba(251, 192, 126, 1)); 
+  background-image:linear-gradient(90deg,rgba(244, 115, 64, 1), rgba(251, 192, 126, 1)); 
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-tansition: all .5s;
+}
+
+.regist-btn:hover {
+  background-image: none;
+  color: rgba(244, 115, 64, 1);
+  background-color: #fff;
+  border: solid 2px rgba(244, 115, 64, .8);
+  cursor: pointer;
+}
+
+ .form-default .reg {
+  position: relative;
+}
+
+.reg .reg-number {
+  position: absolute;
+  left: 305px;
+  top: 6px;
+  display: block;
+  width: 100px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  font-size: 14px;
+  background-color: rgba(249, 91, 20, .68);
+  border: solid 1px rgba(249, 91, 20, .2);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+}
+
+.reg .reg-number:hover{
+  background-color: #fff;
+  color: rgba(249, 91, 20, 1);
+  border: solid 1px rgba(249, 91, 20, 1);
+}
+
+
+
+
+/* **********************************************  alert **************************************************** */
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  line-height: 36px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-tansition: all .5s;
+}
+
+.flt {
+  float: left;
+}
+
+.frt {
+  float: right;
+}
+
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  margin-top: -300px;
+  margin-left: -475px;
+  width: 950px;
+  height: 600px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2.5px 4px 1px #e8e8e8;
+}
+
+.alert-wrapper h2,
+.alert-wrapper h3,
+.alert-wrapper h4,
+.alert-wrapper h5 {
+  margin-bottom: 10px;
+  color: #ff0036;
+}
+
+.alert-wrapper p {
+  margin-bottom: 8px;
+  text-indent: 28px;
+  letter-spacing: 1.5px;
+  line-height: 24px;
+}
+
+.alert-wrapper .alert-title {
+  margin-top: 40px;
+  margin-bottom: 26px;
+  text-align: center;
+  color: #ff0036;
+  border-bottom: #ccc;
+}
+
+.alert-wrapper .content-wrapper {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 90%;
+  /* height: 42%; */
+  /* padding-bottom: 10px; */
+  background-color: #fefefe;
+  border-radius: 0;
+  /* border: solid 1px #ddd; */
+  box-shadow: 0 0 14px 0px #ddd inset;
+  overflow: hidden;
+}
+
+.content-wrapper .alert-content {
+  margin-top: -3px;
+  margin-left: -4px;
+  /* width: 93%; */
+  /* height: 48%; */
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+.alert-list {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  letter-spacing: 1.5px;
+  font-size: 14.7px;
+}
+
+.alert-list li {
+  margin-top: 10px;
+}
+
+.action {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 26px;
+}
+
+.cancel {
+  width: 154px;
+  height: 52px;
+  color: #888;
+  font-size: 18px;
+  background-color: #eee;
+  border: solid 1px #bbb;
+  border-radius: 24px;
+}
+
+.cancel:hover {
+  font-weight: bold;
+}
+
+.confirm {
+  width: 154px;
+  height: 52px;
+  color: #fff;
+  font-size: 18px;
+  background-image:-webkit-linear-gradient(90deg, rgba(244, 115, 64, 1), rgba(251, 192, 126, 1)); 
+  background-image:linear-gradient(90deg,rgba(244, 115, 64, 1), rgba(251, 192, 126, 1));   
+  border: solid 1px #fff;
+  border-radius: 24px;
+}
+
+.confirm:hover {
+  font-weight: bold;
+  color: rgba(244, 115, 64, 1);
+  background-image: none;
+  background-color: #fff;
+  border: solid 1px rgba(244, 115, 64, 1);
+}

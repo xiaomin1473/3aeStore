@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+      <meta name="applicable-device" content="pc">
+      <meta name="mobile-agent" content="format=html5;url=https://m.3ae.store">
+      
+      <title>3ae.store</title>
+      
+      <link rel="canonical" href="https://3ae.store">
+
+      <link href="assets/css/reset.css" rel="stylesheet">
+</head>
+<body>
+   <h1>Test axios! Is't not support IE ? </h1>
+   <hr>
+   <button id="btnTest" onclick="test()">点击测试</button>
+   <text id="text">sss</text>
+</body>
+</html> 
+<script src="common/js/axios.min.js"></script>
+<script src="assets/js/request.js"></script>
+
+<script src="common/js/es6-promise.auto.min.js"></script>
+
+<script>
+   axios.defaults.baseURL = 'http://api.3ae.store';
+
+   function test() {
+      axios.post('/user/login/root/admin', {
+
+      }).then(function (response) {
+         console.log(response);
+      })
+      .catch(function (error) {
+         console.log(error);
+      });
+   }
+   
+</script>

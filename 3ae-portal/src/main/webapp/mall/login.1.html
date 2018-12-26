@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="Keywords" content="爱悦购商城,爱悦购平台,爱悦购电子商务（北京）有限公司,跨境电商">
+        <meta name="Description" content="爱悦购商城,爱悦购平台,跨境电商,爱悦购电子商务（北京）有限公司通过大数据、大物流、全交通以及全产业链等跨界联合，以“产品、服务、爱”为核心，致力于为消费者提供质优的商品、极致的服务、有担当的爱，同时推出“跨界联合”、“购爱”“正品行货”、“TO一站享 购”等多项专业服务。">
+
+        <title>登录</title>
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/font_icon.css">
+        <link rel="stylesheet" href="css/login_style.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-wrapper">
+                <header class="login-header">
+                    <div class="logo flt">
+                        <a href="./index.html">
+                            <img class="logo-img" width="240" height="132" src="img/logo_2.png">
+                        </a>
+                        <span class="tips">欢迎登陆</span>
+                    </div>
+
+                    <div class="suggest frt">
+                        <a class="reply" href="#">意见反馈</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </header>
+                <section class="login-main">
+                    <header class="title">
+                        <div class="dotted flt"></div><div class="dotted frt"></div><h1>账户登录</h1>
+                    </header>
+                    <form class="form" id="form" method="POST">
+                        <ul class="form-wrapper">
+                            <li class="form-items user">
+                                <label for="user" name="用户名"></label>
+                                <input id="user" type="text" value="请输入用户名" onfocus="if (value == '请输入用户名') {value =''}" onblur="if (value == '') {value ='请输入用户名'}">
+                            </li>
+                            <li class="form-items pwd">
+                                <label for="pwd" name="密码"></label>
+                                <input id="pwd" type="password" placeholder="请输入密码">
+                            </li>
+                            <span class="tips" id="message"></span>
+                            <div class="remember">
+                                <label for="re_pwd">
+                                    <input class="remb" id="re_pwd" type="checkbox" value="remember" checked>
+                                    <i>√</i>
+                                </label>&nbsp;
+                                <label for="re_pwd">记住密码</label>
+                                <label class="forget frt"><a href="##" target="_blank">忘记密码</a></label>
+                            </div>
+                            <btn class="login-btn" onclick="login()">登录</btn>
+                            <div class="login-regist">
+                                <a href="./regist.html" target="_blank">
+                                    <i class="icon"></i>
+                                    <span>立即注册</span>
+                                </a>
+                            </div>
+                        </ul>
+                    </form>
+                </section>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="brand-wrapper">
+                <ul class="brand-list w-1200 clearfix">
+                    <li class="flt">
+                        <img src="./img/footer/quality.png">
+                    </li>
+                    <li class="flt">
+                        <img src="./img/footer/authority.png">
+                    </li>
+                    <li class="flt">
+                        <img src="./img/footer/global.png">
+                    </li>
+                    <li class="flt">
+                        <img src="./img/footer/flash.png">
+                    </li>
+                    <li class="flt">
+                        <img src="./img/footer/sevenday.png">
+                    </li>
+                    <li class="flt">
+                        <img src="./img/footer/praise.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-list w-1200 clearfix">
+                <div class="flt">
+                    <ul class="frt">
+                        <h3>新手上路</h3>
+                        <li><a href="##">用户协议</a></li>
+                        <li><a href="##">购物流程</a></li>
+                    </ul>
+                    <ul class="frt">
+                        <h3>支付方式</h3>
+                        <li><a href="##">联系客服</a></li>
+                    </ul>
+                    <ul class="frt">
+                        <h3>会员中心</h3>
+                        <li><a href="##">资金管理</a></li>
+                        <li><a href="##">我的收藏</a></li>
+                        <li><a href="##">我的订单</a></li>
+                    </ul>
+                    <ul class="frt">
+                        <h3>售后服务</h3>
+                        <li><a href="##">退换货规则</a></li>
+                        <li><a href="##">客服服务</a></li>
+                        <li><a href="##">售后流程</a></li>
+                    </ul>
+                    <ul class="frt">
+                        <h3>商家服务</h3>
+                        <li><a href="##">合作流程</a></li>
+                    </ul>
+                </div>
+                <div class="tels frt">
+                    <img src="./img/footer/tels.gif">
+                    <a class="btn-ctn" href="http://lzt.zoosnet.net/LR/Chatpre.aspx?id=LZT70604741" target="_blank"><i class="iconfont icon-csu"></i>咨询客服</a>
+                </div>
+            </div>
+            <div class="footer-bar-wrapper">
+                <nav class="footer-bar  w-1200">
+                    <ul class="footer-items clearfix">
+                        <li><a href="">首页 |</a></li>
+                        <li><a href=""> 隐私保护 | </a></li>
+                        <li><a href=""> 联系我们 | </a></li>
+                        <li><a href=""> 免责条款 | </a></li>
+                        <li><a href=""> 公司简介 | </a></li>
+                        <li><a href=""> 商家入驻 | </a></li>
+                        <li><a href=""> 人民日报 | </a></li>
+                        <li><a href=""> 中国城市发展联盟 | </a></li>
+                        <li><a href=""> 国药集团 | </a></li>
+                        <li><a href=""> 国贺 | </a></li>
+                        <li><a href=""> 手拉手商城 | </a></li>
+                        <li><a href="">快递查询</a></li>
+                    </ul>
+                </nav>
+                <article class="footer-copy  w-1200">©2017 aiyuemall <a href="##">意见反馈</a> 京ICP证书号 京ICP备17024021号-1 </article>
+                <div class="copy-img w-1200">
+                    <p class="footer-fp-img"></a></p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.1.12.4.js"></script>
+<script src="js/jquery.cookie.1.4.1.js"></script>
+
+<script src="js/login.js"></script>
