@@ -6,65 +6,29 @@
 <mapper namespace="store.ae.dao.mall.order.OrderDao">
     <!-- 目的： 为dao接口提供sql语句配置 -->
         
-    <select id="queryAllCategory" resultType="Category">
-    	select category_id, category_name, category_type, grade_type, gmt_create, gmt_modified
-    	from tb_goods_category
+    <select id="queryOrderByOrderId" resultType="Order">
+    	select order_id, user_id, logistics_id, category_type, discount_way, discount, payment, invoice, order_status, after_sale_status, gmt_create, gmt_modified
+    	from tb_order
+    	where order_id = #{orderId}
     </select>
 
-    <select id="queryAllBrand" resultType="Brand">
-    	select brand_id, brand_name, brand_tips, img_url, gmt_create, gmt_modified
-    	from tb_goods_brand
+    <select id="queryOrderAllByUserId" resultType="Order">
+    	select order_id, user_id, logistics_id, category_type, discount_way, discount, payment, invoice, order_status, after_sale_status, gmt_create, gmt_modified
+    	from tb_order
+    	where user_id = #{userId}
     </select>
 
     
-    <select id="queryAllGoodsByCategory" resultType="Goods">
-    	select goods_id, business_id, brand_id, category_type, goods_name, amount, unit, price, volume, img_url, gmt_create, gmt_modified
-    	from tb_goods
-    	where category_type = #{categoryType}
-    	limit #{offset}, #{limit}
+    <select id="queryOrderBuyerByOrderId" resultType="OrderBuyer">
+    	select order_id, category_type, user_name, buyer_name, buyer_phone, buyer_address, gmt_create, gmt_modified
+    	from tb_order_buyer
+    	where order_id = #{orderId}
     </select>
     
-    <select id="queryAllGoodsByBrandId" resultType="Goods">
-    	select goods_id, business_id, brand_id, category_type, goods_name, amount, unit, price, volume, img_url, gmt_create, gmt_modified
-    	from tb_goods
-    	where brand_id = #{brandId}
-    	limit #{offset}, #{limit}
-    </select>
-    
-    <select id="queryGoodsSpuById" resultType="Goods" parameterType="long">
-    	select goods_id, business_id, brand_id, category_type, goods_name, amount, unit, price, volume, img_url, gmt_create, gmt_modified
-    	from tb_goods
-    	where goods_id = #{goodsId}
-    </select>
-
-	<select id="queryAllGoodsSkuById" resultType="GoodsSku" parameterType="long">
-    	select goods_id, category_type, name, color, model, format, param, props, weight, img_url, market, mall, number, gmt_modified
-    	from tb_goods_list
-    	where goods_id = #{goodsId}
-    </select>
-    
-    <select id="queryGoodsDetailById" resultType="GoodsDetail" parameterType="long">
-    	select goods_id, category_type, goods_name, detail, gmt_create, gmt_modified
-    	from tb_goods_detail
-    	where goods_id = #{goodsId}
-    </select>
-    
-    <select id="queryGoodsImageById" resultType="GoodsImage" parameterType="long">
-    	select goods_id, category_type, name, number_info, number_detail, suffix_type, urls_info, urls_detail,  gmt_create, gmt_modified 
-    	from tb_goods_image
-    	where goods_id = #{goodsId}
-    </select>
-
-    <select id="queryAllGoodsEvaluatesById" resultType="GoodsEvaluate" parameterType="long">
-    	select goods_id, category_type, evaluate_name, evaluate_rank, user_id, content, gmt_create, gmt_modified
-    	from tb_goods_evaluate
-    	where goods_id = #{goodsId}
-    </select>
-    
-    <select id="queryGoodsSkuById" resultType="GoodsSku" parameterType="long">
-    	select goods_sku_id, goods_id, category_type, name, color, model, format, param, props, weight, img_url, market, mall, number, gmt_create, gmt_modified
-    	from tb_goods_list
-    	where goods_sku_id = #{goodsSkuId}
+    <select id="queryOrderGoodsByOrderId" resultType="OrderGoods">
+    	select order_id, goods_sku_id, category_type, goods_name, goods_number, unit, sku_price, img_url, gmt_create, gmt_modified
+    	from tb_order_goods
+    	where order_id = #{orderId}
     </select>
     
 </mapper>

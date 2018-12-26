@@ -9,6 +9,8 @@ import lombok.Data;
 public class Order {
 	private long orderId;
 	
+	private long userId;
+	
 	private long logisticsId;
 	
 	private long categoryType;

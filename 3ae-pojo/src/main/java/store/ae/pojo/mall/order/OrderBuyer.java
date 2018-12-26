@@ -5,20 +5,18 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-public class OrderUser {
+public class OrderBuyer {
 	private long orderId;
-	
-	private long userId;
 	
 	private long categoryType;
 	
 	private String userName;
 	
-	private String deliveryName;
+	private String buyerName;
 	
-	private long deliveryPhone;
+	private long buyerPhone;
 	
-	private String address;
+	private String buyerAddress;
 	
 	private Date gmtCreate;
 	

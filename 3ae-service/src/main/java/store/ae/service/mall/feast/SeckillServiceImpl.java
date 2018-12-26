@@ -13,12 +13,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
+import store.ae.common.enums.mall.feast.SeckillStatEnum;
 import store.ae.dao.mall.cache.RedisDao;
 import store.ae.dao.mall.feast.SeckillDao;
 import store.ae.dao.mall.feast.SeckillSuccessDao;
 import store.ae.dto.mall.feast.Exposer;
 import store.ae.dto.mall.feast.SeckilllExecution;
-import store.ae.enums.mall.feast.SeckillStatEnum;
 import store.ae.exception.mall.feast.SeckillCloseException;
 import store.ae.exception.mall.feast.SeckillException;
 import store.ae.exception.mall.feast.SeckillRepeatException;

@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import store.ae.pojo.mall.order.Order;
 import store.ae.pojo.mall.order.OrderGoods;
-import store.ae.pojo.mall.order.OrderUser;
+import store.ae.pojo.mall.order.OrderBuyer;
 
 public interface OrderDao {
 	
@@ -27,7 +27,7 @@ public interface OrderDao {
 	 * 查询订单收货人
 	 * @return
 	 */
-	OrderUser queryOrderUserByOrderId(@Param("orderId") long orderId);
+	OrderBuyer queryOrderBuyerByOrderId(@Param("orderId") long orderId);
 
 	/**
 	 * 查询订单商品

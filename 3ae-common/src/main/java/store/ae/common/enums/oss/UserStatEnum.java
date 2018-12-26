@@ -1,4 +1,4 @@
-package store.ae.enums.oss;
+package store.ae.common.enums.oss;
 
 public enum UserStatEnum  {
 	SUCCESS(1, "登录成功"),

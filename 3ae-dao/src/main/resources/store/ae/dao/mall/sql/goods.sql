@@ -11,7 +11,7 @@ CREATE TABLE tb_goods (
 `goods_name` varchar(120) NOT NULL COMMENT '商品名称',
 `amount` bigint NOT NULL COMMENT '商品数量, SKU总和',
 `unit` varchar(8) NOT NULL COMMENT '商品单位',
-`price` decimal NOT NULL COMMENT '商品价格',
+`price` decimal(8, 2) NOT NULL COMMENT '商品价格',
 `volume` bigint NOT NULL COMMENT '商品成交量',
 `img_url` varchar(120) NOT NULL COMMENT '商品图片',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
@@ -106,8 +106,8 @@ CREATE TABLE tb_goods_list (
 `props` varchar(64) NOT NULL COMMENT '商品属性',
 `weight` varchar(64) NOT NULL COMMENT '商品重量',
 `img_url` varchar(120) NOT NULL COMMENT '商品图片',
-`market` decimal NOT NULL COMMENT '商品市场价',
-`mall` decimal NOT NULL COMMENT '商品商城价',
+`market` decimal(8, 2) NOT NULL COMMENT '商品市场价',
+`mall` decimal(8, 2) NOT NULL COMMENT '商品商城价',
 `number` int NOT NULL COMMENT '商品库存',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -145,25 +145,26 @@ values
 -- 商品评价
 CREATE TABLE tb_goods_evaluate (
 `goods_id` bigint NOT NULL COMMENT '商品ID',
+`user_id` bigint NOT NULL COMMENT '评价用户ID',
+`user_name` varchar(32) NOT NULL COMMENT '评价用户名称',
 `category_type` bigint NOT NULL COMMENT '分类',
 `evaluate_name` varchar(120) NOT NULL COMMENT '评价名称',
-`evaluate_rank` int NOT NULL COMMENT '评价等级',
-`user_id` bigint NOT NULL COMMENT '评价用户',
+`evaluate_rank` tinyint NOT NULL COMMENT '评价分0~10共四级: 0~2不满意 3~5一般 6~8满意 9~10喜欢',
 `content` text(300) NOT NULL COMMENT '评价内容',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY pk_goods_id(goods_id),
+key idx_user_id(user_id),
 key idx_category_type(category_type),
 key idx_evaluate_rank(evaluate_rank),
-key idx_user_id(user_id),
 key idx_create_time(gmt_create)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户评价表';
 
 -- 初始化数据
-insert into tb_goods_evaluate(goods_id, category_type, evaluate_name, evaluate_rank, user_id, content)
+insert into tb_goods_evaluate(goods_id, user_id, user_name, category_type, evaluate_name, evaluate_rank, content)
 values
-	(1000, 1010101, '默认评价', 10, 1000, "五星好评!"),
-	(1001, 1010101, '默认评价', 9, 1001, "好评!");
+	(1000, 1000, 'xiaomin1473', 1010101, '默认评价', 10,  "五星好评!"),
+	(1001, 1000, 'xiaomin1473', 1010101, '默认评价', 9, "好评!");
 
  
 

@@ -1,7 +1,7 @@
 package store.ae.dto.mall.feast;
 
 import lombok.Data;
-import store.ae.enums.mall.feast.SeckillStatEnum;
+import store.ae.common.enums.mall.feast.SeckillStatEnum;
 import store.ae.pojo.mall.feast.SeckillSuccess;
 
 /**

@@ -24,6 +24,7 @@ public class GoodsController {
 	@Autowired
 	private GoodsService goodsService;
 	
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/category", 
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
@@ -31,6 +32,7 @@ public class GoodsController {
 	public CategoryResult<CategoryList> categorieList() {
 		List<CategoryList> list = goodsService.getCategoryList();
 		
+		@SuppressWarnings("rawtypes")
 		CategoryResult categoryResult = new CategoryResult();
 		
 		categoryResult.setData(list);

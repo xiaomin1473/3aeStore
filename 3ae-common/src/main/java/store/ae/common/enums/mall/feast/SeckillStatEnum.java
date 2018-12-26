@@ -1,4 +1,4 @@
-package store.ae.enums.mall.feast;
+package store.ae.common.enums.mall.feast;
 
 /**
  * @author sidtadpole

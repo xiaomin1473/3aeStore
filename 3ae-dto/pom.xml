@@ -12,12 +12,7 @@
   <dependencies>
 	<dependency>
 		<groupId>store.3ae</groupId>
-		<artifactId>3ae-enums</artifactId>
-		<version>${ae.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>store.3ae</groupId>
-		<artifactId>3ae-pojo</artifactId>
+		<artifactId>3ae-common</artifactId>
 		<version>${ae.version}</version>
 	</dependency>
 	<dependency>
