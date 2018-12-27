@@ -9,9 +9,13 @@
   <description>日志系统</description>
 
   <dependencies>
-    <dependency>
-      <groupId>org.tmatesoft.svnkit</groupId>
-      <artifactId>svnkit</artifactId>
-    </dependency>
+	<dependency>
+	   <groupId>org.tmatesoft.svnkit</groupId>
+	   <artifactId>svnkit</artifactId>
+	</dependency>
+	<dependency>
+	   <groupId>org.eclipse.jgit</groupId>
+	   <artifactId>org.eclipse.jgit</artifactId>
+	</dependency>
   </dependencies>
 </project>

@@ -66,6 +66,8 @@
          
          <!-- SVN -->
          <svnkit.version>1.9.3</svnkit.version>
+         <!-- Git -->
+         <jgit.version>5.2.0.201812061821-r</jgit.version>
          
          <!-- GSON -->
          <gson.version>2.8.5</gson.version>
@@ -249,6 +251,12 @@
             <artifactId>svnkit</artifactId>
             <version>${svnkit.version}</version>
          </dependency>
+      <!-- Git -->
+      	 <dependency>
+		    <groupId>org.eclipse.jgit</groupId>
+		    <artifactId>org.eclipse.jgit</artifactId>
+		    <version>${jgit.version}</version>
+		 </dependency>
       <!-- 跨域 -->
          <dependency>
             <groupId>com.thetransactioncompany</groupId>
