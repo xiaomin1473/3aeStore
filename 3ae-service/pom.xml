@@ -61,7 +61,7 @@
 		</dependency>
 		<dependency>
 			<groupId>store.3ae</groupId>
-		    <artifactId>3ae-exception</artifactId>
+		    <artifactId>3ae-common</artifactId>
 		    <version>${ae.version}</version>
 		</dependency>
 	  </dependencies>

@@ -1,19 +1,20 @@
-package store.ae.exception.oss;
+package store.ae.common.exception.oss;
 
-public class UserException extends RuntimeException{
+public class UserNullException extends UserException{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	public UserException(String message, Throwable cause) {
+
+	public UserNullException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
-
-	public UserException(String message) {
+	
+	public UserNullException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
+
 }

@@ -128,7 +128,6 @@ JAVA架构
 3ae-api         RESTful
 3ae-answer      RPC
 ------- 生产运行层 -------
-3ae-exception   网站异常捕获
 3ae-journal     日志文件
 3ae-job         自动运行
 ------- 用户访问层 ------- FrontEnd

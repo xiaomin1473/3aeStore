@@ -1,4 +1,4 @@
-package store.ae.exception.mall.feast;
+package store.ae.common.exception.mall.feast;
 
 /**
  * @author sidtadpole

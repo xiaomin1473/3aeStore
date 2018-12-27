@@ -6,24 +6,30 @@
    <packaging>pom</packaging>
    <description>父工程,用于版本管理</description>
    <modules>
-      <module>3ae-common</module>  
-      <module>3ae-channel</module>
+   	  <module>3ae-channel</module>
+
       <module>3ae-pojo</module>
       <module>3ae-dao</module>
-      <module>3ae-api</module>
-      <module>3ae-portal</module>
-      <module>3ae-user</module>
-      <module>3ae-admin</module>
-      <module>3ae-answer</module>
-      <module>3ae-agent</module>
-      <module>3ae-server</module>
-      <module>3ae-service</module>
-      <module>3ae-job</module>
+      
+      <module>3ae-vo</module>
       <module>3ae-dto</module>
       
-      <module>3ae-exception</module>
-      <module>3ae-enums</module>
-      <module>3ae-vo</module>
+      <module>3ae-common</module>
+      <module>3ae-service</module>
+      
+      <module>3ae-api</module>
+      <module>3ae-answer</module>
+      
+      <module>3ae-journal</module>
+      <module>3ae-job</module>
+      
+      <module>3ae-admin</module>
+      <module>3ae-user</module>
+      
+      <module>3ae-server</module>
+      <module>3ae-portal</module>
+      
+      <module>3ae-agent</module>
    </modules>
 
 

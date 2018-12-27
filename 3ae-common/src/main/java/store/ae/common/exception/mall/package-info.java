@@ -5,4 +5,4 @@
  * @author sidtadpole
  *
  */
-package store.ae.exception;
+package store.ae.common.exception.mall;

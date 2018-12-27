@@ -1,4 +1,4 @@
-package store.ae.exception.oss;
+package store.ae.common.exception.oss;
 
 public class UserErrorException extends UserException{
 

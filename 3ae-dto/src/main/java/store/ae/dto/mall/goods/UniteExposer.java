@@ -2,12 +2,7 @@ package store.ae.dto.mall.goods;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Data;
-import store.ae.vo.mall.goods.GoodsDetailVo;
-
-@Data
-public class GoodsDetailExposer {
-	
+public class UniteExposer<T> {
 	
 	/**
 	 * 是否开启该api
@@ -25,16 +20,16 @@ public class GoodsDetailExposer {
 	 * 返回api
 	 */
 	@SerializedName("data")
-	GoodsDetailVo goodsDetailVo;
+	private T data;
 
-	public GoodsDetailExposer(int code, String msg, GoodsDetailVo goodsDetailVo) {
+	public UniteExposer(int code, String msg, T data) {
 		super();
 		this.code = code;
 		this.msg = msg;
-		this.goodsDetailVo = goodsDetailVo;
+		this.data = data;
 	}
 
-	public GoodsDetailExposer(int code, String msg) {
+	public UniteExposer(int code, String msg) {
 		super();
 		this.code = code;
 		this.msg = msg;

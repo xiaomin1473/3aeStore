@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import store.ae.dto.mall.goods.CategoryExposer;
+import store.ae.dto.mall.goods.ListExposer;
 import store.ae.pojo.mall.goods.Brand;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
@@ -32,21 +32,21 @@ public class GoodsController {
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public CategoryExposer categorieList() {
+	public ListExposer<CategoryVo> categorieList() {
 		
-		CategoryExposer result;
+		ListExposer<CategoryVo> result;
 		
 		List<CategoryVo> categoryVoList = goodsService.getCategoryList();
 		
 		try {
 			if(null == categoryVoList || categoryVoList.size() ==0 ){
-				return new CategoryExposer(-1, "数据库数据为空");
+				return new ListExposer<CategoryVo>(-1, "数据库数据为空");
 			}
 
-			result = new CategoryExposer(0, "成功", categoryVoList);
+			result = new ListExposer<CategoryVo>(0, "成功", categoryVoList);
 		} catch (Exception e) {
 			logger.info("【商品管理】类目列表获取失败: "+ e.getMessage());
-			result = new CategoryExposer(-1, "失败");
+			result = new ListExposer<CategoryVo>(-1, "失败");
 		}
 		return result;
 	}

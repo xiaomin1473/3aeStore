@@ -4,9 +4,11 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
-import store.ae.vo.mall.goods.GoodsVo;
+import lombok.Data;
 
-public class GoodsListExposer {
+
+@Data
+public class ListExposer<T> {
 	
 	/**
 	 * 是否开启该api
@@ -24,18 +26,21 @@ public class GoodsListExposer {
 	 * 返回api
 	 */
 	@SerializedName("data")
-	List<GoodsVo> goodsVoList;
+	List<T> list;
 
-	public GoodsListExposer(int code, String msg, List<GoodsVo> goodsVoList) {
+
+	public ListExposer(int code, String msg, List<T> list) {
 		super();
 		this.code = code;
 		this.msg = msg;
-		this.goodsVoList = goodsVoList;
+		this.list = (List<T>) list;
 	}
 
-	public GoodsListExposer(int code, String msg) {
+	public ListExposer(int code, String msg) {
 		super();
 		this.code = code;
 		this.msg = msg;
 	}
+	
+	
 }
