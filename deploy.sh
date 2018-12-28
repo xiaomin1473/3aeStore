@@ -17,7 +17,7 @@ killTomcat()
 {
 	pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
 	echo "tomcat ID list :$pid"
-	if [ "$pid"="" ]
+	if [ "$pid" -le 0 ]
 	then
 		echo "no tomcat pid alive"
 	else
@@ -27,9 +27,9 @@ killTomcat()
 
 killNetty()
 {
-	pid=`ps -ef|grep netty|grep -v grep |awk '{print $2}'`
+	pid=`ps -ef|grep netty|grep -v grep java|awk '{print $2}'`
 	echo "netty ID list :$pid"
-	if [ "$pid"="" ]
+	if [ "$pid" -le 0 ]
 	then
 		echo "no netty pid alive"
 	else
@@ -106,7 +106,7 @@ startMysqld()
 {
 	pid=`ps -ef|grep mysqld|grep mysqld|awk '{print $2}'`
 	echo "mysql ID list :$pid"
-	if [ "$pid"="" ]
+	if [ "$pid" -le 0 ]
 	then
 		service mysqld start
 	else
