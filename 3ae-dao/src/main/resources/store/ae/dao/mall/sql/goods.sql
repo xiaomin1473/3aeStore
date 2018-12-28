@@ -1,4 +1,6 @@
 -- 使用数据库
+drop database store_3ae_mall;
+create database store_3ae_mall;
 use store_3ae_mall;
 
 

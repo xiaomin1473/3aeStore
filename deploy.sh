@@ -102,6 +102,16 @@ sh /opt/apache-tomcat-8.5.35/bin/startup.sh
 
 echo "this is lastest version"
 
-service mysqld start
+startMysqld()
+{
+	pid=`ps -ef|grep mysqld|grep |awk '{print $2}'`
+	echo "mysql ID list :$pid"
+	if [ "$pid"="" ]
+	then
+		service mysqld start
+	else
+		echo "mysqld is starting"
+	fi
+}
 
-echo "mysql is start"
+startMysqld()
