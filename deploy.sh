@@ -114,4 +114,4 @@ startMysqld()
 	fi
 }
 
-startMysqld()
+startMysqld
