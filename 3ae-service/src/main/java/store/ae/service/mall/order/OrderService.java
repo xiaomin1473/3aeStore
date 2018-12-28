@@ -21,5 +21,12 @@ public interface OrderService {
 	 * 获取订单详情
 	 * @return
 	 */
-	OrderDetailVo getOrderDetail();
+	OrderDetailVo getOrderDetail(long orderId);
+	
+	/**
+	 * 获取订单支付地址
+	 * @param orderId
+	 * @return
+	 */
+	String getOrderDefrayPath(long orderId);
 }

@@ -30,14 +30,12 @@ public class ListExposer<T> {
 
 
 	public ListExposer(int code, String msg, List<T> list) {
-		super();
 		this.code = code;
 		this.msg = msg;
 		this.list = (List<T>) list;
 	}
 
 	public ListExposer(int code, String msg) {
-		super();
 		this.code = code;
 		this.msg = msg;
 	}

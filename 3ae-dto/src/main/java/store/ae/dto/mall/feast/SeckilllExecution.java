@@ -33,13 +33,13 @@ public class SeckilllExecution {
 	public SeckilllExecution(long seckillId, SeckillStatEnum statEnum, SeckillSuccess seckillSuccess) {
 		this.seckillId = seckillId;
 		this.state = statEnum.getState();
-		this.stateInfo = statEnum.getStaeInfo();
+		this.stateInfo = statEnum.getStateInfo();
 		this.seckillSuccess = seckillSuccess;
 	}
 	
 	public SeckilllExecution(long seckillId, SeckillStatEnum statEnum) {
 		this.seckillId = seckillId;
 		this.state = statEnum.getState();
-		this.stateInfo = statEnum.getStaeInfo();
+		this.stateInfo = statEnum.getStateInfo();
 	}
 }

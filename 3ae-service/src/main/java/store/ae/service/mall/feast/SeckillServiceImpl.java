@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 import store.ae.common.enums.mall.feast.SeckillStatEnum;
-import store.ae.common.exception.mall.feast.SeckillCloseException;
+import store.ae.common.exception.mall.CloseException;
+import store.ae.common.exception.mall.RepeatException;
 import store.ae.common.exception.mall.feast.SeckillException;
-import store.ae.common.exception.mall.feast.SeckillRepeatException;
 import store.ae.dao.mall.cache.RedisDao;
 import store.ae.dao.mall.feast.SeckillDao;
 import store.ae.dao.mall.feast.SeckillSuccessDao;
@@ -40,6 +40,8 @@ public class SeckillServiceImpl implements SeckillService {
 
 	@Autowired
 	private RedisDao redisDao;
+	
+	private final String ERROR_INFO = "\n【秒杀服务】";
 	
 	// md5盐值字符串，用来混淆md5
 	private final String slat = "Aa^p1%@HW+_ijfo&-i14#YgaFO*Htg1a_G$PIT5*%er#HLwr*aMF#48_5GA(mf15a^sfaw6";
@@ -121,9 +123,9 @@ public class SeckillServiceImpl implements SeckillService {
 	@Override
 	@Transactional
 	public SeckilllExecution executeSeckill(long seckillId, long userPhone, String md5)
-			throws SeckillException, SeckillRepeatException, SeckillCloseException {
+			throws SeckillException, RepeatException, CloseException {
 		if(md5 == null || !md5.equals(getMD5(seckillId))) {
-			throw new SeckillException("seckill date rewrite");
+			throw new SeckillException(ERROR_INFO + "seckill date rewrite");
 		}
 		// 执行秒杀逻辑：减库存 + 记录秒杀行为
 		Date nowTime = new Date();
@@ -134,14 +136,14 @@ public class SeckillServiceImpl implements SeckillService {
 			// 唯一验证
 			if(insertCount <=0) {
 				// 重复秒杀
-				throw new SeckillRepeatException("seckill is repeat");
+				throw new RepeatException(ERROR_INFO + "seckill is repeat");
 			} else {
 				// 减库存，行级锁竞争
 				int updateCount = seckillDao.reduceNumber(seckillId, nowTime);
 				
 				if(updateCount <=0) {
 					// 没有更新记录,秒杀结束 rollback
-					throw new SeckillCloseException("seckill is close");
+					throw new CloseException(ERROR_INFO + "seckill is close");
 				} else {
 					// 秒杀成功,commit
 					SeckillSuccess seckillSuccess = seckillSuccessDao.queryByIdWithSeckill(seckillId, userPhone);
@@ -149,16 +151,15 @@ public class SeckillServiceImpl implements SeckillService {
 				}
 			}
 			
-		} catch(SeckillCloseException e1) {
+		} catch(CloseException e1) {
 			throw e1;
-		} catch (SeckillRepeatException e2) {
+		} catch (RepeatException e2) {
 			throw e2;
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 			// 编译期异常转化为运行期异常
-			throw new SeckillException("seckill inner error:" + e.getMessage());
+			throw new SeckillException(ERROR_INFO + "seckill inner error" + e.getMessage());
 		}
-		
 	}
 
 	@Override
@@ -189,7 +190,7 @@ public class SeckillServiceImpl implements SeckillService {
 				return new SeckilllExecution(seckillId, SeckillStatEnum.stateof(result));
 			}
 		} catch (Exception e) {
-			logger.error(e.getMessage(), e);
+			logger.error(ERROR_INFO + SeckillStatEnum.INNER_ERROR + e.getMessage());
 			return new SeckilllExecution(seckillId, SeckillStatEnum.INNER_ERROR);
 		}
 	}

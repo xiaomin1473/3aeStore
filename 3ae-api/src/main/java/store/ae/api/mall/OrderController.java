@@ -11,8 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import store.ae.common.exception.mall.AbsentException;
 import store.ae.dto.mall.goods.ListExposer;
+import store.ae.dto.mall.goods.PathExposer;
+import store.ae.dto.mall.goods.SingleExposer;
 import store.ae.service.mall.order.OrderService;
+import store.ae.vo.mall.goods.order.OrderDetailVo;
 import store.ae.vo.mall.goods.order.OrderUserVo;
 
 @Controller
@@ -24,7 +28,9 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 	
-	@RequestMapping(value = "/{userId}/list", 
+	private final String ERROR_INFO = "错误信息\n【订单管理】";
+	
+	@RequestMapping(value = "/list/{userId}", 
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
@@ -34,16 +40,60 @@ public class OrderController {
 		List<OrderUserVo> OrderUserVoList = orderService.getUserOrderList(userId);
 		
 		try {
-			
 			result = new ListExposer<OrderUserVo>(0, "查询成功" , OrderUserVoList);
-		} catch (Exception e) {
-			// TODO: handle exception
-			logger.info("【订单管理】订单查询失败" + e.getMessage());
+		} catch (AbsentException e) {
+			logger.info(ERROR_INFO + "订单不存在" + e.getMessage());
 			
-			result = new ListExposer<OrderUserVo>(0, "查询失败");
+			result = new ListExposer<OrderUserVo>(0, "订单不存在");
+		}
+		catch (Exception e) {
+			logger.info(ERROR_INFO + "系统异常" + e.getMessage());
+			
+			result = new ListExposer<OrderUserVo>(0, "系统异常");
 		}
 		
 		return result;
 	}
+	
+	@RequestMapping(value = "/detail/{orderId}", 
+			method = RequestMethod.GET,
+			produces= {"application/json;charset=UTF-8"})
+	@ResponseBody
+	public SingleExposer<OrderDetailVo> orderDetail(@PathVariable("orderId") Long orderId) {
+		SingleExposer<OrderDetailVo> result;
+		
+		try {
+			OrderDetailVo orderDetailVo = orderService.getOrderDetail(orderId);
+			
+			result = new SingleExposer<OrderDetailVo>(0, "查询成功", orderDetailVo);
+		} catch (Exception e) {
+			logger.error(ERROR_INFO + "订单详情查询失败" + e.getMessage());
+			
+			result = new SingleExposer<OrderDetailVo>(-1, "查询失败");
+		}
+		
+		return result;
+	}
+	
+	@RequestMapping(value = "/defray/exposer/{orderId}",
+			method = RequestMethod.POST,
+			produces= {"application/json;charset=UTF-8"})
+	@ResponseBody
+	public PathExposer getDefrayPath(@PathVariable("orderId") Long orderId) {
+		PathExposer result;
+		String pathMD5 = null;
+		
+		try {
+			
+			pathMD5 = orderService.getOrderDefrayPath(orderId);
 
+			result = new PathExposer(true, "地址", pathMD5);
+		} catch (Exception e) {
+			logger.error(ERROR_INFO + "支付地址生成失败" + e.getMessage());
+			
+			result = new PathExposer(false, "地址生成失败", pathMD5);
+		}
+		
+		return result;
+	}
 }

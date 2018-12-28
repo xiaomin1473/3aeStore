@@ -10,4 +10,11 @@
     <build>
 	  	<finalName>3ae-common</finalName>
   	</build>
+  	
+  	<dependencies>
+  		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		</dependency>
+  	</dependencies>
 </project>

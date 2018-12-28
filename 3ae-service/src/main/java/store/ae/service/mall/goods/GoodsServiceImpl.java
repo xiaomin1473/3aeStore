@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import store.ae.common.exception.mall.AbsentException;
 import store.ae.dao.mall.goods.GoodsDao;
 import store.ae.pojo.mall.goods.Brand;
 import store.ae.pojo.mall.goods.Category;
@@ -19,17 +20,26 @@ import store.ae.vo.mall.goods.category.SeriesVo;
 //@Component @Service @Dao @Controller 所有组件
 @Service
 public class GoodsServiceImpl implements GoodsService {
-	
+
 	@Autowired
 	private GoodsDao goodsDao;
+	
+	private final String ERROR_INFO = "\n【商品服务】";
+	
+	@SuppressWarnings("rawtypes")
+	private void IsNull(List list) { 
+		if(null == list || list.size() ==0 ){
+			throw new AbsentException(ERROR_INFO + "列表不存在");
+		}
+	}
 
 	@Override
-	public List<CategoryVo> getCategoryList() {
+	public List<CategoryVo> getCategoryList() throws AbsentException{
 		List<Category> list = goodsDao.queryAllCategory();
 		
 		List<CategoryVo> categoryVoList = new ArrayList<>();
-		if(null == list || list.size() ==0 ){ return categoryVoList = null; }
 		
+		IsNull(list);
 		
 		for(Category category: list) {
 			CategoryVo categoryVo = new CategoryVo();
@@ -71,19 +81,19 @@ public class GoodsServiceImpl implements GoodsService {
 
 	@Override
 	public List<Goods> getGoodsListByCategory(long category, int offset, int limit) {
-		// TODO Auto-generated method stub
+
 		return goodsDao.queryAllGoodsByCategory(category, offset, limit);
 	}
 
 	@Override
 	public List<Brand> getBrandList() {
-		// TODO Auto-generated method stub
+
 		return goodsDao.queryAllBrand();
 	}
 
 	@Override
 	public List<Goods> getGoodsListByBrandId(long brandId, int offset, int limit) {
-		// TODO Auto-generated method stub
+
 		return goodsDao.queryAllGoodsByBrandId(brandId, offset, limit);
 	}
 
@@ -95,25 +105,25 @@ public class GoodsServiceImpl implements GoodsService {
 
 	@Override
 	public Goods getGoodsDetailById(long goodsId) {
-		// TODO Auto-generated method stub
+
 		return goodsDao.queryGoodsSpuById(goodsId);
 	}
 
 	@Override
 	public List<GoodsSku> getAllGoodsSkuById(long goodsId) {
-		// TODO Auto-generated method stub
+
 		return goodsDao.queryAllGoodsSkuById(goodsId);
 	}
 
 	@Override
 	public GoodsSku getGoodsSkuById(long goodsSkuId) {
-		// TODO Auto-generated method stub
+
 		return goodsDao.queryGoodsSkuById(goodsSkuId);
 	}
 
 	@Override
 	public List<GoodsEvaluate> getGoodsEvaluateById(long goodsId) {
-		// TODO Auto-generated method stub
+
 		return goodsDao.queryAllGoodsEvaluatesById(goodsId);
 	}
 

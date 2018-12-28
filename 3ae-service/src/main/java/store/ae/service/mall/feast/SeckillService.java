@@ -2,9 +2,9 @@ package store.ae.service.mall.feast;
 
 import java.util.List;
 
-import store.ae.common.exception.mall.feast.SeckillCloseException;
+import store.ae.common.exception.mall.CloseException;
+import store.ae.common.exception.mall.RepeatException;
 import store.ae.common.exception.mall.feast.SeckillException;
-import store.ae.common.exception.mall.feast.SeckillRepeatException;
 import store.ae.dto.mall.feast.Exposer;
 import store.ae.dto.mall.feast.SeckilllExecution;
 import store.ae.pojo.mall.feast.Seckill;
@@ -47,7 +47,7 @@ public interface SeckillService {
 	 * @return
 	 */
 	SeckilllExecution executeSeckill(long seckillId, long userPhone, String md5)
-		throws SeckillException, SeckillRepeatException, SeckillCloseException;
+		throws SeckillException, RepeatException, CloseException;
 	
 	/**
 	 * 执行秒杀操作 by 存储过程

@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import store.ae.common.exception.mall.feast.SeckillCloseException;
-import store.ae.common.exception.mall.feast.SeckillRepeatException;
+import store.ae.common.exception.mall.CloseException;
+import store.ae.common.exception.mall.RepeatException;
 import store.ae.dto.mall.feast.Exposer;
 import store.ae.dto.mall.feast.SeckilllExecution;
 import store.ae.pojo.mall.feast.Seckill;
@@ -70,9 +70,9 @@ public class SeckillServiceTest {
 			try {
 				SeckilllExecution execution = seckillService.executeSeckill(id, phone, md5);
 				logger.info("reslut={}", execution);
-			} catch (SeckillRepeatException e) {
+			} catch (RepeatException e) {
 				logger.error(e.getMessage());
-			} catch (SeckillCloseException e) {
+			} catch (CloseException e) {
 				logger.error(e.getMessage());
 			}
 		} else {

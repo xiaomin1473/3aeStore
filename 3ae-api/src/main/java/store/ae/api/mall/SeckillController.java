@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.google.gson.Gson;
 
 import store.ae.common.enums.mall.feast.SeckillStatEnum;
-import store.ae.common.exception.mall.feast.SeckillCloseException;
-import store.ae.common.exception.mall.feast.SeckillRepeatException;
+import store.ae.common.exception.mall.CloseException;
+import store.ae.common.exception.mall.RepeatException;
 import store.ae.dto.mall.feast.Exposer;
 import store.ae.dto.mall.feast.SeckillResult;
 import store.ae.dto.mall.feast.SeckilllExecution;
@@ -32,6 +32,7 @@ public class SeckillController {
 	@Autowired
 	private SeckillService seckillService;
 
+	private final String ERROR_INFO = "错误信息\n【秒杀管理】";
 	
 	@RequestMapping(value = "/list", 
 			method = RequestMethod.GET,
@@ -75,7 +76,7 @@ public class SeckillController {
 			Exposer exposer = seckillService.exportSeckillUrl(seckillId);
 			result = new SeckillResult<Exposer>(true, exposer);
 		} catch (Exception e) {
-			logger.error(e.getMessage(), e);
+			logger.error(ERROR_INFO + e.getMessage());
 			result = new SeckillResult<Exposer>(false, e.getMessage());
 		}
 
@@ -111,11 +112,11 @@ public class SeckillController {
 			// SeckilllExecution execution = seckillService.executeSeckill(seckillId, phone, md5);
 			return new SeckillResult<SeckilllExecution>(true, execution);
 			
-		} catch (SeckillRepeatException e) {
+		} catch (RepeatException e) {
 			SeckilllExecution execution = new SeckilllExecution(seckillId, SeckillStatEnum.REPEAT_KILL);
 			return new SeckillResult<SeckilllExecution>(false, execution);
 			
-		} catch (SeckillCloseException e) {
+		} catch (CloseException e) {
 			SeckilllExecution execution = new SeckilllExecution(seckillId, SeckillStatEnum.END);
 			return new SeckillResult<SeckilllExecution>(false, execution);
 			

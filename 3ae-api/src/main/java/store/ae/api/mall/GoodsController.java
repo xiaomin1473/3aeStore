@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import store.ae.common.exception.mall.AbsentException;
 import store.ae.dto.mall.goods.ListExposer;
 import store.ae.pojo.mall.goods.Brand;
 import store.ae.pojo.mall.goods.Goods;
@@ -28,26 +29,31 @@ public class GoodsController {
 	@Autowired
 	private GoodsService goodsService;
 	
+	private final String ERROR_INFO = "错误信息\n【商品管理】";
+	
 	@RequestMapping(value = "/category", 
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public ListExposer<CategoryVo> categorieList() {
+	public ListExposer<CategoryVo> categorieList(){
 		
 		ListExposer<CategoryVo> result;
 		
-		List<CategoryVo> categoryVoList = goodsService.getCategoryList();
-		
 		try {
-			if(null == categoryVoList || categoryVoList.size() ==0 ){
-				return new ListExposer<CategoryVo>(-1, "数据库数据为空");
-			}
+			List<CategoryVo> categoryVoList = goodsService.getCategoryList();
 
 			result = new ListExposer<CategoryVo>(0, "成功", categoryVoList);
-		} catch (Exception e) {
-			logger.info("【商品管理】类目列表获取失败: "+ e.getMessage());
+		} catch (AbsentException e) {
+			logger.error(ERROR_INFO + "类目列表获取失败"+ e.getMessage());
 			result = new ListExposer<CategoryVo>(-1, "失败");
 		}
+		
+		catch (Exception e) {
+			logger.info(ERROR_INFO + "系统异常"+ e.getMessage());
+			
+			result = new ListExposer<CategoryVo>(-1, "系统异常");
+		}
+		
 		return result;
 	}
 	

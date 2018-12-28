@@ -1,12 +1,14 @@
 package store.ae.common.exception.mall.feast;
 
+import store.ae.common.exception.mall.SystemException;
+
 /**
  * @author sidtadpole
  * 
  * 秒杀相关业务异常
  *
  */
-public class SeckillException extends RuntimeException{
+public class SeckillException extends SystemException {
 
 	/**
 	 * 

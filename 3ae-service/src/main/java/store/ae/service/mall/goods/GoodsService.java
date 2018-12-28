@@ -2,6 +2,7 @@ package store.ae.service.mall.goods;
 
 import java.util.List;
 
+import store.ae.common.exception.mall.AbsentException;
 import store.ae.pojo.mall.goods.Brand;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
@@ -23,7 +24,7 @@ public interface GoodsService {
 	 * 获取分类列表
 	 * @return
 	 */
-	List<CategoryVo> getCategoryList();
+	List<CategoryVo> getCategoryList() throws AbsentException;
 	
 	/**
 	 * 根据分类获取商品列表

@@ -1,28 +1,27 @@
-package store.ae.common.exception.mall.feast;
+package store.ae.common.exception.mall;
 
 /**
  * @author sidtadpole
  * 
- * 秒杀关闭异常
+ * 不存在异常
  * 
  */
-public class SeckillCloseException extends SeckillException {
+public class AbsentException extends SystemException {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public SeckillCloseException(String message, Throwable cause) {
+	public AbsentException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public SeckillCloseException(String message) {
+	public AbsentException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
-	
 	
 	
 }

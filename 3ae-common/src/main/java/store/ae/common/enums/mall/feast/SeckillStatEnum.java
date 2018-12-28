@@ -1,11 +1,14 @@
 package store.ae.common.enums.mall.feast;
 
+import lombok.Getter;
+
 /**
  * @author sidtadpole
  * 
  * 使用枚举表示常量字段
  *
  */
+@Getter
 public enum SeckillStatEnum {
 	SUCCESS(1, "秒杀成功"),
 	END(0, "秒杀结束"),
@@ -21,14 +24,6 @@ public enum SeckillStatEnum {
 		this.state = state;
 		this.stateInfo = staeInfo;
 	}
-
-	public String getStaeInfo() {
-		return stateInfo;
-	}
-
-	public int getState() {
-		return state;
-	}
 	
 	public static SeckillStatEnum stateof(int index) {
 		for(SeckillStatEnum state : values()) {
@@ -36,8 +31,6 @@ public enum SeckillStatEnum {
 				return state;
 			}
 		}
-		
 		return null;
 	}
-	
 }
