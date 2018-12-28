@@ -104,7 +104,7 @@ echo "this is lastest version"
 
 startMysqld()
 {
-	pid=`ps -ef|grep mysqld|grep |awk '{print $2}'`
+	pid=`ps -ef|grep mysqld|grep mysqld|awk '{print $2}'`
 	echo "mysql ID list :$pid"
 	if [ "$pid"="" ]
 	then
