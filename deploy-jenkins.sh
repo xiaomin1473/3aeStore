@@ -98,20 +98,6 @@ cp -r $PROJ_PATH/3aeStore/3ae-answer/target/3ae-answer $TOMCAT_APP_PATH/app/answ
 
 
 # 启动Tomcat
-sh /opt/apache-tomcat-8.5.35/bin/startup.sh
+sh /opt/apache-tomcat-8.5.37/bin/startup.sh
 
 echo "this is lastest version"
-
-startMysqld()
-{
-	pid=`ps -ef|grep mysqld|grep mysqld|awk '{print $2}'`
-	echo "mysql ID list :$pid"
-	if [ "$pid" -le 0 ]
-	then
-		service mysqld start
-	else
-		echo "mysqld is starting"
-	fi
-}
-
-startMysqld
