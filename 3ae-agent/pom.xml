@@ -8,7 +8,7 @@
   <artifactId>3ae-agent</artifactId>
   
   <build>
-   	<finalName>3ae-agent</finalName>
+   	<finalName>agent</finalName>
    	
    	<plugins>
   		<plugin>

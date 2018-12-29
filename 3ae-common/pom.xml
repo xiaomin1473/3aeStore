@@ -8,7 +8,7 @@
   <artifactId>3ae-common</artifactId>
   
     <build>
-	  	<finalName>3ae-common</finalName>
+	  	<finalName>common</finalName>
   	</build>
   	
   	<dependencies>

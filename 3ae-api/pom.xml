@@ -10,7 +10,7 @@
 
 
    <build>
-      <finalName>3ae-api</finalName>
+      <finalName>api</finalName>
    </build>
  
    <dependencies>	

@@ -9,7 +9,7 @@
   <packaging>war</packaging>
   
   	<build>
-  		<finalName>3ae-answer</finalName>
+  		<finalName>answer</finalName>
 	</build>
   
   <dependencies>
