@@ -7,8 +7,6 @@ import javax.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -27,7 +25,6 @@ import store.ae.pojo.mall.feast.Seckill;
 @ContextConfiguration({"classpath:store/ae/dao/mall/config/mall-dao.xml"})
 
 public class SeckillDaoTest {
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	// 注入Dao实现类依赖
 	@Resource
@@ -37,8 +34,11 @@ public class SeckillDaoTest {
 	public void testQueryById() {
 		long id = 1002;
 		Seckill seckill = seckillDao.queryById(id);
-		logger.info("seckillName={}", seckill.getName());
-		logger.info("seckill={}",seckill);
+		
+		// TODO assert覆写
+		// logger.info("seckillName={}", seckill.getName());
+		
+		// logger.info("seckill={}",seckill);
 		/*  1000元秒杀iphoneX
 		*   Seckill [seckillId=1000, 
 		*	name=1000元秒杀iphoneX, 
@@ -56,7 +56,7 @@ public class SeckillDaoTest {
 	public void testQueryAll() {
 		List<Seckill> seckills = seckillDao.queryAll(0, 100);
 		for(Seckill seckill: seckills) {
-			logger.info("seckill={}", seckill);
+			// logger.info("seckill={}", seckill);
 		}
 	}
 	
@@ -65,7 +65,7 @@ public class SeckillDaoTest {
 	public void testReduceNumber() {
 		Date killTime = new Date();
 		int updateCount = seckillDao.reduceNumber(1002L, killTime);
-		logger.info("updateCount={}" + updateCount);
+		// logger.info("updateCount={}" + updateCount);
 		/*
 		 * update feast_seckill set number = number - 1 
 		 * where seckill_id = ? 

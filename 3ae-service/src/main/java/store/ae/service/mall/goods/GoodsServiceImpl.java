@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+ 
 import store.ae.common.exception.mall.AbsentException;
 import store.ae.dao.mall.goods.GoodsDao;
 import store.ae.pojo.mall.goods.Brand;
@@ -13,6 +13,7 @@ import store.ae.pojo.mall.goods.Category;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsSku;
+import store.ae.vo.mall.goods.brand.BrandVo;
 import store.ae.vo.mall.goods.category.CategoryVo;
 import store.ae.vo.mall.goods.category.GradeVo;
 import store.ae.vo.mall.goods.category.SeriesVo;
@@ -86,9 +87,22 @@ public class GoodsServiceImpl implements GoodsService {
 	}
 
 	@Override
-	public List<Brand> getBrandList() {
-
-		return goodsDao.queryAllBrand();
+	public List<BrandVo> getBrandList() {
+		List<Brand> brands = goodsDao.queryAllBrand();
+		List<BrandVo> brandVoList = new ArrayList<>();
+		
+		for(Brand brand: brands) {
+			BrandVo brandVo = new BrandVo();
+			
+			brandVo.setBrandId(brand.getBrandId());
+			brandVo.setBrandName(brand.getBrandName());
+			brandVo.setBrandTips(brand.getBrandTips());
+			brandVo.setImgUrl(brand.getImgUrl());
+			
+			brandVoList.add(brandVo);
+		}
+		
+		return brandVoList;
 	}
 
 	@Override

@@ -6,8 +6,6 @@ import javax.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -18,7 +16,6 @@ import store.ae.pojo.oss.User;
 //告诉junit spring配置文件
 @ContextConfiguration({"classpath:store/ae/dao/oss/config/oss-dao.xml"})
 public class UserDaoTest {
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Resource
 	UserDao userDao;
@@ -26,15 +23,15 @@ public class UserDaoTest {
 	@Test
 	public void testGetUserByUserName() {
 		User user = userDao.queryByUserName("root");
-		logger.info(user.toString());
+		// logger.info(user.toString());
 	}
 
 	@Test
 	public void testQueryAll() {
 		List<User> users = userDao.queryAll(0, 100);
-		logger.info(users.toString());
+		// logger.info(users.toString());
 		for(User user: users) {
-			logger.info("user={}", user);
+			// logger.info("user={}", user);
 		}
 	}
 	
@@ -46,7 +43,7 @@ public class UserDaoTest {
 		userDao.changePwd(userName, userPwd);
 		User user = userDao.queryByUserName("root");
 		
-		logger.info("user password is : " + user.getUserPwd());
+		// logger.info("user password is : " + user.getUserPwd());
 		
 	}
 }

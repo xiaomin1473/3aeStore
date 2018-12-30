@@ -12,22 +12,7 @@
   </build>
   
     <dependencies>
-		<dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-        </dependency>   
+		   
     	<dependency>
 		    <groupId>commons-collections</groupId>
 		    <artifactId>commons-collections</artifactId>
@@ -52,6 +37,11 @@
 		<dependency>
 			<groupId>store.3ae</groupId>
 		    <artifactId>3ae-dao</artifactId>
+		    <version>${ae.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>store.3ae</groupId>
+		    <artifactId>3ae-manager</artifactId>
 		    <version>${ae.version}</version>
 		</dependency>
 		<dependency>

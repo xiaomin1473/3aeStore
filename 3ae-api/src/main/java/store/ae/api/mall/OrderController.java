@@ -42,12 +42,14 @@ public class OrderController {
 		try {
 			result = new ListExposer<OrderUserVo>(0, "查询成功" , OrderUserVoList);
 		} catch (AbsentException e) {
-			logger.info(ERROR_INFO + "订单不存在" + e.getMessage());
+			
+			logger.error("{} 订单不存在 {}",ERROR_INFO, e);
 			
 			result = new ListExposer<OrderUserVo>(0, "订单不存在");
 		}
 		catch (Exception e) {
-			logger.info(ERROR_INFO + "系统异常" + e.getMessage());
+			
+			logger.error("{} 系统异常 {}",ERROR_INFO, e);
 			
 			result = new ListExposer<OrderUserVo>(0, "系统异常");
 		}
@@ -63,11 +65,13 @@ public class OrderController {
 		SingleExposer<OrderDetailVo> result;
 		
 		try {
+			
 			OrderDetailVo orderDetailVo = orderService.getOrderDetail(orderId);
 			
 			result = new SingleExposer<OrderDetailVo>(0, "查询成功", orderDetailVo);
 		} catch (Exception e) {
-			logger.error(ERROR_INFO + "订单详情查询失败" + e.getMessage());
+			
+			logger.error("{} 订单详情查询失败 {}",ERROR_INFO, e);
 			
 			result = new SingleExposer<OrderDetailVo>(-1, "查询失败");
 		}
@@ -84,12 +88,13 @@ public class OrderController {
 		String pathMD5 = null;
 		
 		try {
-			
+
 			pathMD5 = orderService.getOrderDefrayPath(orderId);
 
 			result = new PathExposer(true, "地址", pathMD5);
 		} catch (Exception e) {
-			logger.error(ERROR_INFO + "支付地址生成失败" + e.getMessage());
+			
+			logger.error("{} 支付地址生成失败 {}",ERROR_INFO, e);
 			
 			result = new PathExposer(false, "地址生成失败", pathMD5);
 		}

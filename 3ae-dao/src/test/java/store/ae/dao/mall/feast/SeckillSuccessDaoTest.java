@@ -4,8 +4,6 @@ import javax.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -15,7 +13,6 @@ import store.ae.pojo.mall.feast.SeckillSuccess;
 
 @ContextConfiguration({"classpath:store/ae/dao/mall/config/mall-dao.xml"})
 public class SeckillSuccessDaoTest {
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	// 注入Dao实现类依赖
 	@Resource
@@ -27,7 +24,7 @@ public class SeckillSuccessDaoTest {
 		long phone = 13544114331L;
 		int insertCount = seckillSuccessDao.insertSeckillSuccess(id, phone);
 		
-		logger.info("insertCount=" + insertCount);
+		// logger.info("insertCount=" + insertCount);
 		/*
 		* 第一次执行： Updates: 1 insertCount = 1
 		* 
@@ -42,8 +39,8 @@ public class SeckillSuccessDaoTest {
 		
 		SeckillSuccess seckillSuccess = seckillSuccessDao.queryByIdWithSeckill(id, phone);
 		
-		logger.info("seckillSuccess=" + seckillSuccess);
-		logger.info("seckill=" + seckillSuccess.getSeckill());
+		// logger.info("seckillSuccess=" + seckillSuccess);
+		// logger.info("seckill=" + seckillSuccess.getSeckill());
 		/*
 		 * 第一次
 		 * seckillSuccess = SeckillSuccess [seckillId=1000, 

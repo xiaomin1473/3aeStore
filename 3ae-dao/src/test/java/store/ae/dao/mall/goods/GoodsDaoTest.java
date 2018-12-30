@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -25,8 +23,6 @@ import store.ae.pojo.mall.goods.GoodsSku;
 @ContextConfiguration({"classpath:store/ae/dao/mall/config/mall-dao.xml"})
 public class GoodsDaoTest {
 	
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-	
 	@Autowired
 	private GoodsDao goodsDao;
 	
@@ -35,14 +31,14 @@ public class GoodsDaoTest {
 		
 		List<Category> categories = goodsDao.queryAllCategory();
 
-		logger.info("商品分类如下: \n" + categories);
+		// logger.info("商品分类如下: \n" + categories);
 	}
 
 	@Test
 	public void testQueryAllBrand() {
 		List<Brand> brands = goodsDao.queryAllBrand();
 		
-		logger.info("商品品牌如下: \n" + brands);
+		// logger.info("商品品牌如下: \n" + brands);
 	}
 
 	@Test
@@ -53,7 +49,7 @@ public class GoodsDaoTest {
 		
 		List<Goods> goods = goodsDao.queryAllGoodsByCategory(categoryType, offset, limit);
 		
-		logger.info("根据分类查询商品如下: \n" + goods);
+		// logger.info("根据分类查询商品如下: \n" + goods);
 	}
 
 	@Test
@@ -63,7 +59,7 @@ public class GoodsDaoTest {
 		int limit = 10;
 		List<Goods> goods = goodsDao.queryAllGoodsByBrandId(brandId, offset, limit);
 		
-		logger.info("根据品牌查询商品如下: \n" + goods);
+		// logger.info("根据品牌查询商品如下: \n" + goods);
 	}
 
 	@Test
@@ -73,7 +69,7 @@ public class GoodsDaoTest {
 		
 		Goods goods = goodsDao.queryGoodsSpuById(goodsId);
 		
-		logger.info("根据商品ID查询商品SPU如下: \n" + goods);
+		// logger.info("根据商品ID查询商品SPU如下: \n" + goods);
 	}
 
 	@Test
@@ -81,7 +77,7 @@ public class GoodsDaoTest {
 		long goodsId = 1000L;
 		List<GoodsSku> goodsSkus = goodsDao.queryAllGoodsSkuById(goodsId );
 		
-		logger.info("根据商品ID查询商品SKU如下: \n" + goodsSkus);
+		// logger.info("根据商品ID查询商品SKU如下: \n" + goodsSkus);
 	}
 
 	@Test
@@ -89,7 +85,7 @@ public class GoodsDaoTest {
 		long goodsId = 1000L;
 		GoodsDetail goodsDetail = goodsDao.queryGoodsDetailById(goodsId);
 		
-		logger.info("根据商品ID查询商品Detail如下: \n" + goodsDetail);
+		// logger.info("根据商品ID查询商品Detail如下: \n" + goodsDetail);
 	}
 
 	@Test
@@ -97,7 +93,7 @@ public class GoodsDaoTest {
 		long goodsId = 1000L;
 		GoodsImage goodsImage = goodsDao.queryGoodsImageById(goodsId);
 		
-		logger.info("根据商品ID查询商品图片如下: \n" + goodsImage);
+		// logger.info("根据商品ID查询商品图片如下: \n" + goodsImage);
 	}
 
 	@Test
@@ -105,7 +101,7 @@ public class GoodsDaoTest {
 		long goodsId = 1000L;
 		List<GoodsEvaluate> goodsEvaluates = goodsDao.queryAllGoodsEvaluatesById(goodsId);
 		
-		logger.info("根据商品ID查询商品评论如下: \n" + goodsEvaluates);
+		// logger.info("根据商品ID查询商品评论如下: \n" + goodsEvaluates);
 	}
 
 	@Test
@@ -115,6 +111,6 @@ public class GoodsDaoTest {
 		
 		success = goodsDao.reduceGoodsStore(goodsSkuId);
 		
-		logger.info("success is : " + success);
+		// logger.info("success is : " + success);
 	}
 }

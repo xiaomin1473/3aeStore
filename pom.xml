@@ -30,6 +30,8 @@
       <module>3ae-portal</module>
       
       <module>3ae-agent</module>
+      <module>3ae-manager</module>
+      <module>3ae-web</module>
    </modules>
 
 

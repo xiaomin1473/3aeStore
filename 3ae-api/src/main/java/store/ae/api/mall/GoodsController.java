@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import store.ae.common.exception.mall.AbsentException;
 import store.ae.dto.mall.goods.ListExposer;
-import store.ae.pojo.mall.goods.Brand;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsSku;
 import store.ae.service.mall.goods.GoodsService;
+import store.ae.vo.mall.goods.brand.BrandVo;
 import store.ae.vo.mall.goods.category.CategoryVo;
 
 @Controller
@@ -44,12 +44,13 @@ public class GoodsController {
 
 			result = new ListExposer<CategoryVo>(0, "成功", categoryVoList);
 		} catch (AbsentException e) {
-			logger.error(ERROR_INFO + "类目列表获取失败"+ e.getMessage());
+			logger.error("{} 类目列表获取失败 {}", ERROR_INFO, e);
+			
 			result = new ListExposer<CategoryVo>(-1, "失败");
 		}
 		
 		catch (Exception e) {
-			logger.info(ERROR_INFO + "系统异常"+ e.getMessage());
+			logger.error("{} 系统异常 {}",ERROR_INFO, e);
 			
 			result = new ListExposer<CategoryVo>(-1, "系统异常");
 		}
@@ -75,10 +76,20 @@ public class GoodsController {
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public List<Brand> brandList() {
-		// 获取列表json
-
-		return goodsService.getBrandList();
+	public ListExposer<BrandVo> brandList() {
+		ListExposer<BrandVo> result;
+		
+		try {
+			List<BrandVo> brandVoList = goodsService.getBrandList();
+			
+			result = new ListExposer<BrandVo>(0, "成功", brandVoList);
+		} catch (Exception e) {
+			logger.error("{} 系统异常 {}",ERROR_INFO, e);
+			
+			result = new ListExposer<>(-1, "程序异常");
+		}
+		
+		return result;
 	}
 	
 	

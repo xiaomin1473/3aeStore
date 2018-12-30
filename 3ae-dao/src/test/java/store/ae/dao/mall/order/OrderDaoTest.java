@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -21,8 +19,6 @@ import store.ae.pojo.mall.order.OrderGoods;
 @ContextConfiguration({"classpath:store/ae/dao/mall/config/mall-dao.xml"})
 public class OrderDaoTest {
 	
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-	
 	@Autowired
 	private OrderDao orderDao;
 	
@@ -31,7 +27,7 @@ public class OrderDaoTest {
 		Long orderId = 1000L;
 		Order order = orderDao.queryOrderByOrderId(orderId);
 		
-		logger.info("order is :" + order);
+		// logger.info("order is :" + order);
 	}
 
 	@Test
@@ -39,7 +35,7 @@ public class OrderDaoTest {
 		Long userId = 1000L;
 		List<Order> orderList = orderDao.queryOrderAllByUserId(userId);
 		
-		logger.info("orderList is :" + orderList);
+		// logger.info("orderList is :" + orderList);
 	}
 
 	@Test
@@ -47,7 +43,7 @@ public class OrderDaoTest {
 		Long orderId = 1000L;
 		OrderBuyer orderBuyer = orderDao.queryOrderBuyerByOrderId(orderId);
 		
-		logger.info("orderBuyer is :" + orderBuyer);
+		// logger.info("orderBuyer is :" + orderBuyer);
 	}
 
 	@Test
@@ -55,6 +51,6 @@ public class OrderDaoTest {
 		Long orderId = 1000L;
 		OrderGoods orderGoods = orderDao.queryOrderGoodsByOrderId(orderId);
 		
-		logger.info("orderGoods is :" + orderGoods);
+		// logger.info("orderGoods is :" + orderGoods);
 	}
 }
