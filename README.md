@@ -114,6 +114,7 @@ JAVA架构
 
 3ae-parent      pom管理
 3ae-channel     底层通信
+3ae-common      公共函数
 >====================================>  core
 ------- 数据存储层 ------- BackEnd
 3ae-pojo        对象实体
@@ -122,9 +123,10 @@ JAVA架构
 3ae-vo          视图对象
 3ae-dto         传输
 ------- 数据操作层 -------
-3ae-common      公共函数
-3ae-service     B/S微服务
+3ae-manager     通用业务  RPC
+3ae-service     B/S微服务 RPC
 ------- 传输结果层 -------
+3ae-web         转发、参数校验
 3ae-api         RESTful
 3ae-answer      RPC
 ------- 生产运行层 -------

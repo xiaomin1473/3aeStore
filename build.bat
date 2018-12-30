@@ -1,5 +1,5 @@
 git add * 
-git commit -m "deploy-jenkis.sh"
+git commit -m "optimize architecture"
 git push
 
 mvn install
