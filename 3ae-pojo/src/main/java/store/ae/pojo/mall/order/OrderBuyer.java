@@ -6,15 +6,15 @@ import lombok.Data;
 
 @Data
 public class OrderBuyer {
-	private long orderId;
+	private Long orderId;
 	
-	private long categoryType;
+	private Long categoryType;
 	
 	private String userName;
 	
 	private String buyerName;
 	
-	private long buyerPhone;
+	private Long buyerPhone;
 	
 	private String buyerAddress;
 	

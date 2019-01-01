@@ -13,7 +13,7 @@ public class CategoryVo {
 	private String categoryName;
 	
 	@SerializedName("type")
-	private long categoryType;
+	private Long categoryType;
 	
 	@SerializedName("child")
 	List<SeriesVo> seriesVoList;

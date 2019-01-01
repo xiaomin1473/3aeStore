@@ -7,25 +7,25 @@ import lombok.Data;
 
 @Data
 public class Order {
-	private long orderId;
+	private Long orderId;
 	
-	private long userId;
+	private Long userId;
 	
-	private long logisticsId;
+	private Long logisticsId;
 	
-	private long categoryType;
+	private Long categoryType;
 	
-	private int discountWay;
+	private Integer discountWay;
 	
 	private BigDecimal discount;
 	
 	private BigDecimal payment;
 	
-	private int invoice;
+	private Integer invoice;
 	
-	private int orderStatus;
+	private Integer orderStatus;
 	
-	private long afterSaleStatus;
+	private Long afterSaleStatus;
 	
 	private Date gmtCreate;
 	

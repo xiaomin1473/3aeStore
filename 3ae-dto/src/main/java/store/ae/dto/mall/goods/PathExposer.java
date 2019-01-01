@@ -8,7 +8,7 @@ public class PathExposer {
 	/**
 	 * 是否开启秒杀
 	 */
-	private boolean exposed;
+	private Boolean exposed;
 	
 	/**
 	 * 提示信息
@@ -23,22 +23,22 @@ public class PathExposer {
 	/**
 	 * id
 	 */
-	private long paramId;
+	private Long paramId;
 	
 	/**
 	 * 系统时间,毫秒
 	 */
-	private long nowTime;
+	private Long nowTime;
 	
 	/**
 	 * 开启时间
 	 */
-	private long start;
+	private Long start;
 	
 	/**
 	 * 结束时间
 	 */
-	private long end;
+	private Long end;
 
 	public PathExposer(boolean exposed, String msg, String pathMD5) {
 		this.exposed = exposed;
@@ -46,7 +46,7 @@ public class PathExposer {
 		this.pathMD5 = pathMD5;
 	}
 
-	public PathExposer(boolean exposed, String msg, long paramId, long nowTime, long start, long end) {
+	public PathExposer(boolean exposed, String msg, Long paramId, Long nowTime, Long start, Long end) {
 		this.exposed = exposed;
 		this.msg = msg;
 		this.paramId = paramId;

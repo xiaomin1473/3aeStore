@@ -6,9 +6,9 @@ import lombok.Data;
 
 @Data
 public class SeckillSuccess {
-	private long seckillId;
+	private Long seckillId;
 	
-	private long userPhone;
+	private Long userPhone;
 	
 	private short state;
 	

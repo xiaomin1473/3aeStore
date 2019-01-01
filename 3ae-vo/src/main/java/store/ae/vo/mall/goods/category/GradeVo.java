@@ -11,5 +11,5 @@ public class GradeVo {
 	private String categoryName;
 	
 	@SerializedName("type")
-	private long categoryType;
+	private Long categoryType;
 }

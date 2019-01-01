@@ -12,7 +12,7 @@ public class SeriesVo {
 	private String categoryName;
 	
 	@SerializedName("type")
-	private long categoryType;
+	private Long categoryType;
 
 	@SerializedName("child")
 	List<GradeVo> GradeVoList;

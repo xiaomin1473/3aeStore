@@ -7,15 +7,15 @@ import lombok.Data;
 @Data
 public class GoodsEvaluate {
 	
-	private long GoodsId;
+	private Long GoodsId;
 	
-	private long categoryType;
+	private Long categoryType;
 	
 	private String evaluateName;
 	
-	private int evaluateRank;
+	private Integer evaluateRank;
 	
-	private long userId;
+	private Long userId;
 	
 	private String content;
 	

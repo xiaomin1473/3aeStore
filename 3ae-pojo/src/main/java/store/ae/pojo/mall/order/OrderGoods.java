@@ -7,15 +7,15 @@ import lombok.Data;
 
 @Data
 public class OrderGoods {
-	private long orderId;
+	private Long orderId;
 	
-	private long goodsSkuId;
+	private Long goodsSkuId;
 	
-	private long categoryType;
+	private Long categoryType;
 	
 	private String goodsName;
 	
-	private int goodsNumber;
+	private Integer goodsNumber;
 	
 	private String unit;
 	

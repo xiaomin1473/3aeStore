@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -24,6 +25,8 @@ public class UserDaoTest {
 	public void testGetUserByUserName() {
 		User user = userDao.queryByUserName("root");
 		// logger.info(user.toString());
+		
+		Assert.assertTrue(user != null);
 	}
 
 	@Test
@@ -32,6 +35,7 @@ public class UserDaoTest {
 		// logger.info(users.toString());
 		for(User user: users) {
 			// logger.info("user={}", user);
+			Assert.assertTrue(user != null);
 		}
 	}
 	
@@ -43,6 +47,7 @@ public class UserDaoTest {
 		userDao.changePwd(userName, userPwd);
 		User user = userDao.queryByUserName("root");
 		
+		Assert.assertTrue(user != null);
 		// logger.info("user password is : " + user.getUserPwd());
 		
 	}

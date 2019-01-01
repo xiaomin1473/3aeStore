@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -35,6 +36,7 @@ public class SeckillDaoTest {
 		long id = 1002;
 		Seckill seckill = seckillDao.queryById(id);
 		
+		Assert.assertTrue(seckill != null);
 		// TODO assert覆写
 		// logger.info("seckillName={}", seckill.getName());
 		
@@ -57,6 +59,7 @@ public class SeckillDaoTest {
 		List<Seckill> seckills = seckillDao.queryAll(0, 100);
 		for(Seckill seckill: seckills) {
 			// logger.info("seckill={}", seckill);
+			Assert.assertTrue(seckill != null);
 		}
 	}
 	
@@ -65,6 +68,8 @@ public class SeckillDaoTest {
 	public void testReduceNumber() {
 		Date killTime = new Date();
 		int updateCount = seckillDao.reduceNumber(1002L, killTime);
+		
+		Assert.assertTrue(updateCount != 0);
 		// logger.info("updateCount={}" + updateCount);
 		/*
 		 * update feast_seckill set number = number - 1 

@@ -25,31 +25,31 @@ public class Exposer {
 	/**
 	 * id
 	 */
-	private long seckillId;
+	private Long seckillId;
 	
 	/**
 	 * 系统时间,毫秒
 	 */
-	private long nowTime;
+	private Long nowTime;
 	
 	/**
 	 * 开启时间
 	 */
-	private long start;
+	private Long start;
 	
 	/**
 	 * 结束时间
 	 */
-	private long end;
+	private Long end;
 	
 
-	public Exposer(boolean exposed, String md5, long seckillId) {
+	public Exposer(boolean exposed, String md5, Long seckillId) {
 		this.exposed = exposed;
 		this.md5 = md5;
 		this.seckillId = seckillId;
 	}
 
-	public Exposer(boolean exposed, long seckillId, long nowTime, long start, long end) {
+	public Exposer(boolean exposed, Long seckillId, Long nowTime, Long start, Long end) {
 		this.exposed = exposed;
 		this.seckillId = seckillId;
 		this.nowTime = nowTime;
@@ -57,7 +57,7 @@ public class Exposer {
 		this.end = end;
 	}
 
-	public Exposer(boolean exposed, long seckillId) {
+	public Exposer(boolean exposed, Long seckillId) {
 		this.exposed = exposed;
 		this.seckillId = seckillId;
 	}

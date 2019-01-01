@@ -6,17 +6,17 @@ import lombok.Data;
 
 @Data
 public class GoodsVo {
-	private long goodsId;
+	private Long goodsId;
 	
-	private long brandId;
+	private Long brandId;
 	
-	private long businessId;
+	private Long businessId;
 	
-	private long categoryType;
+	private Long categoryType;
 	
 	private String goodsName;
 		
-	private long amount;
+	private Long amount;
 	
 	private String unit;
 	
@@ -25,7 +25,7 @@ public class GoodsVo {
 	/**
 	 * 	成交量
 	 */
-	private long volume;
+	private Long volume;
 	
 	private String imgUrl;
 }

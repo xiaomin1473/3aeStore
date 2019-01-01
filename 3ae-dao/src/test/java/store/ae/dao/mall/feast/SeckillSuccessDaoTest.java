@@ -2,6 +2,7 @@ package store.ae.dao.mall.feast;
 
 import javax.annotation.Resource;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -24,6 +25,7 @@ public class SeckillSuccessDaoTest {
 		long phone = 13544114331L;
 		int insertCount = seckillSuccessDao.insertSeckillSuccess(id, phone);
 		
+		Assert.assertTrue(insertCount != 0);
 		// logger.info("insertCount=" + insertCount);
 		/*
 		* 第一次执行： Updates: 1 insertCount = 1
@@ -39,6 +41,7 @@ public class SeckillSuccessDaoTest {
 		
 		SeckillSuccess seckillSuccess = seckillSuccessDao.queryByIdWithSeckill(id, phone);
 		
+		Assert.assertTrue(seckillSuccess != null);
 		// logger.info("seckillSuccess=" + seckillSuccess);
 		// logger.info("seckill=" + seckillSuccess.getSeckill());
 		/*

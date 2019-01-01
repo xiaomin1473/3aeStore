@@ -7,15 +7,15 @@ import lombok.Data;
 @Data
 public class GoodsImage {
 	
-	private long GoodsId;
+	private Long GoodsId;
 	
-	private long categoryType;
+	private Long categoryType;
 	
 	private String name;
 	
-	private int numberInfo;
+	private Integer numberInfo;
 	
-	private int numberDetail;
+	private Integer numberDetail;
 	
 	private String suffixType;
 	

@@ -8,7 +8,7 @@ import lombok.Data;
 public class BrandVo {
 	
 	@SerializedName("num")
-	private long brandId;
+	private Long brandId;
 	
 	@SerializedName("name")
 	private String brandName;

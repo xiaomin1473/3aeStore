@@ -7,13 +7,13 @@ import lombok.Data;
 @Data
 public class Category {
 	
-	private long categoryId;
+	private Long categoryId;
 	
 	private String categoryName;
 	
-	private long categoryType;
+	private Long categoryType;
 	
-	private long gradeType;
+	private Long gradeType;
 	
 	/**
 	 * 格林时间，创建日期

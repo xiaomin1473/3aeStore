@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 public class SeckillResult<T> {
 	
-	private boolean success;
+	private Boolean success;
 	
 	private T data;
 	

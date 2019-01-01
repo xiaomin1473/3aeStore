@@ -7,23 +7,23 @@ import lombok.Data;
 
 @Data
 public class Goods {
-	private long goodsId;
+	private Long goodsId;
 	
-	private long brandId;
+	private Long brandId;
 	
-	private long businessId;
+	private Long businessId;
 	
-	private long categoryType;
+	private Long categoryType;
 	
 	private String goodsName;
 		
-	private long amount;
+	private Long amount;
 	
 	private String unit;
 	
 	private BigDecimal price;
 	
-	private long volume;
+	private Long volume;
 	
 	private String imgUrl;
 	

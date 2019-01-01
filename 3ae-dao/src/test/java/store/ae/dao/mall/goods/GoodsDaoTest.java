@@ -2,6 +2,7 @@ package store.ae.dao.mall.goods;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,8 @@ public class GoodsDaoTest {
 	public void testQueryAllCategory() {
 		
 		List<Category> categories = goodsDao.queryAllCategory();
-
+		
+		Assert.assertTrue(categories != null);
 		// logger.info("商品分类如下: \n" + categories);
 	}
 
@@ -38,6 +40,7 @@ public class GoodsDaoTest {
 	public void testQueryAllBrand() {
 		List<Brand> brands = goodsDao.queryAllBrand();
 		
+		Assert.assertTrue(brands != null);
 		// logger.info("商品品牌如下: \n" + brands);
 	}
 
@@ -49,6 +52,7 @@ public class GoodsDaoTest {
 		
 		List<Goods> goods = goodsDao.queryAllGoodsByCategory(categoryType, offset, limit);
 		
+		Assert.assertTrue(goods != null);
 		// logger.info("根据分类查询商品如下: \n" + goods);
 	}
 
@@ -59,6 +63,7 @@ public class GoodsDaoTest {
 		int limit = 10;
 		List<Goods> goods = goodsDao.queryAllGoodsByBrandId(brandId, offset, limit);
 		
+		Assert.assertTrue(goods != null);
 		// logger.info("根据品牌查询商品如下: \n" + goods);
 	}
 
@@ -69,6 +74,7 @@ public class GoodsDaoTest {
 		
 		Goods goods = goodsDao.queryGoodsSpuById(goodsId);
 		
+		Assert.assertTrue(goods != null);
 		// logger.info("根据商品ID查询商品SPU如下: \n" + goods);
 	}
 
@@ -77,6 +83,7 @@ public class GoodsDaoTest {
 		long goodsId = 1000L;
 		List<GoodsSku> goodsSkus = goodsDao.queryAllGoodsSkuById(goodsId );
 		
+		Assert.assertTrue(goodsSkus != null);
 		// logger.info("根据商品ID查询商品SKU如下: \n" + goodsSkus);
 	}
 
@@ -85,6 +92,7 @@ public class GoodsDaoTest {
 		long goodsId = 1000L;
 		GoodsDetail goodsDetail = goodsDao.queryGoodsDetailById(goodsId);
 		
+		Assert.assertTrue(goodsDetail != null);
 		// logger.info("根据商品ID查询商品Detail如下: \n" + goodsDetail);
 	}
 
@@ -93,6 +101,7 @@ public class GoodsDaoTest {
 		long goodsId = 1000L;
 		GoodsImage goodsImage = goodsDao.queryGoodsImageById(goodsId);
 		
+		Assert.assertTrue(goodsImage != null);
 		// logger.info("根据商品ID查询商品图片如下: \n" + goodsImage);
 	}
 
@@ -101,16 +110,18 @@ public class GoodsDaoTest {
 		long goodsId = 1000L;
 		List<GoodsEvaluate> goodsEvaluates = goodsDao.queryAllGoodsEvaluatesById(goodsId);
 		
+		Assert.assertTrue(goodsEvaluates != null);
 		// logger.info("根据商品ID查询商品评论如下: \n" + goodsEvaluates);
 	}
 
 	@Test
 	public void testReduceGoodsStore() {
 		long goodsSkuId = 1000L;
-		int success = 0;
 		
-		success = goodsDao.reduceGoodsStore(goodsSkuId);
 		
+		int count = goodsDao.reduceGoodsStore(goodsSkuId);
+		
+		Assert.assertTrue(count != 0);
 		// logger.info("success is : " + success);
 	}
 }

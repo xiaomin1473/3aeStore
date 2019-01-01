@@ -10,11 +10,11 @@ import lombok.Data;
  */
 @Data
 public class Seckill {
-	private long seckillId;
+	private Long seckillId;
 	
 	private String name;
 	
-	private int number;
+	private Integer number;
 	
 	private Date startTime;
 

@@ -11,25 +11,25 @@ import lombok.Data;
 public class OrderDetailVo {
 	
 	@SerializedName("order")
-	private long orderId;
+	private Long orderId;
 	
 	@SerializedName("user")
-	private long userId;
+	private Long userId;
 	
 	@SerializedName("uname")
 	private String userName;
 	
 	@SerializedName("logistics")
-	private long logisticsId;
+	private Long logisticsId;
 	
 	@SerializedName("sku")
-	private long goodsSkuId;
+	private Long goodsSkuId;
 	
 	@SerializedName("type")
-	private long categoryType;
+	private Long categoryType;
 	
 	@SerializedName("way")
-	private int discountWay;
+	private Integer discountWay;
 	
 	@SerializedName("discount")
 	private BigDecimal discount;
@@ -38,19 +38,19 @@ public class OrderDetailVo {
 	private BigDecimal payment;
 	
 	@SerializedName("invoice")
-	private int invoice;
+	private Integer invoice;
 	
 	@SerializedName("state")
-	private int orderStatus;
+	private Integer orderStatus;
 	
 	@SerializedName("after_state")
-	private long afterSaleStatus;
+	private Long afterSaleStatus;
 	
 	@SerializedName("name")
 	private String buyerName;
 	
 	@SerializedName("phone")
-	private long buyerPhone;
+	private Long buyerPhone;
 	
 	@SerializedName("address")
 	private String buyerAddress;
@@ -59,7 +59,7 @@ public class OrderDetailVo {
 	private String goodsName;
 	
 	@SerializedName("num")
-	private int goodsNumber;
+	private Integer goodsNumber;
 	
 	@SerializedName("num_unit")
 	private String unit;

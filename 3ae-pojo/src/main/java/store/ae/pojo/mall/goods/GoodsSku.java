@@ -7,11 +7,11 @@ import lombok.Data;
 
 @Data
 public class GoodsSku {
-	private long goodsSkuId;
+	private Long goodsSkuId;
 	
-	private long goodsId;
+	private Long goodsId;
 	
-	private long categoryType;
+	private Long categoryType;
 	
 	private String name;
 	
@@ -33,7 +33,7 @@ public class GoodsSku {
 	
 	private BigDecimal mall;
 	
-	private long number;
+	private Long number;
 	
 	private Date gmtCreate;
 	

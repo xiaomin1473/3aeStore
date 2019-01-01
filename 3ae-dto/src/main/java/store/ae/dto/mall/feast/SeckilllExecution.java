@@ -12,12 +12,12 @@ import store.ae.pojo.mall.feast.SeckillSuccess;
  */
 @Data
 public class SeckilllExecution {
-	private long seckillId;
+	private Long seckillId;
 	
 	/**
 	 * 秒杀状态
 	 */
-	private int state;
+	private Integer state;
 	
 	/**
 	 * 秒杀提示
@@ -30,14 +30,14 @@ public class SeckilllExecution {
 	private SeckillSuccess seckillSuccess;
 
 
-	public SeckilllExecution(long seckillId, SeckillStatEnum statEnum, SeckillSuccess seckillSuccess) {
+	public SeckilllExecution(Long seckillId, SeckillStatEnum statEnum, SeckillSuccess seckillSuccess) {
 		this.seckillId = seckillId;
 		this.state = statEnum.getState();
 		this.stateInfo = statEnum.getStateInfo();
 		this.seckillSuccess = seckillSuccess;
 	}
 	
-	public SeckilllExecution(long seckillId, SeckillStatEnum statEnum) {
+	public SeckilllExecution(Long seckillId, SeckillStatEnum statEnum) {
 		this.seckillId = seckillId;
 		this.state = statEnum.getState();
 		this.stateInfo = statEnum.getStateInfo();
