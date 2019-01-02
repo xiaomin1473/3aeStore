@@ -2,16 +2,14 @@ package store.ae.service.mall.feast;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import store.ae.common.exception.mall.CloseException;
-import store.ae.common.exception.mall.RepeatException;
 import store.ae.dto.mall.feast.Exposer;
 import store.ae.dto.mall.feast.SeckilllExecution;
 import store.ae.pojo.mall.feast.Seckill;
@@ -21,7 +19,6 @@ import store.ae.pojo.mall.feast.Seckill;
 	"classpath:store/ae/dao/mall/config/mall-dao.xml",
 	"classpath:store/ae/service/mall/config/mall-service.xml"})
 public class SeckillServiceTest {
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	private SeckillService seckillService;
@@ -29,7 +26,8 @@ public class SeckillServiceTest {
 	@Test
 	public void testGetSeckillList() throws Exception {
 		List<Seckill> list = seckillService.getSeckillList();
-		logger.info("list={}", list);
+		
+		Assert.assertTrue(list != null);
 		
 		/*
 		* DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11bb571c]
@@ -45,7 +43,8 @@ public class SeckillServiceTest {
 	public void testGetById() throws Exception {
 		long id = 1002L;
 		Seckill seckill = seckillService.getById(id);
-		logger.info("Seckill={}", seckill);
+
+		Assert.assertTrue(seckill != null);
 		/*
 		 * Seckill=Seckill [seckillId=1001, 
 		 * name=1500元秒杀iphoneXs, 
@@ -63,21 +62,18 @@ public class SeckillServiceTest {
 		long id = 1002L;
 		Exposer exposer = seckillService.exportSeckillUrl(id);
 		if(exposer.isExposed()) {
-			logger.info("exposer={}", exposer);
+			Assert.assertTrue(exposer != null);
 			
 			long phone = 13544364323L;
 			String md5= exposer.getMd5();
 			try {
 				SeckilllExecution execution = seckillService.executeSeckill(id, phone, md5);
-				logger.info("reslut={}", execution);
-			} catch (RepeatException e) {
-				logger.error(e.getMessage());
+				Assert.assertTrue(execution != null);
 			} catch (CloseException e) {
-				logger.error(e.getMessage());
 			}
 		} else {
 			// 秒杀未开启
-			logger.warn("exposer={}", exposer);
+			Assert.assertTrue(exposer != null);
 		}
 	}
 	
@@ -87,15 +83,16 @@ public class SeckillServiceTest {
 		long phone = 13244438832L;
 		
 		Exposer exposer = seckillService.exportSeckillUrl(seckillId);
-		logger.info(exposer.toString());
+		Assert.assertTrue(exposer != null);
 		
 		if(exposer.isExposed()) {
 			String md5 = exposer.getMd5();
-			logger.info(md5);
+			Assert.assertTrue(md5 != null);
 			SeckilllExecution execution = seckillService.executeSeckillProcedure(seckillId, phone, md5);
-			logger.info(execution.getStateInfo());
+
+			Assert.assertTrue(execution != null);
 		} else {
-			logger.info("秒杀结束");
+			Assert.assertTrue(exposer != null);
 		}
 	}
 }

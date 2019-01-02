@@ -1,9 +1,8 @@
 package store.ae.service.oss;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -18,8 +17,6 @@ import store.ae.pojo.oss.User;
 	"classpath:store/ae/dao/oss/config/oss-dao.xml",
 	"classpath:store/ae/service/oss/config/oss-service.xml"})
 public class UserServiceTest {
-
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	UserService userService;
@@ -33,7 +30,8 @@ public class UserServiceTest {
 		String userPwd = "admin";
 		String nowPwd = userService.changePwd(userName, userPwd);
 		
-		logger.info("nowPwd=" + nowPwd);
+
+		Assert.assertTrue(nowPwd != null);
 	}
 
 	@Test
@@ -43,8 +41,7 @@ public class UserServiceTest {
 		userService.checkUserInfo(userName, userPwd);
 		User user = userDao.queryByUserName(userName);
 		
-		logger.info("userInfo is:" + user.toString());
-		logger.info("user is:" + user);
+		Assert.assertTrue(user != null);
 	}
 	
 	@Test
@@ -52,7 +49,8 @@ public class UserServiceTest {
 		String userName = "root";
 		UserExposer exposer = userService.exportUserToken(userName);
 		
-		logger.info("userTocken is:" + exposer.getTocken());
+
+		Assert.assertTrue(exposer != null);
 	}
 
 }

@@ -4,10 +4,9 @@ import static org.junit.Assert.fail;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -21,7 +20,6 @@ import store.ae.vo.mall.goods.category.CategoryVo;
 	"classpath:store/ae/dao/mall/config/mall-dao.xml",
 	"classpath:store/ae/service/mall/config/mall-service.xml"})
 public class GoodsServiceTest {
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	private GoodsService goodsService;
@@ -30,7 +28,7 @@ public class GoodsServiceTest {
 	public void testGetCategoryList() {
 		List<CategoryVo> categories = goodsService.getCategoryList();
 		
-		logger.info("分类列表如下: \n" + categories);
+		Assert.assertTrue(categories != null);
 	}
 
 	@Test
@@ -39,7 +37,8 @@ public class GoodsServiceTest {
 		int offset = 0;
 		int limit = 10;
 		List<Goods> goods = goodsService.getGoodsListByCategory(categoryType, offset, limit);
-		logger.info("根据分类查询商品列表如下: \n" + goods);
+
+		Assert.assertTrue(goods != null);
 	}
 
 	@Test
