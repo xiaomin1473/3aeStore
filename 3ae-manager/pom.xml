@@ -29,5 +29,9 @@
 		    <artifactId>3ae-dao</artifactId>
 		    <version>${ae.version}</version>
 		</dependency>
+		<dependency>
+		    <groupId>com.nimbusds</groupId>
+		    <artifactId>nimbus-jose-jwt</artifactId>
+		 </dependency>
   </dependencies>
 </project>
