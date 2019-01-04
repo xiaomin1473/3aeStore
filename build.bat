@@ -1,5 +1,5 @@
 git add * 
-git commit -m "optimize architecture"
+git commit -m "Add PersonalController"
 git push
 
 mvn install

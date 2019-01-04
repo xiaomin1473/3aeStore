@@ -121,7 +121,7 @@ public class SeckillController {
 			return new SeckillResult<SeckilllExecution>(false, execution);
 			
 		} catch (Exception e) {
-			logger.error(e.getMessage(), e);
+			logger.error(e.getMessage(), e.getMessage());
 			
 			SeckilllExecution execution = new SeckilllExecution(seckillId, SeckillStatEnum.INNER_ERROR);
 			return new SeckillResult<SeckilllExecution>(false, execution);

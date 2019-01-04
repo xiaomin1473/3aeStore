@@ -37,19 +37,21 @@ public class OrderController {
 	public ListExposer<OrderUserVo> orderList(@PathVariable("userId") Long userId) {
 		ListExposer<OrderUserVo> result;
 		
-		List<OrderUserVo> OrderUserVoList = orderService.getUserOrderList(userId);
 		
 		try {
+			
+			List<OrderUserVo> OrderUserVoList = orderService.getUserOrderList(userId);
+			
 			result = new ListExposer<OrderUserVo>(0, "查询成功" , OrderUserVoList);
 		} catch (AbsentException e) {
 			
-			logger.error("{} 订单不存在 {}",ERROR_INFO, e);
+			logger.error("{} 订单不存在 {}", ERROR_INFO, e.getMessage());
 			
 			result = new ListExposer<OrderUserVo>(0, "订单不存在");
 		}
 		catch (Exception e) {
 			
-			logger.error("{} 系统异常 {}",ERROR_INFO, e);
+			logger.error("{} 系统异常 {}",ERROR_INFO, e.getMessage());
 			
 			result = new ListExposer<OrderUserVo>(0, "系统异常");
 		}
@@ -71,7 +73,7 @@ public class OrderController {
 			result = new SingleExposer<OrderDetailVo>(0, "查询成功", orderDetailVo);
 		} catch (Exception e) {
 			
-			logger.error("{} 订单详情查询失败 {}",ERROR_INFO, e);
+			logger.error("{} 订单详情查询失败 {}",ERROR_INFO, e.getMessage());
 			
 			result = new SingleExposer<OrderDetailVo>(-1, "查询失败");
 		}
@@ -94,7 +96,7 @@ public class OrderController {
 			result = new PathExposer(true, "地址", pathMD5);
 		} catch (Exception e) {
 			
-			logger.error("{} 支付地址生成失败 {}",ERROR_INFO, e);
+			logger.error("{} 支付地址生成失败 {}",ERROR_INFO, e.getMessage());
 			
 			result = new PathExposer(false, "地址生成失败", pathMD5);
 		}

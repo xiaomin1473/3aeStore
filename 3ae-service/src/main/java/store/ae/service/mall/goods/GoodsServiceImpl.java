@@ -81,9 +81,9 @@ public class GoodsServiceImpl implements GoodsService {
 	}
 
 	@Override
-	public List<Goods> getGoodsListByCategory(long category, int offset, int limit) {
+	public List<Goods> getGoodsListByCategory(long categoryType, int offset, int limit) {
 
-		return goodsDao.queryAllGoodsByCategory(category, offset, limit);
+		return goodsDao.queryAllGoodsByCategory(categoryType, offset, limit);
 	}
 
 	@Override

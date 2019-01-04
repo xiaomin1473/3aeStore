@@ -44,13 +44,13 @@ public class GoodsController {
 
 			result = new ListExposer<CategoryVo>(0, "成功", categoryVoList);
 		} catch (AbsentException e) {
-			logger.error("{} 类目列表获取失败 {}", ERROR_INFO, e);
+			logger.error("{} 类目列表获取失败 {}", ERROR_INFO, e.getMessage());
 			
 			result = new ListExposer<CategoryVo>(-1, "失败");
 		}
 		
 		catch (Exception e) {
-			logger.error("{} 系统异常 {}",ERROR_INFO, e);
+			logger.error("{} 系统异常 {}",ERROR_INFO, e.getMessage());
 			
 			result = new ListExposer<CategoryVo>(-1, "系统异常");
 		}
@@ -60,16 +60,16 @@ public class GoodsController {
 	
 	
 	
-	@RequestMapping(value = "/list/{category}/{offset}/{limit}", 
+	@RequestMapping(value = "/category/{categoryType}/{offset}/{limit}", 
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public List<Goods> goodsListByCategory(@PathVariable("category") Long category,
+	public List<Goods> goodsListByCategory(@PathVariable("categoryType") Long categoryType,
 										   @PathVariable("offset") int offset,
 										   @PathVariable("limit") int limit) {
 		// 获取列表json
 
-		return goodsService.getGoodsListByCategory(category, offset, limit);
+		return goodsService.getGoodsListByCategory(categoryType, offset, limit);
 	}
 	
 	@RequestMapping(value = "/brand", 
@@ -84,7 +84,7 @@ public class GoodsController {
 			
 			result = new ListExposer<BrandVo>(0, "成功", brandVoList);
 		} catch (Exception e) {
-			logger.error("{} 系统异常 {}",ERROR_INFO, e);
+			logger.error("{} 系统异常 {}",ERROR_INFO, e.getMessage());
 			
 			result = new ListExposer<>(-1, "程序异常");
 		}
@@ -94,7 +94,7 @@ public class GoodsController {
 	
 	
 	
-	@RequestMapping(value = "/list/{brandId}/{offset}/{limit}", 
+	@RequestMapping(value = "/brand/{brandId}/{offset}/{limit}", 
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
