@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Add PersonalController"
+git commit -m "build docker images"
 git push
 
 mvn install
