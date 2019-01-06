@@ -78,7 +78,7 @@ public class GoodsController {
 	@ResponseBody
 	public ListExposer<BrandVo> brandList() {
 		ListExposer<BrandVo> result;
-		
+		 
 		try {
 			List<BrandVo> brandVoList = goodsService.getBrandList();
 			
