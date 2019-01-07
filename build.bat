@@ -2,8 +2,6 @@ git add *
 git commit -m "Change category list"
 git push
 
-mvn clean
-
 mvn install
 
 xcopy /s /e /y 3ae-server\target\server.jar app\server
