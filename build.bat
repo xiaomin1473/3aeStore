@@ -1,5 +1,5 @@
 git add * 
-git commit -m "build docker images"
+git commit -m "Change category list"
 git push
 
 mvn install

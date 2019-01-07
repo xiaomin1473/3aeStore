@@ -51,7 +51,7 @@ public class GoodsServiceImpl implements GoodsService {
 				List<SeriesVo> seriesVoList = new ArrayList<>();
 				for(Category category2: list) {
 					SeriesVo seriesVo = new SeriesVo();
-					if(category2.getGradeType() == category.getCategoryType() ) {
+					if(category2.getGradeType().longValue() == category.getCategoryType().longValue()) {
 						seriesVo.setCategoryName(category2.getCategoryName());
 						seriesVo.setCategoryType(category2.getCategoryType());
 						
@@ -59,8 +59,8 @@ public class GoodsServiceImpl implements GoodsService {
 						for(Category category3: list) {
 							GradeVo gradeVo = new GradeVo();
 							
-							if(category3.getGradeType() == category2.getCategoryType()) {
-								if(category3.getCategoryType() != 0) {
+							if(category3.getGradeType().longValue() == category2.getCategoryType().longValue()) {
+								if(category3.getCategoryType().longValue() != 0) {
 									gradeVo.setCategoryName(category3.getCategoryName());
 									gradeVo.setCategoryType(category3.getCategoryType());
 									
