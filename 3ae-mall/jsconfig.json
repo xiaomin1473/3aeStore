@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "vue$": ["vue/dist/vue.esm.js"],
+      "@": ["src/*"],
+      "store": ["src/doctor/cords/store/*"],
+      "api": ["src/doctor/cords/api/*"],
+      "components": ["src/doctor/views/apply/components/*"],
+      "paging": ["src/doctor/views/apply/paging/*"],
+      "views": ["src/doctor/views/*"],
+      "router": ["src/doctor/vitae/router/*"],
+      "utils": ["src/doctor/common/utils/*"],
+      "common": ["src/doctor/common/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"]
+}

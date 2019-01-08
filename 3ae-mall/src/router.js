@@ -1,6 +1,3 @@
-import router from './docker/vitae/index'
+import createRouter from './docker/vitae/index'
 
-
-
-
-export default router
+export { createRouter }

@@ -1,14 +1,8 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './docker/model/store/index'
-import './config/registerServiceWorker'
+import { createApp } from './app.js'
 
-Vue.config.productionTip = false
+// 客户端特定引导逻辑……
 
-new Vue({
-  el: '#app',
-  router,
-  store,
-  render: h => h(App)
-})
+const app = createApp()
+
+// 这里假定 App.vue 模板中根元素具有 `id="app"`
+app.$mount('#app')
