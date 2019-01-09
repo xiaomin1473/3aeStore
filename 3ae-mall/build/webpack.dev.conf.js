@@ -57,6 +57,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: resolve('public/index.html'),
+      inject: true,
       favicon: resolve('public/favicon.ico'),
       title: '3ae-mall',
       path: config.dev.assetsPublicPath + config.dev.assetsSubDirectory

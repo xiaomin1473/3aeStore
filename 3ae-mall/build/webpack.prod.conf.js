@@ -52,10 +52,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: config.build.index,
-      template: 'index.html',
+      template: resolve('public/index.html'),
       inject: true,
-      favicon: resolve('favicon.ico'),
-      title: 'vue-element-admin',
+      favicon: resolve('public/favicon.ico'),
+      title: '3ae-mall',
       path: config.build.assetsPublicPath + config.build.assetsSubDirectory,
       minify: {
         removeComments: true,
@@ -94,7 +94,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // copy custom static assets
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, '../static'),
+        from: path.resolve(__dirname, '../public/static'),
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }

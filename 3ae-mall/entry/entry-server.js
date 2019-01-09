@@ -1,4 +1,4 @@
-import { createApp } from '../src/app'
+import { createApp } from '@/app'
 
 export default context => {
   // 因为有可能会是异步路由钩子函数或组件，所以我们将返回一个 Promise，

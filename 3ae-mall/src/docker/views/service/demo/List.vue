@@ -1,6 +1,7 @@
 <template>
   <div class="list">
     <GoodsList />
+    <SvgIcon />
   </div>
 </template>
 
