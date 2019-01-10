@@ -55,10 +55,11 @@ table {
 }
 
 * {
-    font-family: Microsoft Yahei,SimSun,Helvetica;
+   font-family: Microsoft Yahei,SimSun,Helvetica;
+   font-display: swap;
 	font-size: 14.7px;
-    color: #000;
-    user-select: none; 
+   color: #000;
+   user-select: none;
 }
 
 h1 {

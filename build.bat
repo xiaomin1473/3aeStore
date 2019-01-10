@@ -1,6 +1,6 @@
 git add * 
-git commit -m "Change 3ae-mall to WAP"
+git commit -m "Optimize mall.3ae.store index loading"
 git push
 
-
+mvn install
 
