@@ -1,3 +1,10 @@
+.container {
+   width: 100%;
+   min-width: 1200px;
+   margin: 0 auto;
+   background-color: #f9f9f9;
+}
+
 .iconfont{
    display: inline-block;
    width: 16px;
@@ -7,6 +14,10 @@
    font-style:normal;
    -webkit-font-smoothing:antialiased;
    -moz-osx-font-smoothing:grayscale
+}
+
+.iconfont::before {
+   content: '\e620';
 }
 
 /* ************************* window *************************** */

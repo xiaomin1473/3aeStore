@@ -14,14 +14,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 img{border:none}
 
 button {
-    outline: 0;
-    border: none
+   outline: 0;
+   border: none
 }
 
 body {
 	line-height: 1;
-    font-family: Microsoft Yahei,SimSun,Helvetica;
-    overflow-x: hidden;
+   font-family: Microsoft Yahei,SimSun,Helvetica;
 }
 
 ol,ul {
@@ -272,25 +271,20 @@ html {
 }
 body {
    background-color: #f3f3f5;
-   overflow-x: scroll;
+   overflow: auto;
 }
 
 .container {
    background-color: #fff;
 }
 
-
-
 /* ************************************************ value ************************************************ */
-
-
 .num {
    width: 84px;
    height: 24px;
    margin: 0 auto;
    margin-top: 28px;
 }
-
 
 .num input[name='jian'] {
    float: left;
