@@ -492,6 +492,14 @@
    color: rgb(3, 190, 103);
 }
 
+.floor-seven .floor-main {
+   border-top: solid 2px rgb(255, 124, 156);
+}
+
+.floor-seven .options .options-items input:checked + i {
+   color: rgb(255, 124, 156);
+}
+
 
 
 .floor-bottom {
