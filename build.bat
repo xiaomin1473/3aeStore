@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Optimize mall.3ae.store index siderbar"
+git commit -m "Add mall.3ae.store index citys"
 git push
 
 mvn install

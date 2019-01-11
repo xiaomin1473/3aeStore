@@ -1,6 +1,33 @@
+/* ***************** city ******************** */
+.city {
+   margin-top: 50px;
+   text-align: center;
+}
+
+.city header {
+   width: 200px;
+   margin: 0 auto;
+   font-weight: bold;
+   font-size: 24px;
+   color: #f81828;
+}
+
+.city-list {
+   margin-top: 20px;
+   box-sizing: border-box;
+   padding: 24px 12px;
+   list-style: none;
+   text-align: center;
+   background-color: #fff;
+   box-shadow: 0 0 15px 1px rgba(1, 17, 37, .15) inset;
+}
+
+.city-list li {
+   margin: 13px;
+   float: left;
+}
+
 /* ***************** pick ******************** */
-
-
 .ayg {
    margin-top: 10px;
    position: relative;
