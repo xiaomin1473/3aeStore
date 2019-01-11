@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Optimize mall.3ae.store index floor to six-floor"
+git commit -m "Optimize mall.3ae.store index siderbar"
 git push
 
 mvn install

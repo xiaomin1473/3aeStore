@@ -212,11 +212,11 @@
 }
 
 .footer-list .tels .btn-ctn .iconfont{
-   display:inline-block;
-   font-size:24px;
-   vertical-align:middle;
-   margin-right:1px;
-   color:#fff;
+   display: inline-block;
+   margin-right: 10px;
+   font-size: 24px;
+   color: #fff;
+   vertical-align: -5px;
 }
 
 .brand-list li {

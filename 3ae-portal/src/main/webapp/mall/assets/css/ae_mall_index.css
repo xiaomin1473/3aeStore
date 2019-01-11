@@ -37,9 +37,8 @@
    position: absolute;
    top: 114px;
    right: -5px;
-   margin-bottom: 20px;
    width: 100%;
-   height: 434px;
+   height: 300px;
    overflow-y: hidden; 
 }
 
@@ -527,19 +526,21 @@
    left: 240px; 
    opacity: 1; 
    width:64px;
-   height: 320px;
    display: none;
+   background-color: #f2f2f2;
 }
 
 .sidebar h4 {
+   position: relative;
+   z-index: 10;
    height: 26px;
    margin-top: -10px; 
    text-align: center;
    border-right: solid 1px #eee;
    border-left: solid 1px #eee;
-   color: #666;
+   color: #f81828
 }
-.sider-top {width:100%;height:87px;background:url(../img/dhzz.gif) center center no-repeat;position:relative;z-index:2}
+.sider-top {padding-bottom: 6px;}
 .sider-items {margin-top:0px;}
 .sider-items a {display:block; padding-top: 4px; height:46px;border-bottom: dotted 1px #ccc;text-align:center;line-height:18px;background-color:#fff;color:#999}
 .sider-items li a { font-size: 12px; }
