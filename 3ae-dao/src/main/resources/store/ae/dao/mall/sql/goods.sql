@@ -28,8 +28,16 @@ key idx_create_time(gmt_create)
 -- 初始化数据
 insert into tb_goods(business_id, brand_id, category_type, goods_name, amount, unit, price, volume, img_url)
 values
-	(1000, 1000, 1010101, 'iphone6 plus', 1000, '部', 4000, 0, './assests/img/iphone.png;');
-
+	(1000, 1000, 1010101, "vivo X23全息幻彩版 6GB+128GB 北极晨曦 水滴屏全面屏 游戏手机 移动联通电信全网通4G手机", 1000, '部', 2798, 9527, './assets/img/vivo.jpg;'),
+	(1000, 1000, 1010101, "小米MIX2S 全面屏游戏拍照手机 6GB+128GB 黑色 骁龙845处理器 全网通4G 陶瓷手机", 1000, '部', 2699, 4681, './assets/img/xiaomi.jpg;'),
+	(1000, 1000, 1010101, "联想Z5s 6GB+64GB 蜜恋橘 骁龙710 后置AI变焦三摄 6.3英寸水滴屏 靓彩渐变玻璃机身 全网通4G手机 双卡双待", 1000, '部', 1598, 3443, './assets/img/lenovo.jpg;'),
+	(1000, 1000, 1010101, "Apple iPhone XS Max (A2103) 256GB 金色 全网通（移动4G优先版） 双卡双待", 1000, '部', 4800, 3756, './assets/img/iphonex.jpg;'),
+	(1000, 1000, 1010101, "小米MIX2S 全面屏游戏拍照手机 6GB+128GB 黑色 骁龙845处理器 全网通4G 陶瓷手机", 1000, '部', 2699, 4681, './assets/img/xiaomi.jpg;'),
+	(1000, 1000, 1010101, "联想Z5s 6GB+64GB 蜜恋橘 骁龙710 后置AI变焦三摄 6.3英寸水滴屏 靓彩渐变玻璃机身 全网通4G手机 双卡双待", 1000, '部', 1598, 3443, './assets/img/lenovo.jpg;'),
+	(1000, 1000, 1010101, "Apple iPhone XS Max (A2103) 256GB 金色 全网通（移动4G优先版） 双卡双待", 1000, '部', 4800, 3756, './assets/img/iphonex.jpg;'),
+	(1000, 1000, 1010101, "vivo X23全息幻彩版 6GB+128GB 北极晨曦 水滴屏全面屏 游戏手机 移动联通电信全网通4G手机", 1000, '部', 2798, 9527, './assets/img/vivo.jpg;');
+	
+	
 
 -- 商品品牌
 CREATE TABLE tb_goods_brand (
@@ -68,7 +76,7 @@ key idx_create_time(gmt_create)
 -- 初始化数据
 insert into tb_goods_image(goods_id, category_type, name, number_info, number_detail, suffix_type, urls_info, urls_detail)
 values
-	(1000, 1010101, 'iphone6 plus', 1, 1, 'png', './assests/img/iphone.png;', './assests/img/iphone.png;');
+	(1000, 1010101, 'iphone6 plus', 1, 1, 'png', './assets/img/iphone.png;', './assets/img/iphone.png;');
 
 
 -- 商品类目
@@ -122,7 +130,7 @@ key idx_create_time(gmt_create)
 -- 初始化数据
 insert into tb_goods_list(goods_id, category_type, name, color, model, format, param, props, weight, img_url, market, mall, number)
 values
-	(1000, 1010101, 'iphone6 plus', '土豪金', 'plus', '无', '无', '无', '净重：100g', './assests/img/iphone.png;', 5000, 3000, 1000);
+	(1000, 1010101, 'iphone6 plus', '土豪金', 'plus', '无', '无', '无', '净重：100g', './assets/img/iphone.png;', 5000, 3000, 1000);
 
 
 -- 商品详情

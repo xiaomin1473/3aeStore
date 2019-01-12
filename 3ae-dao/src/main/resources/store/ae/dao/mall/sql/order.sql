@@ -44,7 +44,7 @@ key idx_create_time(gmt_create)
 -- 初始化数据
 insert into tb_order_goods(order_id, goods_sku_id, category_type, goods_name, goods_number, unit, sku_price, img_url)
 values
-	(1000, 1000, 1010101,'iphone6 plus', 1, '部', 1000, './assests/img/iphone.png;');
+	(1000, 1000, 1010101,'iphone6 plus', 1, '部', 1000, './assets/img/iphone.png;');
 
 
 CREATE TABLE tb_order_buyer (
