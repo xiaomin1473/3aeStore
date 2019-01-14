@@ -1,11 +1,11 @@
-package store.ae.answer.couplet;
+package store.ae.agent;
 
 
 /**
  * @author sidtadpole
  *	创建协议对象
  */
-public class answerInfo {
+public class Answer {
 	private String info;
     private byte type;
  

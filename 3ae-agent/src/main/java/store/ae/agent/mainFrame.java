@@ -1,18 +1,18 @@
-package store.ae.answer.couplet;
+package store.ae.agent;
 
 import java.util.Scanner;
 
 
-public class Test1 {
+public class mainFrame {
 	public static void main(String[] args) {  
 		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
-        Client bootstrap = new Client(10010, "47.104.66.44");
+        Client bootstrap = new Client(10010, "localhost");
         
         String infoString = "I'm coming...";
         while (true){
         	infoString = input.nextLine();
-        	answerInfo req = new answerInfo();  
+        	Answer req = new Answer();  
             req.setType((byte) 2);
             req.setInfo(infoString);
             bootstrap.sendMessage(req);  

@@ -10,6 +10,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.ServerSocketChannel;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import store.ae.server.core.ServerHandler;
 
 public class Server {
 	private ServerSocketChannel serverSocketChannel;
@@ -48,10 +49,10 @@ public class Server {
 //										//使用了netty自带的编码器和解码器
 //										new StringDecoder(Charset.forName("utf-8")),
 //										new StringEncoder(Charset.forName("utf-8")),
-								new serverMsgDdr(),
-								new serverMsgEdr(),
+								new MsgDdr(),
+								new MsgEdr(),
 								//自定义的处理器
-								new serverHandler());
+								new ServerHandler());
 						}
 					});
  
@@ -86,5 +87,4 @@ public class Server {
 			serverSocketChannel.writeAndFlush(msg);
 		}
 	}
-	
 }

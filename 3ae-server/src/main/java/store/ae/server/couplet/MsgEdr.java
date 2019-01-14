@@ -1,4 +1,4 @@
-package store.ae.answer.couplet;
+package store.ae.server.couplet;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufOutputStream;
@@ -9,10 +9,10 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * @author sidtadpole
  *	编码器
  */
-public class answerMsgEdr extends MessageToByteEncoder<answerInfo> {
+public class MsgEdr extends MessageToByteEncoder<serverInfo> {
 
 	@Override
-	protected void encode(ChannelHandlerContext ctx, answerInfo msg, ByteBuf out) throws Exception {
+	protected void encode(ChannelHandlerContext ctx, serverInfo msg, ByteBuf out) throws Exception {
 		@SuppressWarnings("resource")
 		ByteBufOutputStream writer = new ByteBufOutputStream(out);
         

@@ -1,8 +1,13 @@
-package store.ae.answer.couplet;
+	package store.ae.agent;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
+/**
+ * 接收/处理/响应客户端websocket请求的核心业务处理类
+ * @author sidtadpole
+ *
+ */
 public class ClientHandler extends ChannelInboundHandlerAdapter {
 		 
 	    @Override

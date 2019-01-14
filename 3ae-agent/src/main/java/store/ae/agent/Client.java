@@ -1,4 +1,4 @@
-package store.ae.answer.couplet;
+package store.ae.agent;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -42,10 +42,8 @@ public class Client {
 	        					protected void initChannel(SocketChannel socketChannel) throws Exception {
 	        						// 初始化编码器，解码器，处理器
 	        						socketChannel.pipeline().addLast(
-	        								new answerMsgDdr(), 
-	        								new answerMsgEdr(),
-//	        								new StringDecoder(Charset.forName("utf-8")),
-//	        								new StringEncoder(Charset.forName("utf-8")),
+	        								new MsgDdr(), 
+	        								new MsgEdr(),
 	        								new ClientHandler());
 	        					}
 	        				});

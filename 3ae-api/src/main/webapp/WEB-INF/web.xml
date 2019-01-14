@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
 	<display-name>api</display-name>
 	<session-config>
-		<session-timeout>30</session-timeout>
+		<session-timeout>0</session-timeout>
 	</session-config>
   
   	<!-- SpringMVC 前端控制器 -->
@@ -15,6 +17,7 @@
 			Mybatis => Spring => SpringMVC
 		-->
 		<init-param>
+			
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath*:store/ae/*/*/config/mall-*.xml</param-value>
 		</init-param>
@@ -26,14 +29,25 @@
   		<url-pattern>/mall/*</url-pattern>
   	</servlet-mapping>
   	
+  	<context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>classpath*:store/ae/*/*/config/mall-*.xml</param-value>
+	</context-param>
+	
+  	<!-- 配置Spring的监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- 防止Spring内存溢出监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+  	
   	  <!-- SpringMVC 前端控制器 -->
 	<servlet>
 		<servlet-name>api-dispatcher-oss</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<!-- 配置SpringMVC需要加载的配置文件 
-			Spring-dao.xml, Spring-service.xml, Spring-web.xml
-			Mybatis => Spring => SpringMVC
-		-->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:store/ae/dao/oss/config/oss-*.xml;classpath:store/ae/service/oss/config/oss-*.xml;classpath:store/ae/api/oss/config/oss-*.xml</param-value>
@@ -63,6 +77,7 @@
 		<error-code>404</error-code>
 		<location>/views/error/404.html</location>
 	</error-page>
+	
   	<filter>
 		<filter-name>CORS</filter-name>
 		<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>

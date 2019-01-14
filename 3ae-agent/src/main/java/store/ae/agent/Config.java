@@ -1,4 +1,4 @@
-package store.ae.answer.couplet;
+package store.ae.agent;
 
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
@@ -9,7 +9,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
  * @author sid
  *
  */
-public class answerConfig {
+public class Config {
 	
 	/**
 	 * 存储每一个客户端接入进来时的channel对象
