@@ -1,6 +1,6 @@
 package store.ae.agent.core;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class ClientTest {
 
