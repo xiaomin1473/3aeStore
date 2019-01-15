@@ -10,7 +10,7 @@ public class Test2 {
 		try {
 			// 建立udp的服务 ，并且要监听一个端口。
 			if (socket == null) {
-				socket = new DatagramSocket(3001);
+				socket = new DatagramSocket(8888);
 			}
 
 			// 准备空的数据包用于存放数据。
