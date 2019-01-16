@@ -2,15 +2,10 @@ package store.ae.agent.core;
 
 import org.junit.Test;
 
-class ClientTest {
+public class ClientTest {
 
 	@Test
-	void testClient() {
-		Client bootstrap = new Client("localhost",8888);
-		
-		while (true) {
-			bootstrap.sendMessage("hello");
-		}
-		
+	public void testClient() {
+		new Client("localhost", 47332);
 	}
 }

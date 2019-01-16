@@ -21,7 +21,7 @@ import store.ae.vo.mall.goods.order.OrderUserVo;
  *
  */
 @Service
-public class OrderServiceImpl  implements OrderService {
+public class OrderServiceImpl implements OrderService {
 	
 	@Autowired
 	private OrderDao orderDao;

@@ -6,6 +6,12 @@
 	<session-config>
 		<session-timeout>0</session-timeout>
 	</session-config>
+	
+	<!-- 加载所有xml配置文件 -->
+	<context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>classpath*:store/ae/*/*/config/*-*.xml</param-value>
+	</context-param>
   
   	<!-- SpringMVC 前端控制器 -->
 	<servlet>
@@ -17,7 +23,6 @@
 			Mybatis => Spring => SpringMVC
 		-->
 		<init-param>
-			
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath*:store/ae/*/*/config/mall-*.xml</param-value>
 		</init-param>
@@ -29,10 +34,7 @@
   		<url-pattern>/mall/*</url-pattern>
   	</servlet-mapping>
   	
-  	<context-param>
-	   <param-name>contextConfigLocation</param-name>
-	   <param-value>classpath*:store/ae/*/*/config/mall-*.xml</param-value>
-	</context-param>
+  	
 	
   	<!-- 配置Spring的监听器 -->
 	<listener>
@@ -48,25 +50,20 @@
 	<servlet>
 		<servlet-name>api-dispatcher-oss</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:store/ae/dao/oss/config/oss-*.xml;classpath:store/ae/service/oss/config/oss-*.xml;classpath:store/ae/api/oss/config/oss-*.xml</param-value>
-		</init-param>
 	</servlet>
   
   	<servlet-mapping>
   		<servlet-name>api-dispatcher-oss</servlet-name>
-  		<!-- 默认匹配所有请求 -->
   		<url-pattern>/user/*</url-pattern>
   	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>api-dispatcher-system</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
+		<!-- <init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:store/ae/dao/system/config/system-*.xml;classpath:store/ae/service/system/config/system-*.xml;classpath:store/ae/api/system/config/system-*.xml</param-value>
-		</init-param>
+		</init-param> -->
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>api-dispatcher-system</servlet-name>

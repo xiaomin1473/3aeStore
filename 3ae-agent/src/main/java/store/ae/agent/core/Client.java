@@ -7,7 +7,6 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 public class Client {
@@ -15,8 +14,6 @@ public class Client {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	private final String CLIENT_INFO = "\n【客户管理】";
-	
-	private SocketChannel socketChannel;
 	
 	public Client(String host, int port){
 		bind(host, port);
@@ -33,12 +30,7 @@ public class Client {
 			ChannelFuture ch = bootstrap.connect(host, port).sync();
 
 			System.out.println(Client.class.getName() + " started and listen on " + ch.channel().localAddress());
-			if(ch.isSuccess()) {
-				logger.info("{} 新的客户端已启动! ", CLIENT_INFO);
-			}else {
-				logger.info("{} 新的客户端启动失败! ", CLIENT_INFO);
-			}
-			
+			logger.info("{} 客户端已启动，等待接收……", CLIENT_INFO);
 			
 			ch.channel().closeFuture().sync();
 			
@@ -47,12 +39,6 @@ public class Client {
 		} finally {
 			// 优雅的退出程序
 			group.shutdownGracefully();
-		}
-	}
-	
-	public void sendMessage(Object msg) {
-		if (socketChannel != null) {
-			socketChannel.writeAndFlush(msg);
 		}
 	}
 }

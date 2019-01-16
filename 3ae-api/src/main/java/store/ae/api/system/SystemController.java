@@ -13,11 +13,11 @@ import store.ae.dto.mall.feast.SeckillResult;
 @Controller
 @RequestMapping("/")
 public class SystemController {
-	
 
 	@RequestMapping(value="/time/now", method = RequestMethod.GET)
 	@ResponseBody
 	public SeckillResult<Long> time() {
+		
 		Date now = new Date();
 		
 		return new SeckillResult<Long>(true, now.getTime());
