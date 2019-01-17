@@ -6,6 +6,9 @@ public class ClientTest {
 
 	@Test
 	public void testClient() {
-		new Client("localhost", 47332);
+		// 远程服务器
+		//new Client("3ae.store", 47332);
+		
+		 new Client("localhost", 47332);
 	}
 }

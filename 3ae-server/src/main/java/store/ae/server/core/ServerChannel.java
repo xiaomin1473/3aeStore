@@ -20,7 +20,7 @@ public class ServerChannel extends ChannelInitializer<SocketChannel> {
 		//e.pipeline().addLast("http-chunked", new ChunkedWriteHandler());
 		
 	    // e.pipeline().addLast("handler", new WebSocketServer());
-		e.pipeline().addLast("handler", new ByteBufServer());
+		e.pipeline().addLast("handler", new TcpServer());
 		// e.pipeline().addLast(new BufferOutServer());
 	}
 

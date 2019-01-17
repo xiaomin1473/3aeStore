@@ -1,4 +1,4 @@
-package store.ae.server.core;
+package store.ae.server.websocket;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

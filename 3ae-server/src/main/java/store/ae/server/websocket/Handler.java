@@ -1,4 +1,4 @@
-package store.ae.server.core;
+package store.ae.server.websocket;
 
 import java.util.Date;
 

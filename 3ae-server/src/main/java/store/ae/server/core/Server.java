@@ -42,13 +42,13 @@ public class Server {
 				.childHandler(new ServerChannel());
 			
 			Channel ch = bootstrap.bind(port).sync().channel();
-			System.out.println(ByteBufServer.class.getName() + " started and listen on " + ch.localAddress());
+			System.out.println(TcpServer.class.getName() + " started and listen on " + ch.localAddress());
 			
 			logger.info("{} 服务端已启动，等待客户端连接……", SERVER_INFO);
 			
 			
 			ch.closeFuture().sync();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

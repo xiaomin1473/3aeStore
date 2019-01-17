@@ -19,7 +19,7 @@ public class ClientChannel extends ChannelInitializer<SocketChannel> {
 		
 		// e.pipeline().addLast("http-chunked", new ChunkedWriteHandler());
 		
-		e.pipeline().addLast("handler", new ByteBufClient());
+		e.pipeline().addLast("handler", new TcpClient());
 	}
 
 }

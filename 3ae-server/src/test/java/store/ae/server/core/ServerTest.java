@@ -9,5 +9,4 @@ public class ServerTest {
 	public void testServer() {
 		new  Server(47332);
 	}
-
 }
