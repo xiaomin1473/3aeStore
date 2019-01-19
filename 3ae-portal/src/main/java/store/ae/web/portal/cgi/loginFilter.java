@@ -29,7 +29,6 @@ public class loginFilter implements Filter {
 		else {
 			res.sendRedirect("/views/login.jsp");
 		}
-		
 //		chain.doFilter(req, res);
 	}
 	
@@ -40,6 +39,5 @@ public class loginFilter implements Filter {
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
-		
 	}
 }

@@ -19,9 +19,9 @@ public class TestIE extends HttpServlet {
 		@SuppressWarnings("unused")
 		HttpServletResponse res = (HttpServletResponse) response;
 
-		response.setContentType("application/json");
-	    response.setCharacterEncoding("utf-8");
-	    response.setHeader("Access-Control-Allow-Origin", "*");
-	    response.getWriter().print("Hello IE");
+      response.setContentType("application/json");
+      response.setCharacterEncoding("utf-8");
+      response.setHeader("Access-Control-Allow-Origin", "*");
+      response.getWriter().print("Hello IE");
 	}
 }
