@@ -1,6 +1,5 @@
 git add * 
-git commit -m "Add learning 6666"
+git commit -m "The program is 👍, let's add ⭐️!"
 git push
 
 mvn install
-
