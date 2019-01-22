@@ -20,6 +20,7 @@ const createLintingRule = () => ({
   }
 })
 
+// 🔪刀放这儿了，删了剁手
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
