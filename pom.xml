@@ -91,7 +91,7 @@
       <!-- Jetty and Netty END -->
       
       <!-- build依赖 -->
-
+      
          <maven-bundle-plugin.version>4.1.0</maven-bundle-plugin.version>
          <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
          <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
@@ -108,7 +108,7 @@
 
    <!-- 构建 -->
    <build>
-      <!-- <plugins>
+      <plugins>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-install-plugin</artifactId>
@@ -153,7 +153,7 @@
                <encoding>UTF-8</encoding>
             </configuration>
          </plugin>
-      </plugins> -->
+      </plugins>
       
       <finalName>3ae-parent</finalName>
    </build>
