@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Add editor themes"
+git commit -m "Upgrade dependencies"
 git push
 
 mvn install
