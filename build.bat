@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Upgrade dependencies"
+git commit -m "Add sonarqube test"
 git push
 
 mvn install
