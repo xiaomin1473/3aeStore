@@ -1,3 +1,3 @@
-build
+start build
 
 deploy-docker
