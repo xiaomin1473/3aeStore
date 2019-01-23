@@ -1,7 +1,13 @@
 package store.ae.job.svnkit;
 
-import com.google.gson.Gson;
-import org.tmatesoft.svn.core.*;
+import java.io.ByteArrayInputStream;
+import java.io.UnsupportedEncodingException;
+
+import org.tmatesoft.svn.core.SVNCommitInfo;
+import org.tmatesoft.svn.core.SVNException;
+import org.tmatesoft.svn.core.SVNProperties;
+import org.tmatesoft.svn.core.SVNPropertyValue;
+import org.tmatesoft.svn.core.SVNURL;
 import org.tmatesoft.svn.core.auth.ISVNAuthenticationManager;
 import org.tmatesoft.svn.core.internal.io.dav.DAVRepositoryFactory;
 import org.tmatesoft.svn.core.io.ISVNEditor;
@@ -9,8 +15,8 @@ import org.tmatesoft.svn.core.io.SVNRepository;
 import org.tmatesoft.svn.core.io.SVNRepositoryFactory;
 import org.tmatesoft.svn.core.io.diff.SVNDeltaGenerator;
 import org.tmatesoft.svn.core.wc.SVNWCUtil;
-import java.io.ByteArrayInputStream;
-import java.io.UnsupportedEncodingException;
+
+import com.google.gson.Gson;
 
 /**
  * 提交到仓库

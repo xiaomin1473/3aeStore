@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Add sonarqube test"
+git commit -m "Add daily"
 git push
 
 mvn install
