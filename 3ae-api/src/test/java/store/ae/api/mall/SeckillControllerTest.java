@@ -1,6 +1,6 @@
 package store.ae.api.mall;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import store.ae.common.enums.mall.feast.SeckillStatEnum;
 

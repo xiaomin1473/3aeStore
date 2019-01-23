@@ -30,7 +30,7 @@ body {
   padding: 0;
   border: 0;
   line-height: 1;
-  font-family: Microsoft Yahei,SimSun,Helvetica;
+  font-family: Microsoft Yahei,SimSun,Helvetica, sans-serif;
 }
 
 ol, ul { list-style: none; }

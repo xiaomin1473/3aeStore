@@ -1,3 +1,0 @@
-start build
-
-deploy-docker

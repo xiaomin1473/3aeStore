@@ -215,7 +215,7 @@
 	width: 80px;
 	height:34px;
 	border: 1px solid #d9d9d9;
-	font: 14px/30px "å¾®è½¯é›…é»‘";
+	font: 14px/30px sans-serif;
     border-radius: 3px;
     outline: none;
     cursor: pointer;
@@ -225,7 +225,7 @@
 	/*width:100px;*/
 	height:30px;
 	border: 1px solid #e8e8e8;
-	font:14px/28px "å¾®è½¯é›…é»‘";
+	font:14px/28px sans-serif;
 	border-radius: 3px;
 	vertical-align: -1px;
 	background:#f9f9f9;
@@ -286,12 +286,12 @@
   
   .m-item-inner{ width:480px; float:left; padding-left:45px;}
   .m-item-inner .itemInfo{ position:relative; width:100%;}
-  .m-item-inner .name{ padding-bottom:20px;font-family:"microsoft yahei";}
+  .m-item-inner .name{ padding-bottom:20px;font-family:"microsoft yahei", sans-serif;}
   .m-item-inner .name h1{ font-size:16px; color:#666; font-weight:bold;}
   .m-item-inner .name h2{ font-size:14px; color:#f93c16; padding-top:8px;}
   .m-item-inner .name .p-ad{ font-size:14px; color:#f93c16; line-height:20px; line-height:25px;}
   .m-item-inner .summary{}
-  .m-item-inner .summary-list{ background:#EEE; text-align:center;font-family:"microsoft yahei";margin-bottom:20px; overflow:hidden;}
+  .m-item-inner .summary-list{ background:#EEE; text-align:center;font-family:"microsoft yahei", sans-serif;margin-bottom:20px; overflow:hidden;}
   .m-item-inner .summary-list .tr{ overflow:hidden; text-align:center;}
   .m-item-inner .summary-list .summary-time{ background:#f93c16;}
   .m-item-inner .summary-list .th,.m-item-inner .summary-list .td{ float:left; height:36px; line-height:36px; color:#727171; font-size:12px;}
@@ -1202,7 +1202,6 @@
     color: #999;
     line-height: 22px;
     text-decoration-line: line-through;
-    text-decoration: line-through;
   }
   
   .case-wrapper .price {
@@ -1539,7 +1538,7 @@
 
 .shared-goods .ecsc-layout-210{ float:right;}
 .shared-goods .ecsc-goods-main{ float:left;}
-.other-group h1{ font-size:16px; color:#333; height:40px; line-height:40px;font-family:"microsoft yahei"; font-weight: normal;}
+.other-group h1{ font-size:16px; color:#333; height:40px; line-height:40px;font-family:"microsoft yahei", sans-serif; font-weight: normal;}
 .other-group .plist-wrap{ margin-bottom:40px;}
 .other-group .p-list-wrap ul{ width:955px;}
 .other-group .p-list-wrap ul li{ margin:0 11px 0 0;}
@@ -1547,7 +1546,7 @@
 .other-group .item .p-name{ width:100%; padding-top:5px;}
 .other-group .item .p-price{ padding-top:10px; font-size:14px; color:#f93c16;}
 .other-group .item .p-num{ float:right; padding-top:10px; color:#9fa0a0;}
-.goods-detail-title .tabs{ float:left; border-left:1px solid #dcdcdc;font-family:"microsoft yahei";}
+.goods-detail-title .tabs{ float:left; border-left:1px solid #dcdcdc;font-family:"microsoft yahei", sans-serif;}
 .goods-detail-title .tabs li{ float:left; height:31px; line-height:31px; *line-height:29px; font-size:14px; padding:0 35px; border:1px solid #dcdcdc; border-bottom:0; border-left:0; cursor:pointer;}
 .goods-detail-title .tabs li.current{ background:#f93c16; border-color:#f93c16; color:#fff; margin-left:-1px;}
 .goods-detail-title .tabs li.first{ margin-left:-1px;}
@@ -1570,7 +1569,7 @@
 .other-group .item-list .biz-rebate{ width:78px; color:#f93c16; font-size:16px;}
 .other-group .item-list .sale{ width:60px;}
 
-.ecsc-single-desc{ width:945px; float:left;font-family:"microsoft yahei"; position:relative; padding-top:43px;}
+.ecsc-single-desc{ width:945px; float:left;font-family:"microsoft yahei", sans-serif; position:relative; padding-top:43px;}
 .ecsc-goods-item .panel{ padding-top:8px; float:left; width:945px;}
 .group-goods .ecsc-goods-item .panel{ padding-top:0;}
 .ecsc-goods-item .panel .panel-mt{ font-size:16px; color:#727171; height:36px; line-height:36px; padding-bottom:5px; float:left; width:100%; position:relative;}
@@ -1597,7 +1596,7 @@
 .goods-detail-title h2{ float:left; width:130px; height:32px; line-height:32px;background:#f93c16; font-size:14px; color:#fff; text-align:center;}
 .goods-detail-title .btn-comment{ float:right; /*margin-top:2px;*/}
 .goods-para{ margin-top:10px; overflow:hidden;}
-.goods-para dt{ color:#777; font-size:14px; padding-bottom:5px; font-family: '\5fae\8f6f\96c5\9ed1';}
+.goods-para dt{ color:#777; font-size:14px; padding-bottom:5px; font-family: '\5fae\8f6f\96c5\9ed1', sans-serif;}
 .goods-para dd{ float:left;}
 .goods-para dd span{ display:block; line-height:24px; color:#555;width:236px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .goods-para .column{ width:236px; height:23px;}
@@ -1619,7 +1618,7 @@
 .percent dd { float: left;width: 100px;height: 10px;margin-top: 6px;overflow: hidden;background: #cccccc;}
 .percent dd div {overflow: hidden;height: 10px;width: 0;background-color: #f93c16;}
 .actor-new{ float:right; width:490px; overflow:hidden;}
-.actor-new dt{ font-size:14px; color:#333;font-family:"microsoft yahei"; line-height:25px;}
+.actor-new dt{ font-size:14px; color:#333;font-family:"microsoft yahei", sans-serif; line-height:25px;}
 .actor-new dd{ overflow:hidden;}
 .conmm-tags { float: left;height: 21px;line-height: 21px;padding: 0 7px;margin-right: 5px;background: #fce8cc;}
 .conmm-tags span {color: #777;}
@@ -1630,13 +1629,13 @@
 .m-tab-trigger li{ float:left; padding:0 20px; margin-bottom:5px; border-right:1px solid #c9c9c9;}
 .m-tab-trigger li.last{ border-right:0;}
 .m-tab-trigger li.first{ padding-left:10px;}
-.m-tab-trigger li a{ font-size:14px;font-family:"microsoft yahei"; }
+.m-tab-trigger li a{ font-size:14px;font-family:"microsoft yahei", sans-serif; }
 .m-tab-trigger li.on a{ color:#f93c16;}
 
 .ratelist-item{ border-bottom: 1px solid #dcdcdc;padding: 30px 0px 10px;color: #222;font-size: 12px; overflow:hidden;}
 .ratelist-item .user-info-block{float: left;margin-right: 50px;width: 85px;text-align: center;}
 .ratelist-item .avatar-wrapper{ width:85px; height:85px;}
-.ratelist-item .name-wrapper{ font-size:14px; line-height:25px;font-family:"microsoft yahei"; }
+.ratelist-item .name-wrapper{ font-size:14px; line-height:25px;font-family:"microsoft yahei", sans-serif; }
 .review-content-wrapper{ overflow:hidden; width:570px; margin-right:50px; float:left;}
 .ratelist-item .info{ margin-bottom: 10px;color: #999; height:18px;line-height: 18px;}
 .ratelist-item .info .rate-status { float: left;font-style: normal; height:18px;}
@@ -1648,7 +1647,7 @@
 .ratelist-item .hf{ margin-top:10px;}
 .ratelist-item .conmm-tags{ background:#fff; border:1px solid #dfc39e; margin-right:10px;}
 .comment-operate{ float:right; width:100%; text-align:right; margin-top:10px;}
-.comment-operate .reply,.comment-operate .nice{ position:relative; padding-left:20px; color:#666;font-family:"microsoft yahei"; margin-left:30px; cursor:pointer;}
+.comment-operate .reply,.comment-operate .nice{ position:relative; padding-left:20px; color:#666;font-family:"microsoft yahei", sans-serif; margin-left:30px; cursor:pointer;}
 .comment-operate i{ display:inline-block; width:14px; height:14px; position:absolute; top:2px;}
 .comment-operate .reply i{ background-position: -176px -262px; left:0px;}
 .comment-operate .nice i{ background-position:-197px -262px; left:0;} 

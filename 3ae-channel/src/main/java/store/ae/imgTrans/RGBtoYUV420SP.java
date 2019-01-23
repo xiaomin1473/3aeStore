@@ -86,10 +86,10 @@ public class RGBtoYUV420SP {
 		int index=0,uvindex=frameSize;
 		for(int i=0; i < height; i++) {
 			for(int j =0; j < width; j++) {
-				a = (argb[index] &0xff000000) >>24;// a is not used obviously
-				r = (argb[index] &0xff0000) >>16;
-				g = (argb[index] &0xff00) >>8;
-				b = (argb[index] &0xff) >>0;
+				a = (argb[index] &0xff000000) >> 24;// a is not used obviously
+				r = (argb[index] &0xff0000) >> 16;
+				g = (argb[index] &0xff00) >> 8;
+				b = (argb[index] &0xff);
 				
 				//Y = 0.213 * R + 0.715 * G + 0.072 * B         　　　　       //
 				//Pb =-0.115 * R - 0.385 * G + 0.500 * B                       //

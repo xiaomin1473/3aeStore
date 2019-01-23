@@ -134,7 +134,7 @@
     font-size: 14px;
     font-weight: none;
     color: #f0f0f0;
-    font-family:microsoft yahei;
+    font-family: "microsoft yahei", sans-serif;
   }
   
   .goods_list{
@@ -146,13 +146,13 @@
   .total_goods{
     font-size: 12px;
     color:#333;
-    font-family: microsoft yahei;
+    font-family: "microsoft yahei", sans-serif;
   }
   
   .attr_father li dl dt{
     float: left;
     margin-right:8px;
-    font-family: microsoft yahei;
+    font-family: "microsoft yahei", sans-serif;
     width: 60px;
     font-weight: bold;
   }
@@ -168,7 +168,7 @@
   .attr_father li dl dd a{
     color: #005aa0;
     text-decoration: none;
-    font-family: verdana,SimSun;
+    font-family: verdana,SimSun, sans-serif;
     font-weight: normal;
     display:block;
     cursor:pointer;
@@ -215,7 +215,7 @@
     border: 1px solid #ccc;
     height: 19px;
     line-height: 19px;
-    font-family: verdana,SimSun;
+    font-family: verdana,SimSun, sans-serif;
     color: #333;
   }
   
@@ -321,7 +321,7 @@
     text-decoration: none;
     color: #999;
     float: right;
-    font-family: SimSun;
+    font-family: SimSun, sans-serif;
   }
   
   .u_cloose dd.give_up_all a:hover{
@@ -433,7 +433,7 @@
     text-align: center;
     cursor: pointer;
     padding: 0 2px;
-    font-family: verdana,SimSun;
+    font-family: verdana,SimSun, sans-serif;
   }
   
   /*.all_brand:hover{
@@ -597,7 +597,7 @@
   }
   
   .price_width dd a{
-    font-family: verdana,SimSun;
+    font-family: verdana,SimSun, sans-serif;
   }
   
   .sl-ext{
@@ -780,7 +780,7 @@
       float: left;
       margin-right: 40px;
       width: auto;
-      font-family: verdana,SimSun;
+      font-family: verdana,SimSun, sans-serif;
   }
   
   .zimu_list a{
@@ -914,7 +914,7 @@
   .mt-component{ border-top:2px solid #dcdcdc;}
   .mt-component-2{ border-top:1px solid #e8e8e8;}
   .component-filter{ float:left;}
-  .component-filter .filter-label-list{ padding:28px 0px 0 35px; float:left;font-family:"microsoft yahei"; width:1165px;}
+  .component-filter .filter-label-list{ padding:28px 0px 0 35px; float:left;font-family: "microsoft yahei", sans-serif;; width:1165px;}
   .component-filter .filter-label-list .label{ float:left; color:#333; font-size:14px;}
   .component-filter .filter-label-list .filter-quanbu{ float:left;padding:0 24px 0 55px;}
   .component-filter .filter-label-list .filter-quanbu a{ font-size:12px; color:#3a78bf; font-weight:bold;}
@@ -932,7 +932,7 @@
   .component-filter .filter-label-list .fliter-list .inline-block-list{ padding-top:10px;}
   .component-filter-top .filter-label-list{ background:#efefef; padding:20px 0 20px 35px; float:left; width:1165px;}
   .component-filter-top .filter-label-list li{ float:left; padding-right:58px; width:auto; padding-left:0;}
-  .component-filter-top .filter-label-list li a{ color:#333; font-size:14px;font-family:"microsoft yahei";}
+  .component-filter-top .filter-label-list li a{ color:#333; font-size:14px;font-family: "microsoft yahei", sans-serif;;}
   .component-filter-top .filter-label-list li a:hover,.component-filter-top .filter-label-list li a.current{ color:#f93c16;}
   .component-filter-category .filter-label-list .inline-block-list{ float:none;}
 
@@ -956,20 +956,20 @@
   .price-button-strip .fP-expand .ui-btn-s, .price-button-strip .fP-expand-kword .ui-btn-s{ border:1px solid #ccc;height:18px;line-height:18px;*line-height:20px;color:#333; padding:0 10px;display:inline-block;outline:0;cursor:pointer;
   background-color: #f7f7f7;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(top,#f7f7f7,#f2f2f2);
-  background-image: -webkit-linear-gradient(top,#f7f7f7,#f2f2f2);
-  background-image: -o-linear-gradient(top,#f7f7f7,#f2f2f2);
-  background-image: linear-gradient(top,#f7f7f7,#f2f2f2);
+  background: -moz-linear-gradient(top,#f7f7f7,#f2f2f2);
+  background: -webkit-linear-gradient(top,#f7f7f7,#f2f2f2);
+  background: -o-linear-gradient(top,#f7f7f7,#f2f2f2);
+  background: linear-gradient(top,#f7f7f7,#f2f2f2);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f2f2f2', GradientType=0);}
   .price-button-strip .fP-expand .ui-btn-s-primary, .price-button-strip .fP-expand-kword .ui-btn-s-primary{
   color:#fff;
   border-color:#f93c16; 
   background-color: #f93c16;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(top,#f93c16,#f55658);
-  background-image: -webkit-linear-gradient(top,#f93c16,#f55658);
-  background-image: -o-linear-gradient(top,#f93c16,#f55658);
-  background-image: linear-gradient(top,#f93c16,#f55658);
+  background: -moz-linear-gradient(top,#f93c16,#f55658);
+  background: -webkit-linear-gradient(top,#f93c16,#f55658);
+  background: -o-linear-gradient(top,#f93c16,#f55658);
+  background: linear-gradient(top,#f93c16,#f55658);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f93c16', endColorstr='#f55658', GradientType=0);margin-left:8px;
   }
   .price-button-strip .fP-expand .ui-btn-s:hover,.price-button-strip .fP-expand-kword .ui-btn-s:hover{ background-position: 0 -321px;}
@@ -977,13 +977,13 @@
   .component-filter-sort .xz-button-strip{ float:left;}
   .store-checkbox{ float:left;}
   .store-checkbox .checkbox{ display:none;}
-  .store-checkbox label{ padding-left:20px; margin-left:20px; color:#666; background:url(../img/ecsc_icon.png) -5px -72px no-repeat; cursor:pointer; background-position: -5px -71px\0; +background-position: -5px -73px;}
-  .checkbox-checked label{ background:url(../img/checked-icon-r.png) 1px 1px no-repeat;background-position: 1px 2px\0;+background-position: 1px 0;}
+  .store-checkbox label{ padding-left:20px; margin-left:20px; color:#666; background:url(../img/ecsc_icon.png) -5px -72px no-repeat; cursor:pointer; background-position: -5px -71px\0;}
+  .checkbox-checked label{ background:url(../img/checked-icon-r.png) 1px 1px no-repeat;background-position: 1px 2px\0;}
   
   .component-filter-sort .button-page{ float:right; position:relative; margin-right:20px; padding-left:50px;}
-  .component-filter-sort .button-page .pageState{ top:0px; right:60px; font-size:12px;font-family:"microsoft yahei"; line-height:40px; color:#999;}
+  .component-filter-sort .button-page .pageState{ top:0px; right:60px; font-size:12px;font-family: "microsoft yahei", sans-serif;; line-height:40px; color:#999;}
   .component-filter-sort .button-page .pageState span{ color:#999;}
-  .component-filter-sort .button-page a{ float:right;width: 22px;height: 22px;line-height: 22px;display: inline-block;background: #dcdcdc;color: #fff;text-align: center;font-size: 14px;margin-top: 10px; font-family: simsun; margin-right:2px;}
+  .component-filter-sort .button-page a{ float:right;width: 22px;height: 22px;line-height: 22px;display: inline-block;background: #dcdcdc;color: #fff;text-align: center;font-size: 14px;margin-top: 10px; font-family: SimSun, sans-serif; margin-right:2px;}
   
   .component-poi-list{ position:relative;}
   .component-poi-list .poi-list{ float:left;width:1200px;}
@@ -1002,14 +1002,14 @@
   .component-poi-list li .produc-content .original-price{ float:right; margin-right:10px; color:#999;}
   .component-poi-list li .produc-content .rebate{ background-position:-455px -166px;}
   .component-poi-list li .brand{ width:238px; height:402px; border:1px solid #f93c16; position:absolute; top:0; left:0; display:none;z-index:99;}
-  .component-poi-list li .time{ font-family:"microsoft yahei"; text-align:center; height:30px; line-height:30px; background:#fff;display:none; float:left; width:100%; padding-top:10px;}
+  .component-poi-list li .time{ font-family: "microsoft yahei", sans-serif;; text-align:center; height:30px; line-height:30px; background:#fff;display:none; float:left; width:100%; padding-top:10px;}
   .component-poi-list li .group-btn{ width:237px; position:static; float:left; margin-left:-18px;}
   .component-poi-list li:hover .brand{ display:block;}
   .component-poi-list li:hover .group-btn { display:inline-block; color:#fff;}
   .component-poi-list li:hover .produc-content .rebate,.component-poi-list li .produc-content .selected{ background-position:-455px -142px;}
   .component-poi-list li:hover .time{ display:block;}
   
-  .filter-mode{ height:40px; border-bottom:2px solid #e9781c; font-family:"microsoft yahei"; margin-left:1px;}
+  .filter-mode{ height:40px; border-bottom:2px solid #e9781c; font-family: "microsoft yahei", sans-serif;; margin-left:1px;}
   .filter-mode .filter-jf{ float:left; margin-top:1px;}
   .filter-mode .filter-jf li{ float:left; height:38px; line-height:38px; text-align:center;}
   .filter-mode .filter-jf li a{ width:84px; display:inline-block; border:1px solid #dcdcdc; border-bottom:0; border-left:0;}
@@ -1022,7 +1022,7 @@
   .nch-breadcrumb { font-size: 0; *word-spacing:-1px/*IE6、7*/; text-align: left; height: 20px; padding: 15px 0; margin: 0 auto;}
   .nch-breadcrumb span { font-size: 12px; line-height: 20px; color: #999; letter-spacing: normal; word-spacing: normal; display: inline-block;*display: inline/* IE6,7*/; height: 20px; zoom: 1;}
   .nch-breadcrumb i { font-size: 14px; color: #AAA; margin-right: 4px;}
-  .nch-breadcrumb span.arrow { font-family: "宋体"; line-height: 20px; color: #AAA; margin: 0 6px;}
+  .nch-breadcrumb span.arrow { font-family: "宋体", sans-serif; line-height: 20px; color: #AAA; margin: 0 6px;}
   .nch-breadcrumb a { color: #777; display: block; }
   .nch-breadcrumb a:hover { color: #ec5151;}
   
@@ -1031,7 +1031,7 @@
 
 
 
-  row  .num {
+  .row .num {
     display: inline-block;
     width: 84px;
     height: 24px;
@@ -1116,7 +1116,7 @@
   .ecsc-breadcrumb .crumbs-nav-item{ float:left;}
   .ecsc-breadcrumb h1{ font-size:18px; font-weight:700; color:#666; float:left; font-family: "microsoft yahei";}
   .ecsc-breadcrumb span{ float:left; font-size:12px;color:#666; display:inline-block; width:auto; max-width:300px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
-  .ecsc-breadcrumb .arrow{ font-family: "宋体";line-height: 24px;color: #AAA;margin: 0 6px;}
+  .ecsc-breadcrumb .arrow{ font-family: "宋体", sans-serif;line-height: 24px;color: #AAA;margin: 0 6px;}
   .ecsc-breadcrumb .breadcrumb-item{ position:relative; display:inline-block; cursor:pointer; z-index:100;overflow:visible;}
   .ecsc-breadcrumb .breadcrumb-item .filter-tag{ border:1px solid #dcdcdc; height:24px; line-height:24px; padding:0 25px 0 10px; overflow:visible;}
   .ecsc-breadcrumb .breadcrumb-item .filter-tag .sc-icon-right{ top:10px;right:8px;}
@@ -1130,7 +1130,7 @@
   .ecsc-breadcrumb .dorpdown-layer li.current a{ color:#f93c16;}
   .ecsc-breadcrumb .hover .filter-tag{ border-color:#f93c16;}
   .ecsc-breadcrumb .hover .dorpdown-layer{ display:block;}
-  .ecsc-breadcrumb .empty{ color:#999; float:right; font-family:"microsoft yahei";}
+  .ecsc-breadcrumb .empty{ color:#999; float:right; font-family: "microsoft yahei", sans-serif;;}
   
 .brand_div .brand_img_word a { color: #666;}
 
@@ -1994,7 +1994,6 @@
     color: #999;
     line-height: 22px;
     text-decoration-line: line-through;
-    text-decoration: line-through;
   }
   
   .case-wrapper .price {
@@ -2320,7 +2319,7 @@
 
 .shared-goods .ecsc-layout-210{ float:right;}
 .shared-goods .ecsc-goods-main{ float:left;}
-.other-group h1{ font-size:16px; color:#333; height:40px; line-height:40px;font-family:"microsoft yahei"; font-weight: normal;}
+.other-group h1{ font-size:16px; color:#333; height:40px; line-height:40px;font-family: "microsoft yahei", sans-serif;; font-weight: normal;}
 .other-group .plist-wrap{ margin-bottom:40px;}
 .other-group .p-list-wrap ul{ width:955px;}
 .other-group .p-list-wrap ul li{ margin:0 11px 0 0;}
@@ -2328,7 +2327,7 @@
 .other-group .item .p-name{ width:100%; padding-top:5px;}
 .other-group .item .p-price{ padding-top:10px; font-size:14px; color:#f93c16;}
 .other-group .item .p-num{ float:right; padding-top:10px; color:#9fa0a0;}
-.goods-detail-title .tabs{ float:left; border-left:1px solid #dcdcdc;font-family:"microsoft yahei";}
+.goods-detail-title .tabs{ float:left; border-left:1px solid #dcdcdc;font-family: "microsoft yahei", sans-serif;;}
 .goods-detail-title .tabs li{ float:left; height:31px; line-height:31px; *line-height:29px; font-size:14px; padding:0 35px; border:1px solid #dcdcdc; border-bottom:0; border-left:0; cursor:pointer;}
 .goods-detail-title .tabs li.current{ background:#f93c16; border-color:#f93c16; color:#fff; margin-left:-1px;}
 .goods-detail-title .tabs li.first{ margin-left:-1px;}
@@ -2351,7 +2350,7 @@
 .other-group .item-list .biz-rebate{ width:78px; color:#f68a00; font-size:16px;}
 .other-group .item-list .sale{ width:60px;}
 
-.ecsc-single-desc{ width:945px; float:left;font-family:"microsoft yahei"; position:relative; padding-top:43px;}
+.ecsc-single-desc{ width:945px; float:left;font-family: "microsoft yahei", sans-serif;; position:relative; padding-top:43px;}
 .ecsc-goods-item .panel{ padding-top:8px; float:left; width:945px;}
 .group-goods .ecsc-goods-item .panel{ padding-top:0;}
 .ecsc-goods-item .panel .panel-mt{ font-size:16px; color:#727171; height:36px; line-height:36px; padding-bottom:5px; float:left; width:100%; position:relative;}
@@ -2392,7 +2391,7 @@
 .rate{ width:82px; height:82px; border:2px solid #f68a00; border-radius:50px; float:left; margin:0px 35px 0 30px; text-align:center;}
 .rate strong{ font-size:30px; color:#f68a00; padding:23px 0 3px 3px; width:100%; display:block; height:24px; line-height:24px;}
 .rate strong span{ font-size:12px; font-weight:normal;}
-.rate .hp{ font-family:"microsoft yahei";}
+.rate .hp{ font-family: "microsoft yahei", sans-serif;;}
 .percent { float: left;width: 186px;height: 74px;padding: 8px 0;}
 .percent dl { padding: 3px 0;overflow: hidden;zoom: 1;}
 .percent dt { float: left;width: 70px;}
@@ -2400,7 +2399,7 @@
 .percent dd { float: left;width: 100px;height: 10px;margin-top: 6px;overflow: hidden;background: #cccccc;}
 .percent dd div {overflow: hidden;height: 10px;width: 0;background-color: #f68a00;}
 .actor-new{ float:right; width:490px; overflow:hidden;}
-.actor-new dt{ font-size:14px; color:#333;font-family:"microsoft yahei"; line-height:25px;}
+.actor-new dt{ font-size:14px; color:#333;font-family: "microsoft yahei", sans-serif;; line-height:25px;}
 .actor-new dd{ overflow:hidden;}
 .conmm-tags { float: left;height: 21px;line-height: 21px;padding: 0 7px;margin-right: 5px;background: #fce8cc;}
 .conmm-tags span {color: #777;}
@@ -2411,13 +2410,13 @@
 .m-tab-trigger li{ float:left; padding:0 20px; margin-bottom:5px; border-right:1px solid #c9c9c9;}
 .m-tab-trigger li.last{ border-right:0;}
 .m-tab-trigger li.first{ padding-left:10px;}
-.m-tab-trigger li a{ font-size:14px;font-family:"microsoft yahei"; }
+.m-tab-trigger li a{ font-size:14px;font-family: "microsoft yahei", sans-serif;; }
 .m-tab-trigger li.on a{ color:#f93c16;}
 
 .ratelist-item{ border-bottom: 1px solid #dcdcdc;padding: 30px 0px 10px;color: #222;font-size: 12px; overflow:hidden;}
 .ratelist-item .user-info-block{float: left;margin-right: 50px;width: 85px;text-align: center;}
 .ratelist-item .avatar-wrapper{ width:85px; height:85px;}
-.ratelist-item .name-wrapper{ font-size:14px; line-height:25px;font-family:"microsoft yahei"; }
+.ratelist-item .name-wrapper{ font-size:14px; line-height:25px;font-family: "microsoft yahei", sans-serif;; }
 .review-content-wrapper{ overflow:hidden; width:570px; margin-right:50px; float:left;}
 .ratelist-item .info{ margin-bottom: 10px;color: #999; height:18px;line-height: 18px;}
 .ratelist-item .info .rate-status { float: left;font-style: normal; height:18px;}
@@ -2429,7 +2428,7 @@
 .ratelist-item .hf{ margin-top:10px;}
 .ratelist-item .conmm-tags{ background:#fff; border:1px solid #dfc39e; margin-right:10px;}
 .comment-operate{ float:right; width:100%; text-align:right; margin-top:10px;}
-.comment-operate .reply,.comment-operate .nice{ position:relative; padding-left:20px; color:#666;font-family:"microsoft yahei"; margin-left:30px; cursor:pointer;}
+.comment-operate .reply,.comment-operate .nice{ position:relative; padding-left:20px; color:#666;font-family: "microsoft yahei", sans-serif;; margin-left:30px; cursor:pointer;}
 .comment-operate i{ display:inline-block; width:14px; height:14px; position:absolute; top:2px;}
 .comment-operate .reply i{ background-position: -176px -262px; left:0px;}
 .comment-operate .nice i{ background-position:-197px -262px; left:0;} 

@@ -52,7 +52,6 @@ b {
     position: absolute;
     top: 20%;
     right: 10%;
-    cursor: pointer;
     border-radius: 50%;
     border: solid 14px #524c4c;
     overflow: hidden;

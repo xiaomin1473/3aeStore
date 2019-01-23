@@ -35,7 +35,7 @@ html {
 
 body { 
   line-height: 1;
-  font-family: Microsoft Yahei,SimSun,Helvetica;
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
   background-color: #fff;
 }
 
@@ -122,7 +122,7 @@ hr {
   src: url("../font/iconfont/iconfont.eot") format('embedded-opentype'), url("../font/iconfont/iconfont.woff") format('woff'), url("../font/iconfont/iconfont.ttf") format('truetype'), url("../font/iconfont/iconfont.svg") format('svg');
 }
 .iconfont {
-  font-family: 'iconfont';
+  font-family: 'iconfont', Helvetica, Arial, Verdana, Tahoma, sans-serif;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;

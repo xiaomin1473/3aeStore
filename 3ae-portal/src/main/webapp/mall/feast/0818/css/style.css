@@ -46,7 +46,7 @@ table {
 * {
    text-decoration: none;
    list-style: none;
-   font-family: "Microsoft Yahei";
+   font-family: "Microsoft Yahei", sans-serif;
    font-size: 12px;
    color: #000;
    border-style: none;
@@ -531,7 +531,7 @@ body {
         height: 3600px;
         background-size: 1920px;
     }
-
+}
 @media (max-width: 1280px) {
     .wrapper {
         position: relative;
@@ -540,7 +540,7 @@ body {
         height: 3600px;
         background-size: 1920px;
     }
-
+}
 @media (max-width: 1024px) {
     .wrapper {
         position: relative;
