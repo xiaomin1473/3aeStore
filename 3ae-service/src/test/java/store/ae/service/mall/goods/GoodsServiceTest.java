@@ -11,6 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.vo.mall.goods.category.CategoryVo;
 
@@ -53,12 +56,49 @@ public class GoodsServiceTest {
 
 	@Test
 	public void testGetGoodsList() {
-		fail("Not yet implemented");
+		// 数据库连接池配置
+		JedisPoolConfig config = new JedisPoolConfig();
+		
+		// 设置最大连接数
+		config.setMaxTotal(30);
+		
+		// 设置最大空闲连接数
+		config.setMaxIdle(10);
+		
+		JedisPool jedisPool = new JedisPool(config, "3ae.store", 56379);
+		
+		// 保存
+		Jedis jedis = null;
+		
+		try {
+			jedis = jedisPool.getResource();
+			
+			// 设置数据
+			jedis.set("name2", "张三到此一游！");
+			
+			String value = jedis.get("name");
+			String value2 = jedis.get("name2");
+			
+			System.out.println(value);
+			System.out.println(value2);
+			
+			Assert.assertTrue(value != null);
+		} catch (Exception e) {
+			
+		} finally {
+			// 释放资源
+			if(jedis != null) {
+				jedis.close();
+			}
+			if(jedisPool != null) {
+				jedisPool.close();
+			}
+		}
 	}
 
 	@Test
 	public void testGetGoodsDetailById() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test

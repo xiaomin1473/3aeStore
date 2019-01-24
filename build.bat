@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Add daily"
+git commit -m "Add spring-cache"
 git push
 
 mvn install

@@ -3,10 +3,19 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans.xsd
-http://www.springframework.org/schema/context
-http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- 加载配置文件 -->
+	<bean
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:store/ae/dao/mall/config/mall-jdbc.properties</value>
+            </list>
+        </property>
+    </bean>
 		
 	<!-- 配置扫描dao接口包, 动态实现dao接口, 注入到spring容器中 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
@@ -16,17 +25,12 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 		<property name="basePackage" value="store.ae.dao.mall" />
 	</bean>
 	
-	<!-- 配置RedisDao -->
 	<bean id="redisDao" class="store.ae.dao.mall.cache.RedisDao">
 		<constructor-arg index="0" value="3ae.store" />
-		<constructor-arg index="1" value="6379" />
+		<constructor-arg index="1" value="56379" />
 	</bean>
-	
-	<!-- 配置数据库相关参数properties属性: ${url} -->
-	<context:property-placeholder location="classpath:store/ae/dao/mall/config/mall-jdbc.properties"/>
 
-	<!-- 配置整合mybatis过程 -->
-	<!-- 数据库连接池 -->
+	<!-- mysql连接池 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<!-- 配置连接池属性 -->
 		<property name="driverClassName" value="${jdbc.driver}"/>
@@ -57,7 +61,7 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	     <property name="testOnReturn" value="false" />
 	</bean>
 	
-	<!-- 配置SqlSessionFactory对象 -->
+	<!-- 配置整合mybatis过程 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 注入数据库连接池 -->
 		<property name="dataSource" ref="dataSource" />

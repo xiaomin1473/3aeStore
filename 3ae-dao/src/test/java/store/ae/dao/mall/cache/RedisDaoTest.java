@@ -2,14 +2,11 @@ package store.ae.dao.mall.cache;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
-import store.ae.dao.mall.feast.SeckillDao;
-import store.ae.pojo.mall.feast.Seckill;
 
 /**
  * 配置spring和junit整合, junit启动时加载springIOC容器
@@ -23,17 +20,17 @@ import store.ae.pojo.mall.feast.Seckill;
 @ContextConfiguration({"classpath:store/ae/dao/mall/config/mall-dao.xml"})
 
 public class RedisDaoTest {
-	private int id = 1002;
+	// private int id = 1002;
 
-	@Autowired
-	private RedisDao redisDao;
+	// @Autowired
+	// private RedisDao redisDao;
 	
-	@Autowired
-	private SeckillDao seckillDao;
+	// @Autowired
+	// private SeckillDao seckillDao;
 	
 	@Test
 	public void testRedis() {
-		JedisPool jedisPool = new JedisPool("3ae.store", 6379);
+		JedisPool jedisPool = new JedisPool("3ae.store", 56379);
 		System.out.println("connection: " + jedisPool.toString());
 		Jedis jedis = jedisPool.getResource();
 		if(jedis == null) {
@@ -52,7 +49,7 @@ public class RedisDaoTest {
 	@Test
 	public void testSeckill() throws Exception {
 		//get and put
-		Seckill seckill =  redisDao.getSeckill(id);
+		/*Seckill seckill =  redisDao.getSeckill(id);
 		if(seckill == null) {
 			seckill = seckillDao.queryById(id);
 			System.out.println(seckill);
@@ -63,12 +60,11 @@ public class RedisDaoTest {
 				System.out.println(seckill);
 			}
 		}
-		System.out.println("redis get = " + seckill);
+		System.out.println("redis get = " + seckill);*/
 	}
 
 	@Test
 	public void testPutSeckill() {
-		
 	}
 
 }
