@@ -1,12 +1,14 @@
 package store.ae.pojo.mall.goods;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 import lombok.Data;
 
+@SuppressWarnings("serial")
 @Data
-public class Goods {
+public class Goods implements Serializable {
 
 	private Long goodsId;
 	

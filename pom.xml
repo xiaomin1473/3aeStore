@@ -51,13 +51,14 @@
          <slf4j.version>1.8.0-beta2</slf4j.version>
          
          <!-- 序列化 -->
+         <commons-lang3.version>3.8.1</commons-lang3.version>
          <commons-pool2.version>2.6.0</commons-pool2.version>
          <protobuf-java.version>3.6.1</protobuf-java.version>
          <protostuff.version>1.6.0</protostuff.version>
          
          <!-- redis -->
-            <jedis.version>3.0.1</jedis.version>
-            <spring-data-redis.version>2.1.4.RELEASE</spring-data-redis.version>
+            <jedis.version>2.10.1</jedis.version>
+            <spring-data-redis.version>1.8.18.RELEASE</spring-data-redis.version>
          
          <!-- mysql -->
          <druid.version>1.1.12</druid.version>
@@ -163,6 +164,13 @@
    <dependencyManagement>
       <dependencies>
       <!-- 公共资源库 -->
+      <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		 <dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>${commons-lang3.version}</version>
+		 </dependency>
+      
          <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>

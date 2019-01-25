@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:tx="http://www.springframework.org/schema/tx"
     xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx  
+    	http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<!-- 加载配置文件 -->
 	<bean
-        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>classpath:store/ae/dao/mall/config/mall-jdbc.properties</value>
-                <value>classpath:store/ae/dao/mall/config/mall-redis.properties</value>
-            </list>
-        </property>
-    </bean>
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:store/ae/dao/mall/config/mall-jdbc.properties</value>
+				<value>classpath:store/ae/dao/mall/config/mall-redis.properties</value>
+			</list>
+		</property>
+	</bean>
 		
 	<!-- 配置扫描dao接口包, 动态实现dao接口, 注入到spring容器中 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
@@ -26,49 +29,10 @@
 		<property name="basePackage" value="store.ae.dao.mall" />
 	</bean>
 	
-	<!-- 配置RedisDao -->
-	<!-- <bean id="redisDao" class="store.ae.dao.mall.cache.RedisDao">
+	<bean id="redisDao" class="store.ae.dao.mall.cache.RedisDao">
 		<constructor-arg index="0" value="3ae.store" />
 		<constructor-arg index="1" value="56379" />
-	</bean> -->
-	
-	<!-- redis连接池 -->
-    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
-        <property name="maxIdle" value="${redis.maxIdle}" />
-        <property name="maxTotal" value="${redis.maxActive}" />
-        <property name="maxWaitMillis" value="${redis.maxWait}" />
-        <property name="testOnBorrow" value="${redis.testOnBorrow}" />
-    </bean>
-
-    <!-- redis服务器中心 -->
-    <bean id="jedisConnectionFactory"
-        class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
-        
-        <property name="hostName" value="${redis.host}" />
-        <property name="port" value="${redis.port}" />
-        <property name="timeout" value="${redis.timeout}" ></property>
-        <!-- <property name="password" value="${redis.pass}" /> -->
-        <property name="database" value="${redis.dbIndex}" />
-        <property name="poolConfig" ref="poolConfig" />
-    </bean>
-
-    <!-- 配置RedisTemplate -->
-    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
-        <property name="connectionFactory" ref="jedisConnectionFactory" />
-    </bean>
-
-    <!-- 配置RedisCacheManager -->
-    <bean id="redisCacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
-        <constructor-arg name="redisOperations" ref="redisTemplate" />
-        <property name="defaultExpiration" value="${redis.expiration}" />
-    </bean>
-
-    <!-- 配置RedisCacheConfig -->
-    <bean id="redisCacheConfig" class="store.ae.dao.utils.RedisCacheConfig">
-        <constructor-arg ref="jedisConnectionFactory" />
-        <constructor-arg ref="redisTemplate" />
-        <constructor-arg ref="redisCacheManager" />
-    </bean>
+	</bean>
 
 
 	<!-- mysql连接池 -->
@@ -100,14 +64,15 @@
 	     <property name="testWhileIdle" value="true" />
 	     <property name="testOnBorrow" value="false" />
 	     <property name="testOnReturn" value="false" />
-	     <!--开启事务  -->
-         <property name="enableTransactionSupport" value="true"></property>
 	</bean>
 	
 	<!-- 配置整合mybatis过程 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 注入数据库连接池 -->
 		<property name="dataSource" ref="dataSource" />
+		<!-- <property name="transactionFactory">
+			<bean id="transactionManager" class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory"></bean>
+		</property> -->
 		<!-- 配置mybatis全局配置文件:mybatis.xml -->
 		<property name="configLocation" value="classpath:store/ae/dao/common/mybatis.xml" />
 		<!-- 扫描pojo包使用别名 store.ae.pojo.Seckill => Seckill -->
