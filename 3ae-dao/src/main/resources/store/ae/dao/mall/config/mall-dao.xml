@@ -10,16 +10,10 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
-	<!-- 加载配置文件 -->
-	<bean
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations">
-			<list>
-				<value>classpath:store/ae/dao/mall/config/mall-jdbc.properties</value>
-				<value>classpath:store/ae/dao/mall/config/mall-redis.properties</value>
-			</list>
-		</property>
-	</bean>
+   <!-- 加载jdbc配置文件 -->
+   <context:property-placeholder location="classpath:store/ae/dao/mall/config/mall-jdbc.properties" ignore-unresolvable="true"/>
+   <!-- 加载redis配置文件 -->
+   <context:property-placeholder location="classpath:store/ae/dao/mall/config/mall-redis.properties" ignore-unresolvable="true"/>
 		
 	<!-- 配置扫描dao接口包, 动态实现dao接口, 注入到spring容器中 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
