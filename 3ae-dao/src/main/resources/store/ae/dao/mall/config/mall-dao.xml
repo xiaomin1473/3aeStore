@@ -61,7 +61,7 @@
 		<!--端口号  -->
 		<property name="port" value="${redis.port}" />
 		<!--如果Redis设置有密码  -->
-		<property name="password" value="${redis.pass}" />
+		<!-- <property name="password" value="${redis.pass}" /> -->
 		<!--客户端超时时间单位是毫秒  -->
 		<property name="timeout" value="${redis.timeout}" />
 		<!--redis数据库序号，redis默认有16个库（从0-15），这里默认是0 -->
