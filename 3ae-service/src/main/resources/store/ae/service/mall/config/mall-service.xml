@@ -39,7 +39,7 @@ http://www.springframework.org/schema/spring-aop-4.3.xsd">
         </property>
         <property name="enableTransactionSupport" value="true"></property>
     </bean >
-    
+
     <!-- spring自己的缓存管理器，这里定义了缓存位置名称 ，即注解中的value -->    
     <bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">    
         <constructor-arg ref="redisTemplate" />
@@ -50,13 +50,12 @@ http://www.springframework.org/schema/spring-aop-4.3.xsd">
     <cache:annotation-driven cache-manager="cacheManager" />
 
 
-	
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<!-- 注入数据库的连接池 -->
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
+
 	<!-- 配置基于注解的声明式事务
 		默认使用注解来管理事务行为 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
