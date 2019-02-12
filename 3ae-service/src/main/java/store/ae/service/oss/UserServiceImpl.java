@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 	// md5盐值字符串，用来混淆md5
 	private final String slat = "w6_Aa^p1%@HW+_ijfo&-i14#Yg_T5*%er#HLwr*aMa^F#48_5GA(mf15a^sfaFO*Htg1a_G$PI";
 	// md5盐值字符串，用来混淆md5
-		private final String tokenSlat = "w6_Aa^p1%@f15a^sfaFO*Htg1a_G$PI";
+	private final String tokenSlat = "w6_Aa^p1%@f15a^sfaFO*Htg1a_G$PI";
 	
 	private String getMD5(String userPwd) {
 		String base = userPwd +"." + slat;
