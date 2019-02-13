@@ -42,8 +42,9 @@
       
       <!-- 项目依赖版本 -->
          <!-- 公共资源库 -->
-         <commons-collections.version>3.2.2</commons-collections.version>
+         <commons-collections.version>4.3</commons-collections.version>
          <lombok.version>1.18.4</lombok.version>
+         <poi.version>4.0.1</poi.version>
          <!-- Token -->
          <nimbus-jose-jwt.version>6.7</nimbus-jose-jwt.version>
          <!-- 日志 -->
@@ -181,6 +182,12 @@
 		    <groupId>org.projectlombok</groupId>
 		    <artifactId>lombok</artifactId>
 		    <version>${lombok.version}</version>
+		 </dependency>
+		 <!-- Excel -->
+		 <dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>${poi.version}</version>
 		 </dependency>
 	 <!-- Token -->
       	 <dependency>
