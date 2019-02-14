@@ -42,7 +42,7 @@
       
       <!-- 项目依赖版本 -->
          <!-- 公共资源库 -->
-         <commons-collections.version>4.3</commons-collections.version>
+         <commons-collections.version>3.2.2</commons-collections.version>
          <lombok.version>1.18.4</lombok.version>
          <poi.version>4.0.1</poi.version>
          <!-- Token -->
