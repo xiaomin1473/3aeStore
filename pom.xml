@@ -32,6 +32,7 @@
       <module>3ae-agent</module>
       <module>3ae-manager</module>
       <module>3ae-web</module>
+      <module>3ae-flow</module>
    </modules>
 
 

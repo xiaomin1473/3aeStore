@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+	<display-name>web</display-name>
+	<session-config>
+		<session-timeout>0</session-timeout>
+	</session-config>
+	
+	<welcome-file-list>
+	    <welcome-file>index.html</welcome-file>
+	  </welcome-file-list>
+	
+	<!-- 加载所有xml配置文件 -->
+	<context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>classpath*:store/ae/*/oa/config/oa-*.xml</param-value>
+	</context-param>
+  
+  	<!-- SpringMVC 前端控制器 -->
+	<servlet>
+		<servlet-name>api-dispatcher-oa</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:store/ae/*/oa/config/oa-*.xml</param-value>
+		</init-param>
+	</servlet>
+  
+  	<servlet-mapping>
+  		<servlet-name>api-dispatcher-oa</servlet-name>
+  		<!-- 默认匹配所有请求 -->
+  		<url-pattern>/user/*</url-pattern>
+  	</servlet-mapping>
+  	
+	
+  	<!-- 配置Spring的监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- 防止Spring内存溢出监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+  	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/views/error/404.html</location>
+	</error-page>
+	
+  	
+</web-app>

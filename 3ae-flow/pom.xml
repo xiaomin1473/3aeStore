@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>store.3ae</groupId>
+    <artifactId>3ae-parent</artifactId>
+    <version>${ae.version}</version>
+  </parent>
+  <artifactId>3ae-flow</artifactId>
+  <packaging>war</packaging>
+  
+  <dependencies>
+  	<dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>tomcat-servlet-api</artifactId>
+    </dependency>
+	
+	<dependency>
+        <groupId>store.3ae</groupId>
+        <artifactId>3ae-service</artifactId>
+        <version>${ae.version}</version>
+    </dependency>
+    <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	</dependency>
+  </dependencies>
+</project>

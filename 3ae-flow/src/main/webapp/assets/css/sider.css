@@ -1,0 +1,45 @@
+.sider-ctrl {
+   position: absolute;
+   top: 0;
+   right: -42px;
+   box-sizing: border-box;
+   width: 42px;
+   height: 42px;
+   color: #fff;
+   background-color: #666;
+   border-right: solid 1px #333;
+   cursor: pointer;
+}
+
+.logo {
+   display: block;
+   text-align: center;
+   line-height: 42px;
+   color: #fff;
+}
+
+.logo .logo-img {
+   vertical-align: -7px;
+}
+
+.logo span {
+   color: #fff;
+   word-wrap: break-word;
+}
+
+.close .logo span {
+   display: none;
+}
+
+.sider-list {
+
+}
+
+.sider-list .items {
+   height: 40px;
+   line-height: 40px;
+   color: #999;
+   text-align: center;
+   background-color: #333;
+   cursor: pointer;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+      <meta name="Keywords" content="爱悦购商城,爱悦购平台,爱悦购电子商务（北京）有限公司,跨境电商">
+      <meta name="Description" content="爱悦购商城,爱悦购平台,跨境电商,爱悦购电子商务（北京）有限公司通过大数据、大物流、全交通以及全产业链等跨界联合，以“产品、服务、爱”为核心，致力于为消费者提供质优的商品、极致的服务、有担当的爱，同时推出“跨界联合”、“购爱”“正品行货”、“TO一站享 购”等多项专业服务。">
+
+      <title>睿实</title>
+      <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+      <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+      
+      <link rel="stylesheet" href="./assets/css/common.css">
+      <link rel="stylesheet" href="./assets/css/global.css">
+      <link rel="stylesheet" href="./assets/css/layer.css">
+      <link rel="stylesheet" href="./assets/css/topbar.css">
+      <link rel="stylesheet" href="./assets/css/sider.css">
+      <link rel="stylesheet" href="./assets/css/portal.css">
+      <script src="./assets/js/portal.js"></script>
+      
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+      <!--[if lt IE 9]>
+            <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+   </head>
+   <body>
+      <aside class="sider">
+         <button class="sider-ctrl" type="button">◀</button>
+         <header>
+            <a class="logo" href="/">
+               <img class="logo-img" width="26" height="26" />
+               <span>南京睿实</span>
+            </a>
+            
+         </header>
+         <ul class="sider-list">
+            <li class="items" onclick="turnToPage('portal')">首页</li>
+            <li class="items" onclick="turnToPage('user')">账户管理</li>
+            <li class="items" onclick="turnToPage('list')">申报列表</li>
+            <li class="items" onclick="turnToPage('list')">支付列表</li>
+            <li class="items" onclick="turnToPage('list')">审核列表</li>
+            <li class="items" onclick="turnToPage('database')">数据备份</li>
+         </ul>
+      </aside>
+      <div class="container">
+         <div class="topbar">
+            <div class="tips flt">
+               <span>管理控制台</span>
+            </div>
+            <ul class="menu">
+               <li class="items" onclick="turnToPage('portal')">首页</li>
+               <li class="items" onclick="turnToPage('list')">列表</li>
+               <li class="items" onclick="turnToPage('detail')">详情</li>
+            </ul>
+            <a class="logout frt" href="javascript:0" type="button" id="logout">登出</a>
+            <span class="user frt">当前用户： --- </span>
+         </div>
+         <div class="context">
+         </div>
+      </div>
+   </body>
+</html>
+
+<script>
+
+   (function sider() {
+      var siderCtrl = document.getElementsByClassName("sider-ctrl");
+      var swt = true;
+      siderCtrl[0].onclick = function() {
+
+         if(swt) {
+            this.innerHTML = '▶';
+            this.parentElement.style.width = "42px";
+            this.parentElement.nextElementSibling.style.paddingLeft="42px"
+            this.parentElement.className = "sider close";
+            swt = false;
+         }
+         else {
+            this.innerHTML = '◀';
+            this.parentElement.style.width = "200px";
+            this.parentElement.nextElementSibling.style.paddingLeft="200px"
+            this.parentElement.className = "sider";
+            swt = true;
+         }
+      }
+   })();
+
+
+   function getPage(n, container, url) {
+      var container = document.getElementsByClassName(container)[0];
+      var ajax = new XMLHttpRequest();
+      ajax.open('get', url);
+      ajax.send();
+      ajax.onreadystatechange = function () {
+         if (ajax.readyState==4 &&ajax.status==200) {
+            container.innerHTML = ajax.responseText
+      　　}
+      }
+      function addCSS(n) {
+         var links = document.getElementsByTagName('link');
+         var link = document.createElement('link');
+         link.href= "./assets/css/" + n + ".css";
+         link.rel = "stylesheet";
+         links[0].parentNode.removeChild(links[6])
+         document.getElementsByTagName('head')[0].appendChild(link);
+      }
+
+      function addJS(n) {
+         
+         var scripts = document.getElementsByTagName('script');
+         var script = document.createElement('script');
+         script.src= "./assets/js/" + n + ".js";
+         scripts[0].parentNode.removeChild(scripts[0]);
+         document.getElementsByTagName('head')[0].appendChild(script);
+      }
+
+      addCSS(n);
+      addJS(n);
+   }
+
+   getPage('portal', "context", "component/portal.html");
+
+   function turnToPage(n) {
+      switch(n) {
+         case 'detail': getPage(n,"context", "component/detail.html"); break;
+         case 'list': getPage(n,"context", "component/list.html"); break;
+         case 'portal': getPage(n,"context", "component/portal.html"); break;
+         case 'database': getPage(n,"context", "component/database.html"); break;
+      }
+   }
+
+   (function Router() {
+      // console.log(window.location.href.split('/')[4]);
+   })();
+
+
+   (function getCookie() {
+      var arr,reg = new RegExp("(^| )"+"Token"+"=([^;]*)(;|$)");
+      if(arr=document.cookie.match(reg)) {
+         return unescape(arr[2]);
+      }
+      else {
+         window.location.href = "/login.html";
+      }
+   })();
+
+   (function logout() {
+      var logout = document.getElementById("logout");
+
+      logout.addEventListener('click', function() {
+         var date = new Date();
+         date.setTime(date.getTime() - 1);
+         var arr,reg = RegExp('(^| )'+"Token"+'=([^;]+)(;|$)');
+         if (arr = document.cookie.match(reg)) {
+            var delValue = decodeURIComponent(arr[2]);
+         }
+
+         window.location.href = "/login.html";
+         
+        // console.log(delValue);
+
+         if (delValue) {
+            document.cookie = "Token"+'='+delValue+';expires='+date.toGMTString();
+         }
+      })
+   })();
+
+</script>
