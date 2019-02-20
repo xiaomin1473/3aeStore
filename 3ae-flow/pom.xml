@@ -8,6 +8,10 @@
   <artifactId>3ae-flow</artifactId>
   <packaging>war</packaging>
   
+  <build>
+  	<finalName>oa</finalName>
+  </build>
+  
   <dependencies>
   	<dependency>
         <groupId>org.apache.tomcat</groupId>
