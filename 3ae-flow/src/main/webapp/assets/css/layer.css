@@ -39,3 +39,28 @@ body {
 
 }
 
+
+.container .page-header {
+   box-sizing: border-box;
+   height: 70px;
+   padding: 0 20px;
+   line-height: 70px;
+   border-bottom: solid 1px #e8e8e8;
+}
+
+.container .page-header h4 {
+   display: inline;
+   padding-left: 4px;
+   font-size: 16px;
+   font-weight: normal;
+   color: #666;
+   border-left: solid 2px #00c4de;
+}
+
+.container .page-header .apply {
+   width: 102px;
+   height: 32px;
+   font-size: 13px;
+   color: #fff;
+   background-color: #00c4de;
+}

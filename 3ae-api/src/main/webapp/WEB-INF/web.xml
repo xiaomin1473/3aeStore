@@ -10,7 +10,7 @@
 	<!-- 加载所有xml配置文件 -->
 	<context-param>
 	   <param-name>contextConfigLocation</param-name>
-	   <param-value>classpath*:store/ae/*/*/config/*-*.xml</param-value>
+	   <param-value>classpath*:store/ae/*/oss/config/oss-*.xml</param-value>
 	</context-param>
   
   	<!-- SpringMVC 前端控制器 -->

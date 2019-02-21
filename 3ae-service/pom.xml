@@ -17,6 +17,15 @@
 		    <groupId>commons-collections</groupId>
 		    <artifactId>commons-collections</artifactId>
 		</dependency>
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		 </dependency>
+      		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		 <dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		 </dependency>
   	<!-- spring 核心 -->
 		<!-- spring service -->
 		<dependency>

@@ -107,7 +107,8 @@
          type: "POST",
          url: "/user/login",
          async: true,
-         context: context
+         context: context,
+         contentType: "application/x-www-form-urlencoded"
       }, callback)
 
       function callback(xmls) {

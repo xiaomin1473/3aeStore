@@ -45,6 +45,12 @@
          <!-- 公共资源库 -->
          <commons-collections.version>3.2.2</commons-collections.version>
          <lombok.version>1.18.4</lombok.version>
+         
+         <!-- 上传文件 -->
+         <commons-io.version>2.6</commons-io.version>
+         <commons-fileupload.version>1.4</commons-fileupload.version>
+         
+         <!-- excel -->
          <poi.version>4.0.1</poi.version>
          <!-- Token -->
          <nimbus-jose-jwt.version>6.7</nimbus-jose-jwt.version>
@@ -172,7 +178,19 @@
 		    <artifactId>commons-lang3</artifactId>
 		    <version>${commons-lang3.version}</version>
 		 </dependency>
-      
+      		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		 <dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>${commons-io.version}</version>
+		 </dependency>
+      		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		 <dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		    <version>${commons-fileupload.version}</version>
+		 </dependency>
+      		
          <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>

@@ -1,7 +1,25 @@
 <div class="page">
+   <div class="page-header">
+      <h4>数据备份</h4>
+      <div class="frt">
+         <button class="apply">导入导出</button>
+      </div>
+   </div>
    <div class="database">
-      数据备份
-      <button>导入</button>
-      <button>导出</button>
+      <div class="database-items">
+         <input id="file" type="file" name="选择文件">
+         <button id="putFile">上传导入</button>
+      </div>
+      
+      <div class="database-items">
+         <button class="date">选择日期</button><select>
+            <option value="选择日期"></option>
+            <option value="选择日期">选择日期</option>
+            <option value="选择日期">选择日期</option>
+            <option value="选择日期">选择日期</option>
+         </select>
+         <button id="outFile">导出</button>
+      </div>
+      
    </div>
 </div>

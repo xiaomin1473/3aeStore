@@ -54,8 +54,13 @@
             }        }
 
         // 打开发送
+        
         xml.open(data.type, data.url, data.async);
-        data.type == "POST" ? xml.setRequestHeader("Content-type","application/x-www-form-urlencoded") : null;
+        if(data.type == "POST") {
+            if(data.contentType) {
+                xml.setRequestHeader("Content-type", data.contentType)
+            }
+        }
 
         data.type == "POST" ? xml.send(data.context) : xml.send();
     }

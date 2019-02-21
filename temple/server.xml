@@ -165,6 +165,7 @@
                prefix="3ae_store_access_log" suffix=".log"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
       </Host>
+      
       <Host name="api.3ae.store"  appBase="/var/www/app"
             unpackWARs="true" autoDeploy="true">
           <Context path="" docBase="api/api" debug="0" reloadable="true" crossContext="true" />
@@ -184,6 +185,14 @@
           <Context path="" docBase="m" debug="0" reloadable="true" crossContext="true" />
           <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="m_3ae_store_access_log" suffix=".log"
+               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+      </Host>
+
+      <Host name="oa.3ae.store"  appBase="/var/www/app"
+            unpackWARs="true" autoDeploy="true">
+          <Context path="" docBase="main/oa/oa" debug="0" reloadable="true" crossContext="true" />
+          <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+               prefix="oa_3ae_store_access_log" suffix=".log"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
       </Host>
     </Engine>

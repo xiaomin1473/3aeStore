@@ -89,5 +89,10 @@ h3 {
 }
 
 button {
+	width: 102px;
+	height: 32px;
+	font-size: 13px;
+	color: #fff;
+	background-color: #00c4de;
 	cursor: pointer;
 }
