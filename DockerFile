@@ -1,0 +1,11 @@
+from tomcat:8.5
+
+MAINTAINER Zhao Yuming 505040575@qq.com
+
+COPY app /var/www
+
+RUN mv /var/www/server.xml  /usr/local/tomcat/conf/
+
+EXPOSE 80
+
+CMD ["catalina.sh", "run"]

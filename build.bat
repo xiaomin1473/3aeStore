@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Add OA systems"
+git commit -m "Add program package files"
 git push
 
 mvn install
