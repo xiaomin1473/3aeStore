@@ -11,13 +11,64 @@
     	from tb_expenses_apply
     </select>
     
+    <insert id="insertExpensesApply">
+    	<!-- 主键冲突，重复，报错 -->
+    	insert ignore into tb_expenses_apply(identifier, expenses_gmt, matter, amount, handler, ascriptor, expenses_type, department_type, receive_company, ascription, project_num, project_name, class_type, apply_status, remark)
+    	values (
+    		#{apply.identifier},
+	    	#{apply.expensesGmt}, 
+	    	#{apply.matter}, 
+	    	#{apply.amount}, 
+	    	#{apply.handler}, 
+	    	#{apply.ascriptor}, 
+	    	#{apply.expensesType}, 
+	    	#{apply.departmentType}, 
+	    	#{apply.receiveCompany}, 
+	    	#{apply.ascription}, 
+	    	#{apply.projectNum}, 
+	    	#{apply.projectName}, 
+	    	#{apply.classType}, 
+	    	#{apply.applyStatus}, 
+	    	#{apply.remark}
+	    )
+    </insert>
+    
     <select id="queryAllExpensesPayment" resultType="Payment">
     	select payment_id, identifier, verify_id, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark, gmt_create, gmt_modified
     	from tb_expenses_payment
     </select>
     
+    <insert id="insertExpensesPayment">
+    	<!-- 主键冲突，重复，报错 -->
+    	insert ignore into tb_expenses_payment(identifier, verify_id, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark)
+    	values (
+    		#{payment.identifier},
+	    	#{payment.verifyId},
+	    	#{payment.paymentType},
+	    	#{payment.paymentBank},
+	    	#{payment.amount},
+	    	#{payment.voucher},
+	    	#{payment.handler},
+	    	#{payment.paymentGmt},
+	    	#{payment.remark}
+	    )
+    </insert>
+    
     <select id="queryAllExpensesVerify" resultType="Verify">
-    	select verify_id, identifier, text_1, text_2, handler, verify_status, remark, gmt_create, gmt_modified
+    	select verify_id, identifier, text_one, text_two, handler, verify_status, remark, gmt_create, gmt_modified
     	from tb_expenses_verify
     </select>
+    
+    <insert id="insertExpensesVerify">
+    	<!-- 主键冲突，重复，报错 -->
+    	insert ignore into tb_expenses_verify(identifier, text_one, text_two, handler, verify_status, remark)
+    	values (
+    		#{verify.identifier},
+	    	#{verify.textOne},
+	    	#{verify.textTwo},
+	    	#{verify.handler},
+	    	#{verify.verifyStatus},
+	    	#{verify.remark}
+	    )
+    </insert>
 </mapper>

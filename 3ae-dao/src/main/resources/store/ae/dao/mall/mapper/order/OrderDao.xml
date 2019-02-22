@@ -5,7 +5,7 @@
     
 <mapper namespace="store.ae.dao.mall.order.OrderDao">
     <!-- 目的： 为dao接口提供sql语句配置 -->
-        
+    
     <select id="queryOrderByOrderId" resultType="Order">
     	select order_id, user_id, logistics_id, category_type, discount_way, discount, payment, invoice, order_status, after_sale_status, gmt_create, gmt_modified
     	from tb_order
@@ -17,7 +17,6 @@
     	from tb_order
     	where user_id = #{userId}
     </select>
-
     
     <select id="queryOrderBuyerByOrderId" resultType="OrderBuyer">
     	select order_id, category_type, user_name, buyer_name, buyer_phone, buyer_address, gmt_create, gmt_modified

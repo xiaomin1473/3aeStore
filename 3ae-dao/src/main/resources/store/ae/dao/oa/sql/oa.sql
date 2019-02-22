@@ -180,8 +180,8 @@ values
 CREATE TABLE tb_expenses_verify (
 `verify_id` bigint NOT NULL AUTO_INCREMENT COMMENT '审核ID',
 `identifier` varchar(32) NOT NULL COMMENT '费用申请编号',
-`text_1` varchar(240) NOT NULL COMMENT '增加条目1',
-`text_2` varchar(240) NOT NULL COMMENT '增加条目2',
+`text_one` varchar(240) NOT NULL COMMENT '增加条目1',
+`text_two` varchar(240) NOT NULL COMMENT '增加条目2',
 `handler` varchar(32) NOT NULL COMMENT '审核经办人',
 `verify_status` tinyint NOT NULL DEFAULT -1 COMMENT '默认-1数据异常 0待提交 1待付款 2未付款 3已完成',
 `remark` varchar(240) NOT NULL COMMENT '备注',
@@ -193,7 +193,7 @@ key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='费用审核表';
 
 -- 初始化数据
-insert into tb_expenses_verify(identifier, text_1, text_2, handler, verify_status, remark)
+insert into tb_expenses_verify(identifier, text_one, text_two, handler, verify_status, remark)
 values
 	('YX19010001', '…………', '…………', '姜叶', 0, '无');
 

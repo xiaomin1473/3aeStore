@@ -1,7 +1,9 @@
 package store.ae.service.oa;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -9,11 +11,15 @@ import java.util.List;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import store.ae.dao.oa.ExpensesDao;
 import store.ae.pojo.oa.Apply;
+import store.ae.vo.oa.Expenses;
 
 
 @Service
@@ -23,6 +29,10 @@ public class DatabaseServiceImpl implements DatabaseService {
 	private ExpensesDao expensesDao;
 	
 	
+	/**	时间序列化
+	 * @param l
+	 * @return
+	 */
 	public static String stampToDate(long l){
         String res;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -101,10 +111,54 @@ public class DatabaseServiceImpl implements DatabaseService {
 		wb.close();
 	}
 
+	@SuppressWarnings("unused")
 	@Override
-	public List<Apply> loadApplyInfo(String xlsPath) throws IOException {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Expenses> loadxlsToDatabase(String xlsPath) throws IOException {
+		
+		
+		List<Expenses> expensesList = null;
+
+		
+		FileInputStream fileIn = new FileInputStream(xlsPath);
+			
+		Workbook wb0 = new HSSFWorkbook(fileIn);
+		
+		// 第一个表格
+		Sheet sht0 = wb0.getSheetAt(0);
+		
+		for (Row r : sht0) {
+	        //如果当前行的行号（从0开始）未达到2（第三行）则从新循环
+			if(r.getRowNum()<1){
+				continue;
+			}
+			//创建实体类
+			
+			Expenses expenses = new Expenses();
+			
+			//取出当前行第1个单元格数据，并封装在info实体stuName属性上
+			expenses.setIdentifier(r.getCell(1).getStringCellValue());
+			expenses.setExpensesGmt(r.getCell(2).getDateCellValue());
+			expenses.setMatter(r.getCell(3).getStringCellValue());
+			
+			BigDecimal price = new BigDecimal(r.getCell(4).getNumericCellValue());
+			
+			expenses.setAmount(price);
+			expenses.setHandler(r.getCell(5).getStringCellValue());
+			expenses.setAscriptor(r.getCell(6).getStringCellValue());
+			expenses.setDepartmentType(r.getCell(9).getStringCellValue());
+			expenses.setReceiveCompany(r.getCell(10).getStringCellValue());
+			expenses.setAscription(r.getCell(11).getStringCellValue());
+			expenses.setExpensesType(r.getCell(12).getStringCellValue());
+			expenses.setProjectNum(r.getCell(13).getStringCellValue());
+			expenses.setProjectName(r.getCell(14).getStringCellValue());
+			expenses.setClassType(r.getCell(15).getStringCellValue());
+			
+			
+			expensesList.add(expenses);
+        }
+		
+	        fileIn.close();
+		return expensesList;
 	}
 
 }

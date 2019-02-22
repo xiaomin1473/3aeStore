@@ -44,7 +44,6 @@ public class UserServiceImpl implements UserService {
 		return userDao.queryUserById(Id);
 	}
 	
-	@Cacheable("queryUser")
 	@Override
 	public User queryUserByUserName(String userName) {
 		User user = userDao.queryByUserName(userName);
@@ -52,7 +51,6 @@ public class UserServiceImpl implements UserService {
 		return user;
 	}
 	
-	@Cacheable("checkUserInfo")
 	@Override
 	public boolean checkUserInfo(String userName, String userPwd) {
 		User user = userDao.queryByUserName(userName);

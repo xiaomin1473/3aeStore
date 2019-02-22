@@ -10,9 +10,9 @@ public class Verify {
 	
 	private String identifier;
 	
-	private String text1;
+	private String textOne;
 	
-	private String text2;
+	private String textTwo;
 	
 	private String handler;
 	

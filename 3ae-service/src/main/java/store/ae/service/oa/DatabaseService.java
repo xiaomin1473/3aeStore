@@ -3,7 +3,7 @@ package store.ae.service.oa;
 import java.io.IOException;
 import java.util.List;
 
-import store.ae.pojo.oa.Apply;
+import store.ae.vo.oa.Expenses;
 
 /**
  * 	数据备份
@@ -19,7 +19,12 @@ public interface DatabaseService {
 	 * @throws IOException
 	 */
 	public void createOutWorkbook(String fileName) throws IOException;
-	
-	public List<Apply> loadApplyInfo(String xlsPath) throws IOException;
+
+	/**
+	 * @param xlsPath
+	 * @return
+	 * @throws IOException
+	 */
+	List<Expenses> loadxlsToDatabase(String xlsPath) throws IOException;
 	
 }
