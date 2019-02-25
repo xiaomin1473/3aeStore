@@ -40,10 +40,9 @@
     
     <insert id="insertExpensesPayment">
     	<!-- 主键冲突，重复，报错 -->
-    	insert ignore into tb_expenses_payment(identifier, verify_id, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark)
+    	insert ignore into tb_expenses_payment(identifier, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark)
     	values (
     		#{payment.identifier},
-	    	#{payment.verifyId},
 	    	#{payment.paymentType},
 	    	#{payment.paymentBank},
 	    	#{payment.amount},

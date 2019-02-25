@@ -11,6 +11,7 @@ import java.util.List;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -19,7 +20,8 @@ import org.springframework.stereotype.Service;
 
 import store.ae.dao.oa.ExpensesDao;
 import store.ae.pojo.oa.Apply;
-import store.ae.vo.oa.Expenses;
+import store.ae.pojo.oa.Payment;
+import store.ae.pojo.oa.Verify;
 
 
 @Service
@@ -111,54 +113,69 @@ public class DatabaseServiceImpl implements DatabaseService {
 		wb.close();
 	}
 
-	@SuppressWarnings("unused")
+	@SuppressWarnings({ "unused", "resource" })
 	@Override
-	public List<Expenses> loadxlsToDatabase(String xlsPath) throws IOException {
-		
-		
-		List<Expenses> expensesList = null;
+	public void loadxlsToDatabase(String xlsPath) throws IOException {
 
 		
 		FileInputStream fileIn = new FileInputStream(xlsPath);
-			
+		
 		Workbook wb0 = new HSSFWorkbook(fileIn);
 		
-		// 第一个表格
-		Sheet sht0 = wb0.getSheetAt(0);
+		Sheet sht0 = wb0.getSheetAt(2);
 		
-		for (Row r : sht0) {
-	        //如果当前行的行号（从0开始）未达到2（第三行）则从新循环
-			if(r.getRowNum()<1){
-				continue;
-			}
-			//创建实体类
-			
-			Expenses expenses = new Expenses();
-			
-			//取出当前行第1个单元格数据，并封装在info实体stuName属性上
-			expenses.setIdentifier(r.getCell(1).getStringCellValue());
-			expenses.setExpensesGmt(r.getCell(2).getDateCellValue());
-			expenses.setMatter(r.getCell(3).getStringCellValue());
-			
-			BigDecimal price = new BigDecimal(r.getCell(4).getNumericCellValue());
-			
-			expenses.setAmount(price);
-			expenses.setHandler(r.getCell(5).getStringCellValue());
-			expenses.setAscriptor(r.getCell(6).getStringCellValue());
-			expenses.setDepartmentType(r.getCell(9).getStringCellValue());
-			expenses.setReceiveCompany(r.getCell(10).getStringCellValue());
-			expenses.setAscription(r.getCell(11).getStringCellValue());
-			expenses.setExpensesType(r.getCell(12).getStringCellValue());
-			expenses.setProjectNum(r.getCell(13).getStringCellValue());
-			expenses.setProjectName(r.getCell(14).getStringCellValue());
-			expenses.setClassType(r.getCell(15).getStringCellValue());
-			
-			
-			expensesList.add(expenses);
-        }
+		Row r = sht0.getRow(3);
+		int total = sht0.getLastRowNum();
 		
-	        fileIn.close();
-		return expensesList;
+		Apply apply = new Apply();
+		Payment payment = new Payment();
+		Verify verify = new Verify();
+		
+			for(int i = 3; i < total; i++) {
+				r = sht0.getRow(i);
+				
+				// 跳过没有编号的数据或空行
+				if(r.getCell(1).getStringCellValue() == null) {
+					continue;
+				}
+				
+				//取出当前行第1个单元格数据，并封装在info实体stuName属性上
+				apply.setIdentifier(r.getCell(1) != null ? r.getCell(1).getStringCellValue() : "");
+				apply.setExpensesGmt(r.getCell(2).getCellType() != CellType.STRING ? 
+						r.getCell(2).getDateCellValue() : null);
+				
+				apply.setMatter(r.getCell(3) != null ? r.getCell(3).getStringCellValue() : "");
+
+				BigDecimal price = new BigDecimal(r.getCell(4) !=null ? r.getCell(4).getNumericCellValue() : 0.00);
+				
+				apply.setAmount(price);
+				apply.setHandler(r.getCell(5) != null ? r.getCell(5).getStringCellValue() : "");
+				apply.setAscriptor(r.getCell(6) != null ? r.getCell(6).getStringCellValue() : "");
+				
+				apply.setDepartmentType(r.getCell(9) != null ? r.getCell(9).getStringCellValue() : "");
+				apply.setReceiveCompany(r.getCell(10) != null ? r.getCell(10).getStringCellValue() : "");
+				apply.setAscription(r.getCell(11) != null ? r.getCell(11).getStringCellValue() : "");
+				apply.setExpensesType(r.getCell(12) != null ? r.getCell(12).getStringCellValue() : "");
+				apply.setProjectNum(r.getCell(13) != null ? r.getCell(13).getStringCellValue() : "");
+				apply.setProjectName(r.getCell(14) !=null ? r.getCell(14).getStringCellValue() : "");
+				apply.setClassType(r.getCell(15) !=null ? r.getCell(15).getStringCellValue() : "");
+				apply.setApplyStatus(3);
+				apply.setRemark("无");
+				verify.setIdentifier(r.getCell(1) != null ? r.getCell(1).getStringCellValue() : "");
+				verify.setVerifyStatus(0);
+				payment.setAmount(price);
+				payment.setHandler("未知");
+				payment.setIdentifier(r.getCell(1) != null ? r.getCell(1).getStringCellValue() : "");
+				payment.setPaymentBank(r.getCell(22) != null ? r.getCell(22).getStringCellValue() : "");
+				payment.setPaymentGmt(r.getCell(21) != null ? r.getCell(21).getDateCellValue() : null);
+				payment.setVoucher(0L);
+				payment.setPaymentType(r.getCell(23) != null ? r.getCell(23).getStringCellValue() : "");
+
+				
+				expensesDao.insertExpensesApply(apply);
+				expensesDao.insertExpensesPayment(payment);
+				expensesDao.insertExpensesVerify(verify);
+        	}
 	}
 
 }

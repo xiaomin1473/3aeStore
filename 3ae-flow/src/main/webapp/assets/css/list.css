@@ -152,8 +152,9 @@
    color: #f81828;
 }
 
-.form-body .form-items input {
-   width: 384px;
+.form-body .form-items .section {
+   box-sizing: border-box;
+   width: 446px;
    height: 30px;
    padding: 0 30px;
    color: brown;
@@ -162,7 +163,7 @@
    
 }
 
-.form-body .form-items input:hover {
+.form-body .form-items .section:hover {
    border: solid 1px #999;
 }
 
@@ -185,6 +186,7 @@
 .form-footer .cancel {
    width: 80px;
    height: 32px;
+   color: #666;
    background-color: #fff;
    border: solid 1px #ccc;
 }

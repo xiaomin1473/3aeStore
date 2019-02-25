@@ -12,8 +12,6 @@ public class Payment {
 	
 	private String identifier;
 	
-	private Long verifyId;
-	
 	private String paymentType;
 	
 	private String paymentBank;

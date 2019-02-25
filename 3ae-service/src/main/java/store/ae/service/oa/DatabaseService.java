@@ -1,9 +1,6 @@
 package store.ae.service.oa;
 
 import java.io.IOException;
-import java.util.List;
-
-import store.ae.vo.oa.Expenses;
 
 /**
  * 	数据备份
@@ -25,6 +22,6 @@ public interface DatabaseService {
 	 * @return
 	 * @throws IOException
 	 */
-	List<Expenses> loadxlsToDatabase(String xlsPath) throws IOException;
+	void loadxlsToDatabase(String xlsPath) throws IOException;
 	
 }
