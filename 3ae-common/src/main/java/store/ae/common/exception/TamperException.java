@@ -1,24 +1,24 @@
-package store.ae.common.exception.mall;
+package store.ae.common.exception;
 
 /**
  * @author sidtadpole
  * 
- * 不存在异常
+ * 篡改异常
  * 
  */
-public class AbsentException extends SystemException {
+public class TamperException extends SystemException {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public AbsentException(String message, Throwable cause) {
+	public TamperException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public AbsentException(String message) {
+	public TamperException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}

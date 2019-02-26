@@ -2,7 +2,6 @@ package store.ae.service.oa;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,6 +17,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import store.ae.common.exception.SystemException;
 import store.ae.dao.oa.ExpensesDao;
 import store.ae.pojo.oa.Apply;
 import store.ae.pojo.oa.Payment;
@@ -45,7 +45,7 @@ public class DatabaseServiceImpl implements DatabaseService {
     }
 
 	@Override
-	public void createOutWorkbook(String fileName) throws IOException {
+	public void createOutWorkbook(String fileName) throws SystemException {
 		HSSFWorkbook wb = new HSSFWorkbook();
 		//创建HSSFSheet对象
 		HSSFSheet sheet = wb.createSheet("费用申报记录");
@@ -104,23 +104,34 @@ public class DatabaseServiceImpl implements DatabaseService {
 		
 		//合并单元格CellRangeAddress构造参数依次表示起始行，截至行，起始列， 截至列
 		// sheet.addMergedRegion(new CellRangeAddress(0,0,0,3));
-		
+		FileOutputStream output = null;
 		//输出Excel文件
-		FileOutputStream output=new FileOutputStream(fileName);
-		wb.write(output);
-		output.flush();
-		output.close();
-		wb.close();
+		try {
+			output = new FileOutputStream(fileName);
+			wb.write(output);
+			output.flush();
+			output.close();
+			wb.close();
+		} catch (Exception e) {
+			
+		}
+		
+		
 	}
 
 	@SuppressWarnings({ "unused", "resource" })
 	@Override
-	public void loadxlsToDatabase(String xlsPath) throws IOException {
-
+	public void loadxlsToDatabase(String xlsPath) throws SystemException {
 		
-		FileInputStream fileIn = new FileInputStream(xlsPath);
-		
-		Workbook wb0 = new HSSFWorkbook(fileIn);
+		FileInputStream fileIn =null;
+		Workbook wb0 = null;
+		try {
+			fileIn = new FileInputStream(xlsPath);
+			
+			wb0 = new HSSFWorkbook(fileIn);
+		} catch(Exception e) {
+			
+		}
 		
 		Sheet sht0 = wb0.getSheetAt(2);
 		

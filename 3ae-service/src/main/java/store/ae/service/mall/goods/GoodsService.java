@@ -2,7 +2,7 @@ package store.ae.service.mall.goods;
 
 import java.util.List;
 
-import store.ae.common.exception.mall.AbsentException;
+import store.ae.common.exception.AbsentException;
 import store.ae.pojo.mall.goods.Goods;
 import store.ae.pojo.mall.goods.GoodsEvaluate;
 import store.ae.pojo.mall.goods.GoodsSku;

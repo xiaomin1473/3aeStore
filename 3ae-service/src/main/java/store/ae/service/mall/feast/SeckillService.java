@@ -2,8 +2,8 @@ package store.ae.service.mall.feast;
 
 import java.util.List;
 
-import store.ae.common.exception.mall.CloseException;
-import store.ae.common.exception.mall.RepeatException;
+import store.ae.common.exception.CloseException;
+import store.ae.common.exception.RepeatException;
 import store.ae.common.exception.mall.feast.SeckillException;
 import store.ae.dto.mall.feast.Exposer;
 import store.ae.dto.mall.feast.SeckilllExecution;

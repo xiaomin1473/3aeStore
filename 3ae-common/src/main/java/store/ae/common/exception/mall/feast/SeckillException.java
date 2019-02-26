@@ -1,6 +1,6 @@
 package store.ae.common.exception.mall.feast;
 
-import store.ae.common.exception.mall.SystemException;
+import store.ae.common.exception.SystemException;
 
 /**
  * @author sidtadpole

@@ -2,6 +2,8 @@ package store.ae.service.oa;
 
 import java.io.IOException;
 
+import store.ae.common.exception.SystemException;
+
 /**
  * 	数据备份
  * @author sidtadpole
@@ -15,13 +17,13 @@ public interface DatabaseService {
 	 * @return
 	 * @throws IOException
 	 */
-	public void createOutWorkbook(String fileName) throws IOException;
+	public void createOutWorkbook(String fileName) throws SystemException;
 
 	/**
 	 * @param xlsPath
 	 * @return
 	 * @throws IOException
 	 */
-	void loadxlsToDatabase(String xlsPath) throws IOException;
+	void loadxlsToDatabase(String xlsPath) throws SystemException;
 	
 }

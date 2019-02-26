@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import store.ae.common.exception.mall.CloseException;
+import store.ae.common.exception.CloseException;
 import store.ae.dto.mall.feast.Exposer;
 import store.ae.dto.mall.feast.SeckilllExecution;
 import store.ae.pojo.mall.feast.Seckill;

@@ -52,8 +52,11 @@
 }
 
 .expenses-body {
+   padding-bottom: 20px;
    padding-left: 50px;
-   background-color: #f0f0f0;
+   background-color: #fff;
+
+   overflow: auto;
 }
 
 
@@ -64,6 +67,7 @@
    margin-top: 50px;
    margin-right: 30px;
    border: solid 1px #ccc;
+   background-color: #FFF;
    box-shadow: 0 0 13px 1px rgba(1, 13, 37, .15);
 }
 

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
-import store.ae.common.exception.mall.AbsentException;
+import store.ae.common.exception.AbsentException;
 import store.ae.dao.mall.order.OrderDao;
 import store.ae.pojo.mall.order.Order;
 import store.ae.pojo.mall.order.OrderBuyer;

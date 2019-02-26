@@ -10,6 +10,25 @@ import store.ae.pojo.oa.Verify;
 
 
 public interface ExpensesDao {
+	
+	/**
+	 * @param identifier
+	 * @return
+	 */
+	Apply queryApplyByIdentifier(String identifier);
+	
+	/**
+	 * @param identifier
+	 * @return
+	 */
+	Verify queryVerifyByIdentifier(String identifier);
+	
+	/**
+	 * @param identifier
+	 * @return
+	 */
+	Payment queryPaymentByIdentifier(String identifier);
+	
 	/**
 	 * @return
 	 */
@@ -43,4 +62,5 @@ public interface ExpensesDao {
 	 * @return
 	 */
 	int insertExpensesVerify(@Param("verify") Verify verify);
+	
 }

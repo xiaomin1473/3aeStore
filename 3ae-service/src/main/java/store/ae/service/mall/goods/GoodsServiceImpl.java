@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import store.ae.common.exception.mall.AbsentException;
+import store.ae.common.exception.AbsentException;
 import store.ae.dao.mall.goods.GoodsDao;
 import store.ae.pojo.mall.goods.Brand;
 import store.ae.pojo.mall.goods.Category;

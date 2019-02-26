@@ -23,6 +23,14 @@ public class ExpensesDaoTest {
 	
 	@Autowired
 	private ExpensesDao expensesDao;
+	
+	
+	@Test
+	public void testQueryExpensesApply() {
+		String identifier = "YY19010064";
+		Apply lists = expensesDao.queryApplyByIdentifier(identifier);
+		System.out.println(lists);
+	}
 
 	@Test
 	public void testQueryAllExpensesApply() {

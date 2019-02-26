@@ -6,6 +6,14 @@
 <mapper namespace="store.ae.dao.oa.ExpensesDao">
     <!-- 目的： 为dao接口提供sql语句配置 -->
     
+    
+    
+    <select id="queryApplyByIdentifier" resultType="Apply">
+    	select expenses_id, identifier, expenses_gmt, matter, amount, handler, ascriptor, expenses_type, department_type, receive_company, ascription, project_num, project_name, class_type, apply_status, remark, gmt_create, gmt_modified
+    	from tb_expenses_apply
+    	where identifier = #{identifier}
+    </select>
+    
     <select id="queryAllExpensesApply" resultType="Apply">
     	select expenses_id, identifier, expenses_gmt, matter, amount, handler, ascriptor, expenses_type, department_type, receive_company, ascription, project_num, project_name, class_type, apply_status, remark, gmt_create, gmt_modified
     	from tb_expenses_apply
@@ -34,7 +42,7 @@
     </insert>
     
     <select id="queryAllExpensesPayment" resultType="Payment">
-    	select payment_id, identifier, verify_id, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark, gmt_create, gmt_modified
+    	select payment_id, identifier, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark, gmt_create, gmt_modified
     	from tb_expenses_payment
     </select>
     

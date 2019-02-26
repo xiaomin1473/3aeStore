@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 import store.ae.common.enums.mall.feast.SeckillStatEnum;
-import store.ae.common.exception.mall.CloseException;
-import store.ae.common.exception.mall.RepeatException;
+import store.ae.common.exception.CloseException;
+import store.ae.common.exception.RepeatException;
 import store.ae.common.exception.mall.feast.SeckillException;
 import store.ae.dao.mall.cache.RedisDao;
 import store.ae.dao.mall.feast.SeckillDao;
