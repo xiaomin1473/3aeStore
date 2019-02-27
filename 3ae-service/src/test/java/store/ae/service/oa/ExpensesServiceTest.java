@@ -46,16 +46,19 @@ public class ExpensesServiceTest {
 
 	@Test
 	public void testGetApplyList() {
+		@SuppressWarnings("unused")
 		List<Apply> list = expensesService.getApplyList();
 	}
 
 	@Test
 	public void testGetVerifyList() {
+		@SuppressWarnings("unused")
 		List<Verify> list = expensesService.getVerifyList();
 	}
 
 	@Test
 	public void testGetPaymentList() {
+		@SuppressWarnings("unused")
 		List<Payment> list = expensesService.getPaymentList();
 	}
 

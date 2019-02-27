@@ -19,6 +19,7 @@ import store.ae.service.oa.DatabaseService;
 @RequestMapping("/database")
 public class DatabaseController extends BaseController {
 	
+	@SuppressWarnings("unused")
 	@Autowired
 	private DatabaseService databasesService;
 	
@@ -36,8 +37,10 @@ public class DatabaseController extends BaseController {
 			
 			InputStream inputStream = file.getInputStream();
 			POIFSFileSystem poifsFileSystem = new POIFSFileSystem(inputStream);
+			@SuppressWarnings("resource")
 			HSSFWorkbook wb = new HSSFWorkbook(poifsFileSystem);
 			// 2.读取页脚sheet
+			@SuppressWarnings("unused")
 			HSSFSheet sheetAt = wb.getSheetAt(0);
 			
 			
