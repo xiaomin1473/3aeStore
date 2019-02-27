@@ -32,14 +32,21 @@
 }
 
 .sider-list {
-
+   margin-top: 30px;
 }
 
 .sider-list .items {
+   margin: 10px 0;
    height: 40px;
    line-height: 40px;
-   color: #999;
+   color: #fff;
    text-align: center;
-   background-color: #333;
+   background-color: #26282c;
    cursor: pointer;
+}
+
+.sider-list .cur {
+   color: #fff;
+   background-color: #00c4de;
+   border-left: solid 3px #FFF;
 }

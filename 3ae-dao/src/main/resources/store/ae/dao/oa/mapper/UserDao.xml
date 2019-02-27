@@ -7,12 +7,13 @@
     <!-- 目的： 为dao接口提供sql语句配置 -->
     
     <select id="queryUserById" resultType="User" parameterType="long">
-    	select user_id, user_group_id, user_name, user_pwd, user_mark, login_status, gmt_create, gmt_modified
+    	select user_id, user_group_id, user_name, user_pwd, user_mark, user_permit, login_status, gmt_create, gmt_modified
     	from tb_user
+    	where user_id = #{userId}
     </select>
     
     <select id="queryByUserName" resultType="User" parameterType="String">
-    	select user_id, user_group_id, user_name, user_pwd, user_mark, login_status, gmt_create, gmt_modified
+    	select user_id, user_group_id, user_name, user_pwd, user_mark, user_permit, login_status, gmt_create, gmt_modified
     	from tb_user
     	where user_name = #{userName}
     </select>

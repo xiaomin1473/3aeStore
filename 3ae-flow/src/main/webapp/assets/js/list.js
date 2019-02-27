@@ -52,27 +52,47 @@
       }) 
    }
 
-      Ae.trans.AJAX({
-         type: "GET",
-         url: "/user/expenses/apply/list",
-         async: true,
-      }, callback)
+   Ae.trans.AJAX({
+      type: "GET",
+      url: "/user/expenses/apply/list",
+      async: true,
+   }, callback)
 
-      function callback(xmls) {
-         jsonName = xmls.responseText;
-         data = JSON.parse(jsonName);
+   function callback(xmls) {
+      jsonName = xmls.responseText;
+      data = JSON.parse(jsonName);
 
-         current = 0;
-         limit = 6;
-         getData(data, current, limit);
-      }
+      current = 0;
+      limit = 6;
+      getData(data, current, limit);
+   }
 
 
    function getData(data, current, limit) {
       var expensesList = '';
+      var arr,reg = new RegExp("(^| )"+"UserPermit"+"=([^;]*)(;|$)");
+      arr=document.cookie.match(reg);
 
-      for(var i = 0 ; i < limit; i++) {
+
+      for(var i = 0 ; i < limit;) {
          current++;
+         if(arr[2] == 0 ) {
+
+         } else if(arr[2] == 1010000 && "YX" == data[current].identifier.substring(0, 2)) {
+
+         } else if(arr[2] == 1020000 && "ZZ" == data[current].identifier.substring(0, 2)) {
+
+         } else if(arr[2] == 1030000 && "YF" == data[current].identifier.substring(0, 2)) {
+
+         } else if(arr[2] == 1040000 && "YY" == data[current].identifier.substring(0, 2)) {
+
+         } else if(arr[2] == 1050000 && "CG" == data[current].identifier.substring(0, 2)) {
+
+         } else {
+            continue;
+         }
+         
+         i++
          expensesList += `<li class="items">
             <div class="items-header">
                费用申请编号：` + data[current].identifier +`

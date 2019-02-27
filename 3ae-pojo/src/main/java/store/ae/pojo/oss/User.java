@@ -17,6 +17,8 @@ public class User {
 	
 	private long userGroupId;
 	
+	private long userPermit;
+	
 	private Date gmtCreate;
 	
 	private Date gmtModified;

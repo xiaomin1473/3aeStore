@@ -51,6 +51,7 @@ public class UserController extends BaseController {
 			}
 
 			UserExposer exposer = userService.exportUserToken(userName);
+			
 			result = new UserResult<UserExposer>(true, exposer);
 
 		} catch (Exception e) {

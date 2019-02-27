@@ -22,10 +22,17 @@ public class UserDaoTest {
 
 	@Test
 	public void test() {
-		Long Id = 1L;
-		User user = userDao.queryUserById(Id);
+		Long userId = 1001L;
+		User user = userDao.queryUserById(userId);
 		
 		System.out.println("sss:" + user);
+	}
+	
+	@Test
+	public void testQueryByUserName() {
+		User user = userDao.queryByUserName("caiwu");
+		
+		System.out.println("sss:" + user.getUserPermit());
 	}
 
 }

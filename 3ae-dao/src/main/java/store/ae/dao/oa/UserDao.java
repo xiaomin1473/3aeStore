@@ -14,7 +14,7 @@ public interface UserDao {
 	 * 通过id查询用户信息
 	 * 
 	 */
-	User queryUserById(@Param("Id") long Id);
+	User queryUserById(@Param("userId") long userId);
 	
 	/**
 	 * @param userName

@@ -17,6 +17,8 @@ public class User {
 	
 	private String userMark;
 	
+	private long userPermit;
+	
 	private int loginStatus;
 	
 	private Date gmtCreate;

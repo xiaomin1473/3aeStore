@@ -76,7 +76,8 @@ public class UserServiceImpl implements UserService {
 			}
 			
 			String token = getToken(userName);
-			exposer = new UserExposer(true, token, userName, nowTime.getTime());
+			
+			exposer = new UserExposer(true, token, userName, user.getUserPermit(), nowTime.getTime());
 
 		} catch (Exception e) {
 			return new UserExposer(false, userName, nowTime.getTime());
