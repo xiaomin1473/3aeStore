@@ -25,15 +25,12 @@
       </div>
    </div>
    <div class="apply-form">
-      <form class="form">
+      <form class="form" id="apply">
          <div class="form-header">
             <h3>申报流程</h3>
          </div>
          <div class="form-body">
             <ul class="form-list">
-               <li class="form-items">
-                  <label><i>*&nbsp;</i>序号:</label><input class="section" placeholder="">
-               </li>
                <li class="form-items">
                   <label><i>*&nbsp;</i>申请编号:</label><input class="section" placeholder="">
                </li>
@@ -79,7 +76,7 @@
             </ul>
          </div>
          <div class="form-footer">
-            <button class="put" type="button">申请</button>
+            <button id="put" type="reset" onclick="alert('提交成功')">申请</button>
             <button class="cancel" type="button">取消</button>
          </div>
       </form>

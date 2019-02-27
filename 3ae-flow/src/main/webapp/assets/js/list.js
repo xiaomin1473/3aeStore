@@ -93,7 +93,7 @@
          }
          
          i++
-         expensesList += `<li class="items">
+         expensesList += `<li class="items" onclick="turnToPage('detail')">
             <div class="items-header">
                费用申请编号：` + data[current].identifier +`
             </div>
@@ -129,5 +129,52 @@
       getData(data, current, limit)
    })
    
+   function put() {
+
+         var identifier = input[0].value;
+         var expensesGmt = input[1].value;
+         var matter = input[2].value;
+         var amount = input[3].value;
+         var handler = input[4].value;
+         var ascriptor = input[5].value;
+         var expensesType = input[6].value;
+         var departmentType = input[7].value;
+         var receiveCompany = input[8].value;
+         var ascription = input[9].value;
+         var projectNum = input[10].value;
+         var projectName = input[11].value;
+         var classType = input[12].value;
+
+
+
+         var context = `identifier=${identifier}&
+                        expensesGmt=${expensesGmt}&
+                        matter=${matter}&
+                        amount=${amount}&
+                        handler=${handler}&
+                        ascriptor=${ascriptor}&
+                        expensesType=${expensesType}&
+                        departmentType=${departmentType}&
+                        receiveCompany=${receiveCompany}&
+                        ascription=${ascription}&
+                        projectNum=${projectNum}&
+                        projectName=${projectName}&
+                        classType=${classType}`
+
+
+
+         Ae.trans.AJAX({
+            type: "POST",
+            url: "/user/apply/add",
+            async: true,
+            context: context,
+            contentType: "application/x-www-form-urlencoded"
+         }, callback)
+   
+         function callback(xmls) {
+            jsonName = xmls.responseText;
+            jsonName = JSON.parse(jsonName);
+         }
+   }
 
 })();
