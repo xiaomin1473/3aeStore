@@ -4,17 +4,15 @@
    (function() {
       var success = document.getElementsByClassName('status-3');
 
-      var apply = document.getElementsByClassName('apply')[0];
       var applyForm = document.getElementsByClassName('apply-form')[0];
-      var cancel = document.getElementsByClassName('cancel')[0];
 
-      apply.addEventListener('click', function() {
+      $('#apply-btn').click(function() {
          console.log("block");
 
          applyForm.style.display = 'block';
       })
 
-      cancel.addEventListener('click', function() {
+      $('#cancel').click(function() {
          console.log("none");
 
          applyForm.style.display = 'none';
@@ -113,13 +111,13 @@
       expensesBody.innerHTML = expensesList;
    }
 
-   nextPage.addEventListener('click', function() {
+   $('#nextPage').click(function() {
       current += limit;
       
       getData(data, current, limit)
    })
 
-   prePage.addEventListener('click', function() {
+   $('#prePage').click(function() {
       
       if(current <= 0) {
          alert('到头了。请翻下一页');
@@ -129,43 +127,16 @@
       getData(data, current, limit)
    })
    
-   function put() {
+   $('#put').click(function put() {
+      var context = $("#apply").serialize();
+      console.log("序列化为url格式为："+context);
+      //context = decodeURIComponent(context,true);
 
-         var identifier = input[0].value;
-         var expensesGmt = input[1].value;
-         var matter = input[2].value;
-         var amount = input[3].value;
-         var handler = input[4].value;
-         var ascriptor = input[5].value;
-         var expensesType = input[6].value;
-         var departmentType = input[7].value;
-         var receiveCompany = input[8].value;
-         var ascription = input[9].value;
-         var projectNum = input[10].value;
-         var projectName = input[11].value;
-         var classType = input[12].value;
-
-
-
-         var context = `identifier=${identifier}&
-                        expensesGmt=${expensesGmt}&
-                        matter=${matter}&
-                        amount=${amount}&
-                        handler=${handler}&
-                        ascriptor=${ascriptor}&
-                        expensesType=${expensesType}&
-                        departmentType=${departmentType}&
-                        receiveCompany=${receiveCompany}&
-                        ascription=${ascription}&
-                        projectNum=${projectNum}&
-                        projectName=${projectName}&
-                        classType=${classType}`
-
-
+      console.log("反列化为url格式为："+context);
 
          Ae.trans.AJAX({
             type: "POST",
-            url: "/user/apply/add",
+            url: "/user/expenses/apply/add",
             async: true,
             context: context,
             contentType: "application/x-www-form-urlencoded"
@@ -175,6 +146,6 @@
             jsonName = xmls.responseText;
             jsonName = JSON.parse(jsonName);
          }
-   }
+   })
 
 })();

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import store.ae.dao.oa.UserDao;
-import store.ae.dto.oss.UserExposer;
+import store.ae.dto.oa.UserExposer;
 import store.ae.pojo.oa.User;
 
 

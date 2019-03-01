@@ -3,10 +3,8 @@
 
    var file = document.getElementById('file');
    
-   var putFile = document.getElementById('putFile');
 
-
-   putFile.addEventListener('click', function() {
+   $('#putFile').click(function() {
 
       var formData = new FormData();
 

@@ -2,7 +2,7 @@
    <div class="page-header">
       <h4>申报流程</h4>
       <div class="frt">
-         <button class="apply">发起申报</button>
+         <button id="apply-btn">发起申报</button>
       </div>
    </div>
    <div class="list">
@@ -32,41 +32,41 @@
          <div class="form-body">
             <ul class="form-list">
                <li class="form-items">
-                  <label><i>*&nbsp;</i>申请编号:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>申请编号:</label><input class="section" name="identifier" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>申请日期:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>申请日期:</label><input class="section" name="expensesGmt" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>报支事项:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>报支事项:</label><input class="section" name="matter" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>金额:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>金额:</label><input class="section" name="amount" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>归属人:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>归属人:</label><input class="section" name="handler" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>归属部门:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>归属部门:</label><input class="section" name="ascriptor" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>收款单位:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>收款单位:</label><input class="section" name="expensesType" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>归属类别:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>归属类别:</label><input class="section" name="departmentType" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>费用项目:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>费用项目:</label><input class="section" name="receiveCompany" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>项目代号:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>项目代号:</label><input class="section" name="ascription" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>项目名称:</label><input class="section" placeholder="">
+                  <label><i>*&nbsp;</i>项目名称:</label><input class="section" name="projectNum" placeholder="">
                </li>
                <li class="form-items">
                   <label><i>*&nbsp;</i>分类标识:</label>
-                  <select class="section">
+                  <select name="classType" class="section">
                      <option value="参加考核">参加考核</option>
                      <option value="记入 2019 但不参加考核">记入 2019 但不参加考核</option>
                      <option value="内部转换">内部转换</option>
@@ -76,8 +76,8 @@
             </ul>
          </div>
          <div class="form-footer">
-            <button id="put" type="reset" onclick="alert('提交成功')">申请</button>
-            <button class="cancel" type="button">取消</button>
+            <button id="put" type="button">申请</button>
+            <button id="cancel" type="button">取消</button>
          </div>
       </form>
    </div>

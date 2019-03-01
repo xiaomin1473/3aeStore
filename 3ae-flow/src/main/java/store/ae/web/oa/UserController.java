@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import store.ae.dto.oss.UserExposer;
-import store.ae.dto.oss.UserResult;
+import store.ae.dto.oa.UserExposer;
+import store.ae.dto.oa.UserResult;
 import store.ae.pojo.oa.User;
 import store.ae.service.oa.UserService;
 

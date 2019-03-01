@@ -1,4 +1,4 @@
-package store.ae.dto.oss;
+package store.ae.dto.oa;
 
 import store.ae.pojo.oss.User;
 

@@ -1,6 +1,6 @@
 package store.ae.service.oa;
 
-import store.ae.dto.oss.UserExposer;
+import store.ae.dto.oa.UserExposer;
 import store.ae.pojo.oa.User;
 
 public interface UserService {

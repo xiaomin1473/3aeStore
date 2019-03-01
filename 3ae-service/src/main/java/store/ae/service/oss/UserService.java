@@ -3,7 +3,7 @@ package store.ae.service.oss;
 import store.ae.common.exception.oss.UserErrorException;
 import store.ae.common.exception.oss.UserException;
 import store.ae.common.exception.oss.UserNullException;
-import store.ae.dto.oss.UserExposer;
+import store.ae.dto.oa.UserExposer;
 import store.ae.pojo.oss.User;
 
 public interface UserService {

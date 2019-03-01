@@ -10,7 +10,9 @@
 
       <title>睿实</title>
       <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-      <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+      <link rel="shortcut icon" href="./assets/img/icon/logo.jpg" />
+
+      <script src="./assets/js/jquery.min.js"></script>
       
       <link rel="stylesheet" href="./assets/css/common.css">
       <link rel="stylesheet" href="./assets/css/global.css">
@@ -34,7 +36,7 @@
          <button class="sider-ctrl" type="button">◀</button>
          <header>
             <a class="logo" href="/">
-               <img class="logo-img" width="26" height="26" />
+               <img class="logo-img" width="38" height="26" style="background-color: #fff" src="./assets/img/icon/logo.jpg"/>
                <span>南京睿实</span>
             </a>
             
@@ -42,7 +44,9 @@
          <ul class="sider-list">
             <li class="items cur" onclick="turnToPage('portal')">首页</li>
             <!-- <li class="items" onclick="turnToPage('user')">账户</li> -->
-            <li class="items" onclick="turnToPage('list')">列表</li>
+            <li class="items" onclick="turnToPage('wait')">待通过</li>
+            <li class="items" onclick="turnToPage('list')">已完成</li>
+            <li class="items" onclick="turnToPage('none')">未通过</li>
             <!-- <li class="items" onclick="turnToPage('detail')">详情</li> -->
             <li class="items" onclick="turnToPage('database')">备份</li>
          </ul>
@@ -68,6 +72,7 @@
    </body>
 </html>
 <script src="./assets/js/ae.js"></script>
+
 <script>
 
    (function sider() {
