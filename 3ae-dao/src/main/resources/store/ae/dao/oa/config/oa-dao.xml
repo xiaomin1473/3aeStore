@@ -16,7 +16,6 @@
 		<property name="locations">
 			<list>
 				<value>classpath:store/ae/dao/oa/config/oa-jdbc.properties</value>
-				<value>classpath:store/ae/dao/oa/config/oa-redis.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -28,44 +27,7 @@
 		<!-- 给出扫描dao接口包 -->
 		<property name="basePackage" value="store.ae.dao.oa" />
 	</bean>
-	
-	<!-- 配置 JedisPoolConfig 实例 -->
-	<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
-		<!--最大空闲数-->
-		<property name="maxIdle" value="${redis.maxIdle}"/>
-		<!--连接池的最大数据库连接数  -->
-		<property name="maxTotal" value="${redis.maxTotal}"/>
-		<!--最大建立连接等待时间-->
-		<property name="maxWaitMillis" value="${redis.maxWaitMillis}"/>
-		<!--逐出连接的最小空闲时间 默认1800000毫秒(30分钟)-->
-		<property name="minEvictableIdleTimeMillis" value="${redis.minEvictableIdleTimeMillis}" />
-		<!--每次逐出检查时 逐出的最大数目 如果为负数就是 : 1/abs(n), 默认3-->
-		<property name="numTestsPerEvictionRun" value="${redis.numTestsPerEvictionRun}" />
-		<!--逐出扫描的时间间隔(毫秒) 如果为负数,则不运行逐出线程, 默认-1-->
-		<property name="timeBetweenEvictionRunsMillis" value="${redis.timeBetweenEvictionRunsMillis}" />
-		<!--是否在从池中取出连接前进行检验,如果检验失败,则从池中去除连接并尝试取出另一个-->
-		<property name="testOnBorrow" value="${redis.testOnBorrow}"/>
-		<!--在空闲时检查有效性, 默认false  -->
-		<property name="testWhileIdle" value="${redis.testWhileIdle}" />
-	</bean>
 
-	<!-- 配置JedisConnectionFactory -->
-	<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
-		<!--IP地址 -->
-		<property name="hostName" value="${redis.host}" />
-		<!--端口号  -->
-		<property name="port" value="${redis.port}" />
-		<!--如果Redis设置有密码  -->
-		<!-- <property name="password" value="${redis.pass}" /> -->
-		<!--客户端超时时间单位是毫秒  -->
-		<property name="timeout" value="${redis.timeout}" />
-		<!--redis数据库序号，redis默认有16个库（从0-15），这里默认是0 -->
-		<property name="database" value="${redis.dbIndex}" />
-		<property name="poolConfig" ref="poolConfig"/>
-	</bean>
-
-	
-	
 	<!-- mysql连接池 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<!-- 配置连接池属性 -->
