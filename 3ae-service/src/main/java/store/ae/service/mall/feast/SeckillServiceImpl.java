@@ -31,7 +31,7 @@ public class SeckillServiceImpl implements SeckillService {
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	@Autowired
+	@Autowired 
 	private SeckillDao seckillDao;
 	
 	// 注入service依赖

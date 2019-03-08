@@ -6,4 +6,12 @@
     <version>${ae.version}</version>
   </parent>
   <artifactId>3ae-web</artifactId>
+  <packaging>war</packaging>
+  
+  <dependencies>
+  	  <dependency>
+         <groupId>com.thetransactioncompany</groupId>
+         <artifactId>cors-filter</artifactId>
+      </dependency>
+  </dependencies>
 </project>
