@@ -1,5 +1,5 @@
 git add * 
-git commit -m "Add program package files"
+git commit -m "test git"
 git push
 
 mvn install
