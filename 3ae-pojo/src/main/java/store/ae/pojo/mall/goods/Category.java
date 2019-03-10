@@ -13,7 +13,7 @@ public class Category {
 	
 	private Long categoryType;
 	
-	private Long gradeType;
+	private Long gradeType; 
 	
 	/**
 	 * 格林时间，创建日期
