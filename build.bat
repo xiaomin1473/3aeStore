@@ -1,5 +1,5 @@
 git add * 
-git commit -m "test git"
+git commit -m "edit readme"
 git push
 
 mvn install
