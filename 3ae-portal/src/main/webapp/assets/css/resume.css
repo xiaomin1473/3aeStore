@@ -45,21 +45,27 @@ b {
 
   box-sizing: border-box;
   width: 840px;
-  height: 1224px;
+  /* A4纸高度 */
+  /* height: 1224px; */
+  height: auto;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 24px 1px rgba(1, 37, 137, .15);
 }
 
+.layer-right {
+  width: 540px;
+}
+
 .brief {
   width: 540px;
-  height: 400px;
+  height: 370px;
   border: dashed 1.5px #c4c4c4;
 }
 
 .brief-content {
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 
 .brief-content .purpose {
@@ -82,10 +88,10 @@ b {
 }
 
 .brief-content .exper {
-  font-size: 14.7px;
-  line-height: 27px;
+  font-size: 14px;
+  line-height: 24px;
   text-align: justify;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
 }
 
 
@@ -180,6 +186,33 @@ b {
 .own-list .active {
   background-color: rgb(126, 121, 121);
 }
+
+
+.work-title {
+  font-size: 14.7px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 2px;
+  color: #444;
+}
+
+.work-content {
+  font-size: 14px;
+  line-height: 18px;
+  color: #222;
+}
+
+.experience {
+  padding-bottom: 30px;
+}
+
+.content-items {
+  font-size: 13px;
+  line-height: 22px;
+  color: #222;
+}
+
+
 
 footer {
   box-sizing: border-box;
