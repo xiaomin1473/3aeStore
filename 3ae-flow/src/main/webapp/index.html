@@ -8,17 +8,17 @@
       <meta name="Keywords" content="爱悦购商城,爱悦购平台,爱悦购电子商务（北京）有限公司,跨境电商">
       <meta name="Description" content="爱悦购商城,爱悦购平台,跨境电商,爱悦购电子商务（北京）有限公司通过大数据、大物流、全交通以及全产业链等跨界联合，以“产品、服务、爱”为核心，致力于为消费者提供质优的商品、极致的服务、有担当的爱，同时推出“跨界联合”、“购爱”“正品行货”、“TO一站享 购”等多项专业服务。">
 
-      <title>睿实</title>
+      <title>睿胜智能</title>
       <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-      <link rel="shortcut icon" href="./assets/img/icon/logo.jpg" />
-
-      <script src="./assets/js/jquery.min.js"></script>
+      <!-- <link rel="shortcut icon" href="./static/img/icon/logo.jpg" /> -->
       
-      <link rel="stylesheet" href="./assets/css/common.css">
-      <link rel="stylesheet" href="./assets/css/global.css">
-      <link rel="stylesheet" href="./assets/css/layer.css">
-      <link rel="stylesheet" href="./assets/css/topbar.css">
-      <link rel="stylesheet" href="./assets/css/sider.css">
+      <script src="./common/js/jquery.min.js"></script>
+      
+      <link rel="stylesheet" href="./common/css/common.css">
+      <link rel="stylesheet" href="./common/css/global.css">
+      <link rel="stylesheet" href="./common/css/layer.css">
+      <link rel="stylesheet" href="./common/css/topbar.css">
+      <link rel="stylesheet" href="./common/css/sider.css">
       <link rel="stylesheet" href="./assets/css/portal.css">
       <script src="./assets/js/portal.js"></script>
       
@@ -36,8 +36,8 @@
          <button class="sider-ctrl" type="button">◀</button>
          <header>
             <a class="logo" href="/">
-               <img class="logo-img" width="38" height="26" style="background-color: #fff" src="./assets/img/icon/logo.jpg"/>
-               <span>南京睿实</span>
+               <!-- <img class="logo-img" width="38" height="26" style="background-color: #fff" src="./static/img/icon/logo.jpg"/> -->
+               <span>睿胜智能</span>
             </a>
             
          </header>
@@ -50,6 +50,7 @@
             <!-- <li class="items" onclick="turnToPage('detail')">详情</li> -->
             <li class="items" onclick="turnToPage('database')">备份</li>
             <li class="items" onclick="turnToPage('controller')">管理</li>
+            <li class="items" onclick="turnToPage('log')">记录</li>
             <!-- <li class="items""><a style=" display: block; width: 100%; height: inherit; color: #fff;" target="blank" href="/views/controller.html">控制台</a></li> -->
          </ul>
       </aside>  
@@ -73,7 +74,7 @@
       
    </body>
 </html>
-<script src="./assets/js/ae.js"></script>
+<script src="./common/js/ae.js"></script>
 
 <script>
 
@@ -127,7 +128,7 @@
          var link = document.createElement('link');
          link.href= "./assets/css/" + n + ".css";
          link.rel = "stylesheet";
-         links[0].parentNode.removeChild(links[6])
+         links[0].parentNode.removeChild(links[5])
          document.getElementsByTagName('head')[0].appendChild(link);
       }
 
@@ -153,6 +154,7 @@
          case 'portal': getPage(n,"context", "component/portal.html"); break;
          case 'database': getPage(n,"context", "component/database.html"); break;
          case 'controller': getPage(n,"context", "component/controller.html"); break;
+         case 'log': getPage(n,"context", "component/log.html"); break;
       }
    }
 

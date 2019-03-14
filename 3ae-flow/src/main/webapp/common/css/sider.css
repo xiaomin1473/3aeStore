@@ -1,0 +1,53 @@
+.sider-ctrl {
+   position: absolute;
+   top: 0;
+   right: -42px;
+   box-sizing: border-box;
+   width: 42px;
+   height: 42px;
+   color: #fff;
+   background-color: #666;
+   border-right: solid 1px #333;
+   cursor: pointer;
+}
+
+.logo {
+   display: block;
+   height: 42px;
+   text-align: center;
+   line-height: 42px;
+   color: #fff;
+}
+
+.logo .logo-img {
+   vertical-align: -7px;
+}
+
+.logo span {
+   color: #fff;
+   word-wrap: break-word;
+}
+
+.close .logo span {
+   display: none;
+}
+
+.sider-list {
+   margin-top: 30px;
+}
+
+.sider-list .items {
+   margin: 10px 0;
+   height: 40px;
+   line-height: 40px;
+   color: #fff;
+   text-align: center;
+   background-color: #26282c;
+   cursor: pointer;
+}
+
+.sider-list .cur {
+   color: #fff;
+   background-color: #00c4de;
+   border-left: solid 3px #FFF;
+}

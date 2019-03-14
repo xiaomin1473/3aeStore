@@ -1,0 +1,50 @@
+
+.control {
+   
+    font-size: 12px;
+    
+ }
+ 
+ .control-header {
+    height: 54px;
+    padding: 0 20px;
+    line-height: 54px;
+    border: solid 1px #e8e8e8;
+ }
+ 
+ .control-header .control-menu {
+    height: 54px;
+ }
+ 
+ .control-header .control-menu li {
+    float: left;
+    box-sizing: border-box;
+    width: 100px;
+    height: 54px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    cursor: pointer;
+ }
+ 
+ .control-header .control-menu li i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    vertical-align: 0px;
+    line-height: 18px;
+    background-color: #f81828;
+    border-radius: 50%;
+ }
+ 
+ .control-header .control-menu .cur {
+    color: #00c4de;
+    border-bottom: solid 2px #00c4de;
+
+ }

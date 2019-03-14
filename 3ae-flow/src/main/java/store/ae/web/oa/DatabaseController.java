@@ -48,12 +48,6 @@ public class DatabaseController extends BaseController {
 			
 			return "导入成功！";
 		}
-		
-		
-		
-		
-		
-		
 
 	}
 }

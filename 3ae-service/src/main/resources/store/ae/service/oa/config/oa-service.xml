@@ -22,8 +22,7 @@ http://www.springframework.org/schema/spring-aop-4.3.xsd">
     <!-- <aop:aspectj-autoproxy/> -->
     
     <!-- 支持上传文件 -->
-	<!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
- 	-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
 
 	<!-- 配置事务管理器 -->
