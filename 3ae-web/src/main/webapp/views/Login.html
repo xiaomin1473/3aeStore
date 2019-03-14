@@ -1,0 +1,128 @@
+<div class="bgDiv" id="LoginDiv">
+    <el-form :model="loginForm" status-icon :rules="rules" ref="loginForm" class="login-container">
+        <h1 class="title">二代网络通信主机系统</h1>
+        <div>
+            <el-form-item label="用户名:" prop="userName">
+                <el-input type="text" v-model="loginForm.userName" auto-complete="off" placeholder="请输入用户名" clearable class="form-control" @keyup.enter.native="login"></el-input>
+            </el-form-item>
+            <el-form-item label=" 密 码 : " prop="password">
+                <el-input :type="passwordType" v-model="loginForm.password" auto-complete="off" placeholder="请输入密码" clearable class="form-control" @keyup.enter.native="login"></el-input>
+            </el-form-item>
+        </div>
+        <div class="downDiv">
+            <a onclick="window.open('tool/Firefox51.0.exe')">下载推荐浏览器</a>
+        </div>
+        <div>
+            <el-form-item style="width:100%;">
+                <el-button type="primary" @click="login" style="width:30%;">登录</el-button>
+                <el-button @click="reset" style="width:30%;">重置</el-button>
+            </el-form-item>
+        </div>
+    </el-form>
+    <div class="copyright">
+        Copyright © 2018-2028 南京睿实消防安全设备有限公司 版权所有 保留一切权利
+    </div>
+</div>
+<script>
+new Vue( {
+	el: '#LoginDiv',
+    name:"Login",
+    data: function() {
+        return {
+            passwordType:'password',
+            loginForm:{
+                userName:"admin",
+                password:"njrs1111"
+            },
+            rules: {
+                userName:[{required:true,message:'请输入用户名',trigger:'change'}],
+                password:[{required:true,message:'请输入密码',trigger:'change'}]
+            },
+        }
+    },
+    methods:{
+        login: function(){
+            this.$refs.loginForm.validate(function(valid) {
+                if(valid){
+                    let params = {userName:this.loginForm.userName,password:this.loginForm.password};
+                    this.$request({
+                        url: '/user/login.do',
+                        method: 'post',
+                        params:params
+                    }).then(function(data) {
+                        this.logining = false;
+                        if(data.success) {
+                            sessionStorage.setItem("userName",this.loginForm.userName);
+                            sessionStorage.setItem("role",data.role);
+                            window.location.href = "Home.html";
+                        }
+                    });
+                }
+            });
+        },
+        reset: function(){
+            this.$refs.loginForm.resetFields();
+        }
+    }
+});
+</script>
+<style type="text/css" scoped>
+    .bgDiv {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/img/login.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .login-container {
+        -webkit-border-radius: 5px;
+        border-radius: 15px;
+        -moz-border-radius: 5px;
+        background-clip: padding-box;
+        margin: 120px auto;
+        width: 350px;
+        padding: 35px 35px 15px 35px;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        box-shadow: 0 0 25px #cac6c6;
+        text-align: center;
+    }
+    
+    .show-pwd {
+        position: absolute;
+        right: 10px;
+        font-size: 16px;
+        color: #889aa4;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .title {
+        margin: 0px auto 40px auto;
+        color:#2426a0;
+    }
+    
+    .form-control {
+        width: 270px;
+        flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+    }
+
+    .downDiv {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .copyright {
+        position: absolute;
+        z-index: 2;
+        bottom: 30px;
+        width: 100%;
+        font-size: 12px;
+    }
+</style>

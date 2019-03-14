@@ -50,11 +50,11 @@ body {
 
 .container .page-header h4 {
    display: inline;
-   padding-left: 4px;
+   padding-left: 8px;
    font-size: 16px;
    font-weight: normal;
    color: #666;
-   border-left: solid 2px #00c4de;
+   border-left: solid 2px #00cccc;
 }
 
 .container .page-header .apply {

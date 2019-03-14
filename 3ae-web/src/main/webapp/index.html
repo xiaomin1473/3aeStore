@@ -7,20 +7,76 @@
 
       <meta name="applicable-device" content="pc">
       <meta name="mobile-agent" content="format=html5;url=https://web.3ae.store">
-      <script src = "https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+      
+      <link rel="stylesheet" href="common/element-ui/lib/theme-chalk/index.css">
+      <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
       <script src="https://cdn.bootcss.com/vue/2.6.6/vue.min.js"></script>
    </head>
    <body>
-
+      <transition name="fade" mode="out-in">
+         <div id="app"></div>
+      </transition>
    </body>
 </html>
 <script>
-   axios.get('https://api.3ae.store/mall/goods/category')
-      .then(function (response) {
-         console.log(response.data);
-      })
-      .catch(function (error) {
-         console.log(error);
-      });
+   var service = axios.create({
+      //baseURL: "http://localhost:8080/",
+      timeout: 60000
+   });
+
+
+
+   // request interceptor
+   service.interceptors.request.use(
+   function (config) {
+      //开启等待
+      $("#wait").attr("class", "wait fadeIn");
+
+      return config;
+   },
+   function (error) {
+      //结束等待
+      wait.className = "wait";
+
+      //return Promise.reject(error);
+      return null;
+   }
+   );
+
+   service.interceptors.response.use(
+      function (response) {
+      //结束等待
+      $("#wait").attr("class","wait");
+      
+      if(!response){
+         return null;
+      }
+      if(response.data.success){
+         if(response.data.error){
+         //Vue.prototype.$message.success(response.data.error);
+         }
+         return response.data;
+      }else{
+         Vue.prototype.$message.error(response.data.error);
+      }
+      return response.data;
+   },
+   function (error) {
+      //结束等待
+      $("#wait").attr("class","wait");
+
+      Vue.prototype.$message.error(error.message);
+      if (error.response){
+         if(error.response.status===401){
+         window.location.href = "/";
+         }
+      }
+      return Promise.reject(error);
+   }
+   );
+
+   Vue.prototype.$request = service;
+      $("#app").load("views/Login.html", function(responseTxt, statusTxt, xhr) {
+   })
 </script>

@@ -10,9 +10,7 @@
 
       <title>睿实</title>
       <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-      <link rel="shortcut icon" href="./assets/img/icon/logo.jpg" />
-
-      <script src="./assets/js/jquery.min.js"></script>
+      <link rel="shortcut icon" href="./assets/img/favicon.ico" />
       
       <link rel="stylesheet" href="./assets/css/common.css">
       <link rel="stylesheet" href="./assets/css/global.css">
@@ -20,7 +18,6 @@
       <link rel="stylesheet" href="./assets/css/topbar.css">
       <link rel="stylesheet" href="./assets/css/sider.css">
       <link rel="stylesheet" href="./assets/css/portal.css">
-      <script src="./assets/js/portal.js"></script>
       
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,7 +33,7 @@
          <button class="sider-ctrl" type="button">◀</button>
          <header>
             <a class="logo" href="/">
-               <img class="logo-img" width="38" height="26" style="background-color: #fff" src="./assets/img/icon/logo.jpg"/>
+               <img class="logo-img" width="26" height="26" />
                <span>南京睿实</span>
             </a>
             
@@ -44,16 +41,12 @@
          <ul class="sider-list">
             <li class="items cur" onclick="turnToPage('portal')">首页</li>
             <!-- <li class="items" onclick="turnToPage('user')">账户</li> -->
-            <!-- <li class="items" onclick="turnToPage('wait')">待通过</li> -->
-            <li class="items" onclick="turnToPage('list')">流程</li>
-            <!-- <li class="items" onclick="turnToPage('none')">未通过</li> -->
+            <li class="items" onclick="turnToPage('list')">列表</li>
             <!-- <li class="items" onclick="turnToPage('detail')">详情</li> -->
             <li class="items" onclick="turnToPage('database')">备份</li>
-            <li class="items" onclick="turnToPage('controller')">管理</li>
-            <!-- <li class="items""><a style=" display: block; width: 100%; height: inherit; color: #fff;" target="blank" href="/views/controller.html">控制台</a></li> -->
          </ul>
-      </aside>  
-      <div class="container"> 
+      </aside>
+      <div class="container">
          <div class="topbar">
             <div class="tips flt">
                <span>管理控制台</span>
@@ -74,10 +67,17 @@
    </body>
 </html>
 <script src="./assets/js/ae.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/vue.js"></script>
+<script>
+
+
+
+</script>
 
 <script>
 
-   (function sider() {
+(function sider() {
       var siderCtrl = document.getElementsByClassName("sider-ctrl");
       var swt = true;
       siderCtrl[0].onclick = function() {
@@ -112,56 +112,8 @@
       })
    })();
 
-   function getPage(n, container, url) {
-      var container = document.getElementsByClassName(container)[0];
-      var ajax = new XMLHttpRequest();
-      ajax.open('get', url);
-      ajax.send();
-      ajax.onreadystatechange = function () {
-         if (ajax.readyState==4 &&ajax.status==200) {
-            container.innerHTML = ajax.responseText
-      　　}
-      }
-      function addCSS(n) {
-         var links = document.getElementsByTagName('link');
-         var link = document.createElement('link');
-         link.href= "./assets/css/" + n + ".css";
-         link.rel = "stylesheet";
-         links[0].parentNode.removeChild(links[6])
-         document.getElementsByTagName('head')[0].appendChild(link);
-      }
 
-      function addJS(n) {
-         
-         var scripts = document.getElementsByTagName('script');
-         var script = document.createElement('script');
-         script.src= "./assets/js/" + n + ".js";
-         scripts[0].parentNode.removeChild(scripts[0]);
-         document.getElementsByTagName('head')[0].appendChild(script);
-      }
-
-      addCSS(n);
-      addJS(n);
-   }
-
-   getPage('portal', "context", "component/portal.html");
-
-   function turnToPage(n) {
-      switch(n) {
-         case 'detail': getPage(n,"context", "component/detail.html"); break;
-         case 'list': getPage(n,"context", "component/list.html"); break;
-         case 'portal': getPage(n,"context", "component/portal.html"); break;
-         case 'database': getPage(n,"context", "component/database.html"); break;
-         case 'controller': getPage(n,"context", "component/controller.html"); break;
-      }
-   }
-
-   (function Router() {
-      // console.log(window.location.href.split('/')[4]);
-   })();
-
-
-   (function getCookie() {
+(function getCookie() {
       var arr,reg = new RegExp("(^| )"+"Token"+"=([^;]*)(;|$)");
       if(arr=document.cookie.match(reg)) {
          return unescape(arr[2]);

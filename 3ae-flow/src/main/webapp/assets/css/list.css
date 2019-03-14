@@ -196,6 +196,11 @@
 }
 
 
+.status-list .items{
+   cursor: pointer;
+}
+
+
 
 
 .loading {
