@@ -17,6 +17,10 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 	 -->
 	<mvc:annotation-driven />
 	
+	<!-- 支持上传文件 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+	
+	
 	<!-- servlet-mapping 映射路径："/" -->
 	<!-- 二、静态资源默认servlet设置
 		 1.加入对静态资源的处理：js, img

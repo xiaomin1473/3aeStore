@@ -21,9 +21,7 @@ http://www.springframework.org/schema/spring-aop-4.3.xsd">
     <!-- 开启动态代理 -->
     <!-- <aop:aspectj-autoproxy/> -->
     
-    <!-- 支持上传文件 -->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
-
+    
 
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

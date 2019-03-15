@@ -65,13 +65,34 @@
                
             </ul> -->
             <a class="logout frt" href="javascript:0" type="button" id="logout">登出</a>
-            <span class="user frt">当前用户： --- </span>
+            <span class="user frt">当前用户： root </span>
+            <span class="user frt" id="changePwd" style="cursor: pointer;">&nbsp;修改密码</span>
          </div>
          <div class="context">
          </div>
       </div>
 
-      
+      <div class="form-container">
+            <form class="form" id="pwdFrom">
+               <div class="form-header">
+                  <h3>修改密码</h3>
+               </div>
+               <div class="form-body">
+                  <ul class="form-list">
+                     <li class="form-items">
+                        <label><i>*&nbsp;</i>当前密码:</label><input class="section" name="identifier" placeholder="">
+                     </li>
+                     <li class="form-items">
+                        <label><i>*&nbsp;</i>新密码:</label><input class="section" name="expensesGmt" placeholder="">
+                     </li>
+                  </ul>
+               </div>
+               <div class="form-footer">
+                  <button id="put" type="button" onclick="alert('修改成功')">确认</button>
+                  <button id="cancel" type="button">取消</button>
+               </div>
+            </form>
+         </div>
    </body>
 </html>
 <script src="./common/js/ae.js"></script>
@@ -194,4 +215,16 @@
       })
    })();
 
+
+
+   $('#changePwd').click(function() {
+      var applyForm = document.getElementsByClassName('form-container')[0];
+      applyForm.style.display = 'block';
+   })
+
+   $('#cancel').click(function() {
+      var applyForm = document.getElementsByClassName('form-container')[0];
+
+      applyForm.style.display = 'none';
+   })
 </script>

@@ -1,5 +1,7 @@
 package store.ae.service.oa;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +37,13 @@ public class UserServiceTest {
 		
 		System.out.println(user);
 	}
-
+	
+	
+	@Test
+	public void testGetAllUser() {
+		
+		List<User> users = userService.getAllUser();
+		
+		System.out.println(users);
+	}
 }

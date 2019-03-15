@@ -31,4 +31,22 @@
          
       }
    })
+
+   $('#outFile').click(function() {
+
+      var formData = new FormData();
+
+      
+
+      Ae.trans.AJAX({
+         type: "POST",
+         url: "/user/database/create/filexls",
+         async: true
+      }, callback)
+
+      function callback(xmls) {
+         jsonName = xmls.responseText;
+         alert(jsonName);
+      }
+   })
 })();

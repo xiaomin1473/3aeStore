@@ -1,6 +1,7 @@
 package store.ae.service.oa;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -83,5 +84,13 @@ public class UserServiceImpl implements UserService {
 		}
 		
 		return exposer;
+	}
+
+	@Override
+	public List<User> getAllUser() {
+		
+		 List<User> users = userDao.queryAllUser();
+		
+		return users;
 	}
 }

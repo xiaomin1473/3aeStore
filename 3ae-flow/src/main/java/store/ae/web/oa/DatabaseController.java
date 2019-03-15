@@ -2,9 +2,9 @@ package store.ae.web.oa;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.util.Date;
 
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,14 +21,14 @@ public class DatabaseController extends BaseController {
 	
 	@SuppressWarnings("unused")
 	@Autowired
-	private DatabaseService databasesService;
+	private DatabaseService databaseService;
 	
 	
 	@RequestMapping(value = "/upload/filexls",
 			method = RequestMethod.POST,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public String categorieList(MultipartFile file, String name) throws IOException{
+	public String loadxls(MultipartFile file, String name) throws IOException{
 		
 		if(file.isEmpty()) {
 			return "文件不能为空！";
@@ -36,18 +36,25 @@ public class DatabaseController extends BaseController {
 		else {
 			
 			InputStream inputStream = file.getInputStream();
-			POIFSFileSystem poifsFileSystem = new POIFSFileSystem(inputStream);
-			@SuppressWarnings("resource")
-			HSSFWorkbook wb = new HSSFWorkbook(poifsFileSystem);
-			// 2.读取页脚sheet
-			@SuppressWarnings("unused")
-			HSSFSheet sheetAt = wb.getSheetAt(0);
+			POIFSFileSystem fileIn = new POIFSFileSystem(inputStream);
 			
-			
-			
+			databaseService.loadxlsToDatabase(fileIn);
 			
 			return "导入成功！";
 		}
 
+	}
+	
+	@RequestMapping(value = "/create/filexls",
+			method = RequestMethod.POST,
+			produces= {"application/json;charset=UTF-8"})
+	@ResponseBody
+	public String createxls() throws IOException{
+		
+		Date date = new Date();
+	
+		databaseService.createOutWorkbook("D://" + DateFormat.getDateInstance().format(date) + ".xls");
+		
+		return "导出成功！";
 	}
 }

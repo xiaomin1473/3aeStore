@@ -17,4 +17,9 @@
     	from tb_user
     	where user_name = #{userName}
     </select>
+    
+    <select id="queryAllUser" resultType="User">
+    	select user_id, user_group_id, user_name, user_mark, user_permit, login_status, gmt_create, gmt_modified
+    	from tb_user
+    </select>
 </mapper>

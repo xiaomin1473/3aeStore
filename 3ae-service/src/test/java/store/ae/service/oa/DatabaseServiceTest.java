@@ -28,7 +28,7 @@ public class DatabaseServiceTest {
 	@Test
 	public void testLoadApplyInfo() throws IOException {
 		
-		databaseService.loadxlsToDatabase("D://123.xls");
+		//databaseService.loadxlsToDatabase("D://123.xls");
 			
 	}
 

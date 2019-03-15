@@ -2,19 +2,80 @@
    <div class="page-header">
       <h4>管理中心</h4>
       <div class="frt">
-         <button >添加用户</button>
+         <button id="addUser">添加用户</button>
       </div>
    </div>
    <div class="control">
       <div class="control-header">
          <ul class="control-menu">
             <li class="items cur">账户管理</li>
-            <li class="items">权限管理</li>
-            <!-- <li>流程管理</li>
-            <li>菜单管理</li>
-            <li>表单管理</li> -->
+            <!-- <li class="items">权限管理</li> -->
+            <!-- <li class="items">流程管理</li>
+            <li class="items">菜单管理</li>
+            <li class="items">表单管理</li> -->
          </ul>
       </div>
+      <div class="control-body">
+         <div class="table">
+            <div class="table-header">
+               <span class="col-1">用户ID</span>
+               <span class="col-2">用户组</span>
+               <span class="col-2">用户名</span>
+               <span class="col-2">分管中心</span>
+               <span class="col-2">添加日期</span>
+               <span class="col-3">操作</span>
+            </div>
+            <ul class="table-body" id="controllerList">
+               <li class="items">
+                  <span class="col-1">用户ID</span>
+                  <span class="col-2">用户组</span>
+                  <span class="col-2">用户名</span>
+                  <span class="col-2">分管中心</span>
+                  <span class="col-2">添加日期</span>
+                  <span class="col-3">
+                     <button class="btn-small">查看</button>
+                     <button class="btn-small">编辑</button>
+                     <button class="btn-small">删除</button>
+                  </span>
+               </li>
+            </ul>
+         </div>
+      </div>
    </div>
- </div>
+   <div class="form-container">
+      <form class="form" id="control">
+         <div class="form-header">
+            <h3>添加用户</h3>
+         </div>
+         <div class="form-body">
+            <ul class="form-list">
+               <li class="form-items">
+                  <label><i>*&nbsp;</i>用户组:</label><input class="section" name="matter" placeholder="">
+               </li>
+               <li class="form-items">
+                  <label><i>*&nbsp;</i>用户名:</label><input class="section" name="identifier" placeholder="">
+               </li>
+               <li class="form-items">
+                  <label><i>*&nbsp;</i>用户密码:</label><input class="section" name="expensesGmt" placeholder="">
+               </li> 
+
+               <li class="form-items">
+                  <label><i>*&nbsp;</i>分管中心:</label>
+                  <select name="classType" class="section">
+                     <option value="1000000">管理员</option>
+                     <option value="1030000">运营中心</option>
+                     <option value="1040000">研发中心</option>
+                     <option value="1020000">制造中心</option>
+                     <option value="1010000">营销中心</option>
+                  </select>
+               </li>
+            </ul>
+         </div>
+         <div class="form-footer">
+            <button id="put" type="button">申请</button>
+            <button id="cancel" type="button">取消</button>
+         </div>
+      </form>
+   </div>
+</div>
  

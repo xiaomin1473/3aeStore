@@ -48,3 +48,11 @@
     border-bottom: solid 2px #00c4de;
 
  }
+
+ .control-body {
+   padding-bottom: 20px;
+   padding-left: 50px;
+   background-color: #fff;
+
+   overflow: auto;
+}

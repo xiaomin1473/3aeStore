@@ -1,5 +1,7 @@
 package store.ae.web.oa;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,14 +24,13 @@ public class UserController extends BaseController {
 			method = RequestMethod.GET,
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public String categorieList(){
-		Long Id =1L;
+	public List<User> userList(){
 		
-		User user = userService.getUser(Id);
+		List<User> users = userService.getAllUser();
 		
-		System.out.println(user);
+		System.out.println(users);
 		
-		return user.toString();
+		return users;
 	}
 	
 	@RequestMapping(value = "/login", 

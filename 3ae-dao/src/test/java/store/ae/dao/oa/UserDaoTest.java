@@ -1,5 +1,7 @@
 package store.ae.dao.oa;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +35,13 @@ public class UserDaoTest {
 		User user = userDao.queryByUserName("caiwu");
 		
 		System.out.println("sss:" + user.getUserPermit());
+	}
+	
+	@Test
+	public void testQueryAllUser() {
+		List<User> users = userDao.queryAllUser();
+		
+		System.out.println("sss:" + users);
 	}
 
 }

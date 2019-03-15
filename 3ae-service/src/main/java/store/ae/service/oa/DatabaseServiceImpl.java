@@ -1,6 +1,5 @@
 package store.ae.service.oa;
 
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -10,6 +9,7 @@ import java.util.List;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -120,13 +120,10 @@ public class DatabaseServiceImpl implements DatabaseService {
 	}
 
 	@SuppressWarnings({ "unused", "resource" })
-	@Override
-	public void loadxlsToDatabase(String xlsPath) throws SystemException {
+	public void loadxlsToDatabase(POIFSFileSystem fileIn) throws SystemException {
 		
-		FileInputStream fileIn =null;
 		Workbook wb0 = null;
 		try {
-			fileIn = new FileInputStream(xlsPath);
 			
 			wb0 = new HSSFWorkbook(fileIn);
 		} catch(Exception e) {

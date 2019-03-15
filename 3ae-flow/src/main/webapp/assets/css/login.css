@@ -5,13 +5,13 @@
    background-size: 100% 100%;
 }
 
-.form {
+.login-form {
    position: absolute;
    top: 50%;
    left: 50%;
 }
 
-.form-wrapper {
+.login-form-wrapper {
    position: relative;
    margin-top: -40%;
    margin-left: -50%;
@@ -23,11 +23,11 @@
    box-shadow: 0 0 25px #cac6c6;
 }
 
-.form-header {
+.login-form-header {
    padding: 50px 0 30px;
 }
 
-.form-header h2 {
+.login-form-header h2 {
    font-size: 24px;
    color: #2426a0;
    letter-spacing: 2px;
@@ -35,24 +35,24 @@
    text-align: center;
 }
 
-.form-body {
+.login-form-body {
    text-align: center;
 }
 
-.form-items {
+.login-form-items {
    box-sizing: border-box;
    height: 68px;
    padding-top: 10px;
 }
 
-.form-items .tips {
+.login-form-items .tips {
    display: inline-block;
    margin-top: 8px;
    font-size: 12px;
    color: #f81828;
 }
 
-.form-footer {
+.login-form-footer {
    position: absolute;
    bottom: 40px;
    width: 100%;

@@ -2,6 +2,8 @@ package store.ae.service.oa;
 
 import java.io.IOException;
 
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+
 import store.ae.common.exception.SystemException;
 
 /**
@@ -24,6 +26,6 @@ public interface DatabaseService {
 	 * @return
 	 * @throws IOException
 	 */
-	void loadxlsToDatabase(String xlsPath) throws SystemException;
+	void loadxlsToDatabase(POIFSFileSystem fileIn) throws SystemException;
 	
 }

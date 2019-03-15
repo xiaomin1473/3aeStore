@@ -214,14 +214,20 @@ $('#put').click(function put() {
  * 
  */
 
+setTimeout(function() {
+   var menu = document.getElementsByClassName('status-list')[0];
 
-var menu = document.getElementsByClassName('status-list')[0];
-
-menu.childNodes.forEach((e) => {
-   e.addEventListener("click", function() {
-      this.parentNode.childNodes.forEach((e)=>{
-         e.className = 'items'
+   menu.childNodes.forEach((e) => {
+      e.addEventListener("click", function() {
+         this.parentNode.childNodes.forEach((e)=>{
+            e.className = 'items'
+         })
+         this.className = 'items cur'
       })
-      this.className = 'items cur'
    })
-})
+}, 300);
+
+// $('.status-list').find("li").click(function() {
+//    $('.status-list').find("li").css("items");
+//    //this.css("items cur") 
+// })
