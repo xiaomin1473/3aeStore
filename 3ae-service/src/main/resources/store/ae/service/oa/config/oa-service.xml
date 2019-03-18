@@ -20,7 +20,7 @@ http://www.springframework.org/schema/spring-aop-4.3.xsd">
 
     <!-- 开启动态代理 -->
     <!-- <aop:aspectj-autoproxy/> -->
-    
+    <!-- <aop:aspectj-autoproxy proxy-target-class="true"/> -->
     
 
 	<!-- 配置事务管理器 -->

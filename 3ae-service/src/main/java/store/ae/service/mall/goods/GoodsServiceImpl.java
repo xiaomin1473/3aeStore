@@ -45,7 +45,7 @@ public class GoodsServiceImpl implements GoodsService {
 		}
 	}
 	
-	//@Cacheable("categoryList")
+	//@Cacheable(cacheNames = {"categoryList"})
 	@Override
 	public List<CategoryVo> getCategoryList() throws AbsentException{
 		List<Category> list = goodsDao.queryAllCategory();

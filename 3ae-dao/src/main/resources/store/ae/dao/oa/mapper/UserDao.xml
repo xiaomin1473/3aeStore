@@ -19,7 +19,7 @@
     </select>
     
     <select id="queryAllUser" resultType="User">
-    	select user_id, user_group_id, user_name, user_mark, user_permit, login_status, gmt_create, gmt_modified
+    	select user_id, user_group_id, user_power_id, user_name, user_mark, department_type, user_permit, login_status, gmt_create, gmt_modified
     	from tb_user
     </select>
 </mapper>

@@ -51,6 +51,8 @@ var UserController = {
          return "管理员"
       } else if(data == "1040000") {
          return "运营中心"
+      } else if(data == "1") {
+         return "普通员工"
       } else {
          return "未分配"
       }
@@ -108,9 +110,10 @@ var UserController = {
       for(var i = 0; i < data.length; i++) {
          es +=`<li class="items">
             <span class="col-1">`+ data[i].userId + `</span>
-            <span class="col-2">`+ data[i].userGroupId + `</span>
+            <span class="col-1">`+ data[i].userGroupId + `</span>
             <span class="col-2">`+ data[i].userName + `</span>
-            <span class="col-2">`+ this.getPermit(data[i].userPermit) + `</span>
+            <span class="col-2">`+ this.getPermit(data[i].departmentType) + `</span>
+            <span class="col-1">`+ this.getPermit(data[i].userPermit) + `</span>
             <span class="col-2">`+ this.format(data[i].gmtCreate, 'yyyy-MM-dd') + `</span>
             <span class="col-3">
                <button class="btn-small">查看</button>

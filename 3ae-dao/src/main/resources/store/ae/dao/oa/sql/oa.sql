@@ -11,10 +11,12 @@ USE `com_njrs_oa`;
 CREATE TABLE tb_user (
 `user_id` bigint NOT NULL AUTO_INCREMENT COMMENT '用户ID',
 `user_group_id` bigint NOT NULL COMMENT '用户组ID',
+`user_power_id` bigint NOT NULL COMMENT '权限ID',
 `user_name` varchar(32) NOT NULL COMMENT '用户名称',
 `user_pwd` varchar(64) NOT NULL COMMENT '用户密码',
 `user_mark` varchar(120) NOT NULL COMMENT '用户标识',
-`user_permit` bigint NOT NULL COMMENT '用户权限',
+`department_type` bigint NOT NULL COMMENT '部门类别',
+`user_permit` bigint NOT NULL COMMENT '用户权限 0root 1普通角色 2初级管理员 3高级管理员 ...',
 `login_status` tinyint NOT NULL DEFAULT -1 COMMENT '登录状态 默认-1登录异常 0未登录 1已登录 2登录超时',
 `gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
 `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
@@ -27,11 +29,11 @@ key idx_create_time(gmt_create)
 
 -- 初始化数据 pwd = admin
 -- mark标识：超级用户、超级角色、超级权限、超级时间、超级操作、备用
-insert into tb_user(user_group_id, user_name, user_pwd, user_mark, user_permit, login_status)
+insert into tb_user(user_group_id, user_power_id, user_name, user_pwd, user_mark, department_type, user_permit, login_status)
 values
-	(1000, 'root', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', 0, 0),
-	(1001, 'caiwu', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', 1040000, 0),
-	(1002, 'wenyuan', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', 1030000, 0);
+	(1000, 1000, 'root', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', 0, 0, 0),
+	(1001, 1001, 'caiwu', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', 1040000, 1, 0),
+	(1002, 1001, 'wenyuan', '15ab525b4437e93aa2a618d700845d25', '1000-1000-1000-1000-1000-1000', 1030000, 1, 0);
 
 CREATE TABLE tb_user_group (
 `user_group_id` bigint NOT NULL AUTO_INCREMENT COMMENT '用户组ID',
@@ -205,9 +207,6 @@ key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='费用申请表';
 
 -- 初始化数据
-insert into tb_expenses_apply(identifier, expenses_gmt, matter, amount, handler, ascriptor, expenses_type, department_type, receive_company, ascription, project_num, project_name, class_type, apply_status, remark)
-values
-	('YX19010001', '2019-1-3', '中标服务费', '21300.00', '王国庆', '孙继先', '投标费用', 1010100, '国电物资东北（沈阳）配送有限公司', 'YX-招投标费用', '无', '国电哈尔滨热电有限公司防爆型消防炮的采购', '参加考核', 0, '无');
 
 
 CREATE TABLE tb_expenses_verify (
@@ -226,9 +225,6 @@ key idx_create_time(gmt_create)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='费用审核表';
 
 -- 初始化数据
-insert into tb_expenses_verify(identifier, text_one, text_two, handler, verify_status, remark)
-values
-	('YX19010001', '…………', '…………', '姜叶', 0, '无');
 
 
 CREATE TABLE tb_expenses_payment (
@@ -250,9 +246,6 @@ key idx_create_time(gmt_create)
 
 
 -- 初始化数据
-insert into tb_expenses_payment(identifier, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark)
-values
-	('YX19010001', '网银', '工行', 21300.00, 325551420, '姜叶', '2019-1-3', '无');
 
 	
 
@@ -292,4 +285,16 @@ values
 	('商务部', 1040500, 1040000),
 	('生管部', 1040600, 1040000);
 
+
 	
+CREATE TABLE tb_log (
+`log_id` bigint NOT NULL AUTO_INCREMENT COMMENT '记录ID',
+`object_id` bigint NOT NULL COMMENT '对象ID',
+`object_class` varchar(32) NOT NULL COMMENT '对象类',
+`operator` varchar(32) NOT NULL COMMENT '操作者',
+`action_type` tinyint NOT NULL COMMENT '操作类型 1查看 2增加 3更新 4删除',
+`gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+`gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY pk_log_id(log_id),
+key idx_create_time(gmt_create)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='操作记录表';

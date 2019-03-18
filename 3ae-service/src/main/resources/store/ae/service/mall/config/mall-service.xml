@@ -19,7 +19,8 @@ http://www.springframework.org/schema/spring-aop-4.3.xsd">
 	<context:component-scan base-package="store.ae.service.mall" />
 
     <!-- 开启动态代理 -->
-    <!-- <aop:aspectj-autoproxy/> -->
+    <!-- <aop:aspectj-autoproxy/>  -->
+    <!-- <aop:aspectj-autoproxy proxy-target-class="true"/> -->
 
     <!-- 配置RedisTemplate -->
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" >

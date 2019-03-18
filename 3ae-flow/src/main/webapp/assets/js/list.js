@@ -20,7 +20,7 @@
 (function() {
    var success = document.getElementsByClassName('status-3');
 
-   var applyForm = document.getElementsByClassName('apply-form')[0];
+   var applyForm = document.getElementsByClassName('form-container')[0];
 
    $('#apply-btn').click(function() {
       console.log("block");

@@ -11,11 +11,15 @@ public class User {
 	
 	private long userGroupId;
 	
+	private long userPowerId;
+	
 	private String userName;
 	
 	private String userPwd;
 	
 	private String userMark;
+	
+	private long departmentType;
 	
 	private long userPermit;
 	

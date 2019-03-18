@@ -1,5 +1,5 @@
 git add * 
-git commit -m "edit readme"
+git commit -m "add power limit"
 git push
 
 mvn install

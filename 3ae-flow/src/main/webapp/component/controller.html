@@ -19,18 +19,20 @@
          <div class="table">
             <div class="table-header">
                <span class="col-1">用户ID</span>
-               <span class="col-2">用户组</span>
+               <span class="col-1">用户组</span>
                <span class="col-2">用户名</span>
                <span class="col-2">分管中心</span>
+               <span class="col-1">权限</span>
                <span class="col-2">添加日期</span>
                <span class="col-3">操作</span>
             </div>
             <ul class="table-body" id="controllerList">
                <li class="items">
                   <span class="col-1">用户ID</span>
-                  <span class="col-2">用户组</span>
+                  <span class="col-1">用户组</span>
                   <span class="col-2">用户名</span>
                   <span class="col-2">分管中心</span>
+                  <span class="col-1">权限</span>
                   <span class="col-2">添加日期</span>
                   <span class="col-3">
                      <button class="btn-small">查看</button>
@@ -62,17 +64,24 @@
                <li class="form-items">
                   <label><i>*&nbsp;</i>分管中心:</label>
                   <select name="classType" class="section">
-                     <option value="1000000">管理员</option>
+                     <option value="0">后台管理</option>
                      <option value="1030000">运营中心</option>
                      <option value="1040000">研发中心</option>
                      <option value="1020000">制造中心</option>
                      <option value="1010000">营销中心</option>
                   </select>
                </li>
+               <li class="form-items">
+                  <label><i>*&nbsp;</i>权限:</label>
+                  <select name="classType" class="section">
+                     <option value="0">管理员</option>
+                     <option value="1">普通员工</option>
+                  </select>
+               </li>
             </ul>
          </div>
          <div class="form-footer">
-            <button id="put" type="button">申请</button>
+            <button id="put" type="button">添加</button>
             <button id="cancel" type="button">取消</button>
          </div>
       </form>
