@@ -119,7 +119,8 @@ b {
 
 
 .art {
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'rsFont', Arial, Helvetica, sans-serif;
-    writing-mode:tb-rl
+    writing-mode:tb-rl;
+    line-height: 26px;
 }
