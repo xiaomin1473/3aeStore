@@ -12,14 +12,17 @@ public class UserExposer {
 	
 	private long userPermit;
 	
+	private long departmentType;
+	
 	private long nowTime;
 	
-	public UserExposer(boolean logined, String token, String userName, long userPermit, long nowTime) {
+	public UserExposer(boolean logined, String token, String userName, long userPermit, long departmentType, long nowTime) {
 		super();
 		this.logined = logined;
 		this.token = token;
 		this.userName = userName;
 		this.userPermit = userPermit;
+		this.departmentType = departmentType;
 		this.nowTime = nowTime;
 	}
 

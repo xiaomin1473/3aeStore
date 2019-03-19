@@ -122,9 +122,11 @@
             var Days = 30;
             var exp = new Date();
             exp.setTime(exp.getTime() + Days*24*60*60*1000);
+            console.log(jsonName);
             document.cookie = "Token" + "="+ escape (jsonName.data.token) + ";expires=" + exp.toGMTString();
             document.cookie = "UserName" + "="+ escape (jsonName.data.userName) + ";expires=" + exp.toGMTString();
             document.cookie = "UserPermit" + "="+ escape (jsonName.data.userPermit) + ";expires=" + exp.toGMTString();
+            document.cookie = "departmentType" + "="+ escape (jsonName.data.departmentType) + ";expires=" + exp.toGMTString();
          } else {
             msg.innerHTML = jsonName.error;
          }
