@@ -25,6 +25,31 @@ public interface UserDao {
 	 */
 	List<User> queryAllUser();
 	
+	
+	/**
+	 * @param user
+	 * @return
+	 * 添加用户
+	 */
+	boolean insertUser(@Param("user") User user);
+	
+	/**
+	 * @param userName
+	 * @param user
+	 * @return
+	 * 
+	 * 更新用户
+	 */
+	boolean updateUser(@Param("userName") String userName, @Param("user") User user);
+	
+	/**
+	 * @param userName
+	 * @return
+	 * 
+	 * 删除用户
+	 */
+	boolean delUser(String userName);
+	
 	/**
 	 * @param userName
 	 * @return

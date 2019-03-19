@@ -2,7 +2,8 @@
 .trip {
     position: relative;
     margin: 1px;
-    background-color: #fff;
+    
+    /* background-color: #fff; */
 }
 
 .trip::before {
@@ -68,7 +69,8 @@
 .trip-mind {
     position: relative;
     margin: 1px;
-    background-color: #fff;
+    margin-right: 200px;
+    /* background-color: #fff; */
 }
 
 .trip-mind::before {

@@ -18,18 +18,15 @@
  * 
  */
 (function() {
-   var success = document.getElementsByClassName('status-3');
 
    var applyForm = document.getElementsByClassName('form-container')[0];
 
    $('#apply-btn').click(function() {
-      console.log("block");
 
       applyForm.style.display = 'block';
    })
 
    $('#cancel').click(function() {
-      console.log("none");
 
       applyForm.style.display = 'none';
    })
@@ -48,41 +45,6 @@
 var limit = 6;
 var current = 0;
 var data = [];
-
-
-/****************************************************************
- *
- *
- *                        时间格式化
- * 
- * 
- */
-var format = function(time, format){
-   var t = new Date(time);
-   var tf = function(i){return (i < 10 ? '0' : '') + i};
-   return format.replace(/yyyy|MM|dd|HH|mm|ss/g, function(a){
-   switch(a){
-         case 'yyyy':
-            return tf(t.getFullYear());
-            break;
-         case 'MM':
-            return tf(t.getMonth() + 1);
-            break;
-         case 'mm':
-            return tf(t.getMinutes());
-            break;
-         case 'dd':
-            return tf(t.getDate());
-            break;
-         case 'HH':
-            return tf(t.getHours());
-            break;
-         case 'ss':
-            return tf(t.getSeconds());
-            break;
-         }
-   }) 
-}
 
 /****************************************************************
  *
@@ -145,7 +107,7 @@ function getData(data, current, limit) {
             收款单位： ` + data[current].receiveCompany + `
          </div>
          <div class="items-footer">
-            申请人：`+ data[current].ascriptor +  `  日期：` + format(data[current].expensesGmt,'yyyy-MM-dd') + `
+            申请人：`+ data[current].ascriptor +  `  日期：` + Ae.date.format(data[current].expensesGmt,'yyyy-MM-dd') + `
             <button class="status-3 frt">已完成</button>
          </div>
       </li>`
@@ -180,10 +142,6 @@ $('#prePage').click(function() {
 
 $('#put').click(function put() {
    var context = $("#apply").serialize();
-   console.log("序列化为url格式为："+context);
-   //context = decodeURIComponent(context,true);
-
-   console.log("反列化为url格式为："+context);
 
       Ae.trans.AJAX({
          type: "POST",

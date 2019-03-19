@@ -9,12 +9,16 @@
       <div class="expenses">
          <div class="expenses-header">
             <ul class="status-list flt">
-               <li class="items cur">全部</li>
-               <li class="items">未申请<i>1</i></li>
-               <li class="items">未付款</li>
-               <li class="items">未通过</li>
-               <li class="items">已完成</li>
+               <li class="items cur">费用</li>
+               <!-- <li class="items">未申请<i>1</i></li> -->
+               <li class="items">审核</li>
+               <li class="items">支付</li>
             </ul>
+            <select class="select">
+               <option value="0">全部</option>
+               <option>未完成</option>
+               <option>已完成</option>
+            </select>
             <div class="frt"><button id="nextPage">下一页</button></div>
             <div class="frt"><button id="prePage">上一页</button></div>
          </div>

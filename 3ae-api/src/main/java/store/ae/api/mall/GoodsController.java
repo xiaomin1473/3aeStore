@@ -123,7 +123,7 @@ public class GoodsController {
 			produces= {"application/json;charset=UTF-8"})
 	@ResponseBody
 	public GoodsSku goodsSku(@PathVariable("goodsId") Long goodsId,
-											 @PathVariable("goodsSkuId") Long goodsSkuId) {
+							 	@PathVariable("goodsSkuId") Long goodsSkuId) {
 
 		// 获取列表json
 

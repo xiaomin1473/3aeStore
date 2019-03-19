@@ -1,20 +1,27 @@
-h3,h4,h5 {
+h2,h3,h4,h5 {
     font-weight: normal;
-    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'rsFont', "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     line-height: 26px;
     opacity: 0;
 }
 
 h5 {
+    font-size: 18px;
     color: #000;
 }
 
 h4 {
+    font-size: 18px;
     color: #333;
 }
 
 h3 {
+    font-size: 18px;
     color: #555;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 /* 
@@ -28,6 +35,9 @@ b {
     box-sizing: border-box;
     height: 100vh;
     padding-bottom: 10px;
+    background-image: url(../imgs/bg/bg-12.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 
@@ -56,6 +66,7 @@ b {
     border: solid 14px #524c4c;
     overflow: hidden;
     cursor: pointer;
+    visibility: hidden;
 }
   
 @media (max-width: 680px) {
@@ -103,4 +114,12 @@ b {
 .wrapper .status {
     line-height: 100vh;
     text-align: center;
+}
+
+
+
+.art {
+    font-size: 20px;
+    font-family: 'rsFont', Arial, Helvetica, sans-serif;
+    writing-mode:tb-rl
 }

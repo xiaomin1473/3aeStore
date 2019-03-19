@@ -1,11 +1,15 @@
 package store.ae.web.oa;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import store.ae.dto.oa.UserExposer;
@@ -62,6 +66,34 @@ public class UserController extends BaseController {
 		}
 		
 		return result;
+	}
+	
+	
+	@RequestMapping(value = "/manage/account/add", 
+			method = RequestMethod.POST,
+			produces= {"application/json;charset=UTF-8"})
+	@ResponseBody
+	public Map<String, Object> addUser(@RequestParam Map<String, Object> params) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+
+		userService.addUser(params);
+		
+		System.out.println("\n\n\n\n -----POST----- \n\n\n" + params);
+		
+		map = params;
+		
+		return map;
+	}
+	
+	@RequestMapping(value = "/manage/account/del/{userName}", 
+			method = RequestMethod.POST,
+			produces= {"application/json;charset=UTF-8"})
+	@ResponseBody
+	public void delUser(@PathVariable("userName") String userName) {
+
+		userService.delUser(userName);
+		
 	}
 
 }

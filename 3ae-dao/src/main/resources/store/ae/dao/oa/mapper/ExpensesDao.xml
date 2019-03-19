@@ -6,6 +6,24 @@
 <mapper namespace="store.ae.dao.oa.ExpensesDao">
     <!-- 目的： 为dao接口提供sql语句配置 -->
     
+    <select id="queryAllExpensesApply" resultType="Apply">
+    	select expenses_id, identifier, expenses_gmt, matter, amount, handler, ascriptor, expenses_type, department_type, receive_company, ascription, project_num, project_name, class_type, apply_status, remark, gmt_create, gmt_modified
+    	from tb_expenses_apply
+    </select>
+    
+    
+    <select id="queryAllExpensesVerify" resultType="Verify">
+    	select verify_id, identifier, text_one, text_two, handler, verify_status, remark, gmt_create, gmt_modified
+    	from tb_expenses_verify
+    </select>
+    
+    
+    <select id="queryAllExpensesPayment" resultType="Payment">
+    	select payment_id, identifier, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark, gmt_create, gmt_modified
+    	from tb_expenses_payment
+    </select>
+    
+    
     
     
     <select id="queryApplyByIdentifier" resultType="Apply">
@@ -13,11 +31,32 @@
     	from tb_expenses_apply
     	where identifier = #{identifier}
     </select>
-    
-    <select id="queryAllExpensesApply" resultType="Apply">
-    	select expenses_id, identifier, expenses_gmt, matter, amount, handler, ascriptor, expenses_type, department_type, receive_company, ascription, project_num, project_name, class_type, apply_status, remark, gmt_create, gmt_modified
-    	from tb_expenses_apply
+    <delete id="delApplyByIdentifier">
+	  	delete from tb_expenses_apply where identifier = #{identifier}
+	</delete>
+	
+	
+	<select id="queryVerifyByIdentifier" resultType="Verify">
+    	select verify_id, identifier, text_one, text_two, handler, verify_status, remark, gmt_create, gmt_modified
+    	from tb_expenses_verify
+    	where identifier = #{identifier}
     </select>
+    <delete id="delVerifyByIdentifier">
+	  	delete from tb_expenses_verify where identifier = #{identifier}
+	</delete>
+	
+	
+	<select id="queryPaymentByIdentifier" resultType="Payment">
+    	select payment_id, identifier, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark, gmt_create, gmt_modified
+    	from tb_expenses_payment
+    	where identifier = #{identifier}
+    </select>
+	<delete id="delPaymentByIdentifier">
+	  	delete from tb_expenses_payment where identifier = #{identifier}
+	</delete>
+	
+
+    
     
     <insert id="insertExpensesApply">
     	<!-- 主键冲突，重复，报错 -->
@@ -40,11 +79,26 @@
 	    	#{apply.remark}
 	    )
     </insert>
+    <update id="updateExpensesApply">
+    	update tb_expenses_apply set
+    		identifier = #{apply.identifier},
+	    	expenses_gmt = #{apply.expensesGmt}, 
+	    	matter = #{apply.matter}, 
+	    	amount = #{apply.amount}, 
+	    	handler = #{apply.handler}, 
+	    	ascriptor = #{apply.ascriptor}, 
+	    	expenses_type = #{apply.expensesType}, 
+	    	department_type = #{apply.departmentType}, 
+	    	receive_company = #{apply.receiveCompany}, 
+	    	ascription = #{apply.ascription}, 
+	    	project_num = #{apply.projectNum}, 
+	    	project_name = #{apply.projectName}, 
+	    	class_type = #{apply.classType}, 
+	    	apply_status = #{apply.applyStatus}, 
+	    	remark = #{apply.remark}
+		where identifier = #{identifier}
+    </update>
     
-    <select id="queryAllExpensesPayment" resultType="Payment">
-    	select payment_id, identifier, payment_type, payment_bank, amount, voucher, handler, payment_gmt, remark, gmt_create, gmt_modified
-    	from tb_expenses_payment
-    </select>
     
     <insert id="insertExpensesPayment">
     	<!-- 主键冲突，重复，报错 -->
@@ -60,11 +114,19 @@
 	    	#{payment.remark}
 	    )
     </insert>
-    
-    <select id="queryAllExpensesVerify" resultType="Verify">
-    	select verify_id, identifier, text_one, text_two, handler, verify_status, remark, gmt_create, gmt_modified
-    	from tb_expenses_verify
-    </select>
+    <update id="updateExpensesPayment">
+    	update tb_expenses_payment set
+    		identifier = #{payment.identifier},
+	    	payment_type = #{payment.paymentType},
+	    	payment_bank = #{payment.paymentBank},
+	    	amount = #{payment.amount},
+	    	voucher = #{payment.voucher},
+	    	handler = #{payment.handler},
+	    	payment_gmt = #{payment.paymentGmt},
+	    	remark = #{payment.remark}
+	    where identifier = #{identifier}
+    </update>
+
     
     <insert id="insertExpensesVerify">
     	<!-- 主键冲突，重复，报错 -->
@@ -78,4 +140,15 @@
 	    	#{verify.remark}
 	    )
     </insert>
+    <update id="updateExpensesVerify">
+    	update tb_expenses_verify set
+    		identifier = #{verify.identifier},
+	    	text_one = #{verify.textOne},
+	    	text_two = #{verify.textTwo},
+	    	handler = #{verify.handler},
+	    	verify_status = #{verify.verifyStatus},
+	    	remark = #{verify.remark}
+	    where identifier = #{identifier}
+    </update>
+    
 </mapper>

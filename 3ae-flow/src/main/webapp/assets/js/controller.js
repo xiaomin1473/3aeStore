@@ -1,5 +1,3 @@
-
-
 /****************************************************************
  *
  *
@@ -10,39 +8,7 @@
 var UserController = {
    userList:{},
 
-/****************************************************************
- *
- *
- *                         全局函数
- * 
- * 
- */
-   format: function(time, format){
-      var t = new Date(time);
-      var tf = function(i){return (i < 10 ? '0' : '') + i};
-      return format.replace(/yyyy|MM|dd|HH|mm|ss/g, function(a){
-      switch(a){
-            case 'yyyy':
-               return tf(t.getFullYear());
-               break;
-            case 'MM':
-               return tf(t.getMonth() + 1);
-               break;
-            case 'mm':
-               return tf(t.getMinutes());
-               break;
-            case 'dd':
-               return tf(t.getDate());
-               break;
-            case 'HH':
-               return tf(t.getHours());
-               break;
-            case 'ss':
-               return tf(t.getSeconds());
-               break;
-            }
-      }) 
-   },
+
 
    getPermit: function(data) {
       if(data == '1030000') {
@@ -59,25 +25,20 @@ var UserController = {
    },
 
 
-   addUser: function() {
-
+   addUserWrapper: function() {
+      var applyForm = document.getElementsByClassName('form-container')[0];
       $('#addUser').click(function() {
-         var applyForm = document.getElementsByClassName('form-container')[0];
          applyForm.style.display = 'block';
       })
-   },
 
-   cancel: function() {
-      $('#cancel').click(function() {
-         var applyForm = document.getElementsByClassName('form-container')[0];
-   
+      $('#cancelAdd').click(function() {
          applyForm.style.display = 'none';
       })
    },
 /****************************************************************
  *
  *
- *                       发送已完成请求
+ *                       获取用户列表
  * 
  * 
  */
@@ -100,6 +61,58 @@ var UserController = {
 /****************************************************************
  *
  *
+ *                       发送添加用户请求
+ * 
+ * 
+ */
+   addUserRequest: function(context) {
+      that = this
+      Ae.trans.AJAX({
+         type: "POST",
+         url: "/user/manage/account/add",
+         async: true,
+         context: context,
+         contentType: "application/x-www-form-urlencoded"
+      }, callback)
+      
+      function callback(xmls) {
+         jsonName = xmls.responseText;
+         var data = JSON.parse(jsonName);
+
+         console.log(data);
+         
+
+         var applyForm = document.getElementsByClassName('form-container')[0];
+         applyForm.style.display = 'none';
+         that.getdata("/user/list");
+      }
+   },
+
+/****************************************************************
+ *
+ *
+ *                   封装添加用户信息表单并发送
+ * 
+ * 
+ */
+   putAddUserRequest: function() {
+      that = this
+      $("#putAdd").click(function() {
+         var context = $("#control").serialize();
+         var userName = $("#userName").val();
+         var userPwd = $("#userPwd").val();
+         if(!userName || !userPwd) {
+            alert("用户名密码不能为空！");
+            return;
+         } 
+         that.addUserRequest(context);
+      })
+   },
+
+
+/****************************************************************
+ *
+ *
  *                       包装数据
  * 
  * 
@@ -114,11 +127,11 @@ var UserController = {
             <span class="col-2">`+ data[i].userName + `</span>
             <span class="col-2">`+ this.getPermit(data[i].departmentType) + `</span>
             <span class="col-1">`+ this.getPermit(data[i].userPermit) + `</span>
-            <span class="col-2">`+ this.format(data[i].gmtCreate, 'yyyy-MM-dd') + `</span>
+            <span class="col-2">`+ Ae.date.format(data[i].gmtCreate, 'yyyy-MM-dd') + `</span>
             <span class="col-3">
                <button class="btn-small">查看</button>
                <button class="btn-small">编辑</button>
-               <button class="btn-small" onclick="alert('删除成功')">删除</button>
+               <button class="btn-small" onclick="del('`+ data[i].userName +`')">删除</button>
             </span>
          </li>`
       }
@@ -134,8 +147,8 @@ var UserController = {
  */
    _init: function() {
       this.getdata("/user/list");
-      this.addUser();
-      this.cancel();
+      this.addUserWrapper();
+      this.putAddUserRequest();
    }
 }
 
@@ -161,3 +174,18 @@ menu.childNodes.forEach((e) => {
       this.className = 'items cur'
    })
 })
+
+function del(userName) {
+   Ae.trans.AJAX({
+      type: "POST",
+      url: "/user/manage/account/del/"+ userName,
+      async: true,
+   }, callback)
+   
+   function callback(xmls) {
+
+      alert("删除成功！")
+
+      UserController.getdata("/user/list");
+   }
+}

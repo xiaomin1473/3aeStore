@@ -43,5 +43,64 @@ public class UserDaoTest {
 		
 		System.out.println("sss:" + users);
 	}
+	
+	@Test
+	public void testAddUser() {
+		User user = new User();
+
+		long userGroupId = 1003;
+		long userPowerId = 1003;
+		String userMark= "";
+		String userName = "test";
+		String userPwd ="pwd";
+		long departmentType = 1030000;
+		long userPermit = 10003;
+		int loginStatus = 0;
+		
+		user.setUserGroupId(userGroupId);
+		user.setUserPowerId(userPowerId);
+		user.setUserMark(userMark);
+		user.setUserName(userName);
+		user.setUserPwd(userPwd);
+		user.setDepartmentType(departmentType);
+		user.setUserPermit(userPermit);
+		user.setLoginStatus(loginStatus );
+		
+		boolean a = userDao.insertUser(user);
+		System.out.println(a);
+	}
+	
+	
+	@Test
+	public void testUpdateUser() {
+		User user = new User();
+
+		long userGroupId = 1003;
+		long userPowerId = 1004;
+		String userMark= "";
+		String userName = "test";
+		String userPwd ="pwd";
+		long departmentType = 1030000;
+		long userPermit = 10003;
+		int loginStatus = 0;
+		
+		user.setUserGroupId(userGroupId);
+		user.setUserPowerId(userPowerId);
+		user.setUserMark(userMark);
+		user.setUserName(userName);
+		user.setUserPwd(userPwd);
+		user.setDepartmentType(departmentType);
+		user.setUserPermit(userPermit);
+		user.setLoginStatus(loginStatus );
+		
+		boolean a = userDao.updateUser(userName, user);
+		System.out.println(a);
+	}
+	
+	@Test
+	public void testdelUser() {
+		boolean a = userDao.delUser("test");
+		System.out.println(a);
+	}
 
 }

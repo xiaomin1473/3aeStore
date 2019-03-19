@@ -2,6 +2,7 @@ package store.ae.service.oa;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -92,5 +93,43 @@ public class UserServiceImpl implements UserService {
 		 List<User> users = userDao.queryAllUser();
 		
 		return users;
+	}
+
+	@Override
+	public boolean addUser(Map<String, Object> params) {
+		
+		User user = new User();
+		
+		String userPwd = (String)params.get("userPwd");
+		String pwdMD5 = getMD5(userPwd);
+		
+
+		user.setUserGroupId(Long.parseLong((String)params.get("userGroupId")));
+		user.setUserPowerId(Long.parseLong((String)params.get("userPowerId")));
+		user.setUserMark((String)params.get("userMark"));
+		user.setUserName((String)params.get("userName"));
+		user.setUserPwd(pwdMD5);
+		user.setDepartmentType(Long.parseLong((String)params.get("departmentType")));
+		user.setLoginStatus(Integer.parseInt((String)params.get("loginStatus")));
+		
+		boolean status = userDao.insertUser(user);
+		
+		return status;
+	}
+
+	@Override
+	public boolean updateUser(String userName, User user) {
+		
+		boolean status = userDao.updateUser(userName, user);
+				
+		return status;
+	}
+
+	@Override
+	public boolean delUser(String userName) {
+
+		boolean status = userDao.delUser(userName);
+		
+		return status;
 	}
 }

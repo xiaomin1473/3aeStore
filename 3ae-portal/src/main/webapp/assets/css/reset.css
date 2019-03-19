@@ -116,6 +116,13 @@ hr {
   font-style: normal;
 }
 
+@font-face{
+  font-family: 'rsFont';
+  src:  url('../font/rs.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "iconfont";
   src: url("../font/iconfont/iconfont.eot");

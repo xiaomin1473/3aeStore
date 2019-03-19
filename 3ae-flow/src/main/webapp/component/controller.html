@@ -51,19 +51,28 @@
          </div>
          <div class="form-body">
             <ul class="form-list">
-               <li class="form-items">
-                  <label><i>*&nbsp;</i>用户组:</label><input class="section" name="matter" placeholder="">
+               <li class="form-items" style="display:none">
+                  <label><i>*&nbsp;</i>用户组:</label><input class="section" name="userGroupId" value="1001" placeholder="">
+               </li>
+               <li class="form-items" style="display:none">
+                  <label><i>*&nbsp;</i>权限:</label>
+                  <select name="userPowerId" class="section">
+                     <option value="1000">管理员</option>
+                     <option value="1001">普通员工</option>
+                  </select>
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>用户名:</label><input class="section" name="identifier" placeholder="">
+                  <label><i>*&nbsp;</i>用户名:</label><input class="section" name="userName" id="userName" placeholder="">
                </li>
                <li class="form-items">
-                  <label><i>*&nbsp;</i>用户密码:</label><input class="section" name="expensesGmt" placeholder="">
+                  <label><i>*&nbsp;</i>用户密码:</label><input class="section" name="userPwd" type="password" id="userPwd" placeholder="">
                </li> 
-
+               <li class="form-items" style="display:none">
+                  <label><i>*&nbsp;</i>用户标识:</label><input class="section" name="userMark" placeholder="">
+               </li>
                <li class="form-items">
                   <label><i>*&nbsp;</i>分管中心:</label>
-                  <select name="classType" class="section">
+                  <select name="departmentType" class="section">
                      <option value="0">后台管理</option>
                      <option value="1030000">运营中心</option>
                      <option value="1040000">研发中心</option>
@@ -73,16 +82,19 @@
                </li>
                <li class="form-items">
                   <label><i>*&nbsp;</i>权限:</label>
-                  <select name="classType" class="section">
+                  <select name="userPermit" class="section">
                      <option value="0">管理员</option>
                      <option value="1">普通员工</option>
                   </select>
                </li>
+               <li class="form-items" style="display:none">
+                  <label><i>*&nbsp;</i>登录状态:</label><input class="section" name="loginStatus" value="0" placeholder="">
+               </li>
             </ul>
          </div>
          <div class="form-footer">
-            <button id="put" type="button">添加</button>
-            <button id="cancel" type="button">取消</button>
+            <button id="putAdd" type="button">添加</button>
+            <button id="cancelAdd" type="button">取消</button>
          </div>
       </form>
    </div>

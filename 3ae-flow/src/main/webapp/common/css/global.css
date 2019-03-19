@@ -73,6 +73,18 @@ body {
    text-align: center;
 }
 
+.select {
+	margin-left: 30px;
+	width: 100px;
+	color: #777;
+	line-height: 20px;
+	border: solid 1px #d9d9d9;
+}
+
+.select>option {
+	color: #777;
+	line-height: 20px;
+}
 
 /* h4 {
 	display: inline;
