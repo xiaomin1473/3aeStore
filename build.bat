@@ -1,5 +1,5 @@
 git add * 
-git commit -m "add power limit"
+git commit -m "change blog"
 git push
 
 mvn install
