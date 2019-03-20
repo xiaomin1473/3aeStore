@@ -29,20 +29,26 @@ public class ExpensesServiceImpl implements ExpensesService {
 
 	@Override
 	public Apply getApplyByIdentifier(String identifier) {
-		//Apply apply = expensesDao.
-		return null;
+		
+		Apply apply = expensesDao.queryApplyByIdentifier(identifier);
+		
+		return apply;
 	}
 
 	@Override
 	public Verify getVerifyByIdentifier(String identifier) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Verify verify =expensesDao.queryVerifyByIdentifier(identifier);
+		
+		return verify;
 	}
 
 	@Override
 	public Payment getPaymentByIdentifier(String identifier) {
-		// TODO Auto-generated method stub
-		return null;
+
+		Payment payment = expensesDao.queryPaymentByIdentifier(identifier);
+		
+		return payment;
 	}
 	
 	

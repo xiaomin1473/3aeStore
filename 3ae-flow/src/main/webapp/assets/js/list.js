@@ -100,20 +100,22 @@ ExpensesController = {
             }
 
             i++
-            expensesList += `<li class="items" onclick="turnToPage('detail')">
-               <div class="items-header">
-                  费用申请编号：` + data[current].identifier +`
-               </div>
-               <div class="items-body">
-                  类型：` + data[current].ascription + `<br>
-                  金额：￥` + data[current].amount + `<br>
-                  项目：`+ data[current].matter + `<br>
-                  收款单位： ` + data[current].receiveCompany + `
-               </div>
-               <div class="items-footer">
-                  申请人：`+ data[current].ascriptor +  `  日期：` + Ae.date.format(data[current].expensesGmt,'yyyy-MM-dd') + `
-                  <button class="status-3 frt">已完成</button>
-               </div>
+            expensesList += `<li class="items">
+               <a href="/detail?apply=${data[current].identifier}">
+                  <div class="items-header">
+                     费用申请编号：${data[current].identifier}
+                  </div>
+                  <div class="items-body">
+                     类型：${data[current].ascription}<br>
+                     金额：￥${data[current].amount}<br>
+                     项目：${data[current].matter}<br>
+                     收款单位：${data[current].receiveCompany}
+                  </div>
+                  <div class="items-footer">
+                     申请人：${data[current].ascriptor}  日期：${Ae.date.format(data[current].expensesGmt,'yyyy-MM-dd')}
+                     <button class="status-3 frt">已完成</button>
+                  </div>
+               </a>
             </li>`
          }
          var expensesBody = document.getElementsByClassName('expenses-body')[0];
@@ -163,20 +165,22 @@ ExpensesController = {
             }
 
             i++
-            expensesList += `<li class="items" onclick="turnToPage('detail')">
-               <div class="items-header">
-                  费用申请编号：` + data[current].identifier +`
-               </div>
-               <div class="items-body">
-                  类型：` + data[current].ascription + `<br>
-                  金额：￥` + data[current].amount + `<br>
-                  项目：`+ data[current].matter + `<br>
-                  收款单位： ` + data[current].receiveCompany + `
-               </div>
-               <div class="items-footer">
-                  申请人：`+ data[current].ascriptor +  `  日期：` + Ae.date.format(data[current].expensesGmt,'yyyy-MM-dd') + `
-                  <button class="status-3 frt">已完成</button>
-               </div>
+            expensesList += `<li class="items">
+               <a href="/detail?verify=${data[current].identifier}">
+                  <div class="items-header">
+                     费用申请编号：${data[current].identifier }
+                  </div>
+                  <div class="items-body">
+                     类型：${data[current].ascription}<br>
+                     金额：￥${data[current].amount}<br>
+                     项目：${data[current].matter}<br>
+                     收款单位：${data[current].receiveCompany}
+                  </div>
+                  <div class="items-footer">
+                     申请人：${data[current].ascriptor}  日期：${Ae.date.format(data[current].expensesGmt,'yyyy-MM-dd')}
+                     <button class="status-3 frt">已完成</button>
+                  </div>
+               </a>
             </li>`
          }
          var expensesBody = document.getElementsByClassName('expenses-body')[0];
@@ -226,19 +230,21 @@ ExpensesController = {
             }
 
             i++
-            expensesList += `<li class="items" onclick="turnToPage('detail')">
-               <div class="items-header">
-                  费用申请编号：` + data[current].identifier +`
-               </div>
-               <div class="items-body">
-                  金额：￥` + data[current].amount + `<br>
-                  支付方式：`+ data[current].paymentType + `<br>
-                  交易行： ` + data[current].paymentBank + `
-               </div>
-               <div class="items-footer">
-                  处理人：`+ data[current].handler +  `  支付日期：` + Ae.date.format(data[current].paymentGmt,'yyyy-MM-dd') + `
-                  <button class="status-3 frt">已完成</button>
-               </div>
+            expensesList += `<li class="items">
+               <a href="/detail?payment=${data[current].identifier}">
+                  <div class="items-header">
+                     费用申请编号：${data[current].identifier}
+                  </div>
+                  <div class="items-body">
+                     金额：￥${data[current].amount}<br>
+                     支付方式：${data[current].paymentType}<br>
+                     交易行：${data[current].paymentBank}
+                  </div>
+                  <div class="items-footer">
+                     处理人：${data[current].handler }  支付日期：${ Ae.date.format(data[current].paymentGmt,'yyyy-MM-dd') }
+                     <button class="status-3 frt">已完成</button>
+                  </div>
+               </a>
             </li>`
          }
          var expensesBody = document.getElementsByClassName('expenses-body')[0];

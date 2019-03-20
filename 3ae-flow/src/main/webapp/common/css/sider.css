@@ -40,10 +40,16 @@
    margin: 10px 0;
    height: 40px;
    line-height: 40px;
-   color: #fff;
    text-align: center;
    background-color: #26282c;
    cursor: pointer;
+}
+
+.sider-list .items a {
+   display: block;
+   width: 100%;
+   height: inherit;
+   color: #fff;
 }
 
 .sider-list .cur {

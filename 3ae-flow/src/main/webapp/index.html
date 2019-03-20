@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-      <title>睿胜智能</title>
+      <title>睿盛智能</title>
       <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
       <!-- <link rel="shortcut icon" href="./static/img/icon/logo.jpg" /> -->
       
@@ -33,20 +33,20 @@
          <header>
             <a class="logo" href="/">
                <!-- <img class="logo-img" width="38" height="26" style="background-color: #fff" src="./static/img/icon/logo.jpg"/> -->
-               <span>睿胜智能</span>
+               <span>睿盛智能</span>
             </a>
             
          </header>
          <ul class="sider-list">
-            <li class="items cur" onclick="turnToPage('portal')">首页</li>
+            <li class="items cur"><a href="/">首页</a></li>
             <!-- <li class="items" onclick="turnToPage('user')">账户</li> -->
             <!-- <li class="items" onclick="turnToPage('wait')">待通过</li> -->
-            <li class="items" onclick="turnToPage('list')">流程</li>
+            <li class="items"><a href="/list">流程</a></li>
             <!-- <li class="items" onclick="turnToPage('none')">未通过</li> -->
             <!-- <li class="items" onclick="turnToPage('detail')">详情</li> -->
-            <li class="items" onclick="turnToPage('database')">备份</li>
-            <li class="items" onclick="turnToPage('controller')">管理</li>
-            <li class="items" onclick="turnToPage('log')">记录</li>
+            <li class="items"><a href="/database">备份</a></li>
+            <li class="items"><a href="/controller">管理</a></li>
+            <li class="items"><a href="/log">记录</a></li>
             <!-- <li class="items""><a style=" display: block; width: 100%; height: inherit; color: #fff;" target="blank" href="/views/controller.html">控制台</a></li> -->
          </ul>
       </aside>  
@@ -68,7 +68,7 @@
          </div>
       </div>
 
-      <div class="form-container">
+      <div class="form-container" id="pwdFormWrapper">
             <form class="form" id="pwdFrom">
                <div class="form-header">
                   <h3>修改密码</h3>
@@ -93,134 +93,20 @@
 </html>
 <script src="./common/js/ae.js"></script>
 
+<script src="./main.js"></script>
+<script src="./permision/router.js"></script>
 <script>
+   (function changePwd() {
+      var applyForm = document.getElementById('pwdFormWrapper');
 
-   (function sider() {
-      var siderCtrl = document.getElementsByClassName("sider-ctrl");
-      var swt = true;
-      siderCtrl[0].onclick = function() {
-
-         if(swt) {
-            this.innerHTML = '▶';
-            this.parentElement.style.width = "42px";
-            this.parentElement.nextElementSibling.style.paddingLeft="42px"
-            this.parentElement.className = "sider close";
-            swt = false;
-         }
-         else {
-            this.innerHTML = '◀';
-            this.parentElement.style.width = "200px";
-            this.parentElement.nextElementSibling.style.paddingLeft="200px"
-            this.parentElement.className = "sider";
-            swt = true;
-         }
-      }
-   })();
-
-   (function() {
-      var menu = document.getElementsByClassName('sider-list')[0];
-
-      menu.childNodes.forEach((e) => {
-         e.addEventListener("click", function() {
-            this.parentNode.childNodes.forEach((e)=>{
-               e.className = 'items'
-            })
-            this.className = 'items cur'
-         })
+      $('#changePwd').click(function() {
+         applyForm.style.display = 'block';
+      })
+   
+      $('#cancel').click(function() {
+         applyForm.style.display = 'none';
       })
    })();
-
-   function getPage(n, container, url) {
-      var container = document.getElementsByClassName(container)[0];
-      var ajax = new XMLHttpRequest();
-      ajax.open('get', url);
-      ajax.send();
-      ajax.onreadystatechange = function () {
-         if (ajax.readyState==4 &&ajax.status==200) {
-            container.innerHTML = ajax.responseText
-      　　}
-      }
-      function addCSS(n) {
-         var links = document.getElementsByTagName('link');
-         var link = document.createElement('link');
-         link.href= "./assets/css/" + n + ".css";
-         link.rel = "stylesheet";
-         links[0].parentNode.removeChild(links[5])
-         document.getElementsByTagName('head')[0].appendChild(link);
-      }
-
-      function addJS(n) {
-         
-         var scripts = document.getElementsByTagName('script');
-         var script = document.createElement('script');
-         script.src= "./assets/js/" + n + ".js";
-         scripts[0].parentNode.removeChild(scripts[0]);
-         document.getElementsByTagName('head')[0].appendChild(script);
-      }
-
-      addCSS(n);
-      addJS(n);
-   }
-
-   getPage('portal', "context", "component/portal.html");
-
-   function turnToPage(n) {
-      switch(n) {
-         case 'detail': getPage(n,"context", "component/detail.html"); break;
-         case 'list': getPage(n,"context", "component/list.html"); break;
-         case 'portal': getPage(n,"context", "component/portal.html"); break;
-         case 'database': getPage(n,"context", "component/database.html"); break;
-         case 'controller': getPage(n,"context", "component/controller.html"); break;
-         case 'log': getPage(n,"context", "component/log.html"); break;
-      }
-   }
-
-   (function Router() {
-      // console.log(window.location.href.split('/')[4]);
-   })();
-
-
-   (function getCookie() {
-      var arr,reg = new RegExp("(^| )"+"Token"+"=([^;]*)(;|$)");
-      if(arr=document.cookie.match(reg)) {
-         return unescape(arr[2]);
-      }
-      else {
-         window.location.href = "/login.html";
-      }
-   })();
-
-   (function logout() {
-      var logout = document.getElementById("logout");
-
-      logout.addEventListener('click', function() {
-         var date = new Date();
-         date.setTime(date.getTime() - 1);
-         var arr,reg = RegExp('(^| )'+"Token"+'=([^;]+)(;|$)');
-         if (arr = document.cookie.match(reg)) {
-            var delValue = decodeURIComponent(arr[2]);
-         }
-
-         window.location.href = "/login.html";
-         
-        // console.log(delValue);
-
-         if (delValue) {
-            document.cookie = "Token"+'='+delValue+';expires='+date.toGMTString();
-         }
-      })
-   })();
-
-
-
-   $('#changePwd').click(function() {
-      var applyForm = document.getElementsByClassName('form-container')[0];
-      applyForm.style.display = 'block';
-   })
-
-   $('#cancel').click(function() {
-      var applyForm = document.getElementsByClassName('form-container')[0];
-
-      applyForm.style.display = 'none';
-   })
+   
+   Global._init()
 </script>

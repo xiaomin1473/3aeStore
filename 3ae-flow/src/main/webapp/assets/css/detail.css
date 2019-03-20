@@ -1,3 +1,24 @@
-.detail{
+.detail {
    
+}
+
+.detail-body {
+   margin: 20px 40px;
+}
+
+.detail-items {
+    padding-left: 20px;
+}
+
+.detail-items li {
+    font-size: 14.7px;
+    line-height: 28px;
+    color: #666;
+}
+
+.detail-items li i {
+    display: inline-block;
+    width: 100px;
+    margin-right: 20px;
+    text-align: right;
 }

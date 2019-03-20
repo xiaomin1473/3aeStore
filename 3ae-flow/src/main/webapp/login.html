@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-      <title>睿胜智能</title>
+      <title>睿盛智能</title>
       <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
       <!-- <link rel="shortcut icon" href="./static/img/icon/logo.jpg" /> -->
       
@@ -46,7 +46,7 @@
             </div>
          </form>
          <div class="copyright">
-            Copyright © 2018-2028 南京睿胜智能科技有限公司 版权所有 保留一切权利
+            Copyright © 2019-2029 南京睿盛智能科技有限公司 版权所有 保留一切权利
          </div>
 
          <div class="alert">
@@ -75,65 +75,5 @@
    </body>
 </html>
 <script src="./common/js/ae.js"></script>
-<script>
-
-   
-   var submit = document.getElementById('submit');
-   var callback;
-   var closeAlert = document.getElementById('closeAlert');
-
-   closeAlert.addEventListener("click", function(){ 
-      var alert = document.getElementsByClassName('alert')[0];
-      console.log(alert)
-      alert.style.display = 'none';
-   })
-
-   
-   submit.addEventListener("click", function(){
-      var msg = document.getElementById('message');
-      var input = document.getElementsByTagName('input');
-
-      if(!input[0].value || !input[1].value) {
-         msg.innerHTML = "用户名密码不能为空"
-         return;
-      }
-
-      var userName = input[0].value;
-      var userPwd = input[1].value;
-      var form = document.getElementById('form');
-      var context = `userName=${userName}&userPwd=${userPwd}` 
-
-      Ae.trans.AJAX({
-         type: "POST",
-         url: "/user/login",
-         async: true,
-         context: context,
-         contentType: "application/x-www-form-urlencoded"
-      }, callback)
-
-      function callback(xmls) {
-         jsonName = xmls.responseText;
-         jsonName = JSON.parse(jsonName);
-         console.log(jsonName);
-         if(jsonName.success) {
-            
-            window.location.href='/';
-
-            var Days = 30;
-            var exp = new Date();
-            exp.setTime(exp.getTime() + Days*24*60*60*1000);
-            console.log(jsonName);
-            document.cookie = "Token" + "="+ escape (jsonName.data.token) + ";expires=" + exp.toGMTString();
-            document.cookie = "UserName" + "="+ escape (jsonName.data.userName) + ";expires=" + exp.toGMTString();
-            document.cookie = "UserPermit" + "="+ escape (jsonName.data.userPermit) + ";expires=" + exp.toGMTString();
-            document.cookie = "departmentType" + "="+ escape (jsonName.data.departmentType) + ";expires=" + exp.toGMTString();
-         } else {
-            msg.innerHTML = jsonName.error;
-         }
-      }
-   });
-
-   
-   
-
-</script>
+<script src="./main.js"></script>
+<script src="./assets/js/login.js"></script>

@@ -1,5 +1,5 @@
 git add * 
-git commit -m "change blog"
+git commit -m "optimize flow web frontend"
 git push
 
 mvn install

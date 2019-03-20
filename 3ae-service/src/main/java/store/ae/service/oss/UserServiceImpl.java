@@ -73,8 +73,10 @@ public class UserServiceImpl implements UserService {
 				return new UserExposer(false, userName, nowTime.getTime());
 			}
 			
+			@SuppressWarnings("unused")
 			String token = getToken(userName);
-			exposer = new UserExposer(true, token, userName, user.getUserPermit(), nowTime.getTime());
+			// exposer = new UserExposer(true, token, userName, user.getUserPermit(), nowTime.getTime());
+			exposer = new UserExposer(false, userName, nowTime.getTime());
 
 		} catch (Exception e) {
 			return new UserExposer(false, userName, nowTime.getTime());

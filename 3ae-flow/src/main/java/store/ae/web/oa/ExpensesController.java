@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,6 +35,29 @@ public class ExpensesController extends BaseController {
 		List<Apply> lists = expensesService.getApplyList();
 		
 		return lists;
+	}
+	
+	@RequestMapping(value = "/apply/detail/{identifier}",
+			method = RequestMethod.POST,
+			produces= {"application/json;charset=UTF-8"})
+	@ResponseBody
+	public Apply applyDetail(@PathVariable("identifier") String identifier){
+		
+		Apply apply = expensesService.getApplyByIdentifier(identifier);
+		
+		return apply;
+	}
+	
+	
+	@RequestMapping(value = "/payment/detail/{identifier}",
+			method = RequestMethod.POST,
+			produces= {"application/json;charset=UTF-8"})
+	@ResponseBody
+	public Payment paymentDetail(@PathVariable("identifier") String identifier){
+		
+		Payment payment = expensesService.getPaymentByIdentifier(identifier);
+		
+		return payment;
 	}
 	
 	
