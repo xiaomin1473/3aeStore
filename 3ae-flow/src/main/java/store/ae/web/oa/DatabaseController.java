@@ -19,7 +19,6 @@ import store.ae.service.oa.DatabaseService;
 @RequestMapping("/database")
 public class DatabaseController extends BaseController {
 	
-	@SuppressWarnings("unused")
 	@Autowired
 	private DatabaseService databaseService;
 	
