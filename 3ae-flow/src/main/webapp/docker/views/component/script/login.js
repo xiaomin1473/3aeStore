@@ -1,8 +1,7 @@
 LoginController = {
 
     closeAlert: function() {
-        var closeAlert = document.getElementById('closeAlert');
-        closeAlert.addEventListener("click", function(){ 
+        $('#closeAlert').click(function() {
             var alert = document.getElementsByClassName('alert')[0];
             console.log(alert)
             alert.style.display = 'none';
@@ -15,9 +14,8 @@ LoginController = {
         var msg = document.getElementById('message');
         var input = document.getElementsByTagName('input');
         that = this
-        var submit = document.getElementById('submit');
 
-        submit.addEventListener("click", function(){
+        $('#submit').click(function() {
           
             if(!input[0].value || !input[1].value) {
                 msg.innerHTML = "用户名密码不能为空"
@@ -44,12 +42,12 @@ LoginController = {
                 var datys = 30;
                 if(jsonName.success) {
                     // 提升用户体验
-                    window.location.href='/';
+                    window.location.href='/portal';
 
-                    Global.setCookie("Token", jsonName.data.token, datys);
-                    Global.setCookie("UserName", jsonName.data.userName, datys);
-                    Global.setCookie("UserPermit", jsonName.data.userPermit, datys);
-                    Global.setCookie("departmentType", jsonName.data.departmentType, datys);
+                    Global.cookie.setCookie("Token", jsonName.data.token, datys);
+                    Global.cookie.setCookie("UserName", jsonName.data.userName, datys);
+                    Global.cookie.setCookie("UserPermit", jsonName.data.userPermit, datys);
+                    Global.cookie.setCookie("departmentType", jsonName.data.departmentType, datys);
                     
                     
                 } else {

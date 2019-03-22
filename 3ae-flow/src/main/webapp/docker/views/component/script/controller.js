@@ -138,6 +138,18 @@ var UserController = {
       controllerList.innerHTML = es;
    },
 
+   menu: function() {
+      
+      $('.control-menu li').bind("click", function() {
+         //var query = location.href.split("/")[3];
+         that = this;
+         
+         $('.control-menu li').each(function () {
+            this.className = this == that ? 'items cur' : 'items'
+         });
+      })
+   },
+
 /****************************************************************
  *
  *
@@ -149,6 +161,7 @@ var UserController = {
       this.getdata("/user/list");
       this.addUserWrapper();
       this.putAddUserRequest();
+      this.menu();
    }
 }
 
@@ -162,19 +175,6 @@ UserController._init();
  * 
  * 
  */
-
-
-var menu = document.getElementsByClassName('control-menu')[0];
-
-menu.childNodes.forEach((e) => {
-   e.addEventListener("click", function() {
-      this.parentNode.childNodes.forEach((e)=>{
-         e.className = 'items'
-      })
-      this.className = 'items cur'
-   })
-})
-
 function del(userName) {
    Ae.trans.AJAX({
       type: "POST",
