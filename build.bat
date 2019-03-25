@@ -1,5 +1,5 @@
 git add * 
-git commit -m "optimize web frontend architecture"
+git commit -m "add store"
 git push
 
 mvn install

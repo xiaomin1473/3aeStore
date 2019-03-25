@@ -84,6 +84,34 @@ values
 	('营销中心', 1010000, 1, 0, 'market', ''),
 	('数据备份', 1001, 2, 1000, 'database', ''),
 	('清单列表', 1001, 2, 1000, 'list', '');
+	
+	
+CREATE TABLE tb_app_menu (
+`menu_id` bigint NOT NULL AUTO_INCREMENT COMMENT '权限ID',
+`menu_name` varchar(120) NOT NULL COMMENT '权限名称',
+`user_permit` varchar(120) NOT NULL COMMENT '用户权限',
+`level` bigint NOT NULL COMMENT '级别',
+`pid` bigint NOT NULL COMMENT '父级ID',
+`path` varchar(120) COMMENT '路由',
+`img` varchar(120) COMMENT '缩略图',
+`gmt_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+`gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+PRIMARY KEY pk_menu_id(menu_id),
+key idx_menu_name(menu_name),
+key idx_create_time(gmt_create)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='菜单列表';
+
+-- 初始化数据
+-- mark标识: 超级角色、超级业务、超级模块、备用、备用
+insert into tb_app_menu(menu_name, user_permit, level, pid, path, img)
+values
+	('首页', 3, 2, 1, '/portal', ''),
+	('列表', 3, 2, 1, '/list', ''),
+	('备份', 1, 2, 1, '/database', ''),
+	('管理', 1, 2, 1, '/controller', ''),
+	('权限管理', 2, 3, 1003, '/controller/power', ''),
+	('账户管理', 2, 3, 1003, '/controller/account', ''),
+	('记录', 1, 2, 1, '/log', '');
 
 
 CREATE TABLE tb_user_role (

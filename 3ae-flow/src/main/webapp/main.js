@@ -29,40 +29,41 @@ Global = {
       }
    },
 
-   menu: function() {
+   
 
-      var siderCtrl = document.getElementsByClassName("sider-ctrl");
-      var swt = true;
 
-      function move(e, data) {
-         e.innerHTML = data[0];
-         e.parentElement.style.width = data[1];
-         e.parentElement.nextElementSibling.style.paddingLeft = data[2];
-         e.parentElement.className = data[3];
+
+   // 比对链接和当前路径
+   getComponent: function(url) {
+      var originUrl = url.split("/")[3];
+      var urls = location.href.split("/")[3];
+
+      if(originUrl == urls) {
+         return urls;
+      } else {
+         return originUrl;
       }
-
-      siderCtrl[0].onclick = function() {
-
-         if(swt) {
-            move(this, ["▶", "42px", "42px", "sider close"]);
-            swt = false;
-         }
-         else {
-            move(this, ["◀", "200px", "200px", "sider"]);
-            swt = true;
-         }
-      }
-
-      $('.sider-list li a').bind("click", function() {
-         //var query = location.href.split("/")[3];
-         that = this.parentElement;
-         
-         $('.sider-list li').each(function () {
-            this.className = this == that ? 'items cur' : 'items'
-          });
-      })
-      
    },
+
+   getComponentName: function() {
+      var urls = location.href.split("/")[3];
+
+      console.log(urls);
+      if(urls.indexOf("?")) {
+         urls = urls.split("?")[0];
+         
+         return urls;
+      }
+      
+      return urls;
+   },
+
+
+   
+   // n           组件名称
+   // container 
+   // urls        页面路径
+
 
    getPage: function (n, container, urls) {
       
@@ -114,33 +115,19 @@ Global = {
       
    },
 
-   popTo: function() {
-      if(history.pushState) {
 
-         this.to();
 
-         window.addEventListener("popstate", function() {
+   checkRouter: function() {
+      var componentName = this.getComponentName();
 
-            Global.to();
-      });
+      for(var i = 0; i < Router.length; i++) {
+
+         if(Router[i].name == componentName) {
+            return true;
+         }
       }
-   },
 
-   getComponent: function(url) {
-      var originUrl = url.split("/")[3];
-      var urls = location.href.split("/")[3];
-
-      if(originUrl == urls) {
-         return urls;
-      } else {
-         return originUrl;
-      }
-   },
-
-   getComponentName: function() {
-      var urls = location.href.split("/")[3];
-
-      return urls;
+      return false;
    },
 
    to: function(url) {
@@ -188,7 +175,17 @@ Global = {
    
    },
 
+   popTo: function() {
+      if(history.pushState) {
 
+         this.to();
+
+         window.addEventListener("popstate", function() {
+
+            Global.to();
+      });
+      }
+   },
    
 
    checkUserLogin: function() {
@@ -198,6 +195,42 @@ Global = {
       } else {
          this.getPage("login", "context", "/docker/views/pages/login.html");
       }
+   },
+
+
+   menu: function() {
+
+      var siderCtrl = document.getElementsByClassName("sider-ctrl");
+      var swt = true;
+
+      function move(e, data) {
+         e.innerHTML = data[0];
+         e.parentElement.style.width = data[1];
+         e.parentElement.nextElementSibling.style.paddingLeft = data[2];
+         e.parentElement.className = data[3];
+      }
+
+      siderCtrl[0].onclick = function() {
+
+         if(swt) {
+            move(this, ["▶", "42px", "42px", "sider close"]);
+            swt = false;
+         }
+         else {
+            move(this, ["◀", "200px", "200px", "sider"]);
+            swt = true;
+         }
+      }
+
+      $('.sider-list li a').bind("click", function() {
+         //var query = location.href.split("/")[3];
+         that = this.parentElement;
+         
+         $('.sider-list li').each(function () {
+            this.className = this == that ? 'items cur' : 'items'
+         });
+      })
+      
    },
 
    logout: function() {
@@ -210,19 +243,6 @@ Global = {
          window.location.href = "/login";
 
       })
-   },
-
-   checkRouter: function() {
-      var componentName = this.getComponentName();
-
-      for(var i = 0; i < Router.length; i++) {
-
-         if(Router[i].name == componentName) {
-            return true;
-         }
-      }
-
-      return false;
    },
    
    
