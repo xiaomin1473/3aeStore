@@ -50,5 +50,4 @@ public class TcpClient extends SimpleChannelInboundHandler<Object> {
         cause.printStackTrace();
         ctx.close();
     }
-
 }

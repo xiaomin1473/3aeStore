@@ -25,7 +25,7 @@ public class Main {
 			b.childHandler(new WebSocketChannelHandler());
 			System.out.println("服务器开启，等待客户端连接……");
 			
-			Channel ch = b.bind(8080).sync().channel();
+			Channel ch = b.bind(47332).sync().channel();
 			ch.closeFuture().sync();
 			
 		} catch (Exception e) {

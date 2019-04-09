@@ -33,6 +33,12 @@ public class TcpServer extends ChannelInboundHandlerAdapter {
 		return buf.toString();
 	}
 	
+	/**
+	 * 字符串拼接，代替+
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	private String msgr(String a, String b) {
 		
 		StringBuffer contentBuffer = new StringBuffer();
