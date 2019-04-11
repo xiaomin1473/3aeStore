@@ -23,7 +23,6 @@
     	from tb_user
     </select>
     
-    
     <insert id="insertUser">
     	<!-- 主键冲突，重复，报错 -->
     	insert ignore into tb_user(user_group_id, user_power_id, user_name, user_pwd, user_mark, department_type, user_permit, login_status)
@@ -40,7 +39,7 @@
     </insert>
     
     <update id="updateUser">
-		  update tb_user set
+		update tb_user set
 		    user_group_id = #{user.userGroupId},
     		user_power_id = #{user.userPowerId},
     		user_name = #{user.userName},
@@ -49,10 +48,10 @@
     		department_type = #{user.departmentType},
     		user_permit = #{user.userPermit},
     		login_status = #{user.loginStatus}
-		  where user_name = #{userName}
+		where user_name = #{userName}
 	</update>
     
     <delete id="delUser">
-	  	delete from tb_user where user_name = #{userName}
+		delete from tb_user where user_name = #{userName}
 	</delete>
 </mapper>
