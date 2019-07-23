@@ -17,7 +17,8 @@
     Ae.trans = {
         AJAX: function(data){},
         JSONP: function(data){},
-        CORS: function(data){}
+        CORS: function(data){},
+        CORS_PROXY: function(data){}
     }
 
     Ae.trans.AJAX = function(data, callback) {
@@ -93,6 +94,23 @@
 
         xml.send();
     }
+
+    // 远程代理跨域
+	Ae.trans.CORS_PROXY = function cors_proxy() {
+        $.ajaxPrefilter( function (options) {
+            if (options.crossDomain && jQuery.support.cors) {
+                var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+                options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+                //options.url = "http://cors.corsproxy.io/url=" + options.url;
+            }
+        });
+        $.get(
+            'http://192.168.1.2:8180',
+            function (response) {
+                console.log("> ", response);
+                $("#viewer").html(response);
+        });
+    };
 
     Ae.util = {
         getId: function(id) {
