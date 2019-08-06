@@ -5,7 +5,6 @@ import java.net.InetAddress;
 
 public class LocalUDPSocketProvider
 {
-        private static final String TAG = LocalUDPSocketProvider.class.getSimpleName();
         private static LocalUDPSocketProvider instance = null;
         private DatagramSocket localUDPSocket = null;
  

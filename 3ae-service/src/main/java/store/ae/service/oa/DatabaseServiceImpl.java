@@ -119,7 +119,6 @@ public class DatabaseServiceImpl implements DatabaseService {
 		
 	}
 
-	@SuppressWarnings({ "unused", "resource" })
 	public void loadxlsToDatabase(POIFSFileSystem fileIn) throws SystemException {
 		
 		Workbook wb0 = null;

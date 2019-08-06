@@ -8,7 +8,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class changeImg {
-	@SuppressWarnings("resource")
+
 	public static void main(String[] args) {
 		File imgFile =new File("E:/frame.yuv");
 		try{			

@@ -12,10 +12,6 @@ public class State extends BaseState{
 		int v = DataUtil.getBit(value, 0);
 		if (v == 1) {
 			res.append("火警;");
-			// 水平火源坐标
-			int x = (obj[2] & 0xFF) | ((obj[3] & 0xFF) << 8);
-			// 垂直火源坐标
-			int y = (obj[4] & 0xFF) | ((obj[5] & 0xFF) << 8);
 		}
 		
 		v = DataUtil.getBit(value, 8);

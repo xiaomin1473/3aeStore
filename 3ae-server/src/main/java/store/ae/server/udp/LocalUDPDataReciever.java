@@ -1,14 +1,9 @@
 package store.ae.server.udp;
 
 import java.net.DatagramSocket;
-import java.net.InetAddress;
-
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.socket.DatagramPacket;
 
 public class LocalUDPDataReciever
 {
-        private static final String TAG = LocalUDPDataReciever.class.getSimpleName();
         private static LocalUDPDataReciever instance = null;
         private Thread thread = null;
  
