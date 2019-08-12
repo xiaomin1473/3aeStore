@@ -1,5 +1,5 @@
 git add * 
-git commit -m "final update"
+git commit -m "add pattern chapter1"
 git push
 
-mvn install
+REM  mvn install
