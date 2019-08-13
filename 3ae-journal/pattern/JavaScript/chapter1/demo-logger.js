@@ -112,7 +112,7 @@ Logger.prototype = {
 
 // 给类添加参数,test debug 空 分别对应测试，调试，正常运行三种模式
 var log = new Logger({
-    state: "sss",
+    state: "test",
     expand: true
 });
 
