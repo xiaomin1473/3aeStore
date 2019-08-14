@@ -1,1 +1,1 @@
-log.info("test log");
+log.info("log init");

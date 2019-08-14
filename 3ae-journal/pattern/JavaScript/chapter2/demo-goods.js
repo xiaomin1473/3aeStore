@@ -15,8 +15,8 @@ function add(c,d){
 }
 
 var s = {a:1, b:2};
-console.log(add.call(s,3,4)); // 1+2+3+4 = 10
-console.log(add.apply(s,[5,6])); // 1+2+5+6 = 14
+// console.log(add.call(s,3,4)); // 1+2+3+4 = 10
+// console.log(add.apply(s,[5,6])); // 1+2+5+6 = 14
 
 
 
@@ -59,10 +59,10 @@ BookOrign.prototype = {
 
 var foodBook = new BookOrign(1, "美食杂志", "￥15.00");
 
-var footBook = new BookOrign(1, "足浴杂志", "￥15.00");
+var tourBook = new BookOrign(1, "旅游杂志", "￥15.00");
 
 log.info(foodBook.getName());
-log.info(footBook.getName());
+log.info(tourBook.getName());
 
 
 // 初版
@@ -98,34 +98,77 @@ var GoodsOrgin = (function() {
     return _goods;
 })();
 
-var sexBook = new GoodsOrgin(1000, "性爱杂志", "$25.00");
+var sexBook = new GoodsOrgin(1000, "健身杂志", "$25.00");
 sexBook.display();
 
 // var sexBook2 = new Book(1000, "花花公子杂志", "$55.00");
 // sexBook2.display();
 
+log.trace("这是调试");
+log.warn("这是警告");
+log.notes("这是提示");
 
 
 // 改进继承版
-var GoodsClass = function() {
-    this.name = "花花公子杂志";
+var GoodsClass = function(name) {
+    this.name = name;
 }
-
 GoodsClass.prototype = {
     getName: function() {
         return this.name;
     }
 }
+var BookClass = (function() {
+    var num = 0;
+    function _bookClass(name) {
+        if(num > 2) {
+            log.error("我们只出版了"+ num +"本书，非常抱歉...");
+        }
+        GoodsClass.call(this, name);
+        num++;
+    }
+    _bookClass.prototype = new GoodsClass();
 
-var BookClass = function() {
+    return _bookClass;
+})();
 
+var book = new BookClass("时尚杂志");
+var book1 = new BookClass("美食杂志");
+var book2 = new BookClass("旅游杂志");
+log.info(book.getName());
+log.info(book1.getName());
+log.info(book2.getName());
+
+
+// 终极改良版，
+function inheritPrototype(SubClass, SuperClass) {
+    function _f(){};
+    _f.prototype = SuperClass.prototype;
+    var p = new _f();
+    p.constructor = SubClass;
+    SubClass.prototype = p;
 }
 
-var Book = function(){}
+Goods = function(name) {
+    this.name = name;
+}
+Goods.prototype = {
+    getName: function() {
+        return this.name;
+    }
+}
+Book = (function() {
+    var num = 0;
+    function _book(name) {
+        if(num > 1) { log.error("我们只出版了"+ num +"本书，非常抱歉..."); }
+        Goods.call(this, name);
+        num++;
+    }
+    inheritPrototype(_book, Goods);
+    return _book;
+})();
 
-Book.prototype = new GoodsClass();
-
-var book = new Book();
-
-log.info(book.getName())
-log.info(BookClass.prototype.constructor.prototype.constructor.prototype.constructor.prototype.constructor);
+var book4 = new Book("时尚杂志");
+var book5 = new Book("美食杂志");
+log.info(book4.getName());
+log.table(book5);
