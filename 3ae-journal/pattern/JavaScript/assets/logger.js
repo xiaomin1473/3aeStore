@@ -50,6 +50,7 @@ Logger = (function() {
         this.expand = data.expand;
         var themes = themes;
     };
+    
     _logger.prototype = {
         info: function(msg) {
             if(this.state =="test" || this.state == "debug") {

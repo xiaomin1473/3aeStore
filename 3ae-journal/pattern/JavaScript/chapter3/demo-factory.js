@@ -77,7 +77,7 @@ Goods.prototype = {
         return "书名：" + this.name;
     },
     getNum: function() {
-        return "这是第" + this.num +"本书...";
+        return "这是第" + this.num + "本书...";
     }
 }
 
