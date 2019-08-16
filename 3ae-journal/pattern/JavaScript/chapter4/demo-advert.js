@@ -1,3 +1,24 @@
+log.info("log init");
+/******************************************************************
+**                                                               **
+**                                                               **
+**                      author: sid.tadpole                      **
+**                      time:    2019.8.15                       **
+**                      path:    NanJing                         **
+**                                                               **
+**                                                               **
+******************************************************************/
+
+
+/************************ LEARNING_TARGET *************************
+** 
+** 
+**  1. 通过工厂方法为页面创建不同功能的按钮
+** 
+** 
+*/
+
+
 // 工厂方法模式
 
 /**
@@ -88,12 +109,12 @@ var Script = function(type, content) {
         } else if ("php" == type) {
             div.style.color = 'yellow';
             div.style.background = 'red';
-        } else if ("Javascript" == type) {
+        } else if ("javascript" == type) {
             div.style.color = 'pink';
         } else if ("UI" == type) {
             div.style.border = 'solid 1px red';
         }
-        
+
         document.getElementsByTagName('body')[0].appendChild(div);
     })(type, content)
 }

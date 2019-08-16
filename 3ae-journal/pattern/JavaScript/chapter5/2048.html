@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                height: 80vh;
+                margin: 0;
+                background-color: #f6f6f6;
+            }
+            #gridPanel{
+                width:480px;
+                height:480px;
+                margin:0 auto;
+                background-color:#e6e6d6;
+                border-radius:10px;
+                position:relative;
+                opacity: .8;
+            }
+            .grid,.cell{
+                width:100px;
+                height:100px;
+                border-radius:6px;
+            }
+            .grid{
+                background-color:#e3b89a;
+                margin:16px 0 0 16px;
+                float:left;
+            }
+            .cell{
+                text-align:center;
+                line-height:100px;
+                color:#776e65;
+                position:absolute;
+                font-size:60px;
+            }
+            #c00,#c01,#c02,#c03{
+                top:16px;
+            }
+            #c00,#c10,#c20,#c30{
+                left:16px;
+            }
+            #c10,#c11,#c12,#c13{
+                top:132px;
+            }
+            #c01,#c11,#c21,#c31{
+                left:132px;
+            }
+            #c20,#c21,#c22,#c23{
+                top:248px;
+            }
+            #c02,#c12,#c22,#c32{
+                left:248px;
+            }
+            #c30,#c31,#c32,#c33{
+                top:364px;
+            }
+            #c03,#c13,#c23,#c33{
+                left:364px;
+            }
+            .n2{background-color:#f9f9f9}
+            .n4{background-color:#f08888}
+            .n8{background-color:#f8a868}
+            .n16{background-color:#f88800}
+            .n32{background-color:#f66c66}
+            .n64{background-color:#f45633}
+            .n128{background-color:#99ff66}
+            .n256{background-color:#50dd2c}
+            .n512{background-color:#1cc00d}
+            .n1024{background-color:#33b6e6}
+            .n2048{background-color:#3366dd}
+            .n4096{background-color:#cc66dd}
+            .n8192{background-color:#9333c3}
+            .n4,.n8,.n16,.n32,.n64,.n128,.n256,.n512,.n1024,.n2048,.n4096,.n8192{
+                color:#fff;
+            }
+            .n1024,.n2048,.n4096,.n8192{
+                font-size:40px;
+            }
+            p {
+                width:480px;
+                padding-top:15px;
+                margin: 30px auto;
+                font-size:40px;
+                font-family:Arial;
+                font-weight:bold;
+            }
+            #gameOver{
+                width:100%;
+                height:100%;
+                position:absolute;
+                top:0;
+                left:0;
+                display:none;
+            }
+            #gameOver div{
+                width:100%;
+                height:100%;
+                background-color:#555;
+                opacity:0.5;
+            }
+            #gameOver p{
+                position:absolute;
+                border-radius:10px;
+                top:200px;
+                left:39.5%;
+                width:300px;
+                height:200px;
+                border:1px solid #edcf72;
+                line-height:1.6em;
+                text-align:center;
+                background-color:#fff;
+            }
+            .button{
+                padding:10px;
+                border-radius:6px;
+                background-color:#9f8b77;
+                color:#fff;
+                cursor:pointer;
+            }
+        </style>
+        </head>
+        <body>
+            <p>Score:<span id="score"></span></p>
+            <div id="gridPanel">
+                <!--背景单元格-->
+                <div id="g00" class="grid"></div>
+                <div id="g01" class="grid"></div>
+                <div id="g02" class="grid"></div>
+                <div id="g03" class="grid"></div>
+                
+                <div id="g10" class="grid"></div>
+                <div id="g11" class="grid"></div>
+                <div id="g12" class="grid"></div>
+                <div id="g13" class="grid"></div>
+                
+                <div id="g20" class="grid"></div>
+                <div id="g21" class="grid"></div>
+                <div id="g22" class="grid"></div>
+                <div id="g23" class="grid"></div>
+                
+                <div id="g30" class="grid"></div>
+                <div id="g31" class="grid"></div>
+                <div id="g32" class="grid"></div>
+                <div id="g33" class="grid"></div>
+                
+                <!--前景单元格-->
+                <div id="c00" class="cell"></div>
+                <div id="c01" class="cell"></div>
+                <div id="c02" class="cell"></div>
+                <div id="c03" class="cell"></div>
+                
+                <div id="c10" class="cell"></div>
+                <div id="c11" class="cell"></div>
+                <div id="c12" class="cell"></div>
+                <div id="c13" class="cell"></div>
+                
+                <div id="c20" class="cell"></div>
+                <div id="c21" class="cell"></div>
+                <div id="c22" class="cell"></div>
+                <div id="c23" class="cell"></div>
+                
+                <div id="c30" class="cell"></div>
+                <div id="c31" class="cell"></div>
+                <div id="c32" class="cell"></div>
+                <div id="c33" class="cell"></div>
+            </div>
+            <div id="gameOver">
+                <div><!--半透明背景--></div>
+                <!--前景小窗-->
+                <p>
+                    Game Over!<br/>
+                    Score:<span id="finalScore"></span><br/>
+                    <a class="button" id="restart" onClick="startGame()">Try again!</a>
+                </p>
+            </div>
+        </body>
+    <script src="../assets/logger.js"></script>
+    <script src="./2048.js"></script>
+</html>

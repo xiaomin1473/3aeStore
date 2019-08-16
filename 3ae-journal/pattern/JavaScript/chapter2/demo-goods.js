@@ -1,7 +1,24 @@
+log.info("test log");
+/******************************************************************
+**                                                               **
+**                                                               **
+**                      author: sid.tadpole                      **
+**                      time:    2019.8.13                       **
+**                      path:    NanJing                         **
+**                                                               **
+**                                                               **
+******************************************************************/
+
+/************************ LEARNING_TARGET *************************
+** 
+** 
+**  1. 如何实现深复制？
+** 
+** 
+*/
+
 
 // 该demo主要是展示了对象的封装和继承的多种形式，并实现了一个真实的商品对象的实现
-log.info("test log");
-
 /**
  * 
  *  Tips: 
@@ -20,7 +37,13 @@ var s = {a:1, b:2};
 
 
 
-// 初版
+/*************************** BEGIN ****************************
+**
+**
+**                           初版
+**
+**
+*/
 var BookOrign = function(id, name, price){
     this.name = name;
     this.id = id;
@@ -65,7 +88,13 @@ log.info(foodBook.getName());
 log.info(tourBook.getName());
 
 
-// 初版
+/*************************** BEGIN ****************************
+**
+**
+**                           初版
+**
+**
+*/
 var GoodsOrgin = (function() {
     var goodsNum = 0;
 
@@ -109,7 +138,15 @@ log.warn("这是警告");
 log.notes("这是提示");
 
 
-// 改进继承版
+
+
+/*************************** AFTER ****************************
+**
+**
+**                           改进继承版
+**
+**
+*/
 var GoodsClass = function(name) {
     this.name = name;
 }
@@ -140,7 +177,15 @@ log.info(book1.getName());
 log.info(book2.getName());
 
 
-// 终极改良版，
+
+
+/*************************** FINAL ****************************
+**
+**
+**                           最终版
+**
+**
+*/
 function inheritPrototype(SubClass, SuperClass) {
     function _f(){};
     _f.prototype = SuperClass.prototype;
