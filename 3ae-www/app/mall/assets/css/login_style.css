@@ -1,0 +1,291 @@
+/* ****************************************************************** login_page *****************************************************************/
+.container {
+  width: 100%;
+  min-width: 1200px;
+  height: 672px;
+  background-color: #fff;
+  background-image: url(../img/login_background.png);
+  background-repeat: no-repeat;
+  background-position-y: 80px;
+  background-position-x: center;
+}
+
+.container-wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  height: inherit;
+}
+
+.login-header {
+  width: 100%;
+  height: 100px;
+}
+
+.login-header .logo {
+  width: 380px;
+  height: 100px;
+}
+
+.login-header .logo .logo-img {
+  margin-top: -24px;
+}
+
+.login-header .tips {
+  float: right;
+  display: block;
+  margin-left: 20px;
+  color: #999;
+  line-height: 72px;
+  font-size: 26px;
+}
+
+.login-header .suggest {
+  width: 200px;
+  height: 100px;
+  text-align: right;
+  line-height: 78px;
+}
+
+.login-header .suggest .reply {
+  font-size: 16px;
+  color: rgb(255, 102, 36);
+}
+
+.login-main {
+  position: relative;
+  float: right;
+  width: 420px;
+  height: 540px;
+  margin-top: 20px;
+  background-image: url(../img/login_bak.png);
+}
+
+
+.login-main .title {
+  width: 270px;
+  margin: 0 auto;
+  margin-top: 170px;
+  font-size: 26px;
+  text-align: center;
+}
+
+.login-main .title h1 {
+  margin: 0 auto;
+  width: 100px;
+  color: rgb(255, 102, 36);
+}
+
+.login-main .title .dotted {
+  width: 58px;
+  height: 1px;
+  margin: 0 10px;
+  margin-top: 14px;
+  background-image: url(../img/dotted.png);
+}
+
+
+.form {
+  margin-top: 44px;
+  text-align: center;
+}
+
+
+.form-items {
+  position: relative;
+  margin: 14px auto;
+  height: 48px;
+  line-height: 40px;
+  width: 80%;
+}
+
+.form-wrapper .user {
+  width: 76%;
+}
+
+.form-wrapper .user label {
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  z-index: 1000;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/user.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.form-wrapper .user input {
+  box-sizing: border-box;
+  width: 92%;
+  height: 42px;
+  padding: 4px 30px;
+  padding-left: 78px;
+  font-size: 13px;
+  color: #777;
+  background-color: #fdfdfd;
+  border-radius: 3px;
+  border: solid 1px #fdfdfd;
+  border-bottom: solid 1px #e8e8e8;
+  box-shadow: 0 1px 2px 0 rgba(1, 17, 17, .05);
+}
+
+.form-wrapper .user input:focus {
+  border-bottom : solid 1px rgb(255, 102, 36);
+}
+
+
+.form-wrapper .pwd {
+  width: 78%;
+
+}
+
+.form-wrapper .pwd label {
+  position: absolute;
+  left: 44px;
+  top: 10px;
+  z-index: 1000;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/pwd.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.form-wrapper .pwd input {
+  box-sizing: border-box;
+  width: 92%;
+  height: 42px;
+  padding: 4px 30px;
+  padding-left: 82px;
+  font-size: 13px;
+  color: #777;
+  background-color: #fdfdfd;
+  border-radius: 3px;
+  border: solid 1px #fdfdfd;
+  border-bottom: solid 1px #e8e8e8;
+  box-shadow: 0 1px 2px 0 rgba(1, 17, 17, .05);
+}
+
+.form-wrapper .pwd input:focus {
+  border-bottom : solid 1px rgb(255, 102, 36);
+}
+
+.form-wrapper .tips {
+  display: block;
+  margin-top: -8px;
+  height: 13px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: red;
+}
+
+.form-wrapper .remember {
+  margin: 6px auto;
+  width: 80%;
+  height: 30px;
+}
+
+.form-wrapper .remb{
+  display: none;
+  line-height: 20px;
+  
+}
+
+.form-wrapper .remb + i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  vertical-align: -2px;
+  color:#777;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 8px 0 rgba(1, 17, 17, .3) inset;
+  /* box-shadow: 0 1px 3px 0 rgba(255, 255, 255, .3) inset; */
+  user-select: none; 
+  cursor: pointer;
+}
+
+.form-wrapper .remb:checked + i {
+  color:#fff;
+  box-shadow: 0 1px 8px 0 rgba(1, 17, 17, .5);
+  background-color: rgb(255, 102, 36);
+}
+
+.form-wrapper .remember label {
+  line-height: 30px;
+  font-size: 14px;
+  color: #777;
+  cursor: pointer;
+}
+
+.form-wrapper .forget {
+  float: right;
+  width: 50%;
+  height: 30px;
+}
+
+.form-wrapper .forget a {
+  line-height: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.login-btn {
+  display: inline-block;
+  width: 80%;
+  height: 44px;
+  margin-top: 12px;
+  font-size: 20px;
+  color: #fff;
+  line-height: 44px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 14px;
+  background-image:linear-gradient(90deg,rgba(255, 102, 36, 1), rgba(251, 192, 126, 1)); 
+  border-radius: 16px;
+  border: solid 2px #fff;
+  box-shadow: none;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-image: none;
+  color: rgba(255, 102, 36, 1);
+  background-color: #fff;
+  border: solid 2px rgba(255, 102, 36, 1);
+}
+
+.form-wrapper .login-regist {
+  position: relative;
+  margin-top: -4px;
+}
+
+.login-regist .icon {
+  position: absolute;
+  top: 14px;
+  left: 126px;
+  width: 17px;
+  height: 17px;
+  background-image: url(../img/arrow.png);
+}
+
+.login-regist span {
+  position: absolute;
+  top: 0px;
+  left: 86px;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  height: 44px;
+  border-radius: 16px;
+  box-shadow: none;
+  font-size: 0;
+  background-image: url(../img/regist.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}

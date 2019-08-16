@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link href="common/styles/reset.css" rel="stylesheet">
+</head>
+<body>
+	<h1>This is a socket</h1>
+	
+		<input id="text" type="text" name="query" placeholder="query host infomations">
+		<input id="btn" type="submit">
+	<div class="context" id="context">
+		THIS IS MY WORLD!
+	</div>
+	
+	<h2>This is a services</h2>
+	<a href="servlet/HelloServlet">GET</a>
+	<input id="text2" type="text" name="query" placeholder="return servlet infos">
+	<input id="btn2" type="submit">
+	<div class="context" id="context2">
+		THIS IS YOUR WORLD!
+	</div>
+	<h2>This is a services</h2>
+	<a href="servlet/HelloServlet">POST</a>
+	<input id="text3" type="text" name="query" placeholder="return servlet infos">
+	<input id="btn3" type="submit">
+	<div class="context" id="context3">
+		THIS IS YOUR WORLD!
+	</div>
+		
+	<script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+	<script>
+	var urls = "/res";
+	var urls2 = "/res";
+	
+		$("#btn").click(function(){
+			function clis(urls) {
+				query = $("#text").val();
+				urls = urls + query + '';
+				console.log(query);
+				ctx=$.ajax({
+					type: "GET",
+					url:urls,
+					success: function() {
+						$("#context").html(ctx.responseText);
+					}
+				});
+			}
+			clis(urls);
+		})
+		$("#btn2").click(function(){
+			ctx=$.ajax({
+				type: "GET",
+				url:urls2,
+				success: function() {
+					$("#context2").html(ctx.responseText);
+				}
+			});
+		})
+		$("#btn3").click(function(){
+			ctx=$.ajax({
+				type: "POST",
+				url:urls2,
+				success: function() {
+					$("#context3").html(ctx.responseText);
+				}
+			});
+		})	
+	</script>
+	
+</body>

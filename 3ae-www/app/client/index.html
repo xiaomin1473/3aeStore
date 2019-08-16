@@ -1,0 +1,57 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>websocket</title>
+   </head>
+   <body>
+      <form onSubmit="return false">
+         <input type="text" name="msg" value="">
+         <br/>
+         <br>
+         <input type="button" value="发送socket请求消息" onclick="send(this.form.msg.value)">
+         <hr color="#ccc">
+         <h2>客户端接收到服务端返回的应答消息</h2>
+         <textarea id="res" style="width: 1024px; height: 300px"></textarea>
+      </form>
+   </body>
+</html>
+<script>
+   var socket = null;
+
+   if(!window.WebSocket) {
+      window.WebSocket = window.MozWebSocket;
+   }
+
+   if(window.WebSocket) {
+      socket = new WebSocket("ws://localhost:47332");
+      socket.onmessage = function(event) {
+         var ctx = document.getElementById("res");
+
+         ctx.value += event.data + "\r\n";
+      };
+
+      socket.onopen = function(event) {
+         var ctx = document.getElementById("res");
+         ctx.value = "您当前的浏览器支持websocket， 请进行后续操作\r\n";
+      };
+      
+      socket.onclose = function(event) {
+         var ctx = document.getElementById("res");
+         ctx.value = "";
+         ctx.value = "WebSocket连接已经关闭\n";
+      }
+   } else {
+      alert("您的浏览器不支持WebSocket");
+   }
+
+   function send(msg) {
+      if(!window.WebSocket) {
+         return;
+      }
+      if(socket.readyState == WebSocket.OPEN) {
+         socket.send(msg);
+      } else {
+         alert("Websocket连接没有建立成功。");
+      }
+   }
+</script>

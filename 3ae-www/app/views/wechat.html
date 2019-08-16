@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	
+	<link href="common/styles/reset.css" rel="stylesheet">
+</head>
+<body>
+	<h1>This is web</h1>
+		<form onSubmit = "return false;">
+			<input id="text" type="text" name="message" value="">
+			<input id="btn" type="submit" onclick="send(this.form.message.value)">
+		</form>
+		<hr>
+		<span>客户端收到的应答消息</span>
+		<br><hr>
+	<textarea class="context" id="context">
+		
+	</textarea>
+	
+		
+	<script src="https://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+	<script>
+		var socket;
+		if(!window.WebSocket) {
+			window.WebSocket = window.MozWebSocket;
+		}
+		
+		if(window.WebSocket) {
+			socket = new WebSocket("ws://localhost:8080/websocket");
+			socket.onmessage = function(event) {
+				$("#context").html(event.data + "\r\n");
+				
+			};
+			socket.open = function(event) {
+				$("#context").html("您当前的浏览器支持socket，请继续……\r\n");
+				
+			};
+			
+			socket.onclose = function(event) {
+				$("#context").html("  ");
+				$("#context").html("websocket已经关闭\r\n");
+				
+			}
+		}
+		else {
+			alert('您的浏览器不支持');
+		}
+		
+		function send(msg) {
+			if (!window.WebSocket) {
+				return;
+			}
+			if (socket.readyState == WebSocket.OPEN){
+				socket.send(msg);
+			} else {
+				alert("建立失败");
+			}
+		}
+		
+	</script>
+	
+</body>

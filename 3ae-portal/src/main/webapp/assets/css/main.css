@@ -35,7 +35,7 @@ b {
     box-sizing: border-box;
     height: 100vh;
     padding-bottom: 10px;
-    background-image: url(../imgs/bg/bg-12.jpg);
+    /* background-image: url(../imgs/bg/bg-12.jpg); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
