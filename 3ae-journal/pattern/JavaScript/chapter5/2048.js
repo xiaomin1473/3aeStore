@@ -398,15 +398,17 @@ function addTouch() {
     var startX, startY, moveEndX, moveEndY, X, Y;
 
     document.addEventListener("touchstart", function(e) {
-　　　　startX = e.changedTouches[0].pageX,
-　　　　startY = e.changedTouches[0].pageY;
-　　});
-　　document.addEventListener("touchmove", function(e) {
-　　　　moveEndX = e.changedTouches[0].pageX,
-　　　　moveEndY = e.changedTouches[0].pageY,
-　　　　X = moveEndX - startX,
-　　　　Y = moveEndY - startY;　　
-　　});
+        e.preventDefault();
+        e.stopPropagation();
+        startX = e.changedTouches[0].pageX;
+        startY = e.changedTouches[0].pageY;
+    });
+    document.addEventListener("touchmove", function(e) {
+        moveEndX = e.changedTouches[0].pageX;
+        moveEndY = e.changedTouches[0].pageY;
+        X = moveEndX - startX;
+        Y = moveEndY - startY;
+    });
     document.addEventListener("touchend", function() {
         if (Math.abs(X) > Math.abs(Y) && X > 0 ) {
             gameRightMove();
