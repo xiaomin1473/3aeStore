@@ -2,10 +2,39 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <style>
+            #carousel {
+                width: 320px;
+                height: 150px;
+                overflow: hidden}
+        </style>
     </head>
     <body>
-
+        <div id="carousel"></div>
     </body>
     <script src="../assets/js/logger.js"></script>
     <script src="./demo-carousel.js"></script>
 </html>
+<script>
+    var imgArrs = [];
+    (function(imgArrs) {
+        var host = "https://mall.3ae.store";
+        var imgUrl = "/assets/img/city/city_";
+        var imgArr = [
+            '101010100.png',
+            '101030100.png',
+            '101190100.png',
+            '101020100.png',
+            '101210100.png'];
+        var i = 0;
+        imgArr.forEach(function(data) {
+            imgArrs[i] = host + imgUrl + data;
+            i++;
+        });
+    })(imgArrs);
+    var SlideCarousel = new SlideLoopImage(imgArrs,
+        'carousel',
+        ['left.jpg',
+        'right.jpg']);
+    SlideCarousel.init();
+</script>
