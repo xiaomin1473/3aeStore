@@ -17,7 +17,6 @@ log.info("log init");
 ** 
 ** 
 */
-
 var LoopImages = (function(){
     var carousel = function(container, imgArr) {
         var wrapper = document.createElement('div');
