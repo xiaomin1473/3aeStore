@@ -44,7 +44,6 @@ Logger = (function() {
         console.log(str, themes.set("tips"), themes.set(tips));
     }
 
-
     function _logger(data){
         this.state = data.state ? data.state : null;
         this.expand = data.expand;
@@ -74,6 +73,11 @@ It's sid, you can find me : https://3ae.store`);
         trace: function(msg) {
             if(this.state == "debug") {
                 tips("debug", msg);
+            }
+        },
+        obj:function(msg){
+            if(this.state =="test" || this.state == "debug") {
+                console.log(msg);
             }
         },
         warn: function(msg) {
