@@ -13,10 +13,17 @@ log.info("log init");
 ** 
 ** 
 **  
-**  原型模式
+**    原型模式
 ** 
 ** 
 */
+
+// 改版需求
+/**
+ *   1. 渐隐效果
+ *   2. PC端和移动端
+ *   3. 上下轮播
+ */
 
 function protect() {
     that = arguments[0];
