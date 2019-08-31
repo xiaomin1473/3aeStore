@@ -13,32 +13,17 @@ log.info("log init");
 ** 
 ** 
 **  
-**  原型模式
+**    原型模式
 ** 
 ** 
 */
 
-function protect() {
-    that = arguments[0];
-    var startX, startY, moveEndX, moveEndY, X, Y;
-
-    document.addEventListener("touchstart", function(e) {
-        startX = e.changedTouches[0].pageX,
-        startY = e.changedTouches[0].pageY;
-    });
-    document.addEventListener("touchmove", function(e) {
-        moveEndX = e.changedTouches[0].pageX,
-        moveEndY = e.changedTouches[0].pageY,
-        X = moveEndX - startX,
-        Y = moveEndY - startY;　
-        if (Math.abs(X) > Math.abs(Y) && Math.abs(X) > 20) {
-            that.operate = true;
-        }　
-    });
-    document.addEventListener("touchend", function() {
-    });
-}
-
+/** 
+ *   改版需求
+ *   1. 渐隐效果
+ *   2. PC端和移动端
+ *   3. 上下轮播
+ */
 var LoopImages = (function(){
     var carousel = function(container, imgArr) {
         var wrapper = document.createElement('div');
@@ -46,7 +31,6 @@ var LoopImages = (function(){
         wrapper.style.transition = ".25s all ease-out";
         imgArr.push(imgArr[0]);
         imgArr.unshift(imgArr[imgArr.length-2]);
-
         imgArr.forEach(function(imgUrl){
             var img = document.createElement('img');
             img.src = imgUrl;
@@ -56,36 +40,44 @@ var LoopImages = (function(){
         })
         container.appendChild(wrapper);
     }
+    var os = (function checkOS() {
+        var _os = Object.create(null, {});
+        var ua = navigator.userAgent;
+        isWindowsPhone = /(?:Windows Phone)/.test(ua);
+        isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone;
+        isAndroid = /(?:Android)/.test(ua);
+        isFireFox = /(?:Firefox)/.test(ua);
+        isChrome = /(?:Chrome|CriOS)/.test(ua);
+        isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua));
+        isPhone = /(?:iPhone)/.test(ua) && !isTablet;  
+        _os.isPc = !isPhone && !isAndroid && !isSymbian;
+        _os.isTablet = isTablet;
+        return _os;
+    })();
 
-    function _loopImages(imgArr, container, arrow) {
-        this.containerId = container;
-        this.container = document.getElementById(container);
+    function _loopImages(imgArr, id, arrow) {
+        this.container = document.getElementById(id);
         this.imagesArray = imgArr;      // 图片对象
         this.arrow = arrow;             // 箭头
         this.interval = null;           // 定时器
         this.curr = 1;                  // 当前图片
         this.operate = false;           // 操作保护
+        this.os = os;                   // 当前系统
     }
-
     _loopImages.prototype = {
         createImage: function() {
             carousel(this.container, this.imagesArray);
         },
         changeImage: function() {
             log.info("loop changeImage function");
-        }
+        },
     }
     return _loopImages;
 })();
 
 var SlideLoopImage = function(imgArr, container) {
-    LoopImages.call(this, imgArr, container);
-}
-
-SlideLoopImage.prototype = new LoopImages();
-
-SlideLoopImage.prototype.init = function() {
     that = this;
+    LoopImages.call(this, imgArr, container);
     // 继承父类的createImage()
     this.createImage.call(this);
     var wrapper = this.container.childNodes[0];
@@ -94,16 +86,33 @@ SlideLoopImage.prototype.init = function() {
     wrapper.childNodes.forEach(function(data) {
         data.style.float = "left";
     })
+    // 添加动画
     this.animate();
-    wrapper.addEventListener("mouseenter", function(e) {
-        clearInterval(that.interval);
-    })
-    wrapper.addEventListener("mouseleave", function(e) {
-        that.animate();
-    })
-    this.addTouch(wrapper);
-    protect(this);
+
+    // 移动端
+    if(!this.os.isPc) {
+        // 添加触摸事件
+        this.addTouch(wrapper);
+        // 触摸保护
+        (function() {
+            var startX, startY, moveEndX, moveEndY, X, Y;
+            document.addEventListener("touchstart", function(e) {
+                startX = e.changedTouches[0].pageX,
+                startY = e.changedTouches[0].pageY;
+            });
+            document.addEventListener("touchmove", function(e) {
+                moveEndX = e.changedTouches[0].pageX,
+                moveEndY = e.changedTouches[0].pageY,
+                X = moveEndX - startX,
+                Y = moveEndY - startY;　
+                (Math.abs(X) > Math.abs(Y) && Math.abs(X) > 20) ? that.operate = true : null;
+            });
+            document.addEventListener("touchend", function() {
+            });
+        })();
+    }
 }
+SlideLoopImage.prototype = new LoopImages();
 
 SlideLoopImage.prototype.changeImage = function() {
     var wrapper = this.container.childNodes[0];
@@ -184,7 +193,6 @@ SlideLoopImage.prototype.addTouch = function(wrapper) {
             // 关闭操作
             that.operate = false;
         }, 0);
-        
         that.animate();
     });
 }
