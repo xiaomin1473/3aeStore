@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
-		<title>简历</title>
+		<title>个人简历</title>
 		
 		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
 	    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -29,7 +29,7 @@
                     <div class="brief-content">
                         <div class="purpose">
                             <b>姓名：</b><span>赵宇明 (94年)</span><br>
-                            <b>手机：</b><span>17301391473</span><br>
+                            <b>手机：</b><span>15951713550</span><br>
                             <b>邮箱：</b><span>qq505040575</span><br>
                             <b>意向：</b><span>web前端全职</span><br>
                             <b>薪资：</b><span>14~25K</span><br>
@@ -82,7 +82,7 @@
                             * 让二代主机服务系统进行远程操作和检测物理设备；<br>
                             * 收集物理设备的信息上传到服务器。<br><br>
 
-                            Action:<br>
+                            Action:(java端,前端在项目介绍里)<br>
                             主要负责二代主机前端编写和部分JAVA编码工作：<br>
                             * Spring5 ，SpringMVC等相关技术栈实现项目基础架构。<br> 
                             * mybatis3、lombok实现操作数据库；<br>
@@ -102,6 +102,49 @@
                             1. 南向开发。把vue外链到页面里。并实现了java控制路由；<br>
                             2. 北向开发单独使用vue-cli脚手架实现了webAPP和PC端页面。<br>
                         </p>
+                        <br>
+                        <p class="work-title">
+                            北京爱悦购电子商务有限公司<br>
+                            2017.06-2018.03 前端工程师|创意中心<br>
+                            内容介绍<br>
+                        </p>
+                        <p>
+                            电商页面切图。因为公司目前不做了，所以没有在线的网址，自己搭了一个平台。去了很多框架，目前就登录页和首页重写了一下。
+                            详情页，列表页，个人中心等内容模块都没有上线。
+                            <br>https://mall.3ae.store
+                        </p>
+                        <h2>项目介绍</h2>
+                    <hr>
+                        <p  class="content-items">
+                            熟练使用常用的设计模式，工厂，单例，原型，适配器，代理，备忘录等。<br>
+                            熟练使用vue全家桶:vuex,vue-router。并有实际项目经验。<br>
+                            熟练掌握各种常规布局，特殊布局。并对css3动画有一定的理解。<br>
+                            <b>二代主机二期</b>
+                            <br>前端方向
+                            <br>项目分成三个模块：用户，配置，登录。路由和菜单分别放在两个配置对象里：routes.js和menu.js。前端页面找人重新设计后把用户和操作员的公共页面拆出来打包，其他额外的放在配置/views/conf/下，根据用户身份来决定是否展示配置按钮(另外还加了一个许可证，加密字符串)。模拟router-link。
+                            <br>1.使用element实现用户操作面板。并封装后台restful接口传来的数据对象。
+                            <br>2.使用websocket去持续监听服务端发送来的信息，并用note组件去展示给用户。
+                            <br>3.获取后台设备列表对象，并生成三级下拉菜单。点击查询按钮后通过axios发送post请求数据库查询设备列表。并动态生成列表。
+                            <br>后台方向
+                            <br>1.使用websocket发送设备上传的状态信息给前端(以字符串形式)。
+                            <br>2.使用netty4实现agent服务器，同时实现了客户端，协议开发—约定一串字节数组：启动字节+流水号+数据长度+命令+数据+检验位+结束字节。
+                            <br>3.使用抽象工厂根据命令字节来创建不同的实体对象。然后进入不同的parse包下的parse0~100多个类里去解析数据，接着发送不同的tcp包。
+                            <br>4.使用springMVC那一套框架实现数据库的增删改查，并把设备初始信息，运行信息，用户操作信息等内容存入数据库。
+
+                            <br><b>二代主机一期</b>
+                            <br>把项目前端分成：用户展示，操作员展示，登录三个模块。用户和操作员使用jquery的load函数加在到Home页下，index做成登录页，然后根据登录信息来跟后台验证用户身份并加载不同的页面。
+                            <br>1.根据后台传来的数据对象生成对应的按钮面板，点击按钮后拼装数据并发送给后台。
+                            <br>2.通过对video标签的再封装实现网页播放器控件，从而达到在线播放视频
+                        </p>
+                        <h2>作品链接</h2>
+                        <hr>
+                        <p class="content-items">
+                            由于最近还没准备好自己的作品，临时收到阿里的……就把目前线上有的放这儿了,不是很完善。简历写得很仓促，原本是放在线上的，但是java打包发布需要时间，临时先在本地生成PDF文件上传了。
+                            <br>https://mall.3ae.store
+                            <br>https://game.3ae.store
+                            <br>https://www.3ae.store (ssl证书刚到期) <b>关于链接里就是这个简历</b>
+                            <br>https://github.com/xiaomin1473
+                        </p>
                     </div>
                 </div>
             </div>
@@ -109,21 +152,24 @@
 
             <div class="side-bar">
                 <div class="own">
-                    <div class="avatar">
-                        <img alt="个人照片">
+                    <div class="avatar" style="text-align: center">
+                        <!-- <img alt="个人照片，设计的模板，由于现在长胖了"> -->
+                        <br>本来放照片的
+                        <br>曾经帅小伙<br>现在小胖子
                     </div>
                     <ul class="own-list">
                         <li class="items active">
                             <a href="./resume.html">个人简介</a>
                         </li>
                         <li class="items">
-                            <a href="http://opus.3ae.store">工作作品<i>&nbsp;暂无</i></a>
+                            <!-- <a href="http://opus.3ae.store">工作作品<i>&nbsp;暂无</i></a> -->
+                            <a href="http://opus.3ae.store">工作经历</a>
                         </li>
                         <li class="items">
-                            <a href="http://book.3ae.store">文档手册</a>
+                            <a href="http://book.3ae.store">项目介绍</a>
                         </li>
                         <li class="items">
-                            <a href="blog.3ae.store">技术博客<i>&nbsp;暂无</i></a>
+                            <a href="blog.3ae.store">作品链接</a>
                         </li>
                     </ul>
                 </div>
