@@ -76,7 +76,7 @@
          <mybatis-spring.version>2.0.0</mybatis-spring.version>
          
          <!-- 任务调度 -->
-         <quartz.version>2.3.0</quartz.version>
+         <quartz.version>2.3.2</quartz.version>
          
          <!-- SVN -->
          <svnkit.version>1.9.3</svnkit.version>
