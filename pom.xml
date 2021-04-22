@@ -72,7 +72,7 @@
          <druid.version>1.1.12</druid.version>
          <mysql-connector-java.version>8.0.13</mysql-connector-java.version>
          <mariadb-java-client.version>2.3.0</mariadb-java-client.version>
-         <mybatis.version>3.5.0</mybatis.version>
+         <mybatis.version>3.5.6</mybatis.version>
          <mybatis-spring.version>2.0.0</mybatis-spring.version>
          
          <!-- 任务调度 -->
