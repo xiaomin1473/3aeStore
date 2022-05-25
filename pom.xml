@@ -92,7 +92,7 @@
          <!-- 测试 -->
          <junit.version>4.13-beta-1</junit.version>
          <!-- spring -->
-         <spring.version>5.1.4.RELEASE</spring.version>
+         <spring.version>5.5.7</spring.version>
       <!-- 项目依赖版本 END -->
       
       <!-- Jetty and Netty -->
