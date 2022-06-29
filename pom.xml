@@ -51,7 +51,7 @@
          <commons-fileupload.version>1.4</commons-fileupload.version>
          
          <!-- excel -->
-         <poi.version>4.0.1</poi.version>
+         <poi.version>4.1.1</poi.version>
          <!-- Token -->
          <nimbus-jose-jwt.version>6.7</nimbus-jose-jwt.version>
          <!-- 日志 -->
