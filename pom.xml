@@ -61,7 +61,7 @@
          <!-- 序列化 -->
          <commons-lang3.version>3.8.1</commons-lang3.version>
          <commons-pool2.version>2.6.0</commons-pool2.version>
-         <protobuf-java.version>3.6.1</protobuf-java.version>
+         <protobuf-java.version>3.16.3</protobuf-java.version>
          <protostuff.version>1.6.0</protostuff.version>
          
          <!-- redis -->
